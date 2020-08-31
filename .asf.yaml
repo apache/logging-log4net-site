@@ -1,0 +1,15 @@
+notifications:
+  commits:      commits@logging.apache.org
+  issues:       notifications@logging.apache.org
+  pullrequests: notifications@logging.apache.org
+  jira_options: link label comment 
+
+staging:
+  profile: ~
+  whoami: asf-staging
+  subdir: log4net
+
+publish:
+  profile: ~
+  whoami: asf-site
+  subdir: log4net
