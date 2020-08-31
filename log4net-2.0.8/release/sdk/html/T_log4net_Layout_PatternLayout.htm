@@ -1,0 +1,400 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><style type="text/css">.OH_CodeSnippetContainerTabLeftActive, .OH_CodeSnippetContainerTabLeft,.OH_CodeSnippetContainerTabLeftDisabled { }.OH_CodeSnippetContainerTabRightActive, .OH_CodeSnippetContainerTabRight,.OH_CodeSnippetContainerTabRightDisabled { }.OH_footer { }</style><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>PatternLayout Class</title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="PatternLayout class" /><meta name="System.Keywords" content="log4net.Layout.PatternLayout class" /><meta name="System.Keywords" content="PatternLayout class, about PatternLayout class" /><meta name="Microsoft.Help.F1" content="log4net.Layout.PatternLayout" /><meta name="Microsoft.Help.Id" content="T:log4net.Layout.PatternLayout" /><meta name="Description" content="A flexible layout configurable with pattern string." /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="BrandingAware" content="true" /><meta name="container" content="log4net.Layout" /><meta name="file" content="T_log4net_Layout_PatternLayout" /><meta name="guid" content="T_log4net_Layout_PatternLayout" /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="OH_outerDiv"><div class="OH_outerContent"><table class="TitleTable"><tr><td class="OH_tdTitleColumn">PatternLayout Class</td><td class="OH_tdRunningTitleColumn">Apache log4net™ SDK Documentation</td></tr></table><div id="mainSection"><div id="mainBody"><span class="introStyle"></span><div class="summary">
+            A flexible layout configurable with pattern string.
+            </div><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Inheritance Hierarchy</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">System<span id="LST5CCBF329_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5CCBF329_0?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Object</a><br />  <a href="T_log4net_Layout_LayoutSkeleton.htm">log4net.Layout<span id="LST5CCBF329_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5CCBF329_1?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>LayoutSkeleton</a><br />    <span class="selflink">log4net.Layout<span id="LST5CCBF329_2"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5CCBF329_2?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>PatternLayout</span><br />      <a href="T_log4net_Layout_DynamicPatternLayout.htm">log4net.Layout<span id="LST5CCBF329_3"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5CCBF329_3?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>DynamicPatternLayout</a><br /><p> </p><strong>Namespace:</strong> <a href="N_log4net_Layout.htm">log4net.Layout</a><br /><strong>Assembly:</strong> log4net (in log4net.dll) Version: 2.0.8.0-.NET 4.0<div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Syntax</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><div class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerTabs"><div class="OH_CodeSnippetContainerTabLeft" id="ID0EDCA_tabimgleft"> </div><div id="ID0EDCA_tab1" class="OH_CodeSnippetContainerTabFirst"><a href="#" onclick="javascript:ChangeTab('ID0EDCA','cs','1','4');return false;">C#</a></div><div id="ID0EDCA_tab2" class="OH_CodeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0EDCA','vb','2','4');return false;">VB</a></div><div id="ID0EDCA_tab3" class="OH_CodeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0EDCA','cpp','3','4');return false;">C++</a></div><div id="ID0EDCA_tab4" class="OH_CodeSnippetContainerTab"><a href="#" onclick="javascript:ChangeTab('ID0EDCA','fs','4','4');return false;">F#</a></div><div class="OH_CodeSnippetContainerTabRight" id="ID0EDCA_tabimgright"> </div></div><div class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID0EDCA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EDCA');return false;" title="Copy">Copy</a></div></div><div id="ID0EDCA_code_Div1" class="OH_CodeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">PatternLayout</span> : <span class="identifier">LayoutSkeleton</span></pre></div><div id="ID0EDCA_code_Div2" class="OH_CodeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Class</span> <span class="identifier">PatternLayout</span>
+	<span class="keyword">Inherits</span> <span class="identifier">LayoutSkeleton</span></pre></div><div id="ID0EDCA_code_Div3" class="OH_CodeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">PatternLayout</span> : <span class="keyword">public</span> <span class="identifier">LayoutSkeleton</span></pre></div><div id="ID0EDCA_code_Div4" class="OH_CodeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">type</span> <span class="identifier">PatternLayout</span> =  
+    <span class="keyword">class</span>
+        <span class="keyword">inherit</span> <span class="identifier">LayoutSkeleton</span>
+    <span class="keyword">end</span></pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EDCA");</script><p>The <span class="selflink">PatternLayout</span> type exposes the following members.</p><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Constructors</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><table id="memberList" class="members"><tr><th class="ps_iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_log4net_Layout_PatternLayout__ctor.htm">PatternLayout<span id="LST5CCBF329_4"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5CCBF329_4?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
+            Constructs a PatternLayout using the DefaultConversionPattern
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_log4net_Layout_PatternLayout__ctor_1.htm">PatternLayout(String)</a></td><td><div class="summary">
+            Constructs a PatternLayout using the supplied conversion pattern
+            </div></td></tr></table><a href="#mainBody">Top</a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Properties</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><table id="memberList" class="members"><tr><th class="ps_iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_log4net_Layout_LayoutSkeleton_ContentType.htm">ContentType</a></td><td><div class="summary">
+            The content type output by this layout. 
+            </div> (Inherited from <a href="T_log4net_Layout_LayoutSkeleton.htm">LayoutSkeleton</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_log4net_Layout_PatternLayout_ConversionPattern.htm">ConversionPattern</a></td><td><div class="summary">
+            The pattern formatting string
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_log4net_Layout_LayoutSkeleton_Footer.htm">Footer</a></td><td><div class="summary">
+            The footer for the layout format.
+            </div> (Inherited from <a href="T_log4net_Layout_LayoutSkeleton.htm">LayoutSkeleton</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_log4net_Layout_LayoutSkeleton_Header.htm">Header</a></td><td><div class="summary">
+            The header for the layout format.
+            </div> (Inherited from <a href="T_log4net_Layout_LayoutSkeleton.htm">LayoutSkeleton</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_log4net_Layout_LayoutSkeleton_IgnoresException.htm">IgnoresException</a></td><td><div class="summary">
+            Flag indicating if this layout handles exceptions
+            </div> (Inherited from <a href="T_log4net_Layout_LayoutSkeleton.htm">LayoutSkeleton</a>.)</td></tr></table><a href="#mainBody">Top</a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Methods</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><table id="memberList" class="members"><tr><th class="ps_iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_log4net_Layout_PatternLayout_ActivateOptions.htm">ActivateOptions</a></td><td><div class="summary">
+            Initialize layout options
+            </div> (Overrides <a href="M_log4net_Layout_LayoutSkeleton_ActivateOptions.htm">LayoutSkeleton<span id="LST5CCBF329_5"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5CCBF329_5?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>ActivateOptions<span id="LST5CCBF329_6"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5CCBF329_6?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_log4net_Layout_PatternLayout_AddConverter.htm">AddConverter(ConverterInfo)</a></td><td><div class="summary">
+            Add a converter to this PatternLayout
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_log4net_Layout_PatternLayout_AddConverter_1.htm">AddConverter(String, Type)</a></td><td><div class="summary">
+            Add a converter to this PatternLayout
+            </div></td></tr><tr data="protected;declared;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_log4net_Layout_PatternLayout_CreatePatternParser.htm">CreatePatternParser</a></td><td><div class="summary">
+            Create the pattern parser instance
+            </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/bsc2ak47" target="_blank">Equals</a></td><td><div class="summary">
+                    Determines whether the specified <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a> is equal to the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/4k87zsw7" target="_blank">Finalize</a></td><td><div class="summary">
+                    Allows an <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a> to attempt to free resources and perform other cleanup operations before the <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a> is reclaimed by garbage collection.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_log4net_Layout_LayoutSkeleton_Format.htm">Format(LoggingEvent)</a></td><td><div class="summary">
+            Convenience method for easily formatting the logging event into a string variable.
+            </div> (Inherited from <a href="T_log4net_Layout_LayoutSkeleton.htm">LayoutSkeleton</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_log4net_Layout_PatternLayout_Format.htm">Format(TextWriter, LoggingEvent)</a></td><td><div class="summary">
+            Produces a formatted string as specified by the conversion pattern.
+            </div> (Overrides <a href="M_log4net_Layout_LayoutSkeleton_Format_1.htm">LayoutSkeleton<span id="LST5CCBF329_7"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5CCBF329_7?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Format(TextWriter, LoggingEvent)</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/zdee4b3y" target="_blank">GetHashCode</a></td><td><div class="summary">
+                    Serves as a hash function for a particular type. 
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/dfwy45w9" target="_blank">GetType</a></td><td><div class="summary">
+                    Gets the <a href="http://msdn2.microsoft.com/en-us/library/42892f65" target="_blank">Type</a> of the current instance.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/57ctke0a" target="_blank">MemberwiseClone</a></td><td><div class="summary">
+                    Creates a shallow copy of the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="http://msdn2.microsoft.com/en-us/library/7bxwbwt2" target="_blank">ToString</a></td><td><div class="summary">
+                    Returns a <a href="http://msdn2.microsoft.com/en-us/library/s1wwdcbf" target="_blank">String</a> that represents the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.
+                </div> (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr></table><a href="#mainBody">Top</a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Fields</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><table id="memberList" class="members"><tr><th class="ps_iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="F_log4net_Layout_PatternLayout_DefaultConversionPattern.htm">DefaultConversionPattern</a></td><td><div class="summary">
+            Default pattern string for log output. 
+            </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="F_log4net_Layout_PatternLayout_DetailConversionPattern.htm">DetailConversionPattern</a></td><td><div class="summary">
+            A detailed conversion pattern
+            </div></td></tr></table><a href="#mainBody">Top</a><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Remarks</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><p>
+            The goal of this class is to <span class="nolink">Format(TextWriter, LoggingEvent)</span> a 
+            <a href="T_log4net_Core_LoggingEvent.htm">LoggingEvent</a> as a string. The results
+            depend on the <i>conversion pattern</i>.
+            </p><p>
+            The conversion pattern is closely related to the conversion
+            pattern of the printf function in C. A conversion pattern is
+            composed of literal text and format control expressions called
+            <i>conversion specifiers</i>.
+            </p><p><i>You are free to insert any literal text within the conversion
+            pattern.</i></p><p>
+            Each conversion specifier starts with a percent sign (%) and is
+            followed by optional <i>format modifiers</i> and a <i>conversion
+            pattern name</i>. The conversion pattern name specifies the type of
+            data, e.g. logger, level, date, thread name. The format
+            modifiers control such things as field width, padding, left and
+            right justification. The following is a simple example.
+            </p><p>
+            Let the conversion pattern be <b>"%-5level [%thread]: %message%newline"</b> and assume
+            that the log4net environment was set to use a PatternLayout. Then the
+            statements
+            </p><div class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerTabs"><div class="OH_CodeSnippetContainerTabLeftActive" id="ID0EAQGBA_tabimgleft"> </div><div id="ID0EAQGBA_tab1" class="OH_CodeSnippetContainerTabSolo">C#</div><div class="OH_CodeSnippetContainerTabRightActive" id="ID0EAQGBA_tabimgright"> </div></div><div class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID0EAQGBA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EAQGBA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAQGBA_code_Div1" class="OH_CodeSnippetContainerCode" style="display: block"><pre xml:space="preserve">ILog log = LogManager.GetLogger(<span class="highlight-keyword">typeof</span>(TestApp));
+log.Debug(<span class="highlight-literal">"Message 1"</span>);
+log.Warn(<span class="highlight-literal">"Message 2"</span>);</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAQGBA");</script><p>would yield the output</p><div class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID0EAOGBA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EAOGBA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAOGBA_code_Div1" class="OH_CodeSnippetContainerCode" style="display: block"><pre xml:space="preserve">DEBUG [main]: Message <span class="highlight-number">1</span>
+WARN  [main]: Message <span class="highlight-number">2</span></pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAOGBA");</script><p>
+            Note that there is no explicit separator between text and
+            conversion specifiers. The pattern parser knows when it has reached
+            the end of a conversion specifier when it reads a conversion
+            character. In the example above the conversion specifier
+            <b>%-5level</b> means the level of the logging event should be left
+            justified to a width of five characters.
+            </p><p>
+            The recognized conversion pattern names are:
+            </p><div class="tableSection"><table><tr><th>Conversion Pattern Name</th><th>Effect</th></tr><tr><td>a</td><td>Equivalent to <b>appdomain</b></td></tr><tr><td>appdomain</td><td>
+            			Used to output the friendly name of the AppDomain where the 
+            			logging event was generated. 
+                    </td></tr><tr><td>aspnet-cache</td><td><p>
+                        Used to output all cache items in the case of <b>%aspnet-cache</b> or just one named item if used as <b>%aspnet-cache{key}</b></p><p>
+                        This pattern is not available for Compact Framework or Client Profile assemblies.
+                        </p></td></tr><tr><td>aspnet-context</td><td><p>
+                        Used to output all context items in the case of <b>%aspnet-context</b> or just one named item if used as <b>%aspnet-context{key}</b></p><p>
+                        This pattern is not available for Compact Framework or Client Profile assemblies.
+                        </p></td></tr><tr><td>aspnet-request</td><td><p>
+                        Used to output all request parameters in the case of <b>%aspnet-request</b> or just one named param if used as <b>%aspnet-request{key}</b></p><p>
+                        This pattern is not available for Compact Framework or Client Profile assemblies.
+                        </p></td></tr><tr><td>aspnet-session</td><td><p>
+                        Used to output all session items in the case of <b>%aspnet-session</b> or just one named item if used as <b>%aspnet-session{key}</b></p><p>
+                        This pattern is not available for Compact Framework or Client Profile assemblies.
+                        </p></td></tr><tr><td>c</td><td>Equivalent to <b>logger</b></td></tr><tr><td>C</td><td>Equivalent to <b>type</b></td></tr><tr><td>class</td><td>Equivalent to <b>type</b></td></tr><tr><td>d</td><td>Equivalent to <b>date</b></td></tr><tr><td>date</td><td><p>
+            			Used to output the date of the logging event in the local time zone. 
+            			To output the date in universal time use the <span class="code">%utcdate</span> pattern.
+            			The date conversion 
+            			specifier may be followed by a <i>date format specifier</i> enclosed 
+            			between braces. For example, <b>%date{HH:mm:ss,fff}</b> or
+            			<b>%date{dd MMM yyyy HH:mm:ss,fff}</b>.  If no date format specifier is 
+            			given then ISO8601 format is
+            			assumed (<a href="T_log4net_DateFormatter_Iso8601DateFormatter.htm">Iso8601DateFormatter</a>).
+            			</p><p>
+            			The date format specifier admits the same syntax as the
+            			time pattern string of the <span class="nolink">ToString(string)</span>.
+            			</p><p>
+            			For better results it is recommended to use the log4net date
+            			formatters. These can be specified using one of the strings
+            			"ABSOLUTE", "DATE" and "ISO8601" for specifying 
+            			<a href="T_log4net_DateFormatter_AbsoluteTimeDateFormatter.htm">AbsoluteTimeDateFormatter</a>, 
+            			<a href="T_log4net_DateFormatter_DateTimeDateFormatter.htm">DateTimeDateFormatter</a> and respectively 
+            			<a href="T_log4net_DateFormatter_Iso8601DateFormatter.htm">Iso8601DateFormatter</a>. For example, 
+            			<b>%date{ISO8601}</b> or <b>%date{ABSOLUTE}</b>.
+            			</p><p>
+            			These dedicated date formatters perform significantly
+            			better than <span class="nolink">ToString(string)</span>.
+            			</p></td></tr><tr><td>exception</td><td><p>
+            			Used to output the exception passed in with the log message.
+            			</p><p>
+            			If an exception object is stored in the logging event
+            			it will be rendered into the pattern output with a
+            			trailing newline.
+            			If there is no exception then nothing will be output
+            			and no trailing newline will be appended.
+            			It is typical to put a newline before the exception
+            			and to have the exception as the last data in the pattern.
+            			</p></td></tr><tr><td>F</td><td>Equivalent to <b>file</b></td></tr><tr><td>file</td><td><p>
+            			Used to output the file name where the logging request was
+            			issued.
+            			</p><p><b>WARNING</b> Generating caller location information is
+            			extremely slow. Its use should be avoided unless execution speed
+            			is not an issue.
+            			</p><p>
+            			See the note below on the availability of caller location information.
+            			</p></td></tr><tr><td>identity</td><td><p>
+            			Used to output the user name for the currently active user
+            			(Principal.Identity.Name).
+            			</p><p><b>WARNING</b> Generating caller information is
+            			extremely slow. Its use should be avoided unless execution speed
+            			is not an issue.
+            			</p></td></tr><tr><td>l</td><td>Equivalent to <b>location</b></td></tr><tr><td>L</td><td>Equivalent to <b>line</b></td></tr><tr><td>location</td><td><p>
+            			Used to output location information of the caller which generated
+            			the logging event.
+            			</p><p>
+            			The location information depends on the CLI implementation but
+            			usually consists of the fully qualified name of the calling
+            			method followed by the callers source the file name and line
+            			number between parentheses.
+            			</p><p>
+            			The location information can be very useful. However, its
+            			generation is <b>extremely</b> slow. Its use should be avoided
+            			unless execution speed is not an issue.
+            			</p><p>
+            			See the note below on the availability of caller location information.
+            			</p></td></tr><tr><td>level</td><td><p>
+            			Used to output the level of the logging event.
+            			</p></td></tr><tr><td>line</td><td><p>
+            			Used to output the line number from where the logging request
+            			was issued.
+            			</p><p><b>WARNING</b> Generating caller location information is
+            			extremely slow. Its use should be avoided unless execution speed
+            			is not an issue.
+            			</p><p>
+            			See the note below on the availability of caller location information.
+            			</p></td></tr><tr><td>logger</td><td><p>
+            			Used to output the logger of the logging event. The
+            			logger conversion specifier can be optionally followed by
+            			<i>precision specifier</i>, that is a decimal constant in
+            			brackets.
+                        </p><p>
+            			If a precision specifier is given, then only the corresponding
+            			number of right most components of the logger name will be
+            			printed. By default the logger name is printed in full.
+            			</p><p>
+            			For example, for the logger name "a.b.c" the pattern
+            			<b>%logger{2}</b> will output "b.c".
+            			</p></td></tr><tr><td>m</td><td>Equivalent to <b>message</b></td></tr><tr><td>M</td><td>Equivalent to <b>method</b></td></tr><tr><td>message</td><td><p>
+            			Used to output the application supplied message associated with 
+            			the logging event.
+            			</p></td></tr><tr><td>mdc</td><td><p>
+            			The MDC (old name for the ThreadContext.Properties) is now part of the
+            			combined event properties. This pattern is supported for compatibility
+            			but is equivalent to <b>property</b>.
+            			</p></td></tr><tr><td>method</td><td><p>
+            			Used to output the method name where the logging request was
+            			issued.
+            			</p><p><b>WARNING</b> Generating caller location information is
+            			extremely slow. Its use should be avoided unless execution speed
+            			is not an issue.
+            			</p><p>
+            			See the note below on the availability of caller location information.
+            			</p></td></tr><tr><td>n</td><td>Equivalent to <b>newline</b></td></tr><tr><td>newline</td><td><p>
+            			Outputs the platform dependent line separator character or
+            			characters.
+            			</p><p>
+            			This conversion pattern offers the same performance as using 
+            			non-portable line separator strings such as	"\n", or "\r\n". 
+            			Thus, it is the preferred way of specifying a line separator.
+            			</p></td></tr><tr><td>ndc</td><td><p>
+            			Used to output the NDC (nested diagnostic context) associated
+            			with the thread that generated the logging event.
+            			</p></td></tr><tr><td>p</td><td>Equivalent to <b>level</b></td></tr><tr><td>P</td><td>Equivalent to <b>property</b></td></tr><tr><td>properties</td><td>Equivalent to <b>property</b></td></tr><tr><td>property</td><td><p>
+            			Used to output the an event specific property. The key to 
+            			lookup must be specified within braces and directly following the
+            			pattern specifier, e.g. <b>%property{user}</b> would include the value
+            			from the property that is keyed by the string 'user'. Each property value
+            			that is to be included in the log must be specified separately.
+            			Properties are added to events by loggers or appenders. By default 
+            			the <span class="code">log4net:HostName</span> property is set to the name of machine on 
+            			which the event was originally logged.
+            			</p><p>
+            			If no key is specified, e.g. <b>%property</b> then all the keys and their
+            			values are printed in a comma separated list.
+            			</p><p>
+            			The properties of an event are combined from a number of different
+            			contexts. These are listed below in the order in which they are searched.
+            			</p><dl class="authored"><dt>the event properties</dt><dd>
+            					The event has <a href="P_log4net_Core_LoggingEvent_Properties.htm">Properties</a> that can be set. These 
+            					properties are specific to this event only.
+            					</dd><dt>the thread properties</dt><dd>
+            					The <a href="P_log4net_ThreadContext_Properties.htm">Properties</a> that are set on the current
+            					thread. These properties are shared by all events logged on this thread.
+            					</dd><dt>the global properties</dt><dd>
+            					The <a href="P_log4net_GlobalContext_Properties.htm">Properties</a> that are set globally. These 
+            					properties are shared by all the threads in the AppDomain.
+            					</dd></dl></td></tr><tr><td>r</td><td>Equivalent to <b>timestamp</b></td></tr><tr><td>stacktrace</td><td><p>
+            			Used to output the stack trace of the logging event
+            			The stack trace level specifier may be enclosed 
+            			between braces. For example, <b>%stacktrace{level}</b>.  
+            			If no stack trace level specifier is given then 1 is assumed 
+            			</p><p>
+            			Output uses the format:
+            			type3.MethodCall3 &gt; type2.MethodCall2 &gt; type1.MethodCall1
+            			</p><p>
+                        This pattern is not available for Compact Framework assemblies.
+                        </p></td></tr><tr><td>stacktracedetail</td><td><p>
+            			Used to output the stack trace of the logging event
+            			The stack trace level specifier may be enclosed 
+            			between braces. For example, <b>%stacktracedetail{level}</b>.  
+            			If no stack trace level specifier is given then 1 is assumed 
+            			</p><p>
+            			Output uses the format:
+                        type3.MethodCall3(type param,...) &gt; type2.MethodCall2(type param,...) &gt; type1.MethodCall1(type param,...)
+            			</p><p>
+                        This pattern is not available for Compact Framework assemblies.
+                        </p></td></tr><tr><td>t</td><td>Equivalent to <b>thread</b></td></tr><tr><td>timestamp</td><td><p>
+            			Used to output the number of milliseconds elapsed since the start
+            			of the application until the creation of the logging event.
+            			</p></td></tr><tr><td>thread</td><td><p>
+            			Used to output the name of the thread that generated the
+            			logging event. Uses the thread number if no name is available.
+            			</p></td></tr><tr><td>type</td><td><p>
+            			Used to output the fully qualified type name of the caller
+            			issuing the logging request. This conversion specifier
+            			can be optionally followed by <i>precision specifier</i>, that
+            			is a decimal constant in brackets.
+            			</p><p>
+            			If a precision specifier is given, then only the corresponding
+            			number of right most components of the class name will be
+            			printed. By default the class name is output in fully qualified form.
+            			</p><p>
+            			For example, for the class name "log4net.Layout.PatternLayout", the
+            			pattern <b>%type{1}</b> will output "PatternLayout".
+            			</p><p><b>WARNING</b> Generating the caller class information is
+            			slow. Thus, its use should be avoided unless execution speed is
+            			not an issue.
+            			</p><p>
+            			See the note below on the availability of caller location information.
+            			</p></td></tr><tr><td>u</td><td>Equivalent to <b>identity</b></td></tr><tr><td>username</td><td><p>
+            			Used to output the WindowsIdentity for the currently
+            			active user.
+            			</p><p><b>WARNING</b> Generating caller WindowsIdentity information is
+            			extremely slow. Its use should be avoided unless execution speed
+            			is not an issue.
+            			</p></td></tr><tr><td>utcdate</td><td><p>
+            			Used to output the date of the logging event in universal time. 
+            			The date conversion 
+            			specifier may be followed by a <i>date format specifier</i> enclosed 
+            			between braces. For example, <b>%utcdate{HH:mm:ss,fff}</b> or
+            			<b>%utcdate{dd MMM yyyy HH:mm:ss,fff}</b>.  If no date format specifier is 
+            			given then ISO8601 format is
+            			assumed (<a href="T_log4net_DateFormatter_Iso8601DateFormatter.htm">Iso8601DateFormatter</a>).
+            			</p><p>
+            			The date format specifier admits the same syntax as the
+            			time pattern string of the <span class="nolink">ToString(string)</span>.
+            			</p><p>
+            			For better results it is recommended to use the log4net date
+            			formatters. These can be specified using one of the strings
+            			"ABSOLUTE", "DATE" and "ISO8601" for specifying 
+            			<a href="T_log4net_DateFormatter_AbsoluteTimeDateFormatter.htm">AbsoluteTimeDateFormatter</a>, 
+            			<a href="T_log4net_DateFormatter_DateTimeDateFormatter.htm">DateTimeDateFormatter</a> and respectively 
+            			<a href="T_log4net_DateFormatter_Iso8601DateFormatter.htm">Iso8601DateFormatter</a>. For example, 
+            			<b>%utcdate{ISO8601}</b> or <b>%utcdate{ABSOLUTE}</b>.
+            			</p><p>
+            			These dedicated date formatters perform significantly
+            			better than <span class="nolink">ToString(string)</span>.
+            			</p></td></tr><tr><td>w</td><td>Equivalent to <b>username</b></td></tr><tr><td>x</td><td>Equivalent to <b>ndc</b></td></tr><tr><td>X</td><td>Equivalent to <b>mdc</b></td></tr><tr><td>%</td><td><p>
+            			The sequence %% outputs a single percent sign.
+            			</p></td></tr></table></div><p>
+            The single letter patterns are deprecated in favor of the 
+            longer more descriptive pattern names.
+            </p><p>
+            By default the relevant information is output as is. However,
+            with the aid of format modifiers it is possible to change the
+            minimum field width, the maximum field width and justification.
+            </p><p>
+            The optional format modifier is placed between the percent sign
+            and the conversion pattern name.
+            </p><p>
+            The first optional format modifier is the <i>left justification
+            flag</i> which is just the minus (-) character. Then comes the
+            optional <i>minimum field width</i> modifier. This is a decimal
+            constant that represents the minimum number of characters to
+            output. If the data item requires fewer characters, it is padded on
+            either the left or the right until the minimum width is
+            reached. The default is to pad on the left (right justify) but you
+            can specify right padding with the left justification flag. The
+            padding character is space. If the data item is larger than the
+            minimum field width, the field is expanded to accommodate the
+            data. The value is never truncated.
+            </p><p>
+            This behavior can be changed using the <i>maximum field
+            width</i> modifier which is designated by a period followed by a
+            decimal constant. If the data item is longer than the maximum
+            field, then the extra characters are removed from the
+            <i>beginning</i> of the data item and not from the end. For
+            example, it the maximum field width is eight and the data item is
+            ten characters long, then the first two characters of the data item
+            are dropped. This behavior deviates from the printf function in C
+            where truncation is done from the end.
+            </p><p>
+            Below are various format modifier examples for the logger
+            conversion specifier.
+            </p><div class="tablediv"><table class="dtTABLE" cellspacing="0"><tr><th>Format modifier</th><th>left justify</th><th>minimum width</th><th>maximum width</th><th>comment</th></tr><tr><td align="center">%20logger</td><td align="center">false</td><td align="center">20</td><td align="center">none</td><td><p>
+            				Left pad with spaces if the logger name is less than 20
+            				characters long.
+            				</p></td></tr><tr><td align="center">%-20logger</td><td align="center">true</td><td align="center">20</td><td align="center">none</td><td><p>
+            				Right pad with spaces if the logger 
+            				name is less than 20 characters long.
+            				</p></td></tr><tr><td align="center">%.30logger</td><td align="center">NA</td><td align="center">none</td><td align="center">30</td><td><p>
+            				Truncate from the beginning if the logger 
+            				name is longer than 30 characters.
+            				</p></td></tr><tr><td align="center">%20.30logger</td><td align="center">false</td><td align="center">20</td><td align="center">30</td><td><p>
+            				Left pad with spaces if the logger name is shorter than 20
+            				characters. However, if logger name is longer than 30 characters,
+            				then truncate from the beginning.
+            				</p></td></tr><tr><td align="center">%-20.30logger</td><td align="center">true</td><td align="center">20</td><td align="center">30</td><td><p>
+            				Right pad with spaces if the logger name is shorter than 20
+            				characters. However, if logger name is longer than 30 characters,
+            				then truncate from the beginning.
+            				</p></td></tr></table></div><p><b>Note about caller location information.</b><br />
+            The following patterns <span class="code">%type %file %line %method %location %class %C %F %L %l %M</span> 
+            all generate caller location information.
+            Location information uses the <span class="code">System.Diagnostics.StackTrace</span> class to generate
+            a call stack. The caller's information is then extracted from this stack.
+            </p><div class="alert"><table><tr><th><img src="../icons/alert_caution.gif" alt="Caution note" /> Caution</th></tr><tr><td><p>
+            The <span class="code">System.Diagnostics.StackTrace</span> class is not supported on the 
+            .NET Compact Framework 1.0 therefore caller location information is not
+            available on that framework.
+            </p></td></tr></table></div><div class="alert"><table><tr><th><img src="../icons/alert_caution.gif" alt="Caution note" /> Caution</th></tr><tr><td><p>
+            The <span class="code">System.Diagnostics.StackTrace</span> class has this to say about Release builds:
+            </p><p>
+            "StackTrace information will be most informative with Debug build configurations. 
+            By default, Debug builds include debug symbols, while Release builds do not. The 
+            debug symbols contain most of the file, method name, line number, and column 
+            information used in constructing StackFrame and StackTrace objects. StackTrace 
+            might not report as many method calls as expected, due to code transformations 
+            that occur during optimization."
+            </p><p>
+            This means that in a Release build the caller information may be incomplete or may 
+            not exist at all! Therefore caller location information cannot be relied upon in a Release build.
+            </p></td></tr></table></div><p>
+            Additional pattern converters may be registered with a specific <span class="selflink">PatternLayout</span>
+            instance using the <span class="nolink">[M:AddConverter(string, Type)]</span> method.
+            </p><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Examples</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div>
+            This is a more detailed pattern.
+            <div class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID0EAAFBA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EAAFBA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAAFBA_code_Div1" class="OH_CodeSnippetContainerCode" style="display: block"><pre xml:space="preserve">&lt;b&gt;%timestamp [%thread] %level %logger %ndc - %message%newline&lt;/b&gt;</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAAFBA");</script><div class="OH_CollapsibleAreaRegion"><div class="OH_regiontitle">Examples</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div>
+            A similar pattern except that the relative time is
+            right padded if less than 6 digits, thread name is right padded if
+            less than 15 characters and truncated if longer and the logger
+            name is left padded if shorter than 30 characters and truncated if
+            longer.
+            <div class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID0EAAEBA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EAAEBA');return false;" title="Copy">Copy</a></div></div><div id="ID0EAAEBA_code_Div1" class="OH_CodeSnippetContainerCode" style="display: block"><pre xml:space="preserve">&lt;b&gt;%<span class="highlight-number">-6</span>timestamp [%<span class="highlight-number">15.15</span>thread] %<span class="highlight-number">-5</span>level %<span class="highlight-number">30.30</span>logger %ndc - %message%newline&lt;/b&gt;</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAAEBA");</script><div class="OH_CollapsibleAreaRegion" id="seeAlsoSection"><div class="OH_regiontitle">See Also</div><div class="OH_CollapsibleArea_HrDiv"><hr class="OH_CollapsibleArea_Hr" /></div></div><div class="OH_clear"> </div><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_log4net_Layout.htm">log4net.Layout Namespace</a></div></div></div></div></div><div id="OH_footer" class="OH_footer">Apache log4net, Apache and log4net are trademarks of The Apache Software Foundation.<p><a href="http://logging.apache.org/log4net/" target="_blank">Copyright 2004-2017 The Apache Software Foundation</a></p><div class="OH_feedbacklink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:http%3A%2F%2Flogging.apache.org%2Flog4net%2Fmail-lists.html?Subject=Apache log4net™ SDK Documentation">http://logging.apache.org/log4net/mail-lists.html</a></div><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script> </div></body></html>
