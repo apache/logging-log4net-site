@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteBase "/log4net/"
+
+RewriteCond %{REQUEST_URI} !^/log4net/log4net-1.*$
+RewriteRule ^(.*)/release/sdk/html/AllMembers_(.*)$ $1/release/sdk/html/$2
+
+RewriteCond %{REQUEST_URI} !^/log4net/log4net-\d.\d.*$
+RewriteRule ^(.*)$ log4net-2.0.9/$1
+
