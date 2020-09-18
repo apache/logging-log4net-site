@@ -128,7 +128,7 @@
       <Version>
         <name>Apache log4net 2.0.11</name>
         <created>2019-09-18</created>
-        <revision>2.0.1]1</revision>
+        <revision>2.0.11</revision>
       </Version>
     </release>
   </Project>
