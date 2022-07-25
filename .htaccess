@@ -6,5 +6,5 @@ RewriteCond %{REQUEST_URI} !^/log4net/log4net-1.*$
 RewriteRule ^(.*)/release/sdk/html/AllMembers_(.*)$ $1/release/sdk/html/$2
 
 RewriteCond %{REQUEST_URI} !^/log4net/log4net-\d.\d.*$
-RewriteRule ^(.*)$ log4net-2.0.14/$1
+RewriteRule ^(.*)$ log4net-2.0.15/$1
 
