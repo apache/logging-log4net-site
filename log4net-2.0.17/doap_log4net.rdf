@@ -124,12 +124,5 @@
         <revision>2.0.10</revision>
       </Version>
     </release>
-    <release>
-      <Version>
-        <name>Apache log4net 2.0.17</name>
-        <created>2024-03-15</created>
-        <revision>2.0.17</revision>
-      </Version>
-    </release>
   </Project>
 </rdf:RDF>
