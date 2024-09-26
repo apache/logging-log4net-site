@@ -219,36 +219,56 @@ limitations under the License. -->
         
 <li>
           
+<ul>
+            
+<li>
+              Verify and extract (Windows)
+              
+<div>
+<pre class="code">&amp; verify-release.ps1</pre></div>
+            </li>
+            
+<li>
+              Verify and extract (Linux)
+              
+<ol style="list-style-type: decimal">
+                
+<li>
+                  
 <p>Verify checksums</p>
-          
+                  
 <div>
 <pre class="code">sha512sum --check *.sha512</pre></div>
-        </li>
-        
+                </li>
+                
 <li>
-          
+                  
 <p>Import the release manager GPG keys, unless you haven&#x2019;t earlier done so</p>
-          
+                  
 <div>
 <pre class="code">wget -O - https://downloads.apache.org/logging/KEYS | gpg --import</pre></div>
-        </li>
-        
+                </li>
+                
 <li>
-          
+                  
 <p>Verify signatures</p>
-          
+                  
 <div>
 <pre class="code">for sigFile in *.asc; do gpg --verify $sigFile; done</pre></div>
-        </li>
-        
+                </li>
+                
 <li>
-          
+                  
 <p>Extract sources</p>
-          
+                  
 <div>
 <pre class="code">umask 0022
 unzip -q *-src.zip -d src
 cd src</pre></div>
+                </li>
+              </ol>
+            </li>
+          </ul>
         </li>
         
 <li>
@@ -281,8 +301,7 @@ dotnet test /logging-log4net/src/log4net.sln
 <div>
 <pre class="code">winget install -e --id Mono.Mono
 winget install Microsoft.DotNet.SDK.8
-dotnet test ./log4net.sln`
-          </pre></div>
+dotnet test ./log4net.sln</pre></div>
         </li>
       </ol>
     </div>
