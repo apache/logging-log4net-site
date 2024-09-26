@@ -207,80 +207,97 @@ limitations under the License. -->
         Releases of log4net can be verified with following steps:
       </p>
       
-<ol style="list-style-type: decimal">
-        
-<li>
-          
-<p>Check out the release distribution</p>
-          
-<div>
-<pre class="code">svn co https://dist.apache.org/repos/dist/dev/logging/log4net/source/{releaseVersion} log4net-{releaseVersion} &amp;&amp; cd $_</pre></div>
-        </li>
-        
-<li>
-          
 <ul>
+        
+<li>
+          Windows
+          
+<ol style="list-style-type: decimal">
             
 <li>
-              Verify and extract (Windows)
+              Check out the release distribution
+              
+<div>
+<pre class="code">svn co https://dist.apache.org/repos/dist/dev/logging/log4net/source/{releaseVersion} log4net-{releaseVersion}
+pushd log4net-{releaseVersion}</pre></div>
+            </li>
+            
+<li>
+              Verify and extract
               
 <div>
 <pre class="code">&amp; ./verify-release.ps1</pre></div>
             </li>
             
 <li>
-              Verify and extract (Linux)
               
-<ol style="list-style-type: decimal">
-                
+<p>Verify the build</p>
+              
+<div>
+<pre class="code">winget install -e --id Mono.Mono
+winget install Microsoft.DotNet.SDK.8
+dotnet test ./src/log4net.sln</pre></div>
+            </li>
+          </ol>
+        </li>
+        
 <li>
-                  
+          Linux
+          
+<ol style="list-style-type: decimal">
+            
+<li>
+              
+<p>Check out the release distribution</p>
+              
+<div>
+<pre class="code">svn co https://dist.apache.org/repos/dist/dev/logging/log4net/{releaseVersion} log4net-{releaseVersion} &amp;&amp; cd $_</pre></div>
+            </li>
+            
+<li>
+              
 <p>Verify checksums</p>
-                  
+              
 <div>
 <pre class="code">sha512sum --check *.sha512</pre></div>
-                </li>
-                
+            </li>
+            
 <li>
-                  
+              
 <p>Import the release manager GPG keys, unless you haven&#x2019;t earlier done so</p>
-                  
+              
 <div>
 <pre class="code">wget -O - https://downloads.apache.org/logging/KEYS | gpg --import</pre></div>
-                </li>
-                
+            </li>
+            
 <li>
-                  
+              
 <p>Verify signatures</p>
-                  
+              
 <div>
 <pre class="code">for sigFile in *.asc; do gpg --verify $sigFile; done</pre></div>
-                </li>
-                
+            </li>
+            
 <li>
-                  
+              
 <p>Extract sources</p>
-                  
+              
 <div>
 <pre class="code">umask 0022
 unzip -q *-src.zip -d src
 cd src</pre></div>
-                </li>
-              </ol>
             </li>
-          </ul>
-        </li>
-        
-<li>
-          
-<p>Verify the build (docker)</p>
-          
-<ul>
-            
-<li>install <a class="externalLink" href="https://docs.docker.com/engine/install/">docker</a> (if you haven't already) </li>
             
 <li>
               
+<p>Verify the build</p>
+              
+<ul>
+                
+<li>install <a class="externalLink" href="https://docs.docker.com/engine/install/">docker</a> (if you haven't already) </li>
+                
+<li>
+                  
 <div>
 <pre class="code">docker build -t log4net-builder .
 docker run -it log4net-builder
@@ -288,22 +305,13 @@ docker run -it log4net-builder
 # - install all dependencies in the container
 # - build src/log4net.sln
 # inside the container run
-dotnet test /logging-log4net/src/log4net.sln
-              </pre></div>
+dotnet test /logging-log4net/src/log4net.sln</pre></div>
+                </li>
+              </ul>
             </li>
-          </ul>
+          </ol>
         </li>
-        
-<li>
-          
-<p>Verify the build (Windows)</p>
-          
-<div>
-<pre class="code">winget install -e --id Mono.Mono
-winget install Microsoft.DotNet.SDK.8
-dotnet test ./log4net.sln</pre></div>
-        </li>
-      </ol>
+      </ul>
     </div>
   
 
