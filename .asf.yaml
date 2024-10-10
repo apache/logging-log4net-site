@@ -2,7 +2,7 @@ notifications:
   commits:      commits@logging.apache.org
   issues:       notifications@logging.apache.org
   pullrequests: notifications@logging.apache.org
-  jira_options: link label comment 
+  jira_options: link label comment
 
 
 staging:
