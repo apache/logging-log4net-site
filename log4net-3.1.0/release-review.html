@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Development :: Apache log4net</title>
-    <link rel="canonical" href="https://logging.apache.org/log4net/development.html">
+    <title>Release verification :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/release-review.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
 <link rel="stylesheet" href="./_/css/site.css">
 <link rel="icon" href="./_/../_images/favicon.ico" type="image/x-icon">
@@ -67,7 +67,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="download.html">Download</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="development.html">Development</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -100,7 +100,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="release-notes.html">Release notes</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="release-review.html">Release verification</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -124,149 +124,166 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="development.html">Development</a></li>
+    <li><a href="release-review.html">Release verification</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/development.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/release-review.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Development</h1>
+<h1 class="page">Release verification</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>log4net uses <a href="https://github.com/apache/logging-log4net">GitHub</a> for source code management.</p>
+<p>Releases of log4net can be verified with following steps:</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="building"><a class="anchor" href="#building"></a>Building log4net</h2>
+<h2 id="windows"><a class="anchor" href="#windows"></a>Windows</h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prerequisites (winget - in case of problems see next section choco)</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">winget install -e --id GnuPG.Gpg4win
+winget install -e --id TortoiseSVN.TortoiseSVN  # or any other subversion client
+winget install -e --id Mono.Mono
+winget install -e --id Microsoft.DotNet.SDK.8</code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>Log4net provides support for the following targets</p>
+<p>After installation, verify that gpg and svn are in the path and add them when not.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>net462</p>
 </li>
 <li>
-<p>netstandard2.0</p>
-</li>
-</ul>
+<p>Prerequisites (choco - only in case of problems with winget)</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+choco install gpg4win
+choco install tortoisesvn  # or any other subversion client
+choco install mono
+choco install dotnet-8.0-sdk</code></pre>
 </div>
-<div class="sect2">
-<h3 id="windows"><a class="anchor" href="#windows"></a>Windows</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install Visual Studio Build Tools (at least VS 2022)</p>
+</div>
 </li>
 <li>
-<p>install dotnet (v8+) and the .NET SDK (current latest)</p>
+<p>Check out the release distribution</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">svn co https://dist.apache.org/repos/dist/dev/logging/log4net/{releaseVersion} log4net-{releaseVersion}
+pushd log4net-{releaseVersion}</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>in the project folder</p>
+<p>Verify and extract</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">&amp; ./verify-release.ps1</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>switch to the directory where you extracted the sources (in case you didn&#8217;t use verify-release.ps1)</p>
+</li>
+<li>
+<p>Verify the build</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">dotnet test ./src/log4net.sln</code></pre>
 </div>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="docker"><a class="anchor" href="#docker"></a>Docker</h3>
-<div class="ulist">
-<ul>
+</div>
+<div class="sect1">
+<h2 id="linux"><a class="anchor" href="#linux"></a>Linux</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>install docker (if you haven&#8217;t already)</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.docker.com/engine/install/" class="bare">https://docs.docker.com/engine/install/</a></p>
+<p>Check out the release distribution:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">export releaseVersion=...
+svn co https://dist.apache.org/repos/dist/dev/logging/log4net/$releaseVersion \
+  log4net-$releaseVersion &amp;&amp; cd $_</code></pre>
+</div>
+</div>
+<details>
+<summary class="title">Click to see how to check out using <code>wget</code> instead of <code>svn</code></summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mkdir log4net-$releaseVersion&gt; &amp;&amp; cd $_
+wget --cut-dirs=6 \
+     --no-host-directories \
+     --no-parent \
+     --recursive \
+     https://dist.apache.org/repos/dist/dev/logging/log4net/$releaseVersion/</code></pre>
+</div>
+</div>
+</div>
+</details>
 </li>
-</ul>
+<li>
+<p>Verify checksums:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sha512sum --check *.sha512</code></pre>
+</div>
 </div>
 </li>
 <li>
-<p>in logging/log4net run</p>
+<p>Import the release manager GPG keys, unless you haven&#8217;t earlier done so:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">wget -O - https://downloads.apache.org/logging/KEYS | gpg --import</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify signatures:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">for sigFile in *.asc; do gpg --verify $sigFile ${sigFile%.asc}; done</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Extract sources:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">umask 0022
+unzip -q *source*.zip -d src
+cd src</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify the build (install <a href="https://docs.docker.com/engine/install">docker</a>, if you haven&#8217;t already):</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker build -t log4net-builder .
-docker run -it log4net-builder</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>this will</p>
-<div class="ulist">
-<ul>
-<li>
-<p>install all dependencies in the container</p>
-</li>
-<li>
-<p>build src/log4net.sln</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>inside the container run</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">dotnet test /logging-log4net/src/log4net.sln</code></pre>
+docker run -it log4net-builder
+# this will
+# - install all dependencies in the container
+# - build src/log4net.sln
+# inside the container run
+dotnet test /logging-log4net/src/log4net.sln</code></pre>
 </div>
 </div>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="linux-macos"><a class="anchor" href="#linux-macos"></a>Linux / MacOS</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install the dotnet SDK - v8 or better</p>
-</li>
-<li>
-<p>install Mono (you&#8217;re going to need it to target certain versions of .NET)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="site"><a class="anchor" href="#site"></a>Site</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can build and view the website as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash/powershell hljs" data-lang="bash/powershell">./mvnw -N site</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can view the generated website with a browser by pointing it to <code>target/site</code> directory.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="release-instructions"><a class="anchor" href="#release-instructions"></a>Release instructions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>log4net employs the CI/CD foundation provided by the <a href="https://logging.apache.org/logging-parent"><code>logging-parent</code></a>.
-You can simply use its release instructions.</p>
+</ol>
 </div>
 </div>
 </div>

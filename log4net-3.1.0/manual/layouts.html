@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Layouts :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/layouts.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+<link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/../_images/favicon.ico" type="image/x-icon">
+<!-- `@asciidoctor/tabs` extension styles -->
+<link rel="stylesheet" href="../_/css/vendor/tabs.css">
+<style>
+  /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
+  .doc .admonitionblock.important .icon { background-color: #f70; }
+  .doc .admonitionblock.warning .icon { background-color: #e40046; }
+  /* Default `h4`, `h5`, and `h6` are smaller than the normal text, fix header font sizing: */
+  .doc h1 { font-size: 1.9rem; }
+  .doc h2 { font-size: 1.7rem; }
+  .doc h3 { font-size: 1.5rem; font-weight: 400; }
+  .doc h4 { font-size: 1.3rem; font-weight: 500; }
+  .doc h5 { font-size: 1.1rem; font-weight: 500; text-decoration: underline; }
+  .doc h6 { font-size: 0.9rem; font-weight: 500; text-decoration: underline; }
+  /* Default `code`, `pre`, and `.colist` (source code annotations) fonts are too big, adjust them: */
+  .doc .colist>table code, .doc p code, .doc thead code { font-size: 0.8em; }
+  .doc pre { font-size: 0.7rem; }
+  .doc .colist { font-size: 0.75rem; }
+  /* Make links more visible: */
+  .doc a { text-decoration: underline; }
+  .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Tab header fonts aren't rendered good, adjusting the font weight: */
+  .tablist > ul li { font-weight: 500; }
+  /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
+  .toc .toc-menu li[data-level="4"] a {
+    padding-left: 2.75rem;
+  }
+  /* Replace the default highlight.js color for strings from red (unnecessarily signaling something negative) to green: */
+  .hljs-string {
+    color: #0f8532;
+  }
+</style>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <span class="navbar-item title">Apache log4net</span>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="appenders.html">Appenders</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuration-examples.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="filters.html">Filters</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="layouts.html">Layouts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-review.html">Release verification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">Manual</a></li>
+    <li><a href="layouts.html">Layouts</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/layouts.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Layouts</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>An <a href="appenders.html" class="xref page">appender</a> uses a <strong>layout</strong> to encode a LogEvent into a form that meets the needs of whatever will be consuming the log event.
+This page will try to answer following questions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#concerns">What are some common concerns shared by all predefined layouts?</a></p>
+</li>
+<li>
+<p><a href="#collection">Which layouts does log4net provide?</a></p>
+</li>
+<li>
+<p><a href="#extending">How can you create custom layouts?</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="concerns"><a class="anchor" href="#concerns"></a>Common concerns</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section introduces you to some common concerns shared by almost all predefined layouts that you need to be aware of while using them.</p>
+</div>
+<div class="sect2">
+<h3 id="structured-logging"><a class="anchor" href="#structured-logging"></a>Structured logging</h3>
+<div class="paragraph">
+<p>In almost any modern production deployment, logs are no more written to files read by engineers while troubleshooting, but forwarded to log ingestion systems (Elasticsearch, Google Cloud Logging, etc.) for several observability use cases ranging from logging to metrics.
+This necessitates the applications to <em>structure</em> their logs in a machine-readable way ready to be delivered to an external system.
+This act of encoding logs following a certain structure is called <strong>structured logging</strong>.</p>
+</div>
+<div class="paragraph">
+<p>log4net tries to provide good support for structured logging.
+To create an end-to-end experience, it provides several layouts supporting structured logging.</p>
+</div>
+<div class="paragraph">
+<p>We recommend XmlLayout or <a href="https://gitlab.com/gdziadkiewicz/log4net.Ext.Json/-/blob/develop/log4net.Ext.Json/Layout/SerializedLayout.cs">JsonLayout</a> for structured logging purposes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="collection"><a class="anchor" href="#collection"></a>Collection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>log4net bundles predefined layouts to assist in several common deployment use cases.</p>
+</div>
+<div class="sect2">
+<h3 id="pattern-layout"><a class="anchor" href="#pattern-layout"></a><a id="PatternLayout"></a> Pattern Layout</h3>
+<div class="paragraph">
+<p><code>PatternLayout</code> is a customizable, efficient, garbage-free, and human-readable string generating layout using a user-provided pattern.
+It is analogous to <code>String.Format()</code> with specialized directives on injecting certain properties of a <code>LogEvent</code>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pattern Layout is not intended for <em>structural logging</em> purposes.
+For production environments, you are strongly advised to use XmlLayout or JsonLayout producing XML/JSON output ready to be delivered to log ingestion systems such as Elasticsearch or Google Cloud Logging.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A conversion pattern is composed of literal text and format control expressions.
+For instance, given the <code>%timestamp [%thread] %-5level %logger - %message%newline</code> pattern, following statements</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-charp hljs" data-lang="charp">logger.Debug("Woof!");
+logger.Warn("Meow!");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will yield the output</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">2024-12-21 14:07:41,517 [main] DEBUG Animals.Carnivora.Dog - Woof!
+2024-12-21 14:07:41,517 [main] WARN  Animals.Carnivora.Dog - Meow!</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="layout-list"><a class="anchor" href="#layout-list"></a><a id="LayoutList"></a> List of Layouts</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Layout.ExceptionLayout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renders the exception text from the logging event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Layout.PatternLayout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formats the logging event according to a flexible set of formatting flags.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Layout.RawTimeStampLayout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extracts the timestamp from the logging event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Layout.RawUtcTimeStampLayout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extracts the timestamp from the logging event in Universal Time.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Layout.SimpleLayout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formats the logging event very simply: [level] - [message]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Layout.XmlLayout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formats the logging event as an XML element.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eventlog4net.Layout.XmlLayoutSchemaLog4j</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formats the logging event as an XML element that complies with the log4j event dtd.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Copyright © 1999-2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
+  </p>
+  <p>
+    Apache, Log4j, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.
+    Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+    Other names may be trademarks of their respective owners.
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<!-- `@asciidoctor/tabs` extension scripts -->
+<script async src="../_/js/vendor/tabs.js"></script>
+  </body>
+</html>

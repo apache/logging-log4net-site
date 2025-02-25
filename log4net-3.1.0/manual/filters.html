@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Development :: Apache log4net</title>
-    <link rel="canonical" href="https://logging.apache.org/log4net/development.html">
+    <title>Filters :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/filters.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
-<link rel="stylesheet" href="./_/css/site.css">
-<link rel="icon" href="./_/../_images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/../_images/favicon.ico" type="image/x-icon">
 <!-- `@asciidoctor/tabs` extension styles -->
-<link rel="stylesheet" href="./_/css/vendor/tabs.css">
+<link rel="stylesheet" href="../_/css/vendor/tabs.css">
 <style>
   /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
   .doc .admonitionblock.important .icon { background-color: #f70; }
@@ -60,48 +60,48 @@
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="index.html">Home</a></h3>
+    <h3 class="title"><a href="../index.html">Home</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="download.html">Download</a>
+    <a class="nav-link" href="../download.html">Download</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="development.html">Development</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../development.html">Development</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="manual/index.html">Manual</a>
+    <a class="nav-link" href="index.html">Manual</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/appenders.html">Appenders</a>
+    <a class="nav-link" href="appenders.html">Appenders</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="manual/configuration.html">Configuration</a>
+    <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration-examples.html">Configuration</a>
+    <a class="nav-link" href="configuration-examples.html">Configuration</a>
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/filters.html">Filters</a>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="filters.html">Filters</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/layouts.html">Layouts</a>
+    <a class="nav-link" href="layouts.html">Layouts</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="features.html">Features</a>
+    <a class="nav-link" href="../features.html">Features</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="release-notes.html">Release notes</a>
+    <a class="nav-link" href="../release-notes.html">Release notes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="release-review.html">Release verification</a>
+    <a class="nav-link" href="../release-review.html">Release verification</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
@@ -120,154 +120,89 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="development.html">Development</a></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">Manual</a></li>
+    <li><a href="filters.html">Filters</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/development.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/filters.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Development</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">Filters</h1>
 <div class="paragraph">
-<p>log4net uses <a href="https://github.com/apache/logging-log4net">GitHub</a> for source code management.</p>
+<p>Filters are log4net plugins that evaluate the parameters of a logging call or a log event and return one of three results:</p>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ACCEPT</dt>
+<dd>
+<p>The filter accepts the log event.
+This effectively causes other filters in the same filtering stage to be skipped.</p>
+</dd>
+<dt class="hdlist1">DENY</dt>
+<dd>
+<p>The filter drops the log event.</p>
+</dd>
+<dt class="hdlist1">NEUTRAL</dt>
+<dd>
+<p>log4net behaves as if the filter was not present.
+It is evaluated by the next filter in the filter chain.</p>
+</dd>
+</dl>
 </div>
-</div>
-<div class="sect1">
-<h2 id="building"><a class="anchor" href="#building"></a>Building log4net</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Log4net provides support for the following targets</p>
+<p>Any filter along the way can accept the event and stop processing, deny the event and stop processing, or allow the event on to the next filter.
+If the event gets to the end of the filter chain without being denied it is implicitly accepted and will be logged.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>net462</p>
-</li>
-<li>
-<p>netstandard2.0</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="windows"><a class="anchor" href="#windows"></a>Windows</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install Visual Studio Build Tools (at least VS 2022)</p>
-</li>
-<li>
-<p>install dotnet (v8+) and the .NET SDK (current latest)</p>
-</li>
-<li>
-<p>in the project folder</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">dotnet test ./src/log4net.sln</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="docker"><a class="anchor" href="#docker"></a>Docker</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install docker (if you haven&#8217;t already)</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.docker.com/engine/install/" class="bare">https://docs.docker.com/engine/install/</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>in logging/log4net run</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker build -t log4net-builder .
-docker run -it log4net-builder</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>this will</p>
-<div class="ulist">
-<ul>
-<li>
-<p>install all dependencies in the container</p>
-</li>
-<li>
-<p>build src/log4net.sln</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>inside the container run</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">dotnet test /logging-log4net/src/log4net.sln</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="linux-macos"><a class="anchor" href="#linux-macos"></a>Linux / MacOS</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install the dotnet SDK - v8 or better</p>
-</li>
-<li>
-<p>install Mono (you&#8217;re going to need it to target certain versions of .NET)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="site"><a class="anchor" href="#site"></a>Site</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>You can build and view the website as follows:</p>
+<p>This filter will deny events that have a level that is lower than INFO or higher than FATAL. All events between INFO and FATAL will be logged.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash/powershell hljs" data-lang="bash/powershell">./mvnw -N site</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter type="log4net.Filter.LevelRangeFilter"&gt;
+  &lt;levelMin value="INFO" /&gt;
+  &lt;levelMax value="FATAL" /&gt;
+&lt;/filter&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can view the generated website with a browser by pointing it to <code>target/site</code> directory.</p>
+<p>If we want to only allow messages through that have a specific substring (e.g. 'database') then we need to specify the following filters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter type="log4net.Filter.StringMatchFilter"&gt;
+  &lt;stringToMatch value="database" /&gt;
+&lt;/filter&gt;
+&lt;filter type="log4net.Filter.DenyAllFilter" /&gt;</code></pre>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="release-instructions"><a class="anchor" href="#release-instructions"></a>Release instructions</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>log4net employs the CI/CD foundation provided by the <a href="https://logging.apache.org/logging-parent"><code>logging-parent</code></a>.
-You can simply use its release instructions.</p>
+<p>The first filter will look for the substring 'database' in the message text of the event.
+If the text is found the filter will accept the message and filter processing will stop, the message will be logged.
+If the substring is not found the event will be passed to the next filter to process.
+If there is no next filter the event would be implicitly accepted and would be logged.
+But because we don&#8217;t want the non matching events to be logged we need to use a log4net.Filter.DenyAllFilter that will just deny all events that reach it.
+This filter is only useful at the end of the filter chain.</p>
 </div>
+<div class="paragraph">
+<p>If we want to allow events that have either 'database' or 'ldap' in the message text we can use the following filters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter type="log4net.Filter.StringMatchFilter"&gt;
+  &lt;stringToMatch value="database"/&gt;
+&lt;/filter&gt;
+&lt;filter type="log4net.Filter.StringMatchFilter"&gt;
+  &lt;stringToMatch value="ldap"/&gt;
+&lt;/filter&gt;
+&lt;filter type="log4net.Filter.DenyAllFilter" /&gt;</code></pre>
 </div>
 </div>
 </article>
@@ -286,9 +221,9 @@ You can simply use its release instructions.</p>
     Other names may be trademarks of their respective owners.
   </p>
 </footer>
-<script id="site-script" src="./_/js/site.js" data-ui-root-path="./_"></script>
-<script async src="./_/js/vendor/highlight.js"></script>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
 <!-- `@asciidoctor/tabs` extension scripts -->
-<script async src="./_/js/vendor/tabs.js"></script>
+<script async src="../_/js/vendor/tabs.js"></script>
   </body>
 </html>

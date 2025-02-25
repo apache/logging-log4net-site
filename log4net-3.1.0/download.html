@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Development :: Apache log4net</title>
-    <link rel="canonical" href="https://logging.apache.org/log4net/development.html">
+    <title>Download :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/download.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
 <link rel="stylesheet" href="./_/css/site.css">
 <link rel="icon" href="./_/../_images/favicon.ico" type="image/x-icon">
@@ -64,10 +64,10 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="download.html">Download</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="development.html">Development</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -124,151 +124,42 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="development.html">Development</a></li>
+    <li><a href="download.html">Download</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/development.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/download.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Development</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">Download</h1>
 <div class="paragraph">
-<p>log4net uses <a href="https://github.com/apache/logging-log4net">GitHub</a> for source code management.</p>
+<p>You can manually download all published log4net distributions, verify them, and see their licensing information by following the instructions in the <a href="https://logging.apache.org/download.html">Download page</a> of <a href="https://logging.apache.org">Logging Services</a>.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="building"><a class="anchor" href="#building"></a>Building log4net</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Log4net provides support for the following targets</p>
-</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>net462</p>
+<p>Are you looking for <strong>the log4net installation instructions</strong>?
+Proceed to <a href="manual/installation.html" class="xref page">Install Apache log4net</a>.</p>
 </li>
 <li>
-<p>netstandard2.0</p>
+<p>Are you looking for the list of changes associated with a particular release?
+Proceed to <a href="release-notes.html" class="xref page">Release notes</a>.</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="windows"><a class="anchor" href="#windows"></a>Windows</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install Visual Studio Build Tools (at least VS 2022)</p>
-</li>
-<li>
-<p>install dotnet (v8+) and the .NET SDK (current latest)</p>
-</li>
-<li>
-<p>in the project folder</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">dotnet test ./src/log4net.sln</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="docker"><a class="anchor" href="#docker"></a>Docker</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install docker (if you haven&#8217;t already)</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.docker.com/engine/install/" class="bare">https://docs.docker.com/engine/install/</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>in logging/log4net run</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker build -t log4net-builder .
-docker run -it log4net-builder</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>this will</p>
-<div class="ulist">
-<ul>
-<li>
-<p>install all dependencies in the container</p>
-</li>
-<li>
-<p>build src/log4net.sln</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>inside the container run</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">dotnet test /logging-log4net/src/log4net.sln</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="linux-macos"><a class="anchor" href="#linux-macos"></a>Linux / MacOS</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install the dotnet SDK - v8 or better</p>
-</li>
-<li>
-<p>install Mono (you&#8217;re going to need it to target certain versions of .NET)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="site"><a class="anchor" href="#site"></a>Site</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can build and view the website as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash/powershell hljs" data-lang="bash/powershell">./mvnw -N site</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can view the generated website with a browser by pointing it to <code>target/site</code> directory.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="release-instructions"><a class="anchor" href="#release-instructions"></a>Release instructions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>log4net employs the CI/CD foundation provided by the <a href="https://logging.apache.org/logging-parent"><code>logging-parent</code></a>.
-You can simply use its release instructions.</p>
-</div>
-</div>
+</td>
+</tr>
+</table>
 </div>
 </article>
   </div>

@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Development :: Apache log4net</title>
-    <link rel="canonical" href="https://logging.apache.org/log4net/development.html">
+    <title>Manual :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/index.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
-<link rel="stylesheet" href="./_/css/site.css">
-<link rel="icon" href="./_/../_images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/../_images/favicon.ico" type="image/x-icon">
 <!-- `@asciidoctor/tabs` extension styles -->
-<link rel="stylesheet" href="./_/css/vendor/tabs.css">
+<link rel="stylesheet" href="../_/css/vendor/tabs.css">
 <style>
   /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
   .doc .admonitionblock.important .icon { background-color: #f70; }
@@ -60,48 +60,48 @@
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="index.html">Home</a></h3>
+    <h3 class="title"><a href="../index.html">Home</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="download.html">Download</a>
+    <a class="nav-link" href="../download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../development.html">Development</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="development.html">Development</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="manual/index.html">Manual</a>
+    <a class="nav-link" href="index.html">Manual</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/appenders.html">Appenders</a>
+    <a class="nav-link" href="appenders.html">Appenders</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="manual/configuration.html">Configuration</a>
+    <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration-examples.html">Configuration</a>
+    <a class="nav-link" href="configuration-examples.html">Configuration</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/filters.html">Filters</a>
+    <a class="nav-link" href="filters.html">Filters</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/layouts.html">Layouts</a>
+    <a class="nav-link" href="layouts.html">Layouts</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="features.html">Features</a>
+    <a class="nav-link" href="../features.html">Features</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="release-notes.html">Release notes</a>
+    <a class="nav-link" href="../release-notes.html">Release notes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="release-review.html">Release verification</a>
+    <a class="nav-link" href="../release-review.html">Release verification</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
@@ -120,153 +120,103 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="development.html">Development</a></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">Manual</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/development.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/index.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Development</h1>
+<h1 class="page">Manual</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>log4net uses <a href="https://github.com/apache/logging-log4net">GitHub</a> for source code management.</p>
+<p>log4net is a tool to help the programmer output log statements to a variety of output targets.</p>
+</div>
+<div class="paragraph">
+<p>In case of problems with an application, it is helpful to enable logging so that the problem can be located.
+With log4net it is possible to enable logging at runtime without modifying the application binary.
+The log4net package is designed so that log statements can remain in <em>production</em> code without incurring a high performance cost.
+It follows that the speed of logging (or rather not logging) is crucial.</p>
+</div>
+<div class="paragraph">
+<p>At the same time, log output can be so voluminous that it quickly becomes overwhelming.
+One of the distinctive features of log4net (and common to all of
+the log4x libraries) is the notion of <em>hierarchical loggers</em>.
+Using these loggers it is possible to selectively control
+which log statements are output at arbitrary granularity.</p>
+</div>
+<div class="paragraph">
+<p>log4net is designed with two distinct goals in mind: speed and flexibility.
+There is a tight balance between these two requirements.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="building"><a class="anchor" href="#building"></a>Building log4net</h2>
+<h2 id="_what_are_the_prerequisites_for_log4net"><a class="anchor" href="#_what_are_the_prerequisites_for_log4net"></a>What are the prerequisites for log4net?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Log4net provides support for the following targets</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>net462</p>
-</li>
-<li>
-<p>netstandard2.0</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="windows"><a class="anchor" href="#windows"></a>Windows</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install Visual Studio Build Tools (at least VS 2022)</p>
-</li>
-<li>
-<p>install dotnet (v8+) and the .NET SDK (current latest)</p>
-</li>
-<li>
-<p>in the project folder</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">dotnet test ./src/log4net.sln</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="docker"><a class="anchor" href="#docker"></a>Docker</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install docker (if you haven&#8217;t already)</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.docker.com/engine/install/" class="bare">https://docs.docker.com/engine/install/</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>in logging/log4net run</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker build -t log4net-builder .
-docker run -it log4net-builder</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>this will</p>
-<div class="ulist">
-<ul>
-<li>
-<p>install all dependencies in the container</p>
-</li>
-<li>
-<p>build src/log4net.sln</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>inside the container run</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">dotnet test /logging-log4net/src/log4net.sln</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="linux-macos"><a class="anchor" href="#linux-macos"></a>Linux / MacOS</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>install the dotnet SDK - v8 or better</p>
-</li>
-<li>
-<p>install Mono (you&#8217;re going to need it to target certain versions of .NET)</p>
-</li>
-</ul>
-</div>
+<p>log4net runs on net462 or higher and any framework supporting netstandard2.0.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="site"><a class="anchor" href="#site"></a>Site</h2>
+<h2 id="_is_there_example_code_for_using_log4net"><a class="anchor" href="#_is_there_example_code_for_using_log4net"></a>Is there example code for using log4net?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can build and view the website as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash/powershell hljs" data-lang="bash/powershell">./mvnw -N site</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can view the generated website with a browser by pointing it to <code>target/site</code> directory.</p>
+<p>You can find many examples in <a href="https://github.com/apache/logging-log4net/tree/master/examples">log4net/examples</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="release-instructions"><a class="anchor" href="#release-instructions"></a>Release instructions</h2>
+<h2 id="_what_does_log4net_offer"><a class="anchor" href="#_what_does_log4net_offer"></a>What does log4net offer?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>log4net employs the CI/CD foundation provided by the <a href="https://logging.apache.org/logging-parent"><code>logging-parent</code></a>.
-You can simply use its release instructions.</p>
+<p>log4net offers numerous features, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>log4net is optimized for speed</p>
+</li>
+<li>
+<p>log4net is based on a named logger hierarchy</p>
+</li>
+<li>
+<p>log4net is thread-safe</p>
+</li>
+<li>
+<p>Logging behavior can be set at runtime using a configuration file (xml)</p>
+</li>
+<li>
+<p>log4net is designed to handle exceptions from the start</p>
+</li>
+<li>
+<p>log4net can direct its output to many sinks including: a file, the console, Syslog/EventLog or even e-mail</p>
+</li>
+<li>
+<p>log4net categorizes logging into levels: DEBUG, INFO, WARN, ERROR and FATAL.</p>
+</li>
+<li>
+<p>The format of the log output can be easily changed by implementing a new layout class</p>
+</li>
+<li>
+<p>The target of the log output as well as the writing strategy can be altered by writing a new appender class</p>
+</li>
+<li>
+<p>log4net supports multiple output appenders per logger</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="../features.html" class="xref page">Features</a></p>
 </div>
 </div>
 </div>
@@ -286,9 +236,9 @@ You can simply use its release instructions.</p>
     Other names may be trademarks of their respective owners.
   </p>
 </footer>
-<script id="site-script" src="./_/js/site.js" data-ui-root-path="./_"></script>
-<script async src="./_/js/vendor/highlight.js"></script>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
 <!-- `@asciidoctor/tabs` extension scripts -->
-<script async src="./_/js/vendor/tabs.js"></script>
+<script async src="../_/js/vendor/tabs.js"></script>
   </body>
 </html>
