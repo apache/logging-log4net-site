@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Configuration :: Apache log4net</title>
+    <title>Config Examples :: Apache log4net</title>
     <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration-examples.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
 <link rel="stylesheet" href="../_/css/site.css">
@@ -82,7 +82,7 @@
     <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="3">
-    <a class="nav-link" href="configuration-examples.html">Configuration</a>
+    <a class="nav-link" href="configuration-examples.html">Config Examples</a>
   </li>
 </ul>
   </li>
@@ -126,7 +126,7 @@
     <li><a href="../index.html">Home</a></li>
     <li><a href="index.html">Manual</a></li>
     <li><a href="configuration.html">Configuration</a></li>
-    <li><a href="configuration-examples.html">Configuration</a></li>
+    <li><a href="configuration-examples.html">Config Examples</a></li>
   </ul>
 </nav>
 <div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/configuration-examples.adoc">Edit this Page</a></div>
@@ -136,240 +136,104 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Configuration</h1>
+<h1 class="page">Config Examples</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Using a configuration file is the most popular and recommended approach for configuring log4net.
-In this page we will examine the composition of a configuration file and how log4net uses it.</p>
+<p>This document presents example configurations for the built-in appenders. These configurations are designed to work with the log4net.Config.XmlConfigurator.</p>
+</div>
+<div class="paragraph">
+<p>These examples are by no means exhaustive configurations for the appenders.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adonetappender"><a class="anchor" href="#adonetappender"></a>AdoNetAppender</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The configuration of the AdoNetAppender depends on the provider selected for the target database. Here are some examples.</p>
+</div>
+<div class="sect2">
+<h3 id="mssqlserver"><a class="anchor" href="#mssqlserver"></a>MS SQL Server</h3>
+<div class="paragraph">
+<p>The following example shows how to configure the AdoNetAppender to log messages to a SQL Server database. The events are written in batches of 100 (BufferSize). The ConnectionType specifies the fully qualified type name for the System.Data.IDbConnection to use to connect to the database. The ConnectionString is database provider specific. The CommandText is either a prepared statement or a stored procedure, in this case it is a prepared statement. Each parameter to the prepared statement or stored procedure is specified with its name, database type and a layout that renders the value for the parameter.</p>
+</div>
+<div class="paragraph">
+<p>The database table definition is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">using Animals.Carnivora;
-// Import log4net classes.
-using log4net;
-using log4net.Config;
-
-namespace SampleApp;
-
-private static class MyApp
-{
-  // Define a static logger variable so that it references the Logger instance named "MyApp".
-  private static readonly ILog logger = LogManager.GetLogger(typeof(MyApp));
-
-  private static void Main(string[] args)
-  {
-      // Set up a simple configuration that logs on the console.
-    BasicConfigurator.Configure();
-
-    logger.Info("Entering application.");
-    Dog dog = new();
-    bar.Bark();
-    logger.Info("Exiting application.");
-  }
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">create table dbo.Log
+(
+  Id bigint identity (1, 1) not null,
+  LogDate datetime not null,
+  Thread nvarchar(255) not null,
+  LogLevel nvarchar(50) not null,
+  Logger nvarchar(255) not null,
+  LogMessage nvarchar(2000) not null,
+  Exception nvarchar(2000) null,
+  constraint Log_PKEY primary key (Id)
+) with (data_compression = page)</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>MyApp begins by importing log4net related namespaces.
-It then defines a static logger variable with the name MyApp which happens to be the fully qualified name of the class.</p>
-</div>
-<div class="paragraph">
-<p>MyApp uses the following Dog class:</p>
+<p>The appender configuration is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">// Import log4net classes
-using log4net;
-
-namespace Animals.Carnivora;
-
-internal sealed class Dog
-{
-  private static readonly ILog logger = LogManager.GetLogger(typeof(Dog));
-
-  internal void Bark() =&gt; logger.Debug("Woof!");
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The invocation of the BasicConfigurator.Configure() method creates a rather simple log4net setup.
-This method is hardwired to add to the root logger a ConsoleAppender.
-The output will be formatted using a PatternLayout set to the following pattern:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-log hljs" data-lang="log">%timestamp [%thread] %level %logger %ndc - %message%newline</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note that by default, the root logger is assigned to Level.DEBUG.</p>
-</div>
-<div class="paragraph">
-<p>The output of MyApp is:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-log hljs" data-lang="log">2024-12-21 14:07:41,508 [main] INFO  SampleApp.MyApp - Entering application.
-2024-12-21 14:07:41,517 [main] DEBUG Animals.Carnivora.Dog - Woof!
-2024-12-21 14:07:41,529 [main] INFO  SampleApp.MyApp - Exiting application.</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>As a side note, let me mention that in log4net child loggers link only to their existing ancestors.
-In particular, the logger named Animals.Carnivora.Dog is linked directly to the root logger, thereby circumventing the unused Animals or Animals.Carnivora loggers.
-This significantly increases performance and reduces log4net&#8217;s memory footprint.</p>
-</div>
-<div class="paragraph">
-<p>The MyApp class configures log4net by invoking BasicConfigurator.Configure() method.
-Other classes only need to import the log4net namespace, retrieve the loggers they wish to use, and log away.</p>
-</div>
-<div class="paragraph">
-<p>The previous example always outputs the same log information.
-Fortunately, it is easy to modify MyApp so that the log output can be controlled at run-time.
-Here is a slightly modified version.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">using Animals.Carnivora;
-// Import log4net classes.
-using log4net;
-using log4net.Config;
-
-namespace SampleApp;
-
-private static class MyApp
-{
-  private static readonly ILog logger = LogManager.GetLogger(typeof(MyApp));
-
-  private static void Main(string[] args)
-  {
-    // BasicConfigurator replaced with XmlConfigurator.
-    XmlConfigurator.Configure();
-
-    logger.Info("Entering application.");
-    Dog dog = new();
-    bar.Bark();
-    logger.Info("Exiting application.");
-  }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This version of MyApp instructs the XmlConfigurator to parse a configuration file and set up logging accordingly.</p>
-</div>
-<div class="paragraph">
-<p>Here is a sample configuration file that results in exactly same output as the previous BasicConfigurator based example.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;log4net&gt;
-  &lt;!-- ConsoleAppender is set to be a ConsoleAppender --&gt;
-  &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender"&gt;
-    &lt;!-- ConsoleAppender uses PatternLayout --&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="AdoNetAppender" type="log4net.Appender.AdoNetAppender"&gt;
+  &lt;bufferSize value="100"/&gt;
+  &lt;connectionType value="System.Data.SqlClient.SqlConnection, System.Data"/&gt;
+  &lt;connectionString value="data source=[database server];initial catalog=[database name];integrated security=false;persist security info=True;User ID=[user];Password=[password]"/&gt;
+  &lt;commandText value="insert into dbo.Log (LogDate, Thread, LogLevel, Logger, LogMessage, Exception) values (@LogDate, @Thread, @LogLevel, @Logger, @LogMessage, @Exception)"/&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@LogDate"/&gt;
+    &lt;dbType value="DateTime"/&gt;
+    &lt;layout type="log4net.Layout.RawTimeStampLayout"/&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@Thread"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="255"/&gt;
     &lt;layout type="log4net.Layout.PatternLayout"&gt;
-      &lt;conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message%newline" /&gt;
+      &lt;conversionPattern value="%thread"/&gt;
     &lt;/layout&gt;
-  &lt;/appender&gt;
-  &lt;!-- Set root logger level to DEBUG and its only appender to ConsoleAppender --&gt;
-  &lt;root&gt;
-    &lt;level value="DEBUG" /&gt;
-    &lt;appender-ref ref="ConsoleAppender" /&gt;
-  &lt;/root&gt;
-&lt;/log4net&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Suppose we are no longer interested in seeing the output of any component belonging to the Animals.Carnivora namespace.</p>
-</div>
-<div class="paragraph">
-<p>The following configuration file shows one possible way of achieving this.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;log4net&gt;
-  &lt;!-- ConsoleAppender is set to be a ConsoleAppender --&gt;
-  &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender"&gt;
-    &lt;!-- ConsoleAppender uses PatternLayout --&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@LogLevel"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="50"/&gt;
     &lt;layout type="log4net.Layout.PatternLayout"&gt;
-      &lt;conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message%newline" /&gt;
+      &lt;conversionPattern value="%level"/&gt;
     &lt;/layout&gt;
-  &lt;/appender&gt;
-  &lt;!-- Set root logger level to DEBUG and its only appender to ConsoleAppender --&gt;
-  &lt;root&gt;
-    &lt;level value="DEBUG" /&gt;
-    &lt;appender-ref ref="ConsoleAppender" /&gt;
-  &lt;/root&gt;
-  &lt;!-- Print only messages of level WARN or above in the namespace Animals.Carnivora --&gt;
-  &lt;logger name="Animals.Carnivora"&gt;
-    &lt;level value="WARN" /&gt;
-  &lt;/logger&gt;
-&lt;/log4net&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The output of MyApp configured with this file is shown below.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-log hljs" data-lang="log">2024-12-21 14:07:41,508 [main] INFO  SampleApp.MyApp - Entering application.
-2024-12-21 14:07:41,529 [main] INFO  SampleApp.MyApp - Exiting application.</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>As the logger Animals.Carnivora.Dog does not have an assigned level, it inherits its level from Animals.Carnivora, which was set to WARN in the configuration file.
-The log statement from the Dog.Bark method has the level DEBUG, lower than the logger level WARN.
-Consequently, Bark() method&#8217;s log request is suppressed.</p>
-</div>
-<div class="paragraph">
-<p>Here is another configuration file that uses multiple appenders.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;log4net&gt;
-  &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender"&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@Logger"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="255"/&gt;
     &lt;layout type="log4net.Layout.PatternLayout"&gt;
-      &lt;!-- Pattern to output the caller's file name and line number --&gt;
-      &lt;conversionPattern value="%5level [%thread] (%file:%line) - %message%newline" /&gt;
+      &lt;conversionPattern value="%logger"/&gt;
     &lt;/layout&gt;
-  &lt;/appender&gt;
-  &lt;appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender"&gt;
-    &lt;file value="example.log" /&gt;
-    &lt;appendToFile value="true" /&gt;
-    &lt;maximumFileSize value="100KB" /&gt;
-    &lt;maxSizeRollBackups value="2" /&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@LogMessage"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="2000"/&gt;
     &lt;layout type="log4net.Layout.PatternLayout"&gt;
-      &lt;conversionPattern value="%level %thread %logger - %message%newline" /&gt;
+      &lt;conversionPattern value="%message"/&gt;
     &lt;/layout&gt;
-  &lt;/appender&gt;
-  &lt;!-- Set root logger level to DEBUG and its only appender to ConsoleAppender --&gt;
-  &lt;root&gt;
-    &lt;level value="DEBUG" /&gt;
-    &lt;appender-ref ref="ConsoleAppender" /&gt;
-    &lt;appender-ref ref="RollingFile" /&gt;
-  &lt;/root&gt;
-&lt;/log4net&gt;</code></pre>
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@Exception"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="2000"/&gt;
+    &lt;layout type="log4net.Layout.ExceptionLayout"/&gt;
+  &lt;/parameter&gt;
+&lt;/appender&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Calling the enhanced MyApp with the this configuration file will output the following on the console.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-log hljs" data-lang="log">INFO  [main] (MyApp.cs:17) - Entering application.
-DEBUG [main] (Dog.cs:10) - Woof!
-INFO  [main] (MyApp.cs:20) - Exiting application.</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>In addition, as the root logger has been allocated a second appender, output will also be directed to the example.log file.
-This file will be rolled over when it reaches 100KB.
-When roll-over occurs, the old version of example.log is automatically moved to example.log.1.</p>
-</div>
-<div class="paragraph">
-<p>Note that to obtain these different logging behaviors we did not need to recompile code.
-We could just as easily have logged to an email address or redirected all Animals.Carnivora output to an remote syslog server.</p>
-</div>
-<div class="paragraph">
-<p>For more examples of configuring appenders using the XmlConfigurator see the Example Appender Configuration #TODO document.</p>
 </div>
 </article>
   </div>
