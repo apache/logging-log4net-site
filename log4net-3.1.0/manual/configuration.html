@@ -136,6 +136,8 @@
 </aside>
 <article class="doc">
 <h1 class="page">Configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>Using a configuration file is the most popular and recommended approach for configuring log4net.
 In this page we will examine the composition of a configuration file and how log4net uses it.</p>
@@ -368,7 +370,953 @@ When roll-over occurs, the old version of example.log is automatically moved to 
 We could just as easily have logged to an email address or redirected all Animals.Carnivora output to an remote syslog server.</p>
 </div>
 <div class="paragraph">
-<p>For more examples of configuring appenders using the XmlConfigurator see the Example Appender Configuration #TODO document.</p>
+<p>For more examples of configuring appenders using the XmlConfigurator see <a href="configuration-examples.html" class="xref page">Example Appender Configuration</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-attributes"><a class="anchor" href="#configuration-attributes"></a>Configuration Attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The log4net configuration can be configured using assembly-level attributes rather than specified programmatically.</p>
+</div>
+<div class="sect2">
+<h3 id="xml-configurator-attribute"><a class="anchor" href="#xml-configurator-attribute"></a>XmlConfiguratorAttribute</h3>
+<div class="paragraph">
+<p>The log4net.Config.XmlConfiguratorAttribute Allows the XmlConfigurator to be configured using the following properties:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ConfigFile</dt>
+<dd>
+<p>If specified, this is the filename of the configuration file to use with the XmlConfigurator. This file path is relative to the application base directory (AppDomain.CurrentDomain.BaseDirectory).
+This property cannot be used in conjunction with the ConfigFileExtension property.</p>
+</dd>
+<dt class="hdlist1">ConfigFileExtension</dt>
+<dd>
+<p>If specified, this is the extension for the configuration file. The assembly file name is used as the base name with the this extension appended. For example if the assembly is loaded from the a file TestApp.exe and the ConfigFileExtension property is set to log4net then the configuration file name is TestApp.exe.log4net. This is equivalent to setting the ConfigFile property to TestApp.exe.log4net.
+The path to the configuration file is build by using the application base directory (AppDomain.CurrentDomain.BaseDirectory), the assembly file name and the configuration file extension.
+This property cannot be used in conjunction with the ConfigFile property.</p>
+</dd>
+<dt class="hdlist1">Watch</dt>
+<dd>
+<p>If this flag is specified and set to true then the framework will watch the configuration file and will reload the config each time the file is modified.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>If neither of the ConfigFile or ConfigFileExtension properties are specified, the application configuration file (e.g. TestApp.exe.config) will be used as the log4net configuration file.</p>
+</div>
+<div class="paragraph">
+<p>Example usage:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">// Configure log4net using the .config file
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+// This will cause log4net to look for a configuration file
+// called TestApp.exe.config in the application base
+// directory (i.e. the directory containing TestApp.exe)
+// The config file will be watched for changes.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">// Configure log4net using the .log4net file
+[assembly: log4net.Config.XmlConfigurator(ConfigFileExtension = "log4net", Watch = true)]
+// This will cause log4net to look for a configuration file
+// called TestApp.exe.log4net in the application base
+// directory (i.e. the directory containing TestApp.exe)
+// The config file will be watched for changes.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This attribute may only be used once per assembly.</p>
+</div>
+<div class="paragraph">
+<p>Using attributes can be a clearer method for defining where the application&#8217;s configuration will be loaded from.
+However it is worth noting that attributes are purely passive.
+They are information only.
+Therefore if you use configuration attributes you must invoke log4net to allow it to read the attributes.
+A simple call to LogManager.GetLogger will cause the attributes on the calling assembly to be read and processed.
+<strong>Therefore it is imperative to make a logging call as early as possible during the application start-up, and certainly before any external assemblies have been loaded and invoked.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="appsettings"><a class="anchor" href="#appsettings"></a>AppSettings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you use <a href="#configuration-attributes">attributes</a> to configure log4net, two settings of the appSettings section of your application&#8217;s configuration file can be used to override the values given in your assembly&#8217;s attributes.</p>
+</div>
+<div class="paragraph">
+<p>The setting with the key "log4net.Config" overrides the configuration file name (and is considered to be relative to your application&#8217;s base directory), the setting with the key "log4net.Config.Watch" determines whether the file should be monitored for changes.</p>
+</div>
+<div class="paragraph">
+<p>Even though the assembly attribute</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">[assembly: log4net.Config.XmlConfigurator(Watch = false)]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>would configure your application to use a configuration file "TestApp.exe.config" and not monitor it for changes you can override this to use the file "log4net.config" and monitor it instead by adding</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appSettings&gt;
+  &lt;add key="log4net.Config" value="log4net.config"/&gt;
+  &lt;add key="log4net.Config.Watch" value="True"/&gt;
+&lt;/appSettings&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to your application&#8217;s configuration file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-files"><a class="anchor" href="#configuration-files"></a>Configuration Files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Typically the log4net configuration is specified using a file. This file can be read in one of two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using the System.Configuration API</p>
+</li>
+<li>
+<p>Reading the file contents directly</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="config-files"><a class="anchor" href="#config-files"></a>.config Files</h3>
+<div class="paragraph">
+<p>The System.Configuration API is only available if the configuration data is in the application&#8217;s config file;
+the file named MyApp.exe.config, MyApp.dll.config or Web.config.
+Because the System.Configuration API does not support reloading of the config file the configuration settings cannot be watched using the log4net.Config.XmlConfigurator.ConfigureAndWatch methods.
+The main advantage of using the System.Configuration APIs to read the configuration data is that it requires less permissions than accessing the configuration file directly.</p>
+</div>
+<div class="paragraph">
+<p>The only way to configure an application using the System.Configuration APIs is to call the log4net.Config.XmlConfigurator.Configure() method or the log4net.Config.XmlConfigurator.Configure(ILoggerRepository) method.</p>
+</div>
+<div class="paragraph">
+<p>In order to embed the configuration data in the .config file the section name must be identified to the .NET config file parser using a configSections element.
+The section must specify the log4net.Config.Log4NetConfigurationSectionHandler that will be used to parse the config section.
+This type must be fully assembly qualified because it is being loaded by the .NET config file parser not by log4net.
+The correct assembly name for the log4net assembly must be specified.</p>
+</div>
+<div class="paragraph">
+<p>The following is a simple example configuration file that specifies the correct section handler to use for the log4net section.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;configuration&gt;
+  &lt;configSections&gt;
+    &lt;section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" /&gt;
+  &lt;/configSections&gt;
+  &lt;log4net&gt;
+    &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender" &gt;
+      &lt;layout type="log4net.Layout.PatternLayout"&gt;
+        &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+      &lt;/layout&gt;
+    &lt;/appender&gt;
+    &lt;root&gt;
+      &lt;level value="INFO" /&gt;
+      &lt;appender-ref ref="ConsoleAppender" /&gt;
+    &lt;/root&gt;
+  &lt;/log4net&gt;
+&lt;/configuration&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above example the log4net assembly is specified.
+This assembly must be located where the .NET runtime can find it.
+For example it could be located in the same directory as the application.</p>
+</div>
+<div class="paragraph">
+<p>When using the .config file to specify the configuration the section name and XML element name must be log4net.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reading-files-directly"><a class="anchor" href="#reading-files-directly"></a>Reading Files Directly</h3>
+<div class="paragraph">
+<p>The XmlConfigurator can directly read any XML file and use it to configure log4net.
+This includes the application&#8217;s .config file; the file named MyApp.exe.config, MyApp.dll.config or Web.config.
+The only reason not to read the configuration file directly is if the application does not have sufficient permissions to read the file, then the configuration must be loaded using the .NET configuration APIs (see above).</p>
+</div>
+<div class="paragraph">
+<p>The file to read the configuration from can be specified using any of the log4net.Config.XmlConfigurator methods that accept a System.IO.FileInfo object.
+Because the file system can be monitored for file change notifications the ConfigureAndWatch methods can be used to monitor the configuration file for modifications and automatically reconfigure log4net.</p>
+</div>
+<div class="paragraph">
+<p>Additionally the log4net.Config.XmlConfiguratorAttribute can be used to specify the file to read the configuration from.</p>
+</div>
+<div class="paragraph">
+<p>The configuration is read from the log4net element in the file.
+Only one log4net element can be specified in the file but it may be located anywhere in the XML hierarchy.
+For example it may be the root element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;log4net&gt;
+  &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender" &gt;
+    &lt;layout type="log4net.Layout.PatternLayout"&gt;
+      &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+    &lt;/layout&gt;
+  &lt;/appender&gt;
+  &lt;root&gt;
+    &lt;level value="INFO" /&gt;
+    &lt;appender-ref ref="ConsoleAppender" /&gt;
+  &lt;/root&gt;
+&lt;/log4net&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or it may be nested within other elements:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;configuration&gt;
+  &lt;configSections&gt;
+    &lt;section name="log4net" type="System.Configuration.IgnoreSectionHandler" /&gt;
+  &lt;/configSections&gt;
+  &lt;log4net&gt;
+    &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender" &gt;
+      &lt;layout type="log4net.Layout.PatternLayout"&gt;
+        &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+      &lt;/layout&gt;
+    &lt;/appender&gt;
+    &lt;root&gt;
+      &lt;level value="INFO" /&gt;
+      &lt;appender-ref ref="ConsoleAppender" /&gt;
+    &lt;/root&gt;
+  &lt;/log4net&gt;
+&lt;/configuration&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above example shows how the configuration data can be embedded inside a .config file even though the file is being read directly by log4net.
+An important note is that the .NET config file parser will throw an exception if it finds an element that has not been registered using the configSections element.
+Therefore in the above example the log4net section name is registered, but the type specified to handle the section is System.Configuration.IgnoreSectionHandler.
+This is a built-in class that indicates that another method for reading the config section will be employed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-syntax"><a class="anchor" href="#configuration-syntax"></a>Configuration Syntax</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>log4net includes a configuration reader that parses an XML DOM, the log4net.Config.XmlConfigurator.
+This section defines the syntax accepted by the configurator.</p>
+</div>
+<div class="paragraph">
+<p>This is an example of a valid XML configuration.
+The root element must be &lt;log4net&gt;.
+Note that this does not mean that this element cannot be embedded in another XML document.
+See the section above on Configuration Files for more information on how to embed the XmlConfigurator XML in a configuration file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;log4net&gt;
+  &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender" &gt;
+    &lt;layout type="log4net.Layout.PatternLayout"&gt;
+      &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+    &lt;/layout&gt;
+  &lt;/appender&gt;
+  &lt;root&gt;
+    &lt;level value="INFO" /&gt;
+    &lt;appender-ref ref="ConsoleAppender" /&gt;
+  &lt;/root&gt;
+&lt;/log4net&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The &lt;log4net&gt; element supports the following attributes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">debug</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true or false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set this attribute to true to enable internal log4net debugging for this configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">update</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Merge or Overwrite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Merge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set this attribute to Overwrite to reset the configuration of the repository being configured before applying this configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">threshold</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Level (e.g. DEBUG, INFO, WARN, ERROR)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ALL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set this attribute to limit the messages that are logged across the whole repository, regardless of the logger that the message is logged to.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The &lt;log4net&gt; element supports the following child elements:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Cardinality</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">appender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines an appender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">logger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the configuration of a logger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines an object renderer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">root</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the configuration of the root logger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Repository specific parameters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="appenders"><a class="anchor" href="#appenders"></a>Appenders</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Appenders may only be defined as child elements of the &lt;log4net&gt; element.
+Each appender must be uniquely named.
+The implementing type for the appender must be specified.</p>
+</div>
+<div class="paragraph">
+<p>This example shows an appender of type log4net.Appender.ConsoleAppender being defined.
+The appender will be known as ConsoleAppender.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender" &gt;
+  &lt;layout type="log4net.Layout.PatternLayout"&gt;
+    &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The &lt;appender&gt; element supports the following attributes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be a string name for this appender. The name must be unique among all the appenders defined in this configuration file.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This name is used by the &lt;appender-ref&gt; element of a Logger to reference an appender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the type name for this appender.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the appender is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The &lt;appender&gt; element supports the following child elements:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Cardinality</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">appender-ref</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the appender to reference other appenders. Not supported by all appenders.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the filters used by this appender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the layout used by this appender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appender specific parameters</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For examples of configuring appenders see <a href="configuration-examples.html" class="xref page">Example Appender Configuration</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="filters"><a class="anchor" href="#filters"></a>Filters</h3>
+<div class="paragraph">
+<p>Filters elements may only be defined as children of &lt;appender&gt; elements.</p>
+</div>
+<div class="paragraph">
+<p>The &lt;filter&gt; element supports the following attributes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the type name for this filter.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the filter is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The &lt;filter&gt; element supports the following child elements:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Cardinality</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filter specific parameters</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Filters form a chain that the event has to pass through.
+Any filter along the way can accept the event and stop processing, deny the event and stop processing, or allow the event on to the next filter.
+If the event gets to the end of the filter chain without being denied it is implicitly accepted and will be logged.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter type="log4net.Filter.LevelRangeFilter"&gt;
+  &lt;levelMin value="INFO" /&gt;
+  &lt;levelMax value="FATAL" /&gt;
+&lt;/filter&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This filter will deny events that have a level that is lower than INFO or higher than FATAL.
+All events between INFO and FATAL will be logged.</p>
+</div>
+<div class="paragraph">
+<p>If we want to only allow messages through that have a specific substring (e.g. 'database') then we need to specify the following filters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter type="log4net.Filter.StringMatchFilter"&gt;
+  &lt;stringToMatch value="database" /&gt;
+&lt;/filter&gt;
+&lt;filter type="log4net.Filter.DenyAllFilter" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first filter will look for the substring 'database' in the message text of the event.
+If the text is found the filter will accept the message and filter processing will stop, the message will be logged.
+If the substring is not found the event will be passed to the next filter to process.
+If there is no next filter the event would be implicitly accepted and would be logged.
+But because we don&#8217;t want the non matching events to be logged we need to use a log4net.Filter.DenyAllFilter that will just deny all events that reach it. This filter is only useful at the end of the filter chain.</p>
+</div>
+<div class="paragraph">
+<p>If we want to allow events that have either 'database' or 'ldap' in the message text we can use the following filters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter type="log4net.Filter.StringMatchFilter"&gt;
+  &lt;stringToMatch value="database" /&gt;
+&lt;/filter&gt;
+&lt;filter type="log4net.Filter.StringMatchFilter"&gt;
+  &lt;stringToMatch value="ldap" /&gt;
+&lt;/filter&gt;
+&lt;filter type="log4net.Filter.DenyAllFilter" /&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="layouts"><a class="anchor" href="#layouts"></a>Layouts</h3>
+<div class="paragraph">
+<p>Layout elements may only be defined as children of &lt;appender&gt; elements.</p>
+</div>
+<div class="paragraph">
+<p>The &lt;layout&gt; element supports the following attributes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the type name for this layout.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the layout is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The &lt;layout&gt; element supports the following child elements:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Cardinality</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Layout specific parameters</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This example shows how to configure a layout that uses the log4net.Layout.PatternLayout.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;layout type="log4net.Layout.PatternLayout"&gt;
+  &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+&lt;/layout&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="root-logger"><a class="anchor" href="#root-logger"></a>Root Logger</h3>
+<div class="paragraph">
+<p>Only one root logger element may only be defined and it must be a child of &lt;log4net&gt; element.
+The root logger is the root of the logger hierarchy.
+All loggers ultimately inherit from this logger.</p>
+</div>
+<div class="paragraph">
+<p>An example root logger:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;root&gt;
+  &lt;level value="INFO" /&gt;
+  &lt;appender-ref ref="ConsoleAppender" /&gt;
+&lt;/root&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The &lt;root&gt; element supports no attributes.</p>
+</div>
+<div class="paragraph">
+<p>The &lt;root&gt; element supports the following child elements:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Cardinality</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">appender-ref</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the logger to reference appenders by name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the logging level for this logger. This logger will only accept event that are at this level or above.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logger specific parameters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="loggers"><a class="anchor" href="#loggers"></a>Loggers</h3>
+<div class="paragraph">
+<p>Logger elements may only be defined as children of the &lt;log4net&gt; element.</p>
+</div>
+<div class="paragraph">
+<p>An example logger:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;logger name="MyLogger"&gt;
+  &lt;level value="DEBUG" /&gt;
+  &lt;appender-ref ref="ConsoleAppender" /&gt;
+&lt;/logger&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The &lt;logger&gt; element supports the following attributes.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">any logger name</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the name of the logger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">additivity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true or false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set this attribute to false to prevent this logger from inheriting the appenders defined on parent loggers.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The &lt;logger&gt; element supports the following child elements:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Cardinality</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">appender-ref</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the logger to reference appenders by name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the logging level for this logger. This logger will only accept event that are at this level or above.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logger specific parameters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="renderers"><a class="anchor" href="#renderers"></a>Renderers</h3>
+<div class="paragraph">
+<p>Renderer elements may only be defined as children of the &lt;log4net&gt; element.</p>
+</div>
+<div class="paragraph">
+<p>An example renderer:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;renderer renderingClass="Animals.Carnivora.Renderers.DogRenderer" renderedClass="Animals.Carnivora.Dog" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The &lt;renderer&gt; element supports the following attributes.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderingClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the type name for this renderer.
+If the type is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the type of the object that will take responsibility for rendering the renderedClass.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderedClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the type name for the target type for this renderer.
+If the type is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the name of the type that this renderer will render.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The &lt;renderer&gt; element supports no child elements.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h3>
+<div class="paragraph">
+<p>Parameter elements may be children of many elements. See the specific elements above for details.</p>
+</div>
+<div class="paragraph">
+<p>An example param:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;param name="ConversionPattern" value="%date [%thread] %-5level %logger - %message%newline" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The &lt;param&gt; element supports the following attributes.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the name of the parameter to set on the parent object.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no<br>
+(One of value or type attributes must be specified.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value of this attribute is a string that can be converted to the value of the parameter.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">no<br>
+(One of value or type attributes must be specified.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value of this attribute is a type name to create and set as the value of the parameter.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the type is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The &lt;param&gt; element supports the following child elements:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Cardinality</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter specific parameters</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>An example param that uses nested param elements:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;param name="evaluator" type="log4net.Core.LevelEvaluator"&gt;
+  &lt;param name="Threshold" value="WARN"/&gt;
+&lt;param&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="extension-parameters"><a class="anchor" href="#extension-parameters"></a>Extension Parameters</h3>
+<div class="paragraph">
+<p>Configuration parameters map directly to writable properties on an object.
+The properties available depend on the actual type of the object being configured.</p>
+</div>
+<div class="paragraph">
+<p>For 3rd party components please see their relevant API reference for details of the properties available.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="compact-parameter-syntax"><a class="anchor" href="#compact-parameter-syntax"></a>Compact Parameter Syntax</h3>
+<div class="paragraph">
+<p>All parameters may alternately be specified using the parameter name as the element name rather than using the param element and name attribute.</p>
+</div>
+<div class="paragraph">
+<p>For example a param:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;param name="evaluator" type="log4net.Core.LevelEvaluator"&gt;
+  &lt;param name="Threshold" value="WARN"/&gt;
+&lt;param&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>may be written as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;evaluator type="log4net.Core.LevelEvaluator"&gt;
+  &lt;threshold value="WARN"/&gt;
+&lt;evaluator&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </article>
   </div>
