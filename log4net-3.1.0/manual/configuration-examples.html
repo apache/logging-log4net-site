@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Config Examples :: Apache log4net</title>
+    <title>Configuration Examples :: Apache log4net</title>
     <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration-examples.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
 <link rel="stylesheet" href="../_/css/site.css">
@@ -82,7 +82,7 @@
     <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="3">
-    <a class="nav-link" href="configuration-examples.html">Config Examples</a>
+    <a class="nav-link" href="configuration-examples.html">Configuration Examples</a>
   </li>
 </ul>
   </li>
@@ -126,7 +126,7 @@
     <li><a href="../index.html">Home</a></li>
     <li><a href="index.html">Manual</a></li>
     <li><a href="configuration.html">Configuration</a></li>
-    <li><a href="configuration-examples.html">Config Examples</a></li>
+    <li><a href="configuration-examples.html">Configuration Examples</a></li>
   </ul>
 </nav>
 <div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/configuration-examples.adoc">Edit this Page</a></div>
@@ -136,7 +136,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Config Examples</h1>
+<h1 class="page">Configuration Examples</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -151,13 +151,18 @@
 <h2 id="adonetappender"><a class="anchor" href="#adonetappender"></a>AdoNetAppender</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The configuration of the AdoNetAppender depends on the provider selected for the target database. Here are some examples.</p>
+<p>The configuration of the AdoNetAppender depends on the provider selected for the target database.</p>
+</div>
+<div class="paragraph">
+<p>The following examples show how to configure the AdoNetAppender to log messages to different databases.
+The events are written in batches of 100 (BufferSize).
+The ConnectionType specifies the fully qualified type name for the System.Data.IDbConnection to use to connect to the database.
+The ConnectionString is database provider specific.
+The CommandText is either a prepared statement or a stored procedure, in this case it is a prepared statement.
+Each parameter to the prepared statement or stored procedure is specified with its name, database type and a layout that renders the value for the parameter.</p>
 </div>
 <div class="sect2">
 <h3 id="mssqlserver"><a class="anchor" href="#mssqlserver"></a>MS SQL Server</h3>
-<div class="paragraph">
-<p>The following example shows how to configure the AdoNetAppender to log messages to a SQL Server database. The events are written in batches of 100 (BufferSize). The ConnectionType specifies the fully qualified type name for the System.Data.IDbConnection to use to connect to the database. The ConnectionString is database provider specific. The CommandText is either a prepared statement or a stored procedure, in this case it is a prepared statement. Each parameter to the prepared statement or stored procedure is specified with its name, database type and a layout that renders the value for the parameter.</p>
-</div>
 <div class="paragraph">
 <p>The database table definition is:</p>
 </div>
@@ -177,14 +182,107 @@
 </div>
 </div>
 <div class="paragraph">
+<p>Please add a package reference for the SqlClient to your .csproj file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  &lt;PackageReference Include="Microsoft.Data.SqlClient" Version="*" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>The appender configuration is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="AdoNetAppender" type="log4net.Appender.AdoNetAppender"&gt;
   &lt;bufferSize value="100"/&gt;
-  &lt;connectionType value="System.Data.SqlClient.SqlConnection, System.Data"/&gt;
+	&lt;connectionType value="Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient"/&gt;
   &lt;connectionString value="data source=[database server];initial catalog=[database name];integrated security=false;persist security info=True;User ID=[user];Password=[password]"/&gt;
+  &lt;commandText value="insert into dbo.Log (LogDate, Thread, LogLevel, Logger, LogMessage, Exception) values (@LogDate, @Thread, @LogLevel, @Logger, @LogMessage, @Exception)"/&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@LogDate"/&gt;
+    &lt;dbType value="DateTime"/&gt;
+    &lt;layout type="log4net.Layout.RawTimeStampLayout"/&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@Thread"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="255"/&gt;
+    &lt;layout type="log4net.Layout.PatternLayout"&gt;
+      &lt;conversionPattern value="%thread"/&gt;
+    &lt;/layout&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@LogLevel"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="50"/&gt;
+    &lt;layout type="log4net.Layout.PatternLayout"&gt;
+      &lt;conversionPattern value="%level"/&gt;
+    &lt;/layout&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@Logger"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="255"/&gt;
+    &lt;layout type="log4net.Layout.PatternLayout"&gt;
+      &lt;conversionPattern value="%logger"/&gt;
+    &lt;/layout&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@LogMessage"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="2000"/&gt;
+    &lt;layout type="log4net.Layout.PatternLayout"&gt;
+      &lt;conversionPattern value="%message"/&gt;
+    &lt;/layout&gt;
+  &lt;/parameter&gt;
+  &lt;parameter&gt;
+    &lt;parameterName value="@Exception"/&gt;
+    &lt;dbType value="String"/&gt;
+    &lt;size value="2000"/&gt;
+    &lt;layout type="log4net.Layout.ExceptionLayout"/&gt;
+  &lt;/parameter&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oracle"><a class="anchor" href="#oracle"></a>Oracle</h3>
+<div class="paragraph">
+<p>Please add a package reference for the SqlClient to your .csproj file</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  &lt;PackageReference Include="Oracle.ManagedDataAccess.Core" Version="*" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The database table definition is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">create table Log
+(
+  Id number(10) generated by default as identity,
+  LogDate date not null,
+  Thread varchar2(255) not null,
+  LogLevel varchar2(50) not null,
+  Logger varchar2(255) not null,
+  LogMessage varchar2(2000) not null,
+  Exception varchar2(2000) null,
+  constraint Log_PKEY primary key (Id)
+)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The appender configuration is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="AdoNetAppender" type="log4net.Appender.AdoNetAppender"&gt;
+  &lt;bufferSize value="100"/&gt;
+	&lt;connectionType value="Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess.Client"/&gt;
+  &lt;connectionString value="data source=[mydatabase];User ID=[user];Password=[password]"/&gt;
   &lt;commandText value="insert into dbo.Log (LogDate, Thread, LogLevel, Logger, LogMessage, Exception) values (@LogDate, @Thread, @LogLevel, @Logger, @LogMessage, @Exception)"/&gt;
   &lt;parameter&gt;
     &lt;parameterName value="@LogDate"/&gt;
