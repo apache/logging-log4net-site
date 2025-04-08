@@ -74,6 +74,9 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Manual</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="appenders.html">Appenders</a>
   </li>
@@ -82,15 +85,81 @@
     <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration-examples.html">Configuration Examples</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration/examples.html">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/udpappender.html">UdpAppender</a>
   </li>
 </ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq.html">F.A.Q.</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="filters.html">Filters</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="layouts.html">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
   </li>
 </ul>
   </li>
@@ -197,6 +266,10 @@ See <a href="layouts.html" class="xref page">Layouts</a> for more information.</
 <td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to the ASP trace context. These can then be rendered at the end of the ASP page or on the ASP trace page.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BufferingForwardingAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buffers events and then forwards them to attached appenders.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ColoredConsoleAppender</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Writes color highlighted logging events to the application&#8217;s Windows Console.</p></td>
 </tr>
@@ -263,6 +336,103 @@ The RollingFileAppender can be configured to log to multiple files based upon da
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ForwardingAppender</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Can be used to wrap another appender, for example to attach additional filters.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="appender-additivity"><a class="anchor" href="#appender-additivity"></a>Appender Additivity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A logger can have multiple appenders.</p>
+</div>
+<div class="paragraph">
+<p>Each enabled logging request is passed to all appenders attached to that logger, and also to appenders higher in the logger hierarchy.
+This behavior is called <strong>appender additivity</strong> and is enabled by default.</p>
+</div>
+<div class="paragraph">
+<p>For example, if a console appender is attached to the root logger, all enabled logs will at least print to the console.
+If a file appender is added to logger <code>X</code>, logs from <code>X</code> and its children will go to both the file and the console.</p>
+</div>
+<div class="paragraph">
+<p>Additivity can be disabled by setting a logger’s <code>additivity</code> flag to <code>false</code>.
+This prevents logging events from being passed to ancestor appenders beyond that point.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the <code>Animals</code> logger has <code>additivity = false</code>, then the <code>Animals.Carnivora</code> logger will only send its log messages to its own appenders and to <code>Animals</code>’ appenders—
+but not to any appenders higher up in the hierarchy, such as those on the root logger.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Logger Name</th>
+<th class="tableblock halign-left valign-top">Added Appenders</th>
+<th class="tableblock halign-left valign-top">Additivity Flag</th>
+<th class="tableblock halign-left valign-top">Output Targets</th>
+<th class="tableblock halign-left valign-top">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">root</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">not applicable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default appender at the root.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Animals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FileAppender, RollingFileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender, FileAppender, RollingFileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appenders of "Animals" and root.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Animals.Carnivora</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender, FileAppender, RollingFileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inherited from "Animals" and root.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Animals.Carnivora.Felidae</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SmtpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender, FileAppender, RollingFileAppender, SmtpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appenders in "Animals.Carnivora.Felidae", "Animals", and root.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UdpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UdpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No appender accumulation because additivity is set to false.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security.Access</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UdpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only appenders of "Security" are used due to disabled additivity in "Security".</p></td>
 </tr>
 </tbody>
 </table>

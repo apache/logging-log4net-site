@@ -75,6 +75,9 @@
     <a class="nav-link" href="index.html">Manual</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="appenders.html">Appenders</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
@@ -82,15 +85,81 @@
     <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration-examples.html">Configuration Examples</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration/examples.html">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/udpappender.html">UdpAppender</a>
   </li>
 </ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq.html">F.A.Q.</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="filters.html">Filters</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="layouts.html">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
   </li>
 </ul>
   </li>
@@ -139,8 +208,8 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Using a configuration file is the most popular and recommended approach for configuring log4net.
-In this page we will examine the composition of a configuration file and how log4net uses it.</p>
+<p>The recommended way to configure log4net is through a configuration file.
+This section explains the structure of a configuration file and how log4net processes it.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -170,8 +239,8 @@ private static class MyApp
 </div>
 </div>
 <div class="paragraph">
-<p>MyApp begins by importing log4net related namespaces.
-It then defines a static logger variable with the name MyApp which happens to be the fully qualified name of the class.</p>
+<p>MyApp starts by importing the necessary log4net namespaces.
+It then declares a static logger for the type <code>MyApp</code>.</p>
 </div>
 <div class="paragraph">
 <p>MyApp uses the following Dog class:</p>
@@ -192,9 +261,9 @@ internal sealed class Dog
 </div>
 </div>
 <div class="paragraph">
-<p>The invocation of the BasicConfigurator.Configure() method creates a rather simple log4net setup.
-This method is hardwired to add to the root logger a ConsoleAppender.
-The output will be formatted using a PatternLayout set to the following pattern:</p>
+<p>Calling <code>BasicConfigurator.Configure()</code> sets up a simple log4net configuration.
+This method automatically adds a <code>ConsoleAppender</code> to the root logger,
+formatting the output using a <code>PatternLayout</code> with the following pattern:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -215,18 +284,19 @@ The output will be formatted using a PatternLayout set to the following pattern:
 </div>
 </div>
 <div class="paragraph">
-<p>As a side note, let me mention that in log4net child loggers link only to their existing ancestors.
-In particular, the logger named Animals.Carnivora.Dog is linked directly to the root logger, thereby circumventing the unused Animals or Animals.Carnivora loggers.
-This significantly increases performance and reduces log4net&#8217;s memory footprint.</p>
+<p>In log4net, child loggers link only to existing ancestors.
+For example, the logger <code>Animals.Carnivora.Dog</code> is directly linked to the root logger,
+bypassing the unused <code>Animals</code> and <code>Animals.Carnivora</code> loggers.
+This improves performance and reduces log4net’s memory footprint.</p>
 </div>
 <div class="paragraph">
-<p>The MyApp class configures log4net by invoking BasicConfigurator.Configure() method.
-Other classes only need to import the log4net namespace, retrieve the loggers they wish to use, and log away.</p>
+<p>The <code>MyApp</code> class configures log4net by calling <code>BasicConfigurator.Configure()</code>.
+Other classes simply need to import the log4net namespace, retrieve the desired loggers, and start logging.</p>
 </div>
 <div class="paragraph">
-<p>The previous example always outputs the same log information.
-Fortunately, it is easy to modify MyApp so that the log output can be controlled at run-time.
-Here is a slightly modified version.</p>
+<p>The previous example always produces the same log output.
+However, <code>MyApp</code> can be modified to allow runtime control over log output.
+Here’s an improved version:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -255,10 +325,10 @@ private static class MyApp
 </div>
 </div>
 <div class="paragraph">
-<p>This version of MyApp instructs the XmlConfigurator to parse a configuration file and set up logging accordingly.</p>
+<p>In this version, <code>MyApp</code> uses <code>XmlConfigurator</code> to load a configuration file and set up logging accordingly.</p>
 </div>
 <div class="paragraph">
-<p>Here is a sample configuration file that results in exactly same output as the previous BasicConfigurator based example.</p>
+<p>The following sample configuration file produces the same output as the previous <code>BasicConfigurator</code> example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -267,7 +337,7 @@ private static class MyApp
   &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender"&gt;
     &lt;!-- ConsoleAppender uses PatternLayout --&gt;
     &lt;layout type="log4net.Layout.PatternLayout"&gt;
-      &lt;conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message%newline" /&gt;
+      &lt;conversionPattern value="%-4timestamp [%thread] %-5level %logger - %message%newline" /&gt;
     &lt;/layout&gt;
   &lt;/appender&gt;
   &lt;!-- Set root logger level to DEBUG and its only appender to ConsoleAppender --&gt;
@@ -279,10 +349,8 @@ private static class MyApp
 </div>
 </div>
 <div class="paragraph">
-<p>Suppose we are no longer interested in seeing the output of any component belonging to the Animals.Carnivora namespace.</p>
-</div>
-<div class="paragraph">
-<p>The following configuration file shows one possible way of achieving this.</p>
+<p>If we want to suppress logging for all components in the <code>Animals.Carnivora</code> namespace,
+we can achieve this with the following configuration file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -291,7 +359,7 @@ private static class MyApp
   &lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender"&gt;
     &lt;!-- ConsoleAppender uses PatternLayout --&gt;
     &lt;layout type="log4net.Layout.PatternLayout"&gt;
-      &lt;conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message%newline" /&gt;
+      &lt;conversionPattern value="%-4timestamp [%thread] %-5level %logger - %message%newline" /&gt;
     &lt;/layout&gt;
   &lt;/appender&gt;
   &lt;!-- Set root logger level to DEBUG and its only appender to ConsoleAppender --&gt;
@@ -316,12 +384,15 @@ private static class MyApp
 </div>
 </div>
 <div class="paragraph">
-<p>As the logger Animals.Carnivora.Dog does not have an assigned level, it inherits its level from Animals.Carnivora, which was set to WARN in the configuration file.
-The log statement from the Dog.Bark method has the level DEBUG, lower than the logger level WARN.
-Consequently, Bark() method&#8217;s log request is suppressed.</p>
+<p>Since the <code>Animals.Carnivora.Dog</code> logger does not have a specific level assigned,
+it inherits the <code>WARN</code> level from <code>Animals.Carnivora</code>, as set in the configuration file.</p>
 </div>
 <div class="paragraph">
-<p>Here is another configuration file that uses multiple appenders.</p>
+<p>The log statement in <code>Dog.Bark()</code> is at the <code>DEBUG</code> level, which is lower than <code>WARN</code>.
+As a result, the log request from <code>Bark()</code> is suppressed.</p>
+</div>
+<div class="paragraph">
+<p>Below is another configuration file that uses multiple appenders:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -361,16 +432,17 @@ INFO  [main] (MyApp.cs:20) - Exiting application.</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In addition, as the root logger has been allocated a second appender, output will also be directed to the example.log file.
-This file will be rolled over when it reaches 100KB.
-When roll-over occurs, the old version of example.log is automatically moved to example.log.1.</p>
+<p>Additionally, since the root logger has a second appender, the output is also written to <code>example.log</code>.
+This file rolls over once it reaches 100KB, moving the old log to <code>example.log.1</code>.</p>
 </div>
 <div class="paragraph">
-<p>Note that to obtain these different logging behaviors we did not need to recompile code.
-We could just as easily have logged to an email address or redirected all Animals.Carnivora output to an remote syslog server.</p>
+<p>Notably, achieving these different logging behaviors required no code recompilation.
+We could just as easily log to an email address or redirect all <code>Animals.Carnivora</code> output
+to a remote syslog server.</p>
 </div>
 <div class="paragraph">
-<p>For more examples of configuring appenders using the XmlConfigurator see <a href="configuration-examples.html" class="xref page">Example Appender Configuration</a>.</p>
+<p>For more examples of configuring appenders with <code>XmlConfigurator</code>, see
+<a href="configuration/examples.html" class="xref page">Examples</a>.</p>
 </div>
 </div>
 </div>
@@ -378,34 +450,38 @@ We could just as easily have logged to an email address or redirected all Animal
 <h2 id="configuration-attributes"><a class="anchor" href="#configuration-attributes"></a>Configuration Attributes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The log4net configuration can be configured using assembly-level attributes rather than specified programmatically.</p>
+<p>log4net can be configured using assembly-level attributes instead of setting it up programmatically.</p>
 </div>
 <div class="sect2">
 <h3 id="xml-configurator-attribute"><a class="anchor" href="#xml-configurator-attribute"></a>XmlConfiguratorAttribute</h3>
 <div class="paragraph">
-<p>The log4net.Config.XmlConfiguratorAttribute Allows the XmlConfigurator to be configured using the following properties:</p>
+<p>The <code>log4net.Config.XmlConfiguratorAttribute</code> allows log4net to be configured using the following properties:</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">ConfigFile</dt>
 <dd>
-<p>If specified, this is the filename of the configuration file to use with the XmlConfigurator. This file path is relative to the application base directory (AppDomain.CurrentDomain.BaseDirectory).
-This property cannot be used in conjunction with the ConfigFileExtension property.</p>
+<p>Specifies the filename of the configuration file to use with the <code>XmlConfigurator</code>.
+The file path is relative to the application base directory (<code>AppDomain.CurrentDomain.BaseDirectory</code>).
+This property cannot be used with the <code>ConfigFileExtension</code> property.</p>
 </dd>
 <dt class="hdlist1">ConfigFileExtension</dt>
 <dd>
-<p>If specified, this is the extension for the configuration file. The assembly file name is used as the base name with the this extension appended. For example if the assembly is loaded from the a file TestApp.exe and the ConfigFileExtension property is set to log4net then the configuration file name is TestApp.exe.log4net. This is equivalent to setting the ConfigFile property to TestApp.exe.log4net.
-The path to the configuration file is build by using the application base directory (AppDomain.CurrentDomain.BaseDirectory), the assembly file name and the configuration file extension.
-This property cannot be used in conjunction with the ConfigFile property.</p>
+<p>Specifies the extension for the configuration file.
+The assembly filename is used as the base name, with this extension appended.
+For example, if the assembly is <code>TestApp.exe</code> and the <code>ConfigFileExtension</code> is set to <code>log4net</code>, the configuration file will be <code>TestApp.dll.log4net</code>.
+This is equivalent to setting the <code>ConfigFile</code> property to <code>TestApp.dll.log4net</code>.
+The path to the configuration file is built using the application base directory (<code>AppDomain.CurrentDomain.BaseDirectory</code>), the assembly file name, and the configuration file extension.
+This property cannot be used with the <code>ConfigFile</code> property.</p>
 </dd>
 <dt class="hdlist1">Watch</dt>
 <dd>
-<p>If this flag is specified and set to true then the framework will watch the configuration file and will reload the config each time the file is modified.</p>
+<p>If set to <code>true</code>, this flag will enable the framework to monitor the configuration file and automatically reload it when the file is modified.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>If neither of the ConfigFile or ConfigFileExtension properties are specified, the application configuration file (e.g. TestApp.exe.config) will be used as the log4net configuration file.</p>
+<p>If neither the <code>ConfigFile</code> nor the <code>ConfigFileExtension</code> properties are specified, the application configuration file (e.g., <code>TestApp.dll.config</code>) will be used as the log4net configuration file.</p>
 </div>
 <div class="paragraph">
 <p>Example usage:</p>
@@ -415,7 +491,7 @@ This property cannot be used in conjunction with the ConfigFile property.</p>
 <pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">// Configure log4net using the .config file
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 // This will cause log4net to look for a configuration file
-// called TestApp.exe.config in the application base
+// called TestApp.dll.config in the application base
 // directory (i.e. the directory containing TestApp.exe)
 // The config file will be watched for changes.</code></pre>
 </div>
@@ -425,7 +501,7 @@ This property cannot be used in conjunction with the ConfigFile property.</p>
 <pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">// Configure log4net using the .log4net file
 [assembly: log4net.Config.XmlConfigurator(ConfigFileExtension = "log4net", Watch = true)]
 // This will cause log4net to look for a configuration file
-// called TestApp.exe.log4net in the application base
+// called TestApp.dll.log4net in the application base
 // directory (i.e. the directory containing TestApp.exe)
 // The config file will be watched for changes.</code></pre>
 </div>
@@ -435,11 +511,12 @@ This property cannot be used in conjunction with the ConfigFile property.</p>
 </div>
 <div class="paragraph">
 <p>Using attributes can be a clearer method for defining where the application&#8217;s configuration will be loaded from.
-However it is worth noting that attributes are purely passive.
-They are information only.
-Therefore if you use configuration attributes you must invoke log4net to allow it to read the attributes.
-A simple call to LogManager.GetLogger will cause the attributes on the calling assembly to be read and processed.
-<strong>Therefore it is imperative to make a logging call as early as possible during the application start-up, and certainly before any external assemblies have been loaded and invoked.</strong></p>
+However, note that attributes are passive — they only provide information.
+Therefore, to trigger log4net to read and process the attributes, you must invoke log4net.
+A simple call to <code>LogManager.GetLogger</code> will cause the attributes on the calling assembly to be processed.</p>
+</div>
+<div class="paragraph">
+<p><strong>It is crucial to make a logging call as early as possible during the application startup, and certainly before any external assemblies are loaded and invoked.</strong></p>
 </div>
 </div>
 </div>
@@ -448,13 +525,13 @@ A simple call to LogManager.GetLogger will cause the attributes on the calling a
 <h2 id="appsettings"><a class="anchor" href="#appsettings"></a>AppSettings</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you use <a href="#configuration-attributes">attributes</a> to configure log4net, two settings of the appSettings section of your application&#8217;s configuration file can be used to override the values given in your assembly&#8217;s attributes.</p>
+<p>If you use <a href="#configuration-attributes">attributes</a> to configure log4net, two settings in the appSettings section of your application&#8217;s configuration file can override the values specified in your assembly&#8217;s attributes.</p>
 </div>
 <div class="paragraph">
-<p>The setting with the key "log4net.Config" overrides the configuration file name (and is considered to be relative to your application&#8217;s base directory), the setting with the key "log4net.Config.Watch" determines whether the file should be monitored for changes.</p>
+<p>The setting with the key <code>log4net.Config</code> overrides the configuration file name (relative to your application&#8217;s base directory), while the setting with the key <code>log4net.Config.Watch</code> determines whether the configuration file should be monitored for changes.</p>
 </div>
 <div class="paragraph">
-<p>Even though the assembly attribute</p>
+<p>For example, even though the assembly attribute:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -462,7 +539,7 @@ A simple call to LogManager.GetLogger will cause the attributes on the calling a
 </div>
 </div>
 <div class="paragraph">
-<p>would configure your application to use a configuration file "TestApp.exe.config" and not monitor it for changes you can override this to use the file "log4net.config" and monitor it instead by adding</p>
+<p>configures your application to use the "TestApp.dll.config" file and not monitor it for changes, you can override this to use the "log4net.config" file and monitor it for changes by adding the following to your application&#8217;s configuration file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -481,7 +558,8 @@ A simple call to LogManager.GetLogger will cause the attributes on the calling a
 <h2 id="configuration-files"><a class="anchor" href="#configuration-files"></a>Configuration Files</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Typically the log4net configuration is specified using a file. This file can be read in one of two ways:</p>
+<p>Typically the log4net configuration is specified using a file.
+This file can be read in one of two ways:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -496,22 +574,23 @@ A simple call to LogManager.GetLogger will cause the attributes on the calling a
 <div class="sect2">
 <h3 id="config-files"><a class="anchor" href="#config-files"></a>.config Files</h3>
 <div class="paragraph">
-<p>The System.Configuration API is only available if the configuration data is in the application&#8217;s config file;
-the file named MyApp.exe.config, MyApp.dll.config or Web.config.
-Because the System.Configuration API does not support reloading of the config file the configuration settings cannot be watched using the log4net.Config.XmlConfigurator.ConfigureAndWatch methods.
-The main advantage of using the System.Configuration APIs to read the configuration data is that it requires less permissions than accessing the configuration file directly.</p>
+<p>The <code>System.Configuration</code> API can only be used if the configuration data is stored in the application&#8217;s config file (e.g. <code>MyApp.dll.config</code>, <code>MyApp.exe.config</code>, or <code>Web.config</code>).</p>
 </div>
 <div class="paragraph">
-<p>The only way to configure an application using the System.Configuration APIs is to call the log4net.Config.XmlConfigurator.Configure() method or the log4net.Config.XmlConfigurator.Configure(ILoggerRepository) method.</p>
+<p>The <code>System.Configuration</code> API does not support reloading the config file.
+This means that the configuration settings cannot be watched using the <code>log4net.Config.XmlConfigurator.ConfigureAndWatch</code> methods.</p>
 </div>
 <div class="paragraph">
-<p>In order to embed the configuration data in the .config file the section name must be identified to the .NET config file parser using a configSections element.
-The section must specify the log4net.Config.Log4NetConfigurationSectionHandler that will be used to parse the config section.
-This type must be fully assembly qualified because it is being loaded by the .NET config file parser not by log4net.
-The correct assembly name for the log4net assembly must be specified.</p>
+<p>To configure an application using the <code>System.Configuration</code> API, you must call one of the following methods:
+* <code>log4net.Config.XmlConfigurator.Configure()</code>
+* <code>log4net.Config.XmlConfigurator.Configure(ILoggerRepository)</code></p>
 </div>
 <div class="paragraph">
-<p>The following is a simple example configuration file that specifies the correct section handler to use for the log4net section.</p>
+<p>To embed the configuration data in the <code>.config</code> file, you must define the <code>log4net</code> section in the <code>configSections</code> element.
+The section must specify the <code>log4net.Config.Log4NetConfigurationSectionHandler, log4net</code> type.</p>
+</div>
+<div class="paragraph">
+<p>The following is a simple example configuration file that specifies the correct section handler to use for the <code>log4net</code> section.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -533,33 +612,26 @@ The correct assembly name for the log4net assembly must be specified.</p>
 &lt;/configuration&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>In the above example the log4net assembly is specified.
-This assembly must be located where the .NET runtime can find it.
-For example it could be located in the same directory as the application.</p>
-</div>
-<div class="paragraph">
-<p>When using the .config file to specify the configuration the section name and XML element name must be log4net.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="reading-files-directly"><a class="anchor" href="#reading-files-directly"></a>Reading Files Directly</h3>
 <div class="paragraph">
-<p>The XmlConfigurator can directly read any XML file and use it to configure log4net.
-This includes the application&#8217;s .config file; the file named MyApp.exe.config, MyApp.dll.config or Web.config.
-The only reason not to read the configuration file directly is if the application does not have sufficient permissions to read the file, then the configuration must be loaded using the .NET configuration APIs (see above).</p>
+<p>The <code>XmlConfigurator</code> can directly read any XML file and use it to configure log4net.
+This includes the application&#8217;s <code>.config</code> file (e.g. <code>MyApp.dll.config</code>, <code>MyApp.exe.config</code>, or <code>Web.config</code>).</p>
 </div>
 <div class="paragraph">
-<p>The file to read the configuration from can be specified using any of the log4net.Config.XmlConfigurator methods that accept a System.IO.FileInfo object.
-Because the file system can be monitored for file change notifications the ConfigureAndWatch methods can be used to monitor the configuration file for modifications and automatically reconfigure log4net.</p>
+<p>You can specify the configuration file using <code>log4net.Config.XmlConfigurator</code> methods that accept a <code>System.IO.FileInfo</code> object.
+To auto-reconfigure on changes, use <code>ConfigureAndWatch</code>, which monitors the file for updates.</p>
 </div>
 <div class="paragraph">
-<p>Additionally the log4net.Config.XmlConfiguratorAttribute can be used to specify the file to read the configuration from.</p>
+<p>Additionally, the <code>log4net.Config.XmlConfiguratorAttribute</code> can be used to specify the file to read the configuration from.</p>
 </div>
 <div class="paragraph">
-<p>The configuration is read from the log4net element in the file.
-Only one log4net element can be specified in the file but it may be located anywhere in the XML hierarchy.
-For example it may be the root element:</p>
+<p>The configuration is read from the <code>log4net</code> element in the file.
+Only one <code>log4net</code> element can be specified in the file, but it may be located anywhere in the <code>XML</code> hierarchy.</p>
+</div>
+<div class="paragraph">
+<p>For example, it may be the root element:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -600,10 +672,9 @@ For example it may be the root element:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The above example shows how the configuration data can be embedded inside a .config file even though the file is being read directly by log4net.
-An important note is that the .NET config file parser will throw an exception if it finds an element that has not been registered using the configSections element.
-Therefore in the above example the log4net section name is registered, but the type specified to handle the section is System.Configuration.IgnoreSectionHandler.
-This is a built-in class that indicates that another method for reading the config section will be employed.</p>
+<p>The example shows how to embed configuration data in a .config file while allowing log4net to read it directly.
+Since the .NET config parser throws errors for unregistered elements, the <code>log4net</code> section is registered using <code>System.Configuration.IgnoreSectionHandler</code>.
+This tells .NET to ignore the section, as it will be processed by log4net instead.</p>
 </div>
 </div>
 </div>
@@ -612,14 +683,13 @@ This is a built-in class that indicates that another method for reading the conf
 <h2 id="configuration-syntax"><a class="anchor" href="#configuration-syntax"></a>Configuration Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>log4net includes a configuration reader that parses an XML DOM, the log4net.Config.XmlConfigurator.
-This section defines the syntax accepted by the configurator.</p>
+<p>log4net provides an XML-based configuration reader, <code>log4net.Config.XmlConfigurator</code>.
+This section outlines the syntax accepted by the configurator.</p>
 </div>
 <div class="paragraph">
-<p>This is an example of a valid XML configuration.
-The root element must be &lt;log4net&gt;.
-Note that this does not mean that this element cannot be embedded in another XML document.
-See the section above on Configuration Files for more information on how to embed the XmlConfigurator XML in a configuration file.</p>
+<p>A valid XML configuration must have <code>&lt;log4net&gt;</code> as the root element.
+However, this element can be embedded in another XML document.
+For details on embedding XML configurations in a file, see the section on <a href="#config-files">.config Files</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -637,7 +707,7 @@ See the section above on Configuration Files for more information on how to embe
 </div>
 </div>
 <div class="paragraph">
-<p>The &lt;log4net&gt; element supports the following attributes:</p>
+<p>The <code>&lt;log4net&gt;</code> element supports the following attributes:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -669,7 +739,7 @@ See the section above on Configuration Files for more information on how to embe
 <td class="tableblock halign-left valign-top"><p class="tableblock">no</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Merge or Overwrite</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Merge</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Set this attribute to Overwrite to reset the configuration of the repository being configured before applying this configuration.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set this attribute to <code>Overwrite</code> to reset the configuration of the repository being configured before applying this configuration.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">threshold</p></td>
@@ -681,7 +751,7 @@ See the section above on Configuration Files for more information on how to embe
 </tbody>
 </table>
 <div class="paragraph">
-<p>The &lt;log4net&gt; element supports the following child elements:</p>
+<p>The <code>&lt;log4net&gt;</code> element supports the following child elements:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -720,7 +790,7 @@ See the section above on Configuration Files for more information on how to embe
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Repository specific parameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Repository-specific parameters.</p></td>
 </tr>
 </tbody>
 </table>
@@ -730,13 +800,11 @@ See the section above on Configuration Files for more information on how to embe
 <h2 id="appenders"><a class="anchor" href="#appenders"></a>Appenders</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Appenders may only be defined as child elements of the &lt;log4net&gt; element.
-Each appender must be uniquely named.
-The implementing type for the appender must be specified.</p>
+<p>Appenders must be defined as child elements of the <code>&lt;log4net&gt;</code> element.
+Each appender requires a unique name and a specified implementing type.</p>
 </div>
 <div class="paragraph">
-<p>This example shows an appender of type log4net.Appender.ConsoleAppender being defined.
-The appender will be known as ConsoleAppender.</p>
+<p>The following example defines an appender of type <code>log4net.Appender.ConsoleAppender</code>, named <code>ConsoleAppender</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -748,7 +816,7 @@ The appender will be known as ConsoleAppender.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The &lt;appender&gt; element supports the following attributes:</p>
+<p>The <code>&lt;appender&gt;</code> element supports the following attributes:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -769,19 +837,19 @@ The appender will be known as ConsoleAppender.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be a string name for this appender. The name must be unique among all the appenders defined in this configuration file.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This name is used by the &lt;appender-ref&gt; element of a Logger to reference an appender.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A unique string name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used by the <code>&lt;appender-ref&gt;</code> element of a Logger to reference an appender.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the type name for this appender.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If the appender is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A fully qualified type name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the appender is not in the log4net assembly, the type name must be fully assembly qualified.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The &lt;appender&gt; element supports the following child elements:</p>
+<p>The <code>&lt;appender&gt;</code> element supports the following child elements:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -815,20 +883,23 @@ The appender will be known as ConsoleAppender.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Appender specific parameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appender-specific parameters.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For examples of configuring appenders see <a href="configuration-examples.html" class="xref page">Example Appender Configuration</a>.</p>
+<p>For examples of configuring appenders see <a href="configuration/examples.html" class="xref page">Example Appender Configuration</a>.</p>
 </div>
-<div class="sect2">
-<h3 id="filters"><a class="anchor" href="#filters"></a>Filters</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="filters"><a class="anchor" href="#filters"></a>Filters</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Filters elements may only be defined as children of &lt;appender&gt; elements.</p>
+<p>Filter elements may only be defined as children of <code>&lt;appender&gt;</code> elements.</p>
 </div>
 <div class="paragraph">
-<p>The &lt;filter&gt; element supports the following attributes:</p>
+<p>The <code>&lt;filter&gt;</code> element supports the following attributes:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -850,12 +921,12 @@ The appender will be known as ConsoleAppender.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the type name for this filter.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If the filter is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the filter is not defined in the log4net assembly, this type name must be fully assembly qualified.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The &lt;filter&gt; element supports the following child elements:</p>
+<p>The <code>&lt;filter&gt;</code> element supports the following child elements:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -874,14 +945,29 @@ The appender will be known as ConsoleAppender.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Filter specific parameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filter-specific parameters.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Filters form a chain that the event has to pass through.
-Any filter along the way can accept the event and stop processing, deny the event and stop processing, or allow the event on to the next filter.
-If the event gets to the end of the filter chain without being denied it is implicitly accepted and will be logged.</p>
+<p>Filters form a chain that the event must pass through.
+Each filter can either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Accept the event and stop processing.</p>
+</li>
+<li>
+<p>Deny the event and stop processing.</p>
+</li>
+<li>
+<p>Pass the event to the next filter.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If no filter denies the event, it is implicitly accepted and logged.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -892,11 +978,11 @@ If the event gets to the end of the filter chain without being denied it is impl
 </div>
 </div>
 <div class="paragraph">
-<p>This filter will deny events that have a level that is lower than INFO or higher than FATAL.
-All events between INFO and FATAL will be logged.</p>
+<p>This filter denies events with a level lower than INFO or higher than FATAL.
+Only events between INFO and FATAL are logged.</p>
 </div>
 <div class="paragraph">
-<p>If we want to only allow messages through that have a specific substring (e.g. 'database') then we need to specify the following filters:</p>
+<p>To allow only messages containing a specific substring (e.g., 'database'), the following filters must be specified:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -907,14 +993,17 @@ All events between INFO and FATAL will be logged.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The first filter will look for the substring 'database' in the message text of the event.
-If the text is found the filter will accept the message and filter processing will stop, the message will be logged.
-If the substring is not found the event will be passed to the next filter to process.
-If there is no next filter the event would be implicitly accepted and would be logged.
-But because we don&#8217;t want the non matching events to be logged we need to use a log4net.Filter.DenyAllFilter that will just deny all events that reach it. This filter is only useful at the end of the filter chain.</p>
+<p>The first filter checks if the message text contains the substring 'database'.
+* If found, the filter accepts the message, stops processing, and logs the event.
+* If not found, the event moves to the next filter.</p>
 </div>
 <div class="paragraph">
-<p>If we want to allow events that have either 'database' or 'ldap' in the message text we can use the following filters:</p>
+<p>If there is no next filter, the event would be implicitly accepted and logged.
+To prevent logging non-matching events, a <code>log4net.Filter.DenyAllFilter</code> must be used at the end of the filter chain.
+This filter ensures that all unmatched events are denied.</p>
+</div>
+<div class="paragraph">
+<p>To allow events containing either 'database' or 'ldap', use the following filters:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -928,13 +1017,15 @@ But because we don&#8217;t want the non matching events to be logged we need to 
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="layouts"><a class="anchor" href="#layouts"></a>Layouts</h3>
+</div>
+<div class="sect1">
+<h2 id="layouts"><a class="anchor" href="#layouts"></a>Layouts</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Layout elements may only be defined as children of &lt;appender&gt; elements.</p>
+<p>Layout elements may only be defined as children of <code>&lt;appender&gt;</code> elements.</p>
 </div>
 <div class="paragraph">
-<p>The &lt;layout&gt; element supports the following attributes:</p>
+<p>The <code>&lt;layout&gt;</code> element supports the following attributes:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -956,12 +1047,12 @@ But because we don&#8217;t want the non matching events to be logged we need to 
 <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Value must be the type name for this layout.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">If the layout is not defined in the log4net assembly this type name must be fully assembly qualified.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the layout is not defined in the log4net assembly, this type name must be fully assembly qualified.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The &lt;layout&gt; element supports the following child elements:</p>
+<p>The <code>&lt;layout&gt;</code> element supports the following child elements:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -980,12 +1071,12 @@ But because we don&#8217;t want the non matching events to be logged we need to 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Layout specific parameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Layout-specific parameters.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>This example shows how to configure a layout that uses the log4net.Layout.PatternLayout.</p>
+<p>This example shows how to configure a layout using <code>log4net.Layout.PatternLayout</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -995,10 +1086,12 @@ But because we don&#8217;t want the non matching events to be logged we need to 
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="root-logger"><a class="anchor" href="#root-logger"></a>Root Logger</h3>
+</div>
+<div class="sect1">
+<h2 id="root-logger"><a class="anchor" href="#root-logger"></a>Root Logger</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Only one root logger element may only be defined and it must be a child of &lt;log4net&gt; element.
+<p>Only one <code>root</code> logger element may be defined, and it must be a child of the <code>log4net</code> element.
 The root logger is the root of the logger hierarchy.
 All loggers ultimately inherit from this logger.</p>
 </div>
@@ -1051,8 +1144,10 @@ All loggers ultimately inherit from this logger.</p>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="loggers"><a class="anchor" href="#loggers"></a>Loggers</h3>
+</div>
+<div class="sect1">
+<h2 id="loggers"><a class="anchor" href="#loggers"></a>Loggers</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Logger elements may only be defined as children of the &lt;log4net&gt; element.</p>
 </div>
@@ -1129,7 +1224,7 @@ All loggers ultimately inherit from this logger.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">level</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the logging level for this logger. This logger will only accept event that are at this level or above.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the logging level for this logger. This logger will only accept events that are at this level or above.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">param</p></td>
@@ -1139,8 +1234,10 @@ All loggers ultimately inherit from this logger.</p>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="renderers"><a class="anchor" href="#renderers"></a>Renderers</h3>
+</div>
+<div class="sect1">
+<h2 id="renderers"><a class="anchor" href="#renderers"></a>Renderers</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Renderer elements may only be defined as children of the &lt;log4net&gt; element.</p>
 </div>
@@ -1191,8 +1288,10 @@ If the type is not defined in the log4net assembly this type name must be fully 
 <p>The &lt;renderer&gt; element supports no child elements.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h3>
+</div>
+<div class="sect1">
+<h2 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Parameter elements may be children of many elements. See the specific elements above for details.</p>
 </div>
@@ -1280,8 +1379,10 @@ If the type is not defined in the log4net assembly this type name must be fully 
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="extension-parameters"><a class="anchor" href="#extension-parameters"></a>Extension Parameters</h3>
+</div>
+<div class="sect1">
+<h2 id="extension-parameters"><a class="anchor" href="#extension-parameters"></a>Extension Parameters</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Configuration parameters map directly to writable properties on an object.
 The properties available depend on the actual type of the object being configured.</p>
@@ -1290,8 +1391,10 @@ The properties available depend on the actual type of the object being configure
 <p>For 3rd party components please see their relevant API reference for details of the properties available.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="compact-parameter-syntax"><a class="anchor" href="#compact-parameter-syntax"></a>Compact Parameter Syntax</h3>
+</div>
+<div class="sect1">
+<h2 id="compact-parameter-syntax"><a class="anchor" href="#compact-parameter-syntax"></a>Compact Parameter Syntax</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>All parameters may alternately be specified using the parameter name as the element name rather than using the param element and name attribute.</p>
 </div>
@@ -1313,7 +1416,6 @@ The properties available depend on the actual type of the object being configure
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;evaluator type="log4net.Core.LevelEvaluator"&gt;
   &lt;threshold value="WARN"/&gt;
 &lt;evaluator&gt;</code></pre>
-</div>
 </div>
 </div>
 </div>

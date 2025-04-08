@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Layouts :: Apache log4net</title>
-    <link rel="canonical" href="https://logging.apache.org/log4net/manual/layouts.html">
+    <title>Supported Frameworks :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/supported-frameworks.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
 <link rel="stylesheet" href="../_/css/site.css">
 <link rel="icon" href="../_/../_images/favicon.ico" type="image/x-icon">
@@ -152,13 +152,13 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="filters.html">Filters</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="layouts.html">Layouts</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="installation.html">Installation</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
   </li>
 </ul>
@@ -194,141 +194,25 @@
   <ul>
     <li><a href="../index.html">Home</a></li>
     <li><a href="index.html">Manual</a></li>
-    <li><a href="layouts.html">Layouts</a></li>
+    <li><a href="supported-frameworks.html">Supported Frameworks</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/layouts.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/supported-frameworks.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Layouts</h1>
+<h1 class="page">Supported Frameworks</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>An <a href="appenders.html" class="xref page">appender</a> uses a <strong>layout</strong> to encode a LogEvent into a form that meets the needs of whatever will be consuming the log event.
-This page will try to answer following questions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#concerns">What are some common concerns shared by all predefined layouts?</a></p>
-</li>
-<li>
-<p><a href="#predefined-layouts">Which layouts does log4net provide?</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="concerns"><a class="anchor" href="#concerns"></a>Common Concerns</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This section outlines some common concerns shared by most predefined layouts in log4net that users should be aware of.</p>
-</div>
-<div class="sect2">
-<h3 id="structured-logging"><a class="anchor" href="#structured-logging"></a>Structured Logging</h3>
-<div class="paragraph">
-<p>In modern production environments, logs are typically not read from local files by engineers.
-Instead, they are sent to log ingestion systems like Elasticsearch, Google Cloud Logging, or similar platforms for observability, metrics, and monitoring purposes.</p>
+<p>This document summarizes the .NET frameworks supported by log4net.</p>
 </div>
 <div class="paragraph">
-<p>To support this, logs must be encoded in a machine-readable format — a practice known as <strong>structured logging</strong>.</p>
+<p>The log4net project is actively built and tested by its maintainers against the following target frameworks:</p>
 </div>
-<div class="paragraph">
-<p>log4net provides support for structured logging through specialized layouts.
-For production use cases, we recommend using either:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>XmlLayout</code> — for structured XML output.</p>
-</li>
-<li>
-<p><code>JsonLayout</code> — via the external project <a href="https://gitlab.com/gdziadkiewicz/log4net.Ext.Json/-/blob/develop/log4net.Ext.Json/Layout/SerializedLayout.cs">log4net.Ext.Json</a>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>These layouts help ensure your logs are compatible with log aggregation and analysis tools.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="predefined-layouts"><a class="anchor" href="#predefined-layouts"></a>Predefined Layouts</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>log4net includes a set of predefined layouts designed to support a variety of common logging scenarios.</p>
-</div>
-<div class="sect2">
-<h3 id="patternlayout"><a class="anchor" href="#patternlayout"></a>PatternLayout</h3>
-<div class="paragraph">
-<p><code>PatternLayout</code> is a customizable, efficient, and human-readable layout that generates log messages based on a user-defined pattern.
-It works similarly to <code>String.Format()</code> but provides specialized directives for injecting properties from a <code>LoggingEvent</code>.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><code>PatternLayout</code> is <strong>not</strong> intended for structured logging.
-In production, prefer <code>XmlLayout</code> or <code>JsonLayout</code> for generating machine-readable logs (e.g., XML or JSON) that can be consumed by log ingestion systems such as Elasticsearch or Google Cloud Logging.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>A conversion pattern is composed of literal text and conversion specifiers (format control expressions).
-For example, the following pattern:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-charp hljs" data-lang="charp">logger.Debug("Woof!");
-logger.Warn("Meow!");</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>will yield the output</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">2024-12-21 14:07:41,517 [main] DEBUG Animals.Carnivora.Dog - Woof!
-2024-12-21 14:07:41,517 [main] WARN  Animals.Carnivora.Dog - Meow!</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="dynamic-pattern-layout"><a class="anchor" href="#dynamic-pattern-layout"></a>DyamicPatternLayout</h3>
-<div class="paragraph">
-<p>The <code>DynamicPatternLayout</code> should be used whenever the header or footer needs to include information that may change over time.</p>
-</div>
-<div class="paragraph">
-<p>Unlike the static <code>PatternLayout</code>, which renders headers and footers only once, the <code>DynamicPatternLayout</code> re-evaluates its pattern every time it is invoked.
-This makes it possible, for example, to include the current date and time in the header or footer—something not possible with the static layout.</p>
-</div>
-<div class="paragraph">
-<p>The following example shows how to configure the <code>DynamicPatternLayout</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;layout type="log4net.Layout.DynamicPatternLayout"&gt;
-  &lt;header value="Log started at %date%newline" /&gt;
-  &lt;footer value="Log ended at %date%newline" /&gt;
-  &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
-&lt;/layout&gt;</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="layout-list"><a class="anchor" href="#layout-list"></a>List of Layouts</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -336,46 +220,150 @@ This makes it possible, for example, to include the current date and time in the
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Framework</th>
+<th class="tableblock halign-left valign-top">Website</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Layout.DynamicPatternLayout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Formats the logging event using a pattern string that is re-evaluated on every log event, allowing dynamic values like timestamps in headers or footers.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft .NET 8 (via .NET Standard 2.0)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" class="bare">https://dotnet.microsoft.com/en-us/download/dotnet/8.0</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Layout.ExceptionLayout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Outputs only the exception text from the logging event.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Layout.PatternLayout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Formats the logging event using a flexible pattern string with various conversion specifiers.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Layout.RawTimeStampLayout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Outputs the raw timestamp (as a <code>DateTime</code>) from the logging event.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Layout.RawUtcTimeStampLayout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Outputs the raw timestamp in UTC from the logging event.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Layout.SimpleLayout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a very simple format: <code>[level] - [message]</code>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Layout.XmlLayout</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Formats the logging event as a basic XML element.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Layout.XmlLayoutSchemaLog4j</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Formats the logging event as XML compliant with the log4j event DTD.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft .NET Framework 4.6.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://msdn.microsoft.com/en-us/netframework/" class="bare">http://msdn.microsoft.com/en-us/netframework/</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
+<div class="sect1">
+<h2 id="appenders"><a class="anchor" href="#appenders"></a>Supported Appenders</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following appenders are supported on the specified frameworks:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Appender</th>
+<th class="tableblock halign-left valign-top">.NET Framework 4.6.2</th>
+<th class="tableblock halign-left valign-top">.NET Standard 2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AdoNetAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AnsiColorTerminalAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AspNetTraceAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BufferingForwardingAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ColoredConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DebugAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EventLogAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ForwardingAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LocalSyslogAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ManagedColoredConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MemoryAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OutputDebugStringAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RemoteSyslogAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RollingFileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SmtpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SmtpPickupDirAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TelnetAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TraceAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UdpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </article>

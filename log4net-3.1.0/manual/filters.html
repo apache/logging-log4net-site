@@ -75,6 +75,9 @@
     <a class="nav-link" href="index.html">Manual</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="appenders.html">Appenders</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -82,15 +85,81 @@
     <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration-examples.html">Configuration Examples</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration/examples.html">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/udpappender.html">UdpAppender</a>
   </li>
 </ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq.html">F.A.Q.</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="filters.html">Filters</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="layouts.html">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
   </li>
 </ul>
   </li>
@@ -136,6 +205,8 @@
 </aside>
 <article class="doc">
 <h1 class="page">Filters</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>Filters are log4net plugins that evaluate the parameters of a logging call or a log event and return one of three results:</p>
 </div>
@@ -203,6 +274,54 @@ This filter is only useful at the end of the filter chain.</p>
   &lt;stringToMatch value="ldap"/&gt;
 &lt;/filter&gt;
 &lt;filter type="log4net.Filter.DenyAllFilter" /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="list-of-filters"><a class="anchor" href="#list-of-filters"></a>List of Filters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following filters are defined in the log4net package:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Filter.DenyAllFilter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drops all logging events unconditionally.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Filter.LevelMatchFilter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows only events with an exact level match.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Filter.LevelRangeFilter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows events within a specified range of levels.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Filter.LoggerMatchFilter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matches events from loggers with names starting with a given string.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Filter.PropertyFilter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matches events based on a specific property&#8217;s value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4net.Filter.StringMatchFilter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matches events containing a specific substring in the message.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </article>
