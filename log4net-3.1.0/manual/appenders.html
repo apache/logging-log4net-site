@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Appenders :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/appenders.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+<link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/../_images/favicon.ico" type="image/x-icon">
+<!-- `@asciidoctor/tabs` extension styles -->
+<link rel="stylesheet" href="../_/css/vendor/tabs.css">
+<style>
+  /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
+  .doc .admonitionblock.important .icon { background-color: #f70; }
+  .doc .admonitionblock.warning .icon { background-color: #e40046; }
+  /* Default `h4`, `h5`, and `h6` are smaller than the normal text, fix header font sizing: */
+  .doc h1 { font-size: 1.9rem; }
+  .doc h2 { font-size: 1.7rem; }
+  .doc h3 { font-size: 1.5rem; font-weight: 400; }
+  .doc h4 { font-size: 1.3rem; font-weight: 500; }
+  .doc h5 { font-size: 1.1rem; font-weight: 500; text-decoration: underline; }
+  .doc h6 { font-size: 0.9rem; font-weight: 500; text-decoration: underline; }
+  /* Default `code`, `pre`, and `.colist` (source code annotations) fonts are too big, adjust them: */
+  .doc .colist>table code, .doc p code, .doc thead code { font-size: 0.8em; }
+  .doc pre { font-size: 0.7rem; }
+  .doc .colist { font-size: 0.75rem; }
+  /* Make links more visible: */
+  .doc a { text-decoration: underline; }
+  .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Tab header fonts aren't rendered good, adjusting the font weight: */
+  .tablist > ul li { font-weight: 500; }
+  /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
+  .toc .toc-menu li[data-level="4"] a {
+    padding-left: 2.75rem;
+  }
+  /* Replace the default highlight.js color for strings from red (unnecessarily signaling something negative) to green: */
+  .hljs-string {
+    color: #0f8532;
+  }
+</style>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <span class="navbar-item title">Apache log4net</span>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="appenders.html">Appenders</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration/examples.html">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/udpappender.html">UdpAppender</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq.html">F.A.Q.</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="filters.html">Filters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="layouts.html">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-review.html">Release verification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">Manual</a></li>
+    <li><a href="appenders.html">Appenders</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/appenders.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Appenders</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Appenders are responsible for delivering log events to their destination.
+Every Appender must implement the <code>IAppender</code> interface.</p>
+</div>
+<div class="paragraph">
+<p>While not strictly required by the log4net architecture, most appenders inherit from <code>AppenderSkeleton</code> and:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>delegate the filtering of log events to an implementation of <code>IFilter</code>.
+See <a href="filters.html" class="xref page">Filters</a> for more information.</p>
+</li>
+<li>
+<p>delegate the formatting of log events to an implementation of <code>ILayout</code>.
+See <a href="layouts.html" class="xref page">Layouts</a> for more information.</p>
+</li>
+<li>
+<p>only directly handle the writing of log event data to the target destination.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Appenders always have a name so that they can be referenced from a
+<a href="configuration.html#configuring-loggers" class="xref page">logger configuration</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="appenders-list"><a class="anchor" href="#appenders-list"></a>List of appenders</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>log4net ships with the following appenders</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AdoNetAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to a database using either prepared statements or stored procedures.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AnsiColorTerminalAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes color highlighted logging events to a an ANSI terminal window.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AspNetTraceAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to the ASP trace context. These can then be rendered at the end of the ASP page or on the ASP trace page.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BufferingForwardingAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buffers events and then forwards them to attached appenders.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ColoredConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes color highlighted logging events to the application&#8217;s Windows Console.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to the application&#8217;s Console.
+The events may go to either the standard our stream or the standard error stream.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DebugAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to the .net debugger (<a href="https://web.archive.org/web/20240930165834/https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.debug?view=net-8.0">System.Diagnostics.Debug</a>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EventLogAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to the Windows Event Log.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to a file in the file system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LocalSyslogAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to the local <a href="https://datatracker.ietf.org/doc/html/rfc3164">syslog</a> service (UNIX only).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MemoryAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stores logging events in an in memory buffer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OutputDebugStringAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to the debugger (using <a href="https://web.archive.org/web/20241118170546/https://learn.microsoft.com/en-us/windows/win32/api/debugapi/nf-debugapi-outputdebugstringw">OutputDebugString</a>).
+If the application has no debugger, the system debugger displays the string.
+If the application has no debugger and the system debugger is not active, the message is ignored.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RemoteSyslogAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to a remote <a href="https://datatracker.ietf.org/doc/html/rfc3164">syslog</a> service using UDP networking.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RollingFileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to a file in the file system.
+The RollingFileAppender can be configured to log to multiple files based upon date or file size constraints.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SmtpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sends logging events to an email address.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SmtpPickupDirAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sends logging events to an email address but writes the emails to a configurable directory rather than sending them directly via SMTP.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TelnetAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Clients</strong> connect via Telnet to receive logging events.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TraceAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Writes logging events to the .NET trace system (<a href="https://web.archive.org/web/20240907024634/https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.trace?view=net-8.0">System.Diagnostics.Trace</a>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UdpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sends logging events as connectionless UDP datagrams to a remote host or a multicast group using a UdpClient.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ForwardingAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can be used to wrap another appender, for example to attach additional filters.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="appender-additivity"><a class="anchor" href="#appender-additivity"></a>Appender Additivity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A logger can have multiple appenders.</p>
+</div>
+<div class="paragraph">
+<p>Each enabled logging request is passed to all appenders attached to that logger, and also to appenders higher in the logger hierarchy.
+This behavior is called <strong>appender additivity</strong> and is enabled by default.</p>
+</div>
+<div class="paragraph">
+<p>For example, if a console appender is attached to the root logger, all enabled logs will at least print to the console.
+If a file appender is added to logger <code>X</code>, logs from <code>X</code> and its children will go to both the file and the console.</p>
+</div>
+<div class="paragraph">
+<p>Additivity can be disabled by setting a logger’s <code>additivity</code> flag to <code>false</code>.
+This prevents logging events from being passed to ancestor appenders beyond that point.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the <code>Animals</code> logger has <code>additivity = false</code>, then the <code>Animals.Carnivora</code> logger will only send its log messages to its own appenders and to <code>Animals</code>’ appenders—
+but not to any appenders higher up in the hierarchy, such as those on the root logger.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Logger Name</th>
+<th class="tableblock halign-left valign-top">Added Appenders</th>
+<th class="tableblock halign-left valign-top">Additivity Flag</th>
+<th class="tableblock halign-left valign-top">Output Targets</th>
+<th class="tableblock halign-left valign-top">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">root</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">not applicable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default appender at the root.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Animals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FileAppender, RollingFileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender, FileAppender, RollingFileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appenders of "Animals" and root.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Animals.Carnivora</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender, FileAppender, RollingFileAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inherited from "Animals" and root.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Animals.Carnivora.Felidae</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SmtpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ConsoleAppender, FileAppender, RollingFileAppender, SmtpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Appenders in "Animals.Carnivora.Felidae", "Animals", and root.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UdpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UdpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No appender accumulation because additivity is set to false.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security.Access</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UdpAppender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only appenders of "Security" are used due to disabled additivity in "Security".</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Copyright © 1999-2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
+  </p>
+  <p>
+    Apache, Log4j, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.
+    Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+    Other names may be trademarks of their respective owners.
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<!-- `@asciidoctor/tabs` extension scripts -->
+<script async src="../_/js/vendor/tabs.js"></script>
+  </body>
+</html>

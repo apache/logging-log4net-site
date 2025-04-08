@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Release notes :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/release-notes.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+<link rel="stylesheet" href="./_/css/site.css">
+<link rel="icon" href="./_/../_images/favicon.ico" type="image/x-icon">
+<!-- `@asciidoctor/tabs` extension styles -->
+<link rel="stylesheet" href="./_/css/vendor/tabs.css">
+<style>
+  /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
+  .doc .admonitionblock.important .icon { background-color: #f70; }
+  .doc .admonitionblock.warning .icon { background-color: #e40046; }
+  /* Default `h4`, `h5`, and `h6` are smaller than the normal text, fix header font sizing: */
+  .doc h1 { font-size: 1.9rem; }
+  .doc h2 { font-size: 1.7rem; }
+  .doc h3 { font-size: 1.5rem; font-weight: 400; }
+  .doc h4 { font-size: 1.3rem; font-weight: 500; }
+  .doc h5 { font-size: 1.1rem; font-weight: 500; text-decoration: underline; }
+  .doc h6 { font-size: 0.9rem; font-weight: 500; text-decoration: underline; }
+  /* Default `code`, `pre`, and `.colist` (source code annotations) fonts are too big, adjust them: */
+  .doc .colist>table code, .doc p code, .doc thead code { font-size: 0.8em; }
+  .doc pre { font-size: 0.7rem; }
+  .doc .colist { font-size: 0.75rem; }
+  /* Make links more visible: */
+  .doc a { text-decoration: underline; }
+  .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Tab header fonts aren't rendered good, adjusting the font weight: */
+  .tablist > ul li { font-weight: 500; }
+  /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
+  .toc .toc-menu li[data-level="4"] a {
+    padding-left: 2.75rem;
+  }
+  /* Replace the default highlight.js color for strings from red (unnecessarily signaling something negative) to green: */
+  .hljs-string {
+    color: #0f8532;
+  }
+</style>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <span class="navbar-item title">Apache log4net</span>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/appenders.html">Appenders</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/configuration/examples.html">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/udpappender.html">UdpAppender</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/faq.html">F.A.Q.</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/filters.html">Filters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/layouts.html">Layouts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/supported-frameworks.html">Supported Frameworks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="features.html">Features</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-review.html">Release verification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="release-notes.html">Release notes</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/release-notes.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="1">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Release notes</h1>
+<div class="sect1">
+<h2 id="release-notes-3-0-4"><a class="anchor" href="#release-notes-3-0-4"></a>3.0.4</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Release date</dt>
+<dd>
+<p>2025-02-21</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-4-added"><a class="anchor" href="#release-notes-3-0-4-added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable automatic test runs on commit (implemented by @gdziadkiewicz in <a href="https://github.com/apache/logging-log4net/pull/204">#204</a>) (<a href="https://github.com/apache/logging-log4net/issues/106">106</a>, <a href="https://github.com/apache/logging-log4net/pull/204">204</a>)</p>
+</li>
+<li>
+<p>Provide path of expected .config file in error message (requested by @FrankNuessle, implemented by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/228">#228</a>) (<a href="https://github.com/apache/logging-log4net/issues/227">227</a>, <a href="https://github.com/apache/logging-log4net/pull/228">228</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-4-fixed"><a class="anchor" href="#release-notes-3-0-4-fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Keep old, working ubuntu image version (by @gdziadkiewicz) (<a href="https://github.com/apache/logging-log4net/pull/215">215</a>)</p>
+</li>
+<li>
+<p>fixed SetQWForFiles method name in FileAppender from <a href="https://github.com/apache/logging-log4net/pull/196">#196</a> by @sketchturner in <a href="https://github.com/apache/logging-log4net/pull/217">#217</a> (fixes <a href="https://github.com/apache/logging-log4net/issues/216">#216</a> reported by @sketchturner) (<a href="https://github.com/apache/logging-log4net/issues/216">216</a>, <a href="https://github.com/apache/logging-log4net/pull/217">217</a>, <a href="https://github.com/apache/logging-log4net/pull/196">196</a>)</p>
+</li>
+<li>
+<p>XmlLayoutSchemaLog4J: Changed XML start element for exceptions since v3.0.0 (reported by @sita-martin, fixed in <a href="https://github.com/apache/logging-log4net/pull/226">#226</a> by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/issues/225">225</a>, <a href="https://github.com/apache/logging-log4net/pull/226">226</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="release-notes-3-0-3"><a class="anchor" href="#release-notes-3-0-3"></a>3.0.3</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Release date</dt>
+<dd>
+<p>2024-11-07</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-3-added"><a class="anchor" href="#release-notes-3-0-3-added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Microsoft.CodeAnalysis.NetAnalyzers (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/201">201</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-3-changed"><a class="anchor" href="#release-notes-3-0-3-changed"></a>Changed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>file scoped namespaces and CA warnings fixed in examples (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/202">202</a>)</p>
+</li>
+<li>
+<p>use raw strings for config files in unit tests (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/203">203</a>)</p>
+</li>
+<li>
+<p>use raw strings for config files in unit tests (reported by @FerdinandStapenhorst, implemented by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/206">#206</a> (<a href="https://github.com/apache/logging-log4net/issues/205">205</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-3-fixed"><a class="anchor" href="#release-notes-3-0-3-fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>MDC was accidentally renamed into Mdc in 3.0.2 - this change was reverted (<a href="https://github.com/apache/logging-log4net/commit/72fdee8f58c2cea5bb300e4b6aee179180e7bb93">72fdee8</a>)</p>
+</li>
+<li>
+<p>NDC was accidentally renamed into Ndc in 3.0.2 - this change was reverted (<a href="https://github.com/apache/logging-log4net/commit/72fdee8f58c2cea5bb300e4b6aee179180e7bb93">72fdee8</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-3-updated"><a class="anchor" href="#release-notes-3-0-3-updated"></a>Updated</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix empty string received by .NET 8 users on Linux on userName (by @gdziadkiewicz) (<a href="https://github.com/apache/logging-log4net/pull/199">199</a>)</p>
+</li>
+<li>
+<p>Bumped NUnit to 4.2.2 (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/200">200</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="release-notes-3-0-2"><a class="anchor" href="#release-notes-3-0-2"></a>3.0.2</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Release date</dt>
+<dd>
+<p>2024-10-21</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-2-known-issues"><a class="anchor" href="#release-notes-3-0-2-known-issues"></a>Known issues</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>MDC was accidentally renamed into Mdc - this will be reverted in 3.0.3</p>
+</li>
+<li>
+<p>NDC was accidentally renamed into Ndc - this will be reverted in 3.0.3</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-2-added"><a class="anchor" href="#release-notes-3-0-2-added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>separate review instructions for log4net (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/issues/201">189</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-2-changed"><a class="anchor" href="#release-notes-3-0-2-changed"></a>Changed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>more modern coding style (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/201">196</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-2-fixed"><a class="anchor" href="#release-notes-3-0-2-fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>ObjectDisposedException in TelnetAppender (3.0.1) reported by @VianneyTremelo, fixed by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/195">#195</a> (<a href="https://github.com/apache/logging-log4net/issues/194">194</a>)</p>
+</li>
+<li>
+<p>IndexOutOfRangeException when creating child loggers multithreaded, reported by @FreeAndNil, fixed by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/198">#198</a> (<a href="https://github.com/apache/logging-log4net/issues/197">197</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="release-notes-3-0-1"><a class="anchor" href="#release-notes-3-0-1"></a>3.0.1</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Release date</dt>
+<dd>
+<p>2024-09-27</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-1-added"><a class="anchor" href="#release-notes-3-0-1-added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>added source link (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/176">176</a>)</p>
+</li>
+<li>
+<p>automate version bumps (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/181">181</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-1-fixed"><a class="anchor" href="#release-notes-3-0-1-fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>use ManagedThreadId for long running tasks reported by @Audela-220, fixed by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/180">#180</a> (<a href="https://github.com/apache/logging-log4net/issues/177">177</a>)</p>
+</li>
+<li>
+<p>log4net.Util.PatternString not working in 3.0.0 (Unable to set property [file] on object [log4net.Appender.FileAppender]), reported by @sc-mk, fixed by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/184">#184</a> (<a href="https://github.com/apache/logging-log4net/issues/183">183</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="release-notes-3-0-0"><a class="anchor" href="#release-notes-3-0-0"></a>3.0.0</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Release date</dt>
+<dd>
+<p>2024-09-15</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-0-breaking-changes"><a class="anchor" href="#release-notes-3-0-0-breaking-changes"></a>Breaking changes</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Starting with 3.0.0 we only support the following target frameworks</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>net462</p>
+</li>
+<li>
+<p>netstandard2.0</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The reasoning for this change can be found in <a href="https://github.com/apache/logging-log4net/issues/111">#111 - Dropping support for older runtimes</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="release-notes-3-0-0-removed-obsolete"><a class="anchor" href="#release-notes-3-0-0-removed-obsolete"></a>Removed obsolete classes and members</h4>
+<div class="sect4 2 14">
+<h5 id="release-notes-3-0-0-removed-obsolete-1"><a class="anchor" href="#release-notes-3-0-0-removed-obsolete-1"></a>since 1.2.14 (2015)</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>log4net.Appender.BufferingAppenderSkeleton.OnlyFixPartialEventData</p>
+</li>
+<li>
+<p>log4net.Appender.ColoredConsoleAppender.ctor(ILayout)</p>
+</li>
+<li>
+<p>log4net.Appender.ColoredConsoleAppender.ctor(ILayout, bool)</p>
+</li>
+<li>
+<p>log4net.Appender.ConsoleAppender.ctor(ILayout)</p>
+</li>
+<li>
+<p>log4net.Appender.ConsoleAppender.ctor(ILayout, bool)</p>
+</li>
+<li>
+<p>log4net.Appender.DebugAppender.ctor(ILayout)</p>
+</li>
+<li>
+<p>log4net.Appender.EventLogAppender.ctor(ILayout)</p>
+</li>
+<li>
+<p>log4net.Appender.FileAppender.ctor(ILayout, string)</p>
+</li>
+<li>
+<p>log4net.Appender.FileAppender.ctor(ILayout, string, bool)</p>
+</li>
+<li>
+<p>log4net.Appender.MemoryAppender.OnlyFixPartialEventData</p>
+</li>
+<li>
+<p>log4net.Appender.SmtpAppender.LocationInfo</p>
+</li>
+<li>
+<p>log4net.Appender.TextWriterAppender.ctor(ILayout, Stream)</p>
+</li>
+<li>
+<p>log4net.Appender.TextWriterAppender.ctor(ILayout, TextWriter)</p>
+</li>
+<li>
+<p>log4net.Appender.TraceAppender.ctor(ILayout)</p>
+</li>
+<li>
+<p>log4net.Config.DOMConfigurator</p>
+</li>
+<li>
+<p>log4net.Config.AliasDomainAttribute</p>
+</li>
+<li>
+<p>log4net.Config.DomainAttribute</p>
+</li>
+<li>
+<p>log4net.Config.DOMConfiguratorAttribute</p>
+</li>
+<li>
+<p>log4net.Core.LoggerManager.GetLoggerRepository</p>
+</li>
+<li>
+<p>log4net.Core.LoggerManager.CreateDomain</p>
+</li>
+<li>
+<p>log4net.Core.LoggingEventData.TimeStamp</p>
+</li>
+<li>
+<p>log4net.Core.LoggingEvent.GetExceptionStrRep</p>
+</li>
+<li>
+<p>log4net.Core.LoggingEvent.FixVolatileData</p>
+</li>
+<li>
+<p>log4net.LogManager.GetLoggerRepository</p>
+</li>
+<li>
+<p>log4net.LogManager.CreateDomain</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4 0 6">
+<h5 id="release-notes-3-0-0-removed-obsolete-2"><a class="anchor" href="#release-notes-3-0-0-removed-obsolete-2"></a>since 2.0.6 (2016)</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>log4net.Util.SystemInfo.ProcessStartTime</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="release-notes-3-0-0-sealed"><a class="anchor" href="#release-notes-3-0-0-sealed"></a>Sealed classes - the following classes are now sealed</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>log4net.Config.AliasRepositoryAttribute</p>
+</li>
+<li>
+<p>log4net.Config.RepositoryAttribute</p>
+</li>
+<li>
+<p>log4net.Config.XmlConfiguratorAttribute</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-0-added"><a class="anchor" href="#release-notes-3-0-0-added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for nullable annotations (by @erikmav) (<a href="https://github.com/apache/logging-log4net/pull/122">122</a>, <a href="https://github.com/apache/logging-log4net/pull/123">123</a>, <a href="https://github.com/apache/logging-log4net/issues/124">124</a>, <a href="https://github.com/apache/logging-log4net/pull/126">126</a>, <a href="https://github.com/apache/logging-log4net/pull/129">129</a>, <a href="https://github.com/apache/logging-log4net/pull/131">131</a>, <a href="https://github.com/apache/logging-log4net/pull/132">132</a>, <a href="https://github.com/apache/logging-log4net/pull/136">136</a>, <a href="https://github.com/apache/logging-log4net/pull/141">141</a>)</p>
+</li>
+<li>
+<p>Enable building log4net with docker container (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/issues/127">127</a>, <a href="https://github.com/apache/logging-log4net/pull/128">128</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-0-changed"><a class="anchor" href="#release-notes-3-0-0-changed"></a>Changed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>log4net.Appender.MemoryAppender.m_eventsList (protected field) is now List&lt;LoggingEvent&gt; (instead of System.Collections.ArrayList) (<a href="https://github.com/apache/logging-log4net/issues/124">124</a>)</p>
+</li>
+<li>
+<p>log4net.Util.ReadOnlyPropertiesDictionary.InnerHashtable is now Dictionary&lt;string, object?&gt; (instead of System.Collections.Hashtable) (<a href="https://github.com/apache/logging-log4net/issues/124">124</a>)</p>
+</li>
+<li>
+<p>log4net.Repository.Hierarchy.Hierarchy.EmittedNoAppenderWarning is now internal (<a href="https://github.com/apache/logging-log4net/issues/157">157</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-0-fixed"><a class="anchor" href="#release-notes-3-0-0-fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix dotnet (ie not netfx) test run (by @mobilebilly) (<a href="https://github.com/apache/logging-log4net/issues/109">109</a>)</p>
+</li>
+<li>
+<p>Regression: Creating nested loggers in reverse order fails in 3.0.0-preview.1 (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/issues/156">156</a>)</p>
+</li>
+<li>
+<p>ColoredConsoleAppender writes UTF-8 preamble to the console on initialization (reported by @RoboBurned, fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/issues/168">168</a>)</p>
+</li>
+<li>
+<p>System.NullReferenceException when comparing with a null Level (by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/issues/169">169</a>)</p>
+</li>
+<li>
+<p>Culture-Specific String Comparisons Cause RollingFileAppender Failure in log4net on NET 5+ (reported by @stianeklund) (<a href="https://github.com/apache/logging-log4net/issues/179">179</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-0-removed"><a class="anchor" href="#release-notes-3-0-0-removed"></a>Removed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Dropping support for older runtimes (by @fluffynuts and @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/issues/111">111</a>, <a href="https://github.com/apache/logging-log4net/pull/115">115</a>)</p>
+</li>
+<li>
+<p>Remove deprecated code for 3.0 (by @erikmav) (<a href="https://github.com/apache/logging-log4net/issues/125">125</a>, <a href="https://github.com/apache/logging-log4net/pull/138">138</a>)</p>
+</li>
+<li>
+<p>log4net.Appender.RemotingAppender (<a href="https://github.com/apache/logging-log4net/issues/154">154</a>)</p>
+</li>
+<li>
+<p>log4net.Appender.NetSendAppender (<a href="https://github.com/apache/logging-log4net/pull/158">158</a>)</p>
+</li>
+<li>
+<p>Serializable Support (for .netstandard) (<a href="https://github.com/apache/logging-log4net/discussions/175">175</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="release-notes-2-x"><a class="anchor" href="#release-notes-2-x"></a>2.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="release-notes-2-x-changed"><a class="anchor" href="#release-notes-2-x-changed"></a>Changed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>release notes for older releases can be found here (<a href="https://logging.apache.org/log4net/log4net-2.0.17/release/release-notes.html">2.x-and-older</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Copyright © 1999-2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
+  </p>
+  <p>
+    Apache, Log4j, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.
+    Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+    Other names may be trademarks of their respective owners.
+  </p>
+</footer>
+<script id="site-script" src="./_/js/site.js" data-ui-root-path="./_"></script>
+<script async src="./_/js/vendor/highlight.js"></script>
+<!-- `@asciidoctor/tabs` extension scripts -->
+<script async src="./_/js/vendor/tabs.js"></script>
+  </body>
+</html>
