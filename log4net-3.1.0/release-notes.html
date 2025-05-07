@@ -48,6 +48,9 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
+      </div>
+      <div class="navbar-end">
         <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
       </div>
     </div>
@@ -196,7 +199,7 @@
     <li><a href="release-notes.html">Release notes</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/release-notes.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/release-notes.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="1">
@@ -204,6 +207,42 @@
 </aside>
 <article class="doc">
 <h1 class="page">Release notes</h1>
+<div class="sect1">
+<h2 id="release-notes-3-1-0"><a class="anchor" href="#release-notes-3-1-0"></a>3.1.0</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Release date</dt>
+<dd>
+<p>2025-05-21</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-1-0-added"><a class="anchor" href="#release-notes-3-1-0-added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Migrate the log4net site to Antora and use logging-parent pom (implemented by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/210">#210</a>) (<a href="https://github.com/apache/logging-log4net/issues/209">209</a>, <a href="https://github.com/apache/logging-log4net/pull/210">210</a>)</p>
+</li>
+<li>
+<p>detect Android and use environment variables instead of AppSettings (reported by @arunjose696, implemented by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/240">#240</a>) (<a href="https://github.com/apache/logging-log4net/issues/239">239</a>, <a href="https://github.com/apache/logging-log4net/pull/240">240</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-1-0-fixed"><a class="anchor" href="#release-notes-3-1-0-fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>RollingFileAppender does not respect the MaxSizeRollBackups with positive CountDirection (implemented by @gdziadkiewicz in <a href="https://github.com/apache/logging-log4net/pull/232">#232</a>) (<a href="https://github.com/apache/logging-log4net/issues/163">163</a>, <a href="https://github.com/apache/logging-log4net/issues/231">231</a>, <a href="https://github.com/apache/logging-log4net/pull/232">232</a>, <a href="https://github.com/apache/logging-log4net/issues/236">236</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="release-notes-3-0-4"><a class="anchor" href="#release-notes-3-0-4"></a>3.0.4</h2>
 <div class="sectionbody">

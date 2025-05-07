@@ -48,6 +48,9 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
+      </div>
+      <div class="navbar-end">
         <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
       </div>
     </div>
@@ -197,7 +200,7 @@
     <li><a href="configuration.html">Configuration</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/manual/configuration.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/configuration.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -676,6 +679,20 @@ Only one <code>log4net</code> element can be specified in the file, but it may b
 Since the .NET config parser throws errors for unregistered elements, the <code>log4net</code> section is registered using <code>System.Configuration.IgnoreSectionHandler</code>.
 This tells .NET to ignore the section, as it will be processed by log4net instead.</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="android"><a class="anchor" href="#android"></a>Android</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Android does not support <code>.config</code> files.</p>
+</div>
+<div class="paragraph">
+<p>Instead, you can set <code>AppSettings</code> values as environment variables for your process — this works only on Android.</p>
+</div>
+<div class="paragraph">
+<p>You must also load the <code>log4net</code> configuration manually, for example by reading it from an XML file at runtime.</p>
 </div>
 </div>
 </div>
