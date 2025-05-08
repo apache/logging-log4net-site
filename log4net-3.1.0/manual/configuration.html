@@ -81,6 +81,9 @@
     <a class="nav-link" href="introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="appenders.html">Appenders</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
@@ -88,61 +91,55 @@
     <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="configuration/examples.html">Examples</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="configuration/adonetappender.html">AdoNetAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/bufferingforwardingappender.html">BufferingForwardingAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/coloredconsoleappender.html">ColoredConsoleAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/consoleappender.html">ConsoleAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/eventlogappender.html">EventLogAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/fileappender.html">FileAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/rollingfileappender.html">RollingFileAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/forwardingappender.html">ForwardingAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/localsyslogappender.html">LocalSyslogAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/memoryappender.html">MemoryAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/outputdebugstringappender.html">OutputDebugStringAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/remotesyslogappender.html">RemoteSyslogAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/smtpappender.html">SmtpAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/smtppickupdirappender.html">SmtpPickupDirAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/traceappender.html">TraceAppender</a>
   </li>
-  <li class="nav-item" data-depth="4">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="configuration/udpappender.html">UdpAppender</a>
-  </li>
-</ul>
   </li>
 </ul>
   </li>
@@ -157,9 +154,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="layouts.html">Layouts</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="installation.html">Installation</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
@@ -1434,6 +1428,72 @@ The properties available depend on the actual type of the object being configure
   &lt;threshold value="WARN"/&gt;
 &lt;evaluator&gt;</code></pre>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document presents example configurations for the built-in appenders. These configurations are designed to work with the log4net.Config.XmlConfigurator.</p>
+</div>
+<div class="paragraph">
+<p>These examples are by no means exhaustive configurations for the appenders.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="configuration/adonetappender.html" class="xref page">AdoNetAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/bufferingforwardingappender.html" class="xref page">BufferingForwardingAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/coloredconsoleappender.html" class="xref page">ColoredConsoleAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/consoleappender.html" class="xref page">ConsoleAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/eventlogappender.html" class="xref page">EventLogAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/fileappender.html" class="xref page">FileAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/rollingfileappender.html" class="xref page">RollingFileAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/forwardingappender.html" class="xref page">ForwardingAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/localsyslogappender.html" class="xref page">LocalSyslogAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/managedcoloredconsoleappender.html" class="xref page">ManagedColoredConsoleAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/memoryappender.html" class="xref page">MemoryAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/outputdebugstringappender.html" class="xref page">OutputDebugStringAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/remotesyslogappender.html" class="xref page">RemoteSyslogAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/smtpappender.html" class="xref page">SmtpAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/smtppickupdirappender.html" class="xref page">SmtpPickupDirAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/traceappender.html" class="xref page">TraceAppender</a></p>
+</li>
+<li>
+<p><a href="configuration/udpappender.html" class="xref page">UdpAppender</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
