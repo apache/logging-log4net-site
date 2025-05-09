@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>F.A.Q. :: Apache log4net</title>
+    <title>FAQ :: Apache log4net</title>
     <link rel="canonical" href="https://logging.apache.org/log4net/manual/faq.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
 <link rel="stylesheet" href="../_/css/site.css">
@@ -28,6 +28,8 @@
   /* Make links more visible: */
   .doc a { text-decoration: underline; }
   .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
   /* Tab header fonts aren't rendered good, adjusting the font weight: */
   .tablist > ul li { font-weight: 500; }
   /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
@@ -81,65 +83,77 @@
     <a class="nav-link" href="introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="installation.html">Installation</a>
+    <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="appenders.html">Appenders</a>
+    <a class="nav-link" href="installation.html">Installation</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/adonetappender.html">AdoNetAppender</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration/appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/udpappender.html">UdpAppender</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+    <a class="nav-link" href="configuration/filters.html">Filters</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/coloredconsoleappender.html">ColoredConsoleAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/consoleappender.html">ConsoleAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/eventlogappender.html">EventLogAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/fileappender.html">FileAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/rollingfileappender.html">RollingFileAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/forwardingappender.html">ForwardingAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/localsyslogappender.html">LocalSyslogAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/memoryappender.html">MemoryAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/outputdebugstringappender.html">OutputDebugStringAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/remotesyslogappender.html">RemoteSyslogAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/smtpappender.html">SmtpAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/smtppickupdirappender.html">SmtpPickupDirAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/traceappender.html">TraceAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="configuration/udpappender.html">UdpAppender</a>
+    <a class="nav-link" href="configuration/layouts.html">Layouts</a>
   </li>
 </ul>
   </li>
@@ -147,16 +161,7 @@
     <a class="nav-link" href="examples.html">Examples</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="faq.html">F.A.Q.</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="filters.html">Filters</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="layouts.html">Layouts</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
+    <a class="nav-link" href="faq.html">FAQ</a>
   </li>
 </ul>
   </li>
@@ -191,7 +196,7 @@
   <ul>
     <li><a href="../index.html">Home</a></li>
     <li><a href="index.html">Manual</a></li>
-    <li><a href="faq.html">F.A.Q.</a></li>
+    <li><a href="faq.html">FAQ</a></li>
   </ul>
 </nav>
 <div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/faq.adoc">Edit this Page</a></div>
@@ -201,7 +206,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">F.A.Q.</h1>
+<h1 class="page">FAQ</h1>
 <div class="sect1">
 <h2 id="setup-and-usage"><a class="anchor" href="#setup-and-usage"></a>Setup &amp; Usage</h2>
 <div class="sectionbody">

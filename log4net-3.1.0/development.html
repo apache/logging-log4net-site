@@ -28,6 +28,8 @@
   /* Make links more visible: */
   .doc a { text-decoration: underline; }
   .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
   /* Tab header fonts aren't rendered good, adjusting the font weight: */
   .tablist > ul li { font-weight: 500; }
   /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
@@ -81,65 +83,77 @@
     <a class="nav-link" href="manual/introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/installation.html">Installation</a>
+    <a class="nav-link" href="manual/supported-frameworks.html">Supported Frameworks</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/appenders.html">Appenders</a>
+    <a class="nav-link" href="manual/installation.html">Installation</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="manual/configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/adonetappender.html">AdoNetAppender</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/configuration/appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/udpappender.html">UdpAppender</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+    <a class="nav-link" href="manual/configuration/filters.html">Filters</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/coloredconsoleappender.html">ColoredConsoleAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/consoleappender.html">ConsoleAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/eventlogappender.html">EventLogAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/fileappender.html">FileAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/rollingfileappender.html">RollingFileAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/forwardingappender.html">ForwardingAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/localsyslogappender.html">LocalSyslogAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/memoryappender.html">MemoryAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/outputdebugstringappender.html">OutputDebugStringAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/remotesyslogappender.html">RemoteSyslogAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/smtpappender.html">SmtpAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/smtppickupdirappender.html">SmtpPickupDirAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/traceappender.html">TraceAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/udpappender.html">UdpAppender</a>
+    <a class="nav-link" href="manual/configuration/layouts.html">Layouts</a>
   </li>
 </ul>
   </li>
@@ -147,16 +161,7 @@
     <a class="nav-link" href="manual/examples.html">Examples</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/faq.html">F.A.Q.</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/filters.html">Filters</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/layouts.html">Layouts</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/supported-frameworks.html">Supported Frameworks</a>
+    <a class="nav-link" href="manual/faq.html">FAQ</a>
   </li>
 </ul>
   </li>

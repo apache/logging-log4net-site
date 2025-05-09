@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>AdoNetAppender :: Apache log4net</title>
-    <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/adonetappender.html">
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/appenders/adonetappender.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
-<link rel="stylesheet" href="../../_/css/site.css">
-<link rel="icon" href="../../_/../_images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/../_images/favicon.ico" type="image/x-icon">
 <!-- `@asciidoctor/tabs` extension styles -->
-<link rel="stylesheet" href="../../_/css/vendor/tabs.css">
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
 <style>
   /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
   .doc .admonitionblock.important .icon { background-color: #f70; }
@@ -28,6 +28,8 @@
   /* Make links more visible: */
   .doc a { text-decoration: underline; }
   .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
   /* Tab header fonts aren't rendered good, adjusting the font weight: */
   .tablist > ul li { font-weight: 500; }
   /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
@@ -63,111 +65,114 @@
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../../index.html">Home</a></h3>
+    <h3 class="title"><a href="../../../index.html">Home</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../download.html">Download</a>
+    <a class="nav-link" href="../../../download.html">Download</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../development.html">Development</a>
+    <a class="nav-link" href="../../../development.html">Development</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">Manual</a>
+    <a class="nav-link" href="../../index.html">Manual</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../introduction.html">Introduction</a>
+    <a class="nav-link" href="../../introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../installation.html">Installation</a>
+    <a class="nav-link" href="../../supported-frameworks.html">Supported Frameworks</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../appenders.html">Appenders</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../configuration.html">Configuration</a>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="4">
     <a class="nav-link" href="adonetappender.html">AdoNetAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="bufferingforwardingappender.html">BufferingForwardingAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="coloredconsoleappender.html">ColoredConsoleAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="consoleappender.html">ConsoleAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="eventlogappender.html">EventLogAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="fileappender.html">FileAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="rollingfileappender.html">RollingFileAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="forwardingappender.html">ForwardingAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="localsyslogappender.html">LocalSyslogAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="memoryappender.html">MemoryAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="outputdebugstringappender.html">OutputDebugStringAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="remotesyslogappender.html">RemoteSyslogAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="smtpappender.html">SmtpAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="smtppickupdirappender.html">SmtpPickupDirAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="traceappender.html">TraceAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="udpappender.html">UdpAppender</a>
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../examples.html">Examples</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../faq.html">F.A.Q.</a>
-  </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../filters.html">Filters</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../layouts.html">Layouts</a>
   </li>
+</ul>
+  </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../supported-frameworks.html">Supported Frameworks</a>
+    <a class="nav-link" href="../../examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq.html">FAQ</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../features.html">Features</a>
+    <a class="nav-link" href="../../../features.html">Features</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../release-notes.html">Release notes</a>
+    <a class="nav-link" href="../../../release-notes.html">Release notes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../release-review.html">Release verification</a>
+    <a class="nav-link" href="../../../release-review.html">Release verification</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
@@ -186,16 +191,17 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../index.html" class="home-link"></a>
+  <a href="../../../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../../index.html">Home</a></li>
-    <li><a href="../index.html">Manual</a></li>
-    <li><a href="../configuration.html">Configuration</a></li>
+    <li><a href="../../../index.html">Home</a></li>
+    <li><a href="../../index.html">Manual</a></li>
+    <li><a href="../../configuration.html">Configuration</a></li>
+    <li><a href="../appenders.html">Appenders</a></li>
     <li><a href="adonetappender.html">AdoNetAppender</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/configuration/adonetappender.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/configuration/appenders/adonetappender.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -545,9 +551,9 @@ Here are the key configuration elements:</p>
     Other names may be trademarks of their respective owners.
   </p>
 </footer>
-<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
-<script async src="../../_/js/vendor/highlight.js"></script>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
 <!-- `@asciidoctor/tabs` extension scripts -->
-<script async src="../../_/js/vendor/tabs.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
   </body>
 </html>

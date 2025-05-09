@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>EventLogAppender :: Apache log4net</title>
-    <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/eventlogappender.html">
+    <title>BufferingForwardingAppender :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/appenders/bufferingforwardingappender.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
-<link rel="stylesheet" href="../../_/css/site.css">
-<link rel="icon" href="../../_/../_images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/../_images/favicon.ico" type="image/x-icon">
 <!-- `@asciidoctor/tabs` extension styles -->
-<link rel="stylesheet" href="../../_/css/vendor/tabs.css">
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
 <style>
   /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
   .doc .admonitionblock.important .icon { background-color: #f70; }
@@ -28,6 +28,8 @@
   /* Make links more visible: */
   .doc a { text-decoration: underline; }
   .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
   /* Tab header fonts aren't rendered good, adjusting the font weight: */
   .tablist > ul li { font-weight: 500; }
   /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
@@ -63,111 +65,114 @@
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="../../index.html">Home</a></h3>
+    <h3 class="title"><a href="../../../index.html">Home</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../download.html">Download</a>
+    <a class="nav-link" href="../../../download.html">Download</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../development.html">Development</a>
+    <a class="nav-link" href="../../../development.html">Development</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">Manual</a>
+    <a class="nav-link" href="../../index.html">Manual</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../introduction.html">Introduction</a>
+    <a class="nav-link" href="../../introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../installation.html">Installation</a>
+    <a class="nav-link" href="../../supported-frameworks.html">Supported Frameworks</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../appenders.html">Appenders</a>
+    <a class="nav-link" href="../../installation.html">Installation</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../configuration.html">Configuration</a>
+    <a class="nav-link" href="../../configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="adonetappender.html">AdoNetAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="4">
     <a class="nav-link" href="bufferingforwardingappender.html">BufferingForwardingAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="coloredconsoleappender.html">ColoredConsoleAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="consoleappender.html">ConsoleAppender</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="eventlogappender.html">EventLogAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="fileappender.html">FileAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="rollingfileappender.html">RollingFileAppender</a>
-  </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="forwardingappender.html">ForwardingAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="localsyslogappender.html">LocalSyslogAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="memoryappender.html">MemoryAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="outputdebugstringappender.html">OutputDebugStringAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="remotesyslogappender.html">RemoteSyslogAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="smtpappender.html">SmtpAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="smtppickupdirappender.html">SmtpPickupDirAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="traceappender.html">TraceAppender</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="udpappender.html">UdpAppender</a>
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../examples.html">Examples</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../faq.html">F.A.Q.</a>
-  </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../filters.html">Filters</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../layouts.html">Layouts</a>
   </li>
+</ul>
+  </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../supported-frameworks.html">Supported Frameworks</a>
+    <a class="nav-link" href="../../examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq.html">FAQ</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../features.html">Features</a>
+    <a class="nav-link" href="../../../features.html">Features</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../release-notes.html">Release notes</a>
+    <a class="nav-link" href="../../../release-notes.html">Release notes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../release-review.html">Release verification</a>
+    <a class="nav-link" href="../../../release-review.html">Release verification</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
@@ -186,49 +191,66 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../index.html" class="home-link"></a>
+  <a href="../../../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../../index.html">Home</a></li>
-    <li><a href="../index.html">Manual</a></li>
-    <li><a href="../configuration.html">Configuration</a></li>
-    <li><a href="eventlogappender.html">EventLogAppender</a></li>
+    <li><a href="../../../index.html">Home</a></li>
+    <li><a href="../../index.html">Manual</a></li>
+    <li><a href="../../configuration.html">Configuration</a></li>
+    <li><a href="../appenders.html">Appenders</a></li>
+    <li><a href="bufferingforwardingappender.html">BufferingForwardingAppender</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/configuration/eventlogappender.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/configuration/appenders/bufferingforwardingappender.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">EventLogAppender</h1>
+<h1 class="page">BufferingForwardingAppender</h1>
 <div class="paragraph">
-<p>The EventLogAppender in log4net logs messages to the Windows Event Log.
-It is limited to .Net 4.x because it is Windows specific and .netstandard lacks support for writing to the Event Log.</p>
+<p>The <code>BufferingForwardingAppender</code> buffers log events in memory before forwarding them to another appender.
+This helps improve performance by reducing the number of writes to the destination appender, especially in high-volume logging scenarios.
+Once the buffer reaches a specified size or time threshold, the events are forwarded to the target appender in a batch.</p>
 </div>
 <div class="paragraph">
-<p>The following example shows how to configure the <code>EventLogAppender</code> to log to the Application event log on the local machine using the event Source of the AppDomain.FriendlyName.</p>
+<p>The following example shows how to configure the <code>BufferingForwardingAppender</code> to buffer 100 messages before delivering them to the <code>ConsoleAppender</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="EventLogAppender" type="log4net.Appender.EventLogAppender" &gt;
-  &lt;layout type="log4net.Layout.PatternLayout"&gt;
-    &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
-  &lt;/layout&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="BufferingForwardingAppender" type="log4net.Appender.BufferingForwardingAppender" &gt;
+  &lt;bufferSize value="100"/&gt;
+  &lt;!--
+    The value configures what gets fixed immediately when calling logger.Log().
+    The default value is All, which may negatively impact performance enough to warrant changing it to fix less data.
+    More information can be found at https://github.com/apache/logging-log4net/blob/master/src/log4net/Core/FixFlags.cs
+  --&gt;
+  &lt;fix value="All"/&gt;
+  &lt;appender-ref ref="ConsoleAppender" /&gt;
 &lt;/appender&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This example shows how to configure the <code>EventLogAppender</code> to use a specific event Source.</p>
+<p>This example shows how to deliver only significant events.</p>
+</div>
+<div class="paragraph">
+<p>A LevelEvaluator is specified with a threshold of WARN.
+This means that the events will only be delivered when a message with level of WARN or higher level is logged.</p>
+</div>
+<div class="paragraph">
+<p>Up to 512 <code>bufferSize</code> previous messages of any level will also be delivered to provide context information.
+Messages not sent will be discarded.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="EventLogAppender" type="log4net.Appender.EventLogAppender" &gt;
-  &lt;applicationName value="MyApp" /&gt;
-  &lt;layout type="log4net.Layout.PatternLayout"&gt;
-    &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
-  &lt;/layout&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="BufferingForwardingAppender" type="log4net.Appender.BufferingForwardingAppender" &gt;
+  &lt;bufferSize value="512" /&gt;
+  &lt;lossy value="true" /&gt;
+  &lt;evaluator type="log4net.Core.LevelEvaluator"&gt;
+    &lt;threshold value="WARN"/&gt;
+  &lt;/evaluator&gt;
+  &lt;appender-ref ref="ConsoleAppender" /&gt;
 &lt;/appender&gt;</code></pre>
 </div>
 </div>
@@ -248,9 +270,9 @@ It is limited to .Net 4.x because it is Windows specific and .netstandard lacks 
     Other names may be trademarks of their respective owners.
   </p>
 </footer>
-<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
-<script async src="../../_/js/vendor/highlight.js"></script>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
 <!-- `@asciidoctor/tabs` extension scripts -->
-<script async src="../../_/js/vendor/tabs.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
   </body>
 </html>
