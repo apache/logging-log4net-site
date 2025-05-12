@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>log4net :: Apache log4net</title>
-    <link rel="canonical" href="https://logging.apache.org/log4net/index.html">
+    <title>ConsoleAppender :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/appenders/consoleappender.html">
     <meta name="generator" content="Antora 3.2.0-alpha.6">
-<link rel="stylesheet" href="./_/css/site.css">
-<link rel="icon" href="./_/../_images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/../_images/favicon.ico" type="image/x-icon">
 <!-- `@asciidoctor/tabs` extension styles -->
-<link rel="stylesheet" href="./_/css/vendor/tabs.css">
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
 <style>
   /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
   .doc .admonitionblock.important .icon { background-color: #f70; }
@@ -65,114 +65,114 @@
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="index.html">Home</a></h3>
+    <h3 class="title"><a href="../../../index.html">Home</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="download.html">Download</a>
+    <a class="nav-link" href="../../../download.html">Download</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="development.html">Development</a>
+    <a class="nav-link" href="../../../development.html">Development</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="manual/index.html">Manual</a>
+    <a class="nav-link" href="../../index.html">Manual</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/introduction.html">Introduction</a>
+    <a class="nav-link" href="../../introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/supported-frameworks.html">Supported Frameworks</a>
+    <a class="nav-link" href="../../supported-frameworks.html">Supported Frameworks</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/installation.html">Installation</a>
+    <a class="nav-link" href="../../installation.html">Installation</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="manual/configuration.html">Configuration</a>
+    <a class="nav-link" href="../../configuration.html">Configuration</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="manual/configuration/appenders.html">Appenders</a>
+    <a class="nav-link" href="../appenders.html">Appenders</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/adonetappender.html">AdoNetAppender</a>
+    <a class="nav-link" href="adonetappender.html">AdoNetAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+    <a class="nav-link" href="bufferingforwardingappender.html">BufferingForwardingAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/coloredconsoleappender.html">ColoredConsoleAppender</a>
+    <a class="nav-link" href="coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="consoleappender.html">ConsoleAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/consoleappender.html">ConsoleAppender</a>
+    <a class="nav-link" href="eventlogappender.html">EventLogAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/eventlogappender.html">EventLogAppender</a>
+    <a class="nav-link" href="fileappender.html">FileAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/fileappender.html">FileAppender</a>
+    <a class="nav-link" href="forwardingappender.html">ForwardingAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/forwardingappender.html">ForwardingAppender</a>
+    <a class="nav-link" href="localsyslogappender.html">LocalSyslogAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/localsyslogappender.html">LocalSyslogAppender</a>
+    <a class="nav-link" href="managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+    <a class="nav-link" href="memoryappender.html">MemoryAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/memoryappender.html">MemoryAppender</a>
+    <a class="nav-link" href="outputdebugstringappender.html">OutputDebugStringAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/outputdebugstringappender.html">OutputDebugStringAppender</a>
+    <a class="nav-link" href="remotesyslogappender.html">RemoteSyslogAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/remotesyslogappender.html">RemoteSyslogAppender</a>
+    <a class="nav-link" href="rollingfileappender.html">RollingFileAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/rollingfileappender.html">RollingFileAppender</a>
+    <a class="nav-link" href="smtpappender.html">SmtpAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/smtpappender.html">SmtpAppender</a>
+    <a class="nav-link" href="smtppickupdirappender.html">SmtpPickupDirAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+    <a class="nav-link" href="traceappender.html">TraceAppender</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/traceappender.html">TraceAppender</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="manual/configuration/appenders/udpappender.html">UdpAppender</a>
+    <a class="nav-link" href="udpappender.html">UdpAppender</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/filters.html">Filters</a>
+    <a class="nav-link" href="../filters.html">Filters</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="manual/configuration/layouts.html">Layouts</a>
+    <a class="nav-link" href="../layouts.html">Layouts</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/examples.html">Examples</a>
+    <a class="nav-link" href="../../examples.html">Examples</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="manual/faq.html">FAQ</a>
+    <a class="nav-link" href="../../faq.html">FAQ</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="features.html">Features</a>
+    <a class="nav-link" href="../../../features.html">Features</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="release-notes.html">Release notes</a>
+    <a class="nav-link" href="../../../release-notes.html">Release notes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="release-review.html">Release verification</a>
+    <a class="nav-link" href="../../../release-review.html">Release verification</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
@@ -191,35 +191,52 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link is-current"></a>
+  <a href="../../../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html">log4net</a></li>
+    <li><a href="../../../index.html">Home</a></li>
+    <li><a href="../../index.html">Manual</a></li>
+    <li><a href="../../configuration.html">Configuration</a></li>
+    <li><a href="../appenders.html">Appenders</a></li>
+    <li><a href="consoleappender.html">ConsoleAppender</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/configuration/appenders/consoleappender.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">log4net</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">ConsoleAppender</h1>
 <div class="paragraph">
-<p>The Apache log4net library is a library to output log statements to a variety of output targets.
-For more information on log4net see the <a href="features.html" class="xref page">Features</a> document.</p>
+<p>The <code>ConsoleAppender</code> writes log messages to the console.
+It outputs messages without color coding, making it simple and suitable for basic logging needs.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="github"><a class="anchor" href="#github"></a>Github</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://github.com/apache/logging-log4net">log4net</a></p>
+<p>The following example shows how to configure the <code>ConsoleAppender</code> to log messages to the console.
+By default the messages are sent to the console standard output stream.</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender"&gt;
+  &lt;layout type="log4net.Layout.PatternLayout"&gt;
+    &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example shows how to direct the log messages to the console error stream.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender"&gt;
+  &lt;target value="Console.Error" /&gt;
+  &lt;layout type="log4net.Layout.PatternLayout"&gt;
+    &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
 </div>
 </div>
 </article>
@@ -237,9 +254,9 @@ For more information on log4net see the <a href="features.html" class="xref page
     Other names may be trademarks of their respective owners.
   </p>
 </footer>
-<script id="site-script" src="./_/js/site.js" data-ui-root-path="./_"></script>
-<script async src="./_/js/vendor/highlight.js"></script>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
 <!-- `@asciidoctor/tabs` extension scripts -->
-<script async src="./_/js/vendor/tabs.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
   </body>
 </html>

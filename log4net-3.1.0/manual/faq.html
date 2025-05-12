@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FAQ :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/faq.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+<link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/../_images/favicon.ico" type="image/x-icon">
+<!-- `@asciidoctor/tabs` extension styles -->
+<link rel="stylesheet" href="../_/css/vendor/tabs.css">
+<style>
+  /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
+  .doc .admonitionblock.important .icon { background-color: #f70; }
+  .doc .admonitionblock.warning .icon { background-color: #e40046; }
+  /* Default `h4`, `h5`, and `h6` are smaller than the normal text, fix header font sizing: */
+  .doc h1 { font-size: 1.9rem; }
+  .doc h2 { font-size: 1.7rem; }
+  .doc h3 { font-size: 1.5rem; font-weight: 400; }
+  .doc h4 { font-size: 1.3rem; font-weight: 500; }
+  .doc h5 { font-size: 1.1rem; font-weight: 500; text-decoration: underline; }
+  .doc h6 { font-size: 0.9rem; font-weight: 500; text-decoration: underline; }
+  /* Default `code`, `pre`, and `.colist` (source code annotations) fonts are too big, adjust them: */
+  .doc .colist>table code, .doc p code, .doc thead code { font-size: 0.8em; }
+  .doc pre { font-size: 0.7rem; }
+  .doc .colist { font-size: 0.75rem; }
+  /* Make links more visible: */
+  .doc a { text-decoration: underline; }
+  .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
+  /* Tab header fonts aren't rendered good, adjusting the font weight: */
+  .tablist > ul li { font-weight: 500; }
+  /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
+  .toc .toc-menu li[data-level="4"] a {
+    padding-left: 2.75rem;
+  }
+  /* Replace the default highlight.js color for strings from red (unnecessarily signaling something negative) to green: */
+  .hljs-string {
+    color: #0f8532;
+  }
+</style>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <span class="navbar-item title">Apache log4net</span>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration/appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/udpappender.html">UdpAppender</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuration/filters.html">Filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuration/layouts.html">Layouts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-review.html">Release verification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">Manual</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/faq.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">FAQ</h1>
+<div class="sect1">
+<h2 id="setup-and-usage"><a class="anchor" href="#setup-and-usage"></a>Setup &amp; Usage</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="what-is-log4net"><a class="anchor" href="#what-is-log4net"></a>What is log4net?</h3>
+<div class="paragraph">
+<p>log4net is a logging library that supports multiple output targets.</p>
+</div>
+<div class="paragraph">
+<p>It helps diagnose issues by enabling logging without modifying the application binary.
+Designed for minimal performance impact, log4net allows log statements to remain in production code.</p>
+</div>
+<div class="paragraph">
+<p>A key feature is hierarchical loggers, which enable fine-grained control over log output to prevent excessive logging.
+log4net is built for both speed and flexibility.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="prerequisites"><a class="anchor" href="#prerequisites"></a>What are the prerequisites for log4net?</h3>
+<div class="paragraph">
+<p>log4net runs on net462 or higher and any framework supporting netstandard2.0.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="examples"><a class="anchor" href="#examples"></a>Are there examples for using log4net?</h3>
+<div class="paragraph">
+<p>The examples can be found at <a href="https://github.com/apache/logging-log4net/tree/master/examples">examples</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="features"><a class="anchor" href="#features"></a>What are the features of log4net?</h3>
+<div class="paragraph">
+<p>See the <a href="../features.html" class="xref page">Features</a> document.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="thread-safety"><a class="anchor" href="#thread-safety"></a>Is log4net thread-safe?</h3>
+<div class="paragraph">
+<p>Yes, log4net is thread-safe.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="output"><a class="anchor" href="#output"></a>What does log output look like?</h3>
+<div class="paragraph">
+<p>The log output can be customized in many ways.
+One can completely override the output format by implementing a custom Layout</p>
+</div>
+<div class="paragraph">
+<p>Here is an example output using PatternLayout with the conversion pattern</p>
+</div>
+<div class="paragraph">
+<p>"%date [%thread] %-5level %logger - %message%newline"</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">2024-12-21 14:07:41,517 [main] DEBUG Animals.Carnivora.Dog - Woof!
+2024-12-21 14:07:41,517 [main] WARN  Animals.Carnivora.Dog - Meow!</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first field is the date and time of the log event.
+The second field is the thread outputting the log statement.
+The third field is the level of the log statement.
+The fourth field is the name of the logger making the log request.
+The text after the '-' is the message of the statement.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="loggers"><a class="anchor" href="#loggers"></a>What are Loggers?</h3>
+<div class="paragraph">
+<p>Loggers are central to log4net&#8217;s configuration.</p>
+</div>
+<div class="paragraph">
+<p>They are organized in a hierarchy and allow runtime control over which log statements are printed.</p>
+</div>
+<div class="paragraph">
+<p>Loggers inherit their levels from log4net&#8217;s configuration.
+Whether a log statement reaches an appender depends on its level and associated logger.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="contributing"><a class="anchor" href="#contributing"></a>What should I keep in mind when contributing code?</h3>
+<div class="paragraph">
+<p>See <a href="https://github.com/apache/logging-log4net/blob/master/doc/CONTRIBUTING.md">contributing</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="distribution"><a class="anchor" href="#distribution"></a>Where can I find the latest distribution of log4net?</h3>
+<div class="paragraph">
+<p>See the <a href="installation.html" class="xref page">Installation</a> or <a href="../download.html" class="xref page">Download</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="disable-looging"><a class="anchor" href="#disable-looging"></a>How do I completely disable all logging at runtime?</h3>
+<div class="paragraph">
+<p>Setting the Threshold on the Hierarchy to Level OFF will disable all logging from that Hierarchy.
+This can be done in the log4net configuration file by setting the "threshold" attribute on the log4net configuration element to "OFF".</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;log4net threshold="OFF" /&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="options-for-appenders"><a class="anchor" href="#options-for-appenders"></a>What are the configurable options for an appender?</h3>
+<div class="paragraph">
+<p>log4net uses public properties to configure components such as Appenders, Layouts, Loggers etc.</p>
+</div>
+<div class="paragraph">
+<p>Thus, any writable public property in on the appender corresponds to a configurable option.
+For example, in RollingFileAppender the</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">public int MaxSizeRollBackups { set; }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>property corresponds to the MaxSizeRollBackups option.</p>
+</div>
+<div class="paragraph">
+<p>Layouts options are also defined by their writable properties.
+Same goes for most other log4net components.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="direct-output-per-level"><a class="anchor" href="#direct-output-per-level"></a>Is it possible to direct log output to different appenders by level?</h3>
+<div class="paragraph">
+<p>Yes, it is.</p>
+</div>
+<div class="paragraph">
+<p>Each appender has a Threshold option that filters out log events below a specified level.</p>
+</div>
+<div class="paragraph">
+<p>For example, setting an appender&#8217;s threshold to DEBUG allows all higher levels (INFO, WARN, ERROR, FATAL) to pass through. This is useful since DEBUG messages are rarely helpful without surrounding context.</p>
+</div>
+<div class="paragraph">
+<p>On the other hand, setting the threshold to ERROR will exclude DEBUG, INFO, and WARN messages while keeping ERROR and FATAL.</p>
+</div>
+<div class="paragraph">
+<p>If you need to log only a specific level, use a LevelMatchFilter to ensure only events of that exact level are recorded.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="automatic-config-reload"><a class="anchor" href="#automatic-config-reload"></a>Is there a way to get log4net to automatically reload a configuration file if it changes?</h3>
+<div class="paragraph">
+<p>Yes.
+The XmlConfigurator supports automatic reloading using the ConfigureAndWatch APIs.
+Refer to the API documentation for details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-assemblies"><a class="anchor" href="#custom-assemblies"></a>Can I load an appender from another assembly?</h3>
+<div class="paragraph">
+<p>Yes.
+When specifying the type in the configuration file you can give the assembly qualified name of the type.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="..." type="MyNamespace.MyAppender, MyAssembly"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The runtime will try to locate the assembly called MyAssembly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="newline-in-header"><a class="anchor" href="#newline-in-header"></a>How do I insert newlines into the layout header?</h3>
+<div class="paragraph">
+<p>To insert newlines in a layout header, use an XML numeric character reference.</p>
+</div>
+<div class="paragraph">
+<p>A carriage return and line feed (CR LF) are represented as &amp;#13;&amp;#10;.</p>
+</div>
+<div class="paragraph">
+<p>For example, to add a header and footer with newlines in the output, use this sequence in the configuration.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;layout type="log4net.Layout.PatternLayout"&gt;
+  &lt;header value="[Header]&amp;#13;&amp;#10;" /&gt;
+  &lt;footer value="[Footer]&amp;#13;&amp;#10;" /&gt;
+  &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+&lt;/layout&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dynamic-patterns"><a class="anchor" href="#dynamic-patterns"></a>How do I use a pattern to set the value of a string property?</h3>
+<div class="paragraph">
+<p>Log4net allows using pattern syntax to set string properties, similar to PatternLayout for formatting output.</p>
+</div>
+<div class="paragraph">
+<p>To enable this, set type="log4net.Util.PatternString" on the string property in the config file. This directs the parser to process the value using PatternString before converting it to a string.</p>
+</div>
+<div class="paragraph">
+<p>For example, to include the current process ID in a FileAppender filename, use the %processid pattern in the File property.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="LogFileAppender" type="log4net.Appender.FileAppender"&gt;
+  &lt;file type="log4net.Util.PatternString" value="log-file-[%processid].txt" /&gt;
+  &lt;layout type="log4net.Layout.PatternLayout" value="%date [%thread] %-5level %logger - %message%newline" /&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="implementation"><a class="anchor" href="#implementation"></a>Implementing Logging</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="naming-loggers"><a class="anchor" href="#naming-loggers"></a>What is the suggested ways to name loggers?</h3>
+<div class="paragraph">
+<p>A common approach is to name loggers by locality, using the fully qualified class name. This has several benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simple to implement and explain to new developers.</p>
+</li>
+<li>
+<p>Reflects the application&#8217;s modular design.</p>
+</li>
+<li>
+<p>Can be refined as needed.</p>
+</li>
+<li>
+<p>Automatically provides context for log statements.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="getting-the-type"><a class="anchor" href="#getting-the-type"></a>How do I get the type of a class in a static block?</h3>
+<div class="paragraph">
+<p>To retrieve the type use:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">private static readonly ILog log = LogManager.GetLogger(typeof(Foo));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, typeof(Foo) provides the type, and LogManager.GetLogger accepts a Type instance, which is commonly used.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="performance"><a class="anchor" href="#performance"></a>What is the fastest way to (not) log?</h3>
+<div class="paragraph">
+<p>Concatenating strings in log statements, such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">log.Debug("Entry number: " + i + " is " + entry[i]);
+// or string interpolation
+log.Debug($"Entry number: {i} is {entry[i]}");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>incurs the cost of constructing the message, including converting values to strings and concatenating them—regardless of whether the message is logged.</p>
+</div>
+<div class="paragraph">
+<p>A more efficient alternative is to use log.DebugFormat etc., which formats the message only if the log level is enabled:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">log.DebugFormat("Entry number: {0} is {1}", i, entry[i]);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, check if logging is enabled before constructing the message:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">if (log.IsDebugEnabled)
+{
+  log.Debug($"Entry number: {i} is {entry[i]}");
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="locking-models"><a class="anchor" href="#locking-models"></a>How do I get multiple process to log to the same file?</h3>
+<div class="paragraph">
+<p>Before proceeding, consider if it&#8217;s absolutely necessary to have multiple processes log to the same file — it&#8217;s often better to avoid this.</p>
+</div>
+<div class="paragraph">
+<p>FileAppender offers different locking models, but they have limitations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Default</strong> - Holds an exclusive write lock, preventing other processes from writing.</p>
+</li>
+<li>
+<p><strong>MinimalLock</strong> - Acquires the write lock only while logging, allowing interleaved writes but with significant performance loss.</p>
+</li>
+<li>
+<p><strong>InterProcessLock</strong> - Uses a system-wide Mutex to synchronize, but requires all processes to cooperate.
+While better than MinimalLock, it still causes performance issues due to frequent Mutex acquisition.</p>
+</li>
+<li>
+<p><strong>NoLock</strong> - Does not use any lock, allowing all processes to write simultaneously.
+However, this can lead to log data corruption if multiple processes write to the file at the same time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Using RollingFileAppender complicates things further, as multiple processes may try to roll the log file simultaneously, which is incompatible with any locking model.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="troubleshooting"><a class="anchor" href="#troubleshooting"></a>Troubleshooting</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="internal-debugging"><a class="anchor" href="#internal-debugging"></a>How do I enable log4net internal debugging?</h3>
+<div class="paragraph">
+<p>There are two ways to enable internal debugging in log4net:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Via the Application Config File</strong> (Preferred):</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Set the <code>log4net.Internal.Debug</code> option to <code>true</code> in the application&#8217;s config file (not the log4net configuration file).</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;configuration&gt;
+    &lt;appSettings&gt;
+    &lt;add key="log4net.Internal.Debug" value="true"/&gt;
+    &lt;/appSettings&gt;
+&lt;/configuration&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This setting is read on startup, and all internal debugging messages are emitted.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Programmatically</strong>:</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Set <code>log4net.Util.LogLog.InternalDebugging</code> to <code>true</code> in code as early as possible to capture the most debug information.</p>
+</div>
+<div class="paragraph">
+<p>Internal debug messages are written to the console and <code>System.Diagnostics.Trace</code>.
+If there&#8217;s no console, messages are lost unless redirected.
+You can capture these messages using a utility like DebugView from  <a href="http://www.sysinternals.com">Sysinternals</a>.</p>
+</div>
+<div class="paragraph">
+<p>To redirect debug messages to a file, add a trace listener in the config file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;configuration&gt;
+  &lt;system.diagnostics&gt;
+    &lt;trace autoflush="true"&gt;
+      &lt;listeners&gt;
+        &lt;add name="textWriterTraceListener"
+             type="System.Diagnostics.TextWriterTraceListener"
+             initializeData="log4net.log" /&gt;
+      &lt;/listeners&gt;
+    &lt;/trace&gt;
+  &lt;/system.diagnostics&gt;
+&lt;/configuration&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Ensure the process has write permissions to the specified file.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-errors"><a class="anchor" href="#configuration-errors"></a>How can I evaluate configuration errors at runtime?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To prevent silent failures, log4net provides a way to evaluate whether it was properly configured and to check for any messages generated during startup.</p>
+</div>
+<div class="paragraph">
+<p>To check if log4net has been configured correctly, you can check the <code>Configured</code> property of the <code>ILoggerRepository</code> and enumerate the configuration messages as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">if (!log4net.LogManager.GetRepository().Configured) // log4net is not configured
+{
+  foreach (log4net.Util.LogLog message in log4net.LogManager.GetRepository().ConfigurationMessages.Cast&lt;log4net.Util.LogLog&gt;())
+  {
+    // Evaluate configuration message
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This allows you to catch any configuration issues and review them at runtime.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logging-from-services"><a class="anchor" href="#logging-from-services"></a>Why doesn&#8217;t the logging in my service work?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A Windows service runs under a user account specified in the Services control panel.
+This account may have restricted permissions, so ensure that the account has permission to create and write files in the logging directory.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, when a Windows service is launched, its current directory is set to the Windows system directory (e.g., <code>C:\Windows\System32</code>).
+If you are loading the configuration file from the current directory, keep in mind that this path won&#8217;t be the location of your assemblies.</p>
+</div>
+<div class="paragraph">
+<p>The best approach to get the correct path to your assemblies is by using <code>AppDomain.BaseDirectory</code>.
+Note that log4net internals never use the current directory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="reporting-bugs"><a class="anchor" href="#reporting-bugs"></a>How do I report bugs?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, ensure it&#8217;s truly a bug and not a usage error.
+If unsure, it&#8217;s best to start with a <a href="https://github.com/apache/logging-log4net/discussions/new?category=general">discussion</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;ve identified a bug, please report it via our <a href="https://github.com/apache/logging-log4net/issues">Issue Tracker</a>.
+Before submitting, check if the issue has already been reported by searching the existing issues.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Copyright © 2007-2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
+  </p>
+  <p>
+    Apache, log4net, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.
+    Other names may be trademarks of their respective owners.
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<!-- `@asciidoctor/tabs` extension scripts -->
+<script async src="../_/js/vendor/tabs.js"></script>
+  </body>
+</html>

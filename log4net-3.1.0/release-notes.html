@@ -28,6 +28,8 @@
   /* Make links more visible: */
   .doc a { text-decoration: underline; }
   .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
   /* Tab header fonts aren't rendered good, adjusting the font weight: */
   .tablist > ul li { font-weight: 500; }
   /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
@@ -48,6 +50,9 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
+      </div>
+      <div class="navbar-end">
         <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
       </div>
     </div>
@@ -65,7 +70,100 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/supported-frameworks.html">Supported Frameworks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/configuration/appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/udpappender.html">UdpAppender</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manual/configuration/filters.html">Filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manual/configuration/layouts.html">Layouts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/faq.html">FAQ</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="features.html">Features</a>
@@ -74,7 +172,7 @@
     <a class="nav-link" href="release-notes.html">Release notes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="https://logging.apache.org/download.html">Download</a>
+    <a class="nav-link" href="release-review.html">Release verification</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
@@ -100,7 +198,7 @@
     <li><a href="release-notes.html">Release notes</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/Feature/Antora/src/site/antora/modules/ROOT/pages/release-notes.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/release-notes.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="1">
@@ -108,6 +206,84 @@
 </aside>
 <article class="doc">
 <h1 class="page">Release notes</h1>
+<div class="sect1">
+<h2 id="release-notes-3-1-0"><a class="anchor" href="#release-notes-3-1-0"></a>3.1.0</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Release date</dt>
+<dd>
+<p>2025-05-12</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-1-0-added"><a class="anchor" href="#release-notes-3-1-0-added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Migrate the log4net site to Antora and use logging-parent pom (implemented by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/210">#210</a>) (<a href="https://github.com/apache/logging-log4net/issues/209">209</a>, <a href="https://github.com/apache/logging-log4net/pull/210">210</a>)</p>
+</li>
+<li>
+<p>detect Android and use environment variables instead of AppSettings (reported by @arunjose696, implemented by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/240">#240</a>) (<a href="https://github.com/apache/logging-log4net/issues/239">239</a>, <a href="https://github.com/apache/logging-log4net/pull/240">240</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-1-0-fixed"><a class="anchor" href="#release-notes-3-1-0-fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>RollingFileAppender does not respect the MaxSizeRollBackups with positive CountDirection (implemented by @gdziadkiewicz in <a href="https://github.com/apache/logging-log4net/pull/232">#232</a>) (<a href="https://github.com/apache/logging-log4net/issues/163">163</a>, <a href="https://github.com/apache/logging-log4net/issues/231">231</a>, <a href="https://github.com/apache/logging-log4net/pull/232">232</a>, <a href="https://github.com/apache/logging-log4net/issues/236">236</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="release-notes-3-0-4"><a class="anchor" href="#release-notes-3-0-4"></a>3.0.4</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Release date</dt>
+<dd>
+<p>2025-02-21</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-4-added"><a class="anchor" href="#release-notes-3-0-4-added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable automatic test runs on commit (implemented by @gdziadkiewicz in <a href="https://github.com/apache/logging-log4net/pull/204">#204</a>) (<a href="https://github.com/apache/logging-log4net/issues/106">106</a>, <a href="https://github.com/apache/logging-log4net/pull/204">204</a>)</p>
+</li>
+<li>
+<p>Provide path of expected .config file in error message (requested by @FrankNuessle, implemented by @FreeAndNil in <a href="https://github.com/apache/logging-log4net/pull/228">#228</a>) (<a href="https://github.com/apache/logging-log4net/issues/227">227</a>, <a href="https://github.com/apache/logging-log4net/pull/228">228</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release-notes-3-0-4-fixed"><a class="anchor" href="#release-notes-3-0-4-fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Keep old, working ubuntu image version (by @gdziadkiewicz) (<a href="https://github.com/apache/logging-log4net/pull/215">215</a>)</p>
+</li>
+<li>
+<p>fixed SetQWForFiles method name in FileAppender from <a href="https://github.com/apache/logging-log4net/pull/196">#196</a> by @sketchturner in <a href="https://github.com/apache/logging-log4net/pull/217">#217</a> (fixes <a href="https://github.com/apache/logging-log4net/issues/216">#216</a> reported by @sketchturner) (<a href="https://github.com/apache/logging-log4net/issues/216">216</a>, <a href="https://github.com/apache/logging-log4net/pull/217">217</a>, <a href="https://github.com/apache/logging-log4net/pull/196">196</a>)</p>
+</li>
+<li>
+<p>XmlLayoutSchemaLog4J: Changed XML start element for exceptions since v3.0.0 (reported by @sita-martin, fixed in <a href="https://github.com/apache/logging-log4net/pull/226">#226</a> by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/issues/225">225</a>, <a href="https://github.com/apache/logging-log4net/pull/226">226</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="release-notes-3-0-3"><a class="anchor" href="#release-notes-3-0-3"></a>3.0.3</h2>
 <div class="sectionbody">
@@ -519,13 +695,12 @@
 </div>
 <footer class="footer">
   <p>
-    Copyright © 1999-2024 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Copyright © 2007-2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
     Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
     Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
   </p>
   <p>
-    Apache, Log4j, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.
-    Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+    Apache, log4net, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.
     Other names may be trademarks of their respective owners.
   </p>
 </footer>
