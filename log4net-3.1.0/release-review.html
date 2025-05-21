@@ -223,7 +223,7 @@
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">winget install -e --id GnuPG.Gpg4win
-winget install -e --id TortoiseSVN.TortoiseSVN  # or any other subversion client
+winget install -e --id Slik.Subversion  # or any other subversion client
 winget install -e --id Mono.Mono
 winget install -e --id Microsoft.DotNet.SDK.8</code></pre>
 </div>
@@ -238,7 +238,7 @@ winget install -e --id Microsoft.DotNet.SDK.8</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 choco install gpg4win
-choco install tortoisesvn  # or any other subversion client
+choco install sliksvn  # or any other subversion client
 choco install mono
 choco install dotnet-8.0-sdk</code></pre>
 </div>
@@ -307,6 +307,18 @@ wget --cut-dirs=6 \
 </details>
 </li>
 <li>
+<p>Verify and extract</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">&amp; ./verify-release.sh</code></pre>
+</div>
+</div>
+<details>
+<summary class="title">Click to see how todo these steps manually</summary>
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Verify checksums:</p>
 <div class="listingblock">
 <div class="content">
@@ -339,6 +351,11 @@ unzip -q *source*.zip -d src
 cd src</code></pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
+</div>
+</details>
 </li>
 <li>
 <p>Verify the build (install <a href="https://docs.docker.com/engine/install">docker</a>, if you haven&#8217;t already):</p>
