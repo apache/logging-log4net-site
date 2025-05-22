@@ -22,12 +22,12 @@
  limitations under the License.
 
 -->
-  <Project rdf:about="http://logging.apache.org/log4net">
+  <Project rdf:about="https://logging.apache.org/log4net">
     <created>2007-02-09</created>
     <license rdf:resource="http://usefulinc.com/doap/licenses/asl20" />
     <name>Apache log4net</name>
-    <homepage rdf:resource="http://logging.apache.org/log4net/" />
-    <asfext:pmc rdf:resource="http://logging.apache.org" />
+    <homepage rdf:resource="https://logging.apache.org/log4net/" />
+    <asfext:pmc rdf:resource="https://logging.apache.org" />
     <shortdesc>Apache log4net provides logging services for .NET.</shortdesc>
     <bug-database rdf:resource="https://github.com/apache/logging-log4net/issues" />
     <mailing-list rdf:resource="https://logging.apache.org/support.html" />
