@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/introduction.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+<link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/../_images/favicon.ico" type="image/x-icon">
+<!-- `@asciidoctor/tabs` extension styles -->
+<link rel="stylesheet" href="../_/css/vendor/tabs.css">
+<style>
+  /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
+  .doc .admonitionblock.important .icon { background-color: #f70; }
+  .doc .admonitionblock.warning .icon { background-color: #e40046; }
+  /* Default `h4`, `h5`, and `h6` are smaller than the normal text, fix header font sizing: */
+  .doc h1 { font-size: 1.9rem; }
+  .doc h2 { font-size: 1.7rem; }
+  .doc h3 { font-size: 1.5rem; font-weight: 400; }
+  .doc h4 { font-size: 1.3rem; font-weight: 500; }
+  .doc h5 { font-size: 1.1rem; font-weight: 500; text-decoration: underline; }
+  .doc h6 { font-size: 0.9rem; font-weight: 500; text-decoration: underline; }
+  /* Default `code`, `pre`, and `.colist` (source code annotations) fonts are too big, adjust them: */
+  .doc .colist>table code, .doc p code, .doc thead code { font-size: 0.8em; }
+  .doc pre { font-size: 0.7rem; }
+  .doc .colist { font-size: 0.75rem; }
+  /* Make links more visible: */
+  .doc a { text-decoration: underline; }
+  .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
+  /* Tab header fonts aren't rendered good, adjusting the font weight: */
+  .tablist > ul li { font-weight: 500; }
+  /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
+  .toc .toc-menu li[data-level="4"] a {
+    padding-left: 2.75rem;
+  }
+  /* Replace the default highlight.js color for strings from red (unnecessarily signaling something negative) to green: */
+  .hljs-string {
+    color: #0f8532;
+  }
+</style>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="../_/../_images/log4net.svg" alt="Apache log4net"/>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="supported-frameworks.html">Supported Frameworks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configuration/appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configuration/appenders/udpappender.html">UdpAppender</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuration/filters.html">Filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configuration/layouts.html">Layouts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-review.html">Release verification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">Manual</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/introduction.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Introduction</h1>
+<div class="sect1">
+<h2 id="overview"><a class="anchor" href="#overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document introduces the log4net API, its unique features, and the rationale behind its design.
+log4net enables developers to control logging output with fine-grained precision.
+It is fully configurable at runtime through external configuration files.</p>
+</div>
+<div class="paragraph">
+<p>Almost every large application includes some form of logging or tracing system.
+Adding log statements is a straightforward and effective method for debugging.
+Sometimes it&#8217;s the only available method, especially in multithreaded or distributed applications.
+Traditional debuggers may be limited or unavailable in such environments.</p>
+</div>
+<div class="paragraph">
+<p>After deployment, logging often becomes the only way to understand application behavior.
+Effective logging systems allow administrators to diagnose and resolve issues.</p>
+</div>
+<div class="paragraph">
+<p>Experience shows that logging is a critical part of the development process.
+It provides detailed context about the application&#8217;s execution.
+It operates automatically once integrated into the codebase.
+Log output can also be stored persistently for later analysis.
+Beyond development, a powerful logging system can also serve as an auditing mechanism.</p>
+</div>
+<div class="paragraph">
+<p>Logging has trade-offs.
+It can reduce performance.
+It can produce overwhelming amounts of output.
+log4net is designed to minimize these downsides.
+It is fast, reliable, and extensible.
+The log4net API emphasizes simplicity and ease of use.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="frameworks"><a class="anchor" href="#frameworks"></a>Frameworks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>log4net is available for several frameworks.
+For each supported framework, an assembly targeting that framework is built:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>.NET Standard 2.0 via .NET 8.0</p>
+</li>
+<li>
+<p>Microsoft .NET Framework 4.6.2</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Not all frameworks are created equal, and some features have been excluded from certain builds.
+For more information, see the <a href="supported-frameworks.html" class="xref page">Supported Frameworks</a> document.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="main-components"><a class="anchor" href="#main-components"></a>Main Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>log4net has three main components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>loggers - capture and categorize log messages.</p>
+</li>
+<li>
+<p>appenders - define where and how log messages are output</p>
+</li>
+<li>
+<p>layouts - control the format of log messages.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These components work together to enable developers to log messages according to message type and level.
+They also allow controlling at runtime how these messages are formatted and where they are reported.</p>
+</div>
+<div class="paragraph">
+<p>These components are assisted by filters that control the actions of the appender.
+Object renderers are used to turn objects into strings.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logger-hierarchy"><a class="anchor" href="#logger-hierarchy"></a>Logger hierarchy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Loggers are named entities, with case-sensitive names that follow a hierarchical structure.
+The main advantage of logging APIs over <code>System.Console.WriteLine</code> is the ability to disable certain log statements while allowing others to print.</p>
+</div>
+<div class="paragraph">
+<p>Loggers can have parent-child relationships based on their names.
+For example, a logger named <code>Animals.Carnivora</code> is the parent of <code>Animals.Carnivora.Dog</code>, and <code>System</code> is the parent of <code>System.Text</code> and ancestor of <code>System.Text.StringBuilder</code>.
+This hierarchy is similar to .NET&#8217;s namespace and class structure.</p>
+</div>
+<div class="paragraph">
+<p>The root logger sits at the top of the hierarchy:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It always exists</p>
+</li>
+<li>
+<p>It cannot be retrieved by name</p>
+</li>
+<li>
+<p>It always has an assigned level</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Loggers are retrieved using the static <code>GetLogger</code> method from the <code>log4net.LogManager</code> class.
+It can take either a string for the logger name or a <code>Type</code> for the desired class.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">namespace log4net
+{
+  public class LogManager
+  {
+    public static ILog GetLogger(string name);
+    public static ILog GetLogger(Type type);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>GetLogger</code> method that takes a <code>Type</code> parameter uses the fully qualified type name as the name of the logger to retrieve.</p>
+</div>
+<div class="paragraph">
+<p>These <code>GetLogger</code> methods return an <code>ILog</code> interface, which is the representation of the logger passed back to the developer.</p>
+</div>
+<div class="paragraph">
+<p>The <code>ILog</code> interface is defined as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">namespace log4net
+{
+  public interface ILog
+  {
+    /* Test if a level is enabled for logging */
+    bool IsDebugEnabled { get; }
+    bool IsInfoEnabled { get; }
+    bool IsWarnEnabled { get; }
+    bool IsErrorEnabled { get; }
+    bool IsFatalEnabled { get; }
+
+    /* Log a message object */
+    void Debug(object message);
+    void Info(object message);
+    void Warn(object message);
+    void Error(object message);
+    void Fatal(object message);
+
+    /* Log a message object and exception */
+    void Debug(object message, Exception t);
+    void Info(object message, Exception t);
+    void Warn(object message, Exception t);
+    void Error(object message, Exception t);
+    void Fatal(object message, Exception t);
+
+    /* Log a message string using the System.String.Format syntax */
+    void DebugFormat(string format, params object[] args);
+    void InfoFormat(string format, params object[] args);
+    void WarnFormat(string format, params object[] args);
+    void ErrorFormat(string format, params object[] args);
+    void FatalFormat(string format, params object[] args);
+
+    /* Log a message string using the System.String.Format syntax and provide a culture / format provider */
+    void DebugFormat(IFormatProvider provider, string format, params object[] args);
+    void InfoFormat(IFormatProvider provider, string format, params object[] args);
+    void WarnFormat(IFormatProvider provider, string format, params object[] args);
+    void ErrorFormat(IFormatProvider provider, string format, params object[] args);
+    void FatalFormat(IFormatProvider provider, string format, params object[] args);
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logger-levels"><a class="anchor" href="#logger-levels"></a>Logger Levels</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Loggers may be assigned levels.
+Levels are instances of the <code>log4net.Core.Level</code> class.
+The following levels are defined in order of increasing priority:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ALL</p>
+</li>
+<li>
+<p>DEBUG</p>
+</li>
+<li>
+<p>INFO</p>
+</li>
+<li>
+<p>WARN</p>
+</li>
+<li>
+<p>ERROR</p>
+</li>
+<li>
+<p>FATAL</p>
+</li>
+<li>
+<p>OFF</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If a given logger is not assigned a level, it inherits one from its closest ancestor with an assigned level.</p>
+</div>
+<div class="paragraph">
+<p>More formally:</p>
+</div>
+<div class="sect2">
+<h3 id="level-inheritance"><a class="anchor" href="#level-inheritance"></a>Level Inheritance</h3>
+<div class="paragraph">
+<p>The inherited level for a given logger X is equal to the first non-null level in the logger hierarchy, starting at X and proceeding upwards in the hierarchy towards the root logger.</p>
+</div>
+<div class="paragraph">
+<p>To ensure that all loggers can eventually inherit a level, the root logger always has an assigned level.
+The default value for the root logger is <code>DEBUG</code>.</p>
+</div>
+<div class="paragraph">
+<p>Below are four examples showing various assigned level values and the resulting inherited levels according to the inheritance rule.</p>
+</div>
+<div class="sect3">
+<h4 id="example1"><a class="anchor" href="#example1"></a>Example 1: Root Logger Assigned Level</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logger name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assigned level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inherited level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">root</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X.Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X.Y.Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In this example, the root logger is assigned the level <code>DEBUG</code>, so all child loggers inherit this level.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="example2"><a class="anchor" href="#example2"></a>Example 2: All Loggers Have Assigned Levels</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logger name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assigned level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inherited level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">root</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X.Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WARN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WARN</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X.Y.Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ERROR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ERROR</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here, each logger has its own assigned level, so no inheritance is needed.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="example3"><a class="anchor" href="#example3"></a>Example 3: Some Loggers Inherit Level</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logger name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assigned level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inherited level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">root</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X.Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X.Y.Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ERROR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ERROR</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In this example, the <code>X.Y</code> logger inherits the <code>INFO</code> level from its parent <code>X</code> logger. The <code>X.Y.Z</code> logger has its own assigned level, <code>ERROR</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="example4"><a class="anchor" href="#example4"></a>Example 4: Some Loggers Inherit from Parent</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logger name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assigned level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inherited level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">root</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X.Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X.Y.Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INFO</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here, the <code>X.Y</code> and <code>X.Y.Z</code> loggers inherit the level <code>INFO</code> from their parent <code>X</code> logger.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="example-summary"><a class="anchor" href="#example-summary"></a>Summary</h4>
+<div class="paragraph">
+<p>The idea is that loggers inherit the level of their closest ancestor logger if no level is explicitly assigned. This ensures that you don’t need to manually assign levels to each logger, and the level can propagate upwards in the hierarchy.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging-requests"><a class="anchor" href="#logging-requests"></a>Logging Requests</h3>
+<div class="paragraph">
+<p>Logging requests are made by invoking one of the printing methods of a logger instance (through the log4net.ILog).</p>
+</div>
+<div class="paragraph">
+<p>The available printing methods are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Debug</p>
+</li>
+<li>
+<p>Info</p>
+</li>
+<li>
+<p>Warn</p>
+</li>
+<li>
+<p>Error</p>
+</li>
+<li>
+<p>Fatal</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By definition, the printing method determines the level of a logging request. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">log.Info("...");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This statement represents a logging request with level <code>INFO</code>.</p>
+</div>
+<div class="paragraph">
+<p>A logging request is considered "enabled" if its level is higher than or equal to the level of the logger. Otherwise, the request is "disabled."</p>
+</div>
+<div class="paragraph">
+<p>If a logger does not have an assigned level, it will inherit one from its closest ancestor in the logger hierarchy.</p>
+</div>
+<div class="sect3">
+<h4 id="basic-selection-rule"><a class="anchor" href="#basic-selection-rule"></a>Basic Selection Rule</h4>
+<div class="paragraph">
+<p>A log request of level <code>L</code> in a logger with (either assigned or inherited, whichever is appropriate) level <code>K</code> is enabled if <code>L &gt;= K</code>.</p>
+</div>
+<div class="paragraph">
+<p>This rule is at the heart of log4net. It assumes that levels are ordered. For the standard levels, we have:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Calling the <code>log4net.LogManager.GetLogger</code> method with the same name will always return a reference to the exact same logger object.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">ILog x = LogManager.GetLogger("wombat");
+ILog y = LogManager.GetLogger("wombat");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, <code>x</code> and <code>y</code> refer to exactly the same logger object.</p>
+</div>
+<div class="paragraph">
+<p>Thus, it is possible to configure a logger and then to retrieve the same instance somewhere else in the code without passing around references.</p>
+</div>
+<div class="paragraph">
+<p>In fundamental contradiction to biological parenthood, where parents always precede their children, log4net loggers can be created and configured in any order.</p>
+</div>
+<div class="paragraph">
+<p>In particular, a "parent" logger will find and link to its descendants even if it is instantiated after them.</p>
+</div>
+<div class="paragraph">
+<p>Logger configuration is usually done during application startup, typically via a configuration file.</p>
+</div>
+<div class="paragraph">
+<p>Loggers are often named after the class they’re used in, using the fully qualified class name.
+This makes log output easy to trace and aligns naturally with the application&#8217;s design.</p>
+</div>
+<div class="paragraph">
+<p>While other naming strategies are possible, this approach is simple, effective, and widely adopted.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="appenders"><a class="anchor" href="#appenders"></a>Appenders</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="configuration/appenders.html" class="xref page">Appenders</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="filters"><a class="anchor" href="#filters"></a>Filters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="configuration/filters.html" class="xref page">Filters</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="layouts"><a class="anchor" href="#layouts"></a>Layouts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="configuration/layouts.html" class="xref page">Layouts</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="renderers"><a class="anchor" href="#renderers"></a>Object Renderers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>log4net can render the content of log messages using custom logic defined by the user.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you often log <code>Orange</code> objects, you can register an <code>OrangeRenderer</code> to format them consistently in logs.</p>
+</div>
+<div class="paragraph">
+<p>Renderers follow the class hierarchy.
+If you register a <code>FruitRenderer</code>, it will be used for all <code>Fruit</code> types—including <code>Orange</code>—unless a more specific <code>OrangeRenderer</code> is also registered.</p>
+</div>
+<div class="paragraph">
+<p>Renderers must implement the <code>log4net.ObjectRenderer.IObjectRenderer</code> interface.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Format methods like <code>DebugFormat</code>, <code>InfoFormat</code>, etc., do <strong>not</strong> use Object Renderers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Copyright © 2007-2025 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
+  </p>
+  <p>
+    Apache, log4net, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.
+    Other names may be trademarks of their respective owners.
+  </p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<!-- `@asciidoctor/tabs` extension scripts -->
+<script async src="../_/js/vendor/tabs.js"></script>
+  </body>
+</html>
