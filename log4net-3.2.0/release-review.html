@@ -214,7 +214,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="windows"><a class="anchor" href="#windows"></a>Windows</h2>
+<h2 id="windows"><a class="anchor" href="#windows"></a>Windows (PowerShell)</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -222,7 +222,9 @@
 <p>Prerequisites (winget - in case of problems see next section choco)</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">winget install -e --id GnuPG.Gpg4win
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell"># as administrator
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+winget install -e --id GnuPG.Gpg4win
 winget install -e --id Slik.Subversion  # or any other subversion client
 winget install -e --id Mono.Mono
 winget install -e --id Microsoft.DotNet.SDK.8</code></pre>
@@ -248,8 +250,9 @@ choco install dotnet-8.0-sdk</code></pre>
 <p>Check out the release distribution</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">svn co https://dist.apache.org/repos/dist/dev/logging/log4net/{releaseVersion} log4net-{releaseVersion}
-pushd log4net-{releaseVersion}</code></pre>
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">$releaseVersion = ...VersionToValidate...
+svn co https://dist.apache.org/repos/dist/dev/logging/log4net/${releaseVersion} log4net-${releaseVersion}
+pushd log4net-${releaseVersion}</code></pre>
 </div>
 </div>
 </li>
@@ -257,7 +260,8 @@ pushd log4net-{releaseVersion}</code></pre>
 <p>Verify and extract</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">&amp; ./verify-release.ps1</code></pre>
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">Unblock-File ./verify-release.ps1
+&amp; ./verify-release.ps1</code></pre>
 </div>
 </div>
 </li>
@@ -281,6 +285,15 @@ pushd log4net-{releaseVersion}</code></pre>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Prerequisites</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sudo apt install unzip -y
+sudo apt install subversion -y</code></pre>
+</div>
+</div>
+</li>
 <li>
 <p>Check out the release distribution:</p>
 <div class="listingblock">
@@ -310,8 +323,7 @@ wget --cut-dirs=6 \
 <p>Verify and extract</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">bash ./verify-release.sh
-cd src</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">bash ./verify-release.sh</code></pre>
 </div>
 </div>
 <details>
@@ -347,8 +359,10 @@ cd src</code></pre>
 <p>Extract sources:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">umask 0022
-unzip -q *source*.zip -d src
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mkdir -p src
+cd src
+unzip -q -o ../*source*.zip
+
 cd src</code></pre>
 </div>
 </div>
