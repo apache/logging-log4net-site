@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>RemoteSyslogAppender :: Apache log4net</title>
     <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/appenders/remotesyslogappender.html">
-    <meta name="generator" content="Antora 3.2.0-alpha.6">
+    <meta name="generator" content="Antora 3.2.0-alpha.9">
 <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="icon" href="../../../_/../_images/favicon.ico" type="image/x-icon">
 <!-- `@asciidoctor/tabs` extension styles -->
@@ -209,6 +209,8 @@
 </aside>
 <article class="doc">
 <h1 class="page">RemoteSyslogAppender</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>RemoteSyslogAppender</code> sends log messages to a remote syslog daemon using the BSD syslog protocol over UDP (default port 514).
 It supports configurable syslog facilities and severity levels, but due to the nature of UDP, messages may be lost or truncated.</p>
@@ -259,6 +261,11 @@ It also splits log messages at line breaks, sending each line as a separate sysl
 &lt;/appender&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="newlinehandling"><a class="anchor" href="#newlinehandling"></a>Newline handling</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If your log message contains multiple lines, it will be logged as multiple separate syslog entries instead of a single multiline message.</p>
 </div>
@@ -291,6 +298,33 @@ Exception of type 'System.InvalidTimeZoneException' was thrown.
   at log4net.Tests.Appender.RemoteSyslogAppenderTest.LineBreakTest()
   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sizelimits"><a class="anchor" href="#sizelimits"></a>Size limits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>RemoteSyslogAppender</code> uses the UDP protocol to send log messages to the syslog server.
+However, there are size limitations associated with UDP:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Message size:</strong> Each log message is limited to <strong>64 KB</strong>, including both the message content and the headers.</p>
+</li>
+<li>
+<p><strong>Practical size limit:</strong> On many networks, such as Ethernet, the practical limit for message size is typically much lower — around <strong>1500 bytes</strong>.</p>
+</li>
+<li>
+<p><strong>Message truncation:</strong> If a log message exceeds these size limits, it will be <strong>truncated</strong>, which means some of the message content will be lost.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To avoid truncation, ensure that log messages are kept within the size limits of your network setup.</p>
+</div>
 </div>
 </div>
 </article>
