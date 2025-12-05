@@ -43,7 +43,6 @@
   /* Colors for maintenance policies */
   .development { color: #8A4FFF; }
   .active { color: #28A745; }
-  .eom { color: #FFC107; }
   .eol { color: #DC3545; }
 </style>
   </head>
@@ -358,11 +357,21 @@ what is considered a bug by one user may be viewed as a feature by another.</p>
 <h2 id="maintenance-policy"><a class="anchor" href="#maintenance-policy"></a>Version lifecycle and maintenance policy</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Minor releases of Apache log4net follow a defined lifecycle consisting of two phases:</p>
+<p>Minor releases of Apache log4net follow a defined lifecycle consisting of three phases:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><span class="active">Active</span></dt>
+<dt class="hdlist1"><span class="development">Active development</span></dt>
+<dd>
+<div class="paragraph">
+<p>The version is under active development and may introduce new features.
+Preview builds may be published during this phase; vulnerability reports are accepted and will be addressed.</p>
+</div>
+<div class="paragraph">
+<p>Versions in this phase are <strong>not recommended</strong> for production use.</p>
+</div>
+</dd>
+<dt class="hdlist1"><span class="active">Active maintenance</span></dt>
 <dd>
 <div class="paragraph">
 <p>The version is considered stable and suitable for production.
@@ -376,6 +385,9 @@ Vulnerability reports are accepted and will be addressed.</p>
 <dd>
 <div class="paragraph">
 <p>The version is no longer maintained, and <strong>vulnerability reports are not accepted</strong>.</p>
+</div>
+<div class="paragraph">
+<p>We will notice the end of support for a version when the first preview for a new major version is published.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -394,7 +406,13 @@ Vulnerability reports are accepted and will be addressed.</p>
 </thead>
 <tbody>
 <tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><span class="development">Active</span></p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><span class="development">Active development</span></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><span class="development">Active maintenance</span></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
