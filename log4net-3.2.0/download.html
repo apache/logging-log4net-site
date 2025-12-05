@@ -40,6 +40,11 @@
   .hljs-string {
     color: #0f8532;
   }
+  /* Colors for maintenance policies */
+  .development { color: #8A4FFF; }
+  .active { color: #28A745; }
+  .eom { color: #FFC107; }
+  .eol { color: #DC3545; }
 </style>
   </head>
   <body class="article">
@@ -175,7 +180,13 @@
     <a class="nav-link" href="release-review.html">Release verification</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="versioning.html">Versioning and support policy</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
@@ -206,6 +217,8 @@
 </aside>
 <article class="doc">
 <h1 class="page">Download</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>You can manually download all published log4net distributions, verify them, and see their licensing information by following the instructions in the <a href="https://logging.apache.org/download.html">Download page</a> of <a href="https://logging.apache.org">Logging Services</a>.</p>
 </div>
@@ -231,6 +244,55 @@ Proceed to <a href="release-notes.html" class="xref page">Release notes</a>.</p>
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="supported-versions"><a class="anchor" href="#supported-versions"></a>Supported versions</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Maintenance status of selected log4net versions</caption>
+<colgroup>
+<col style="width: 13.3333%;">
+<col style="width: 13.3333%;">
+<col style="width: 20%;">
+<col style="width: 13.3333%;">
+<col style="width: 13.3333%;">
+<col style="width: 26.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">Status</th>
+<th class="tableblock halign-left valign-top">Latest release</th>
+<th class="tableblock halign-left valign-top">First release</th>
+<th class="tableblock halign-left valign-top">End-of-life</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.x</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="active">Active</span></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-09-12</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.x</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="eol">End-of-life</span></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2020-09-06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-09-12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last release to support net20 and net45</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>See <a href="versioning.html" class="xref page">Version lifecycle and maintenance policy</a> for more information about the maintenance lifecycle of log4net versions.</p>
+</div>
+</div>
 </div>
 </article>
   </div>
