@@ -6,7 +6,6 @@ notifications:
 
 
 staging:
-  profile: ~
   whoami: asf-staging
   subdir: content/log4net
 
