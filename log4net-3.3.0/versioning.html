@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Versioning and support policy :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/versioning.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.9">
+<link rel="stylesheet" href="./_/css/site.css">
+<link rel="icon" href="./_/../_images/favicon.ico" type="image/x-icon">
+<!-- `@asciidoctor/tabs` extension styles -->
+<link rel="stylesheet" href="./_/css/vendor/tabs.css">
+<style>
+  /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
+  .doc .admonitionblock.important .icon { background-color: #f70; }
+  .doc .admonitionblock.warning .icon { background-color: #e40046; }
+  /* Default `h4`, `h5`, and `h6` are smaller than the normal text, fix header font sizing: */
+  .doc h1 { font-size: 1.9rem; }
+  .doc h2 { font-size: 1.7rem; }
+  .doc h3 { font-size: 1.5rem; font-weight: 400; }
+  .doc h4 { font-size: 1.3rem; font-weight: 500; }
+  .doc h5 { font-size: 1.1rem; font-weight: 500; text-decoration: underline; }
+  .doc h6 { font-size: 0.9rem; font-weight: 500; text-decoration: underline; }
+  /* Default `code`, `pre`, and `.colist` (source code annotations) fonts are too big, adjust them: */
+  .doc .colist>table code, .doc p code, .doc thead code { font-size: 0.8em; }
+  .doc pre { font-size: 0.7rem; }
+  .doc .colist { font-size: 0.75rem; }
+  /* Make links more visible: */
+  .doc a { text-decoration: underline; }
+  .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
+  /* Tab header fonts aren't rendered good, adjusting the font weight: */
+  .tablist > ul li { font-weight: 500; }
+  /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
+  .toc .toc-menu li[data-level="4"] a {
+    padding-left: 2.75rem;
+  }
+  /* Replace the default highlight.js color for strings from red (unnecessarily signaling something negative) to green: */
+  .hljs-string {
+    color: #0f8532;
+  }
+  /* Colors for maintenance policies */
+  .development { color: #8A4FFF; }
+  .active { color: #28A745; }
+  .eol { color: #DC3545; }
+</style>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="./_/../_images/log4net.svg" alt="Apache log4net"/>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/supported-frameworks.html">Supported Frameworks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="manual/configuration/appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="manual/configuration/appenders/udpappender.html">UdpAppender</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manual/configuration/filters.html">Filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="manual/configuration/layouts.html">Layouts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="manual/faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="release-review.html">Release verification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="versioning.html">Versioning and support policy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li>Support</li>
+    <li><a href="versioning.html">Versioning and support policy</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/versioning.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Versioning and support policy</h1>
+<div class="sect1">
+<h2 id="supported-versions"><a class="anchor" href="#supported-versions"></a>Supported versions</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Maintenance status of selected log4net versions</caption>
+<colgroup>
+<col style="width: 13.3333%;">
+<col style="width: 13.3333%;">
+<col style="width: 20%;">
+<col style="width: 13.3333%;">
+<col style="width: 13.3333%;">
+<col style="width: 26.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">Status</th>
+<th class="tableblock halign-left valign-top">Latest release</th>
+<th class="tableblock halign-left valign-top">First release</th>
+<th class="tableblock halign-left valign-top">End-of-life</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">3.x</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="active">Active</span></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-09-12</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">2.x</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="eol">End-of-life</span></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0.17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2020-09-06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-09-12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last release to support net20 and net45</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="versioning-policy"><a class="anchor" href="#versioning-policy"></a>Versioning policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Apache log4net follows
+<a href="https://semver.org/spec/v2.0.0.html">semantic versioning</a>,
+with release numbers of the form:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;[-&lt;pre-release&gt;]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">&lt;major&gt;</dt>
+<dd>
+<div class="paragraph">
+<p>The major version number is incremented when <strong>breaking changes</strong> are introduced.</p>
+</div>
+<div class="paragraph">
+<p>Upgrading to a new major version typically requires code changes in your application.
+For each new major release, a migration guide will be provided.</p>
+</div>
+</dd>
+<dt class="hdlist1">&lt;minor&gt;</dt>
+<dd>
+<div class="paragraph">
+<p>The minor version number is incremented when new features are added in a backward-compatible manner, such as:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>New methods or classes added to the public API of one of the components.</p>
+</li>
+<li>
+<p>New configuration attributes added to appenders, layouts, filters, etc.</p>
+</li>
+<li>
+<p>Functionality or methods/classes being deprecated.</p>
+</li>
+<li>
+<p>Behavioral changes introduced without breaking the public API.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Upgrading to a new minor version usually does not require code changes,
+unless you rely on undocumented behavior that has changed.
+To avoid accumulating such changes, we recommend upgrading minor versions regularly.</p>
+</div>
+<div class="paragraph">
+<p>When upgrading to a new minor version, review the corresponding
+<a href="release-notes.html" class="xref page">Release notes</a>:
+behavioral changes are highlighted in the release description and listed in the “Changed” section.</p>
+</div>
+</dd>
+<dt class="hdlist1">&lt;patch&gt;</dt>
+<dd>
+<div class="paragraph">
+<p>The patch version number is incremented when only backward-compatible bug fixes are introduced.</p>
+</div>
+<div class="paragraph">
+<p>Upgrading to a new patch release is the simplest upgrade path.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The classification of a behavioral change as a minor or patch release may vary by interpretation:
+what is considered a bug by one user may be viewed as a feature by another.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="maintenance-policy"><a class="anchor" href="#maintenance-policy"></a>Version lifecycle and maintenance policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Minor releases of Apache log4net follow a defined lifecycle consisting of three phases:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><span class="development">Active development</span></dt>
+<dd>
+<div class="paragraph">
+<p>The version is under active development and may introduce new features.
+Preview builds may be published during this phase; vulnerability reports are accepted and will be addressed.</p>
+</div>
+<div class="paragraph">
+<p>Versions in this phase are <strong>not recommended</strong> for production use.</p>
+</div>
+</dd>
+<dt class="hdlist1"><span class="active">Active maintenance</span></dt>
+<dd>
+<div class="paragraph">
+<p>The version is considered stable and suitable for production.
+Vulnerability reports are accepted and will be addressed.</p>
+</div>
+<div class="paragraph">
+<p>Due to the limited resources of the Apache log4net project, <strong>only the latest minor release of the latest major version</strong> remains in Active.</p>
+</div>
+</dd>
+<dt class="hdlist1"><span class="eol">End-of-life (EOL)</span></dt>
+<dd>
+<div class="paragraph">
+<p>The version is no longer maintained, and <strong>vulnerability reports are not accepted</strong>.</p>
+</div>
+<div class="paragraph">
+<p>We will notice the end of support for a version when the first preview for a new major version is published.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Maintenance phase</th>
+<th class="tableblock halign-left valign-top">New features</th>
+<th class="tableblock halign-left valign-top">Security/bug fixes</th>
+<th class="tableblock halign-left valign-top">Security advisories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><span class="development">Active development</span></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><span class="development">Active maintenance</span></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Yes</strong></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><span class="eol">End-of-life (EOL)</span></p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>We avoid using the term <strong>support</strong> to describe the maintenance phases, because
+support remains available in <strong>all</strong> phases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>See <a href="https://logging.apache.org/support.html#discussions-user">Community support</a>
+for the community-run discussion channels that are offered on a best-effort basis.</p>
+</li>
+<li>
+<p>Although the ASF does not endorse any third-party commercial providers,
+some companies may offer paid support for EOM or EOL versions.
+See <a href="https://logging.apache.org/support.html#commercial">Commercial support</a>
+for a publicly maintained list of such providers.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Copyright © 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
+  </p>
+  <p>
+    Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+    Other names may be trademarks of their respective owners.
+  </p>
+</footer>
+<script id="site-script" src="./_/js/site.js" data-ui-root-path="./_"></script>
+<script async src="./_/js/vendor/highlight.js"></script>
+<!-- `@asciidoctor/tabs` extension scripts -->
+<script async src="./_/js/vendor/tabs.js"></script>
+  </body>
+</html>
