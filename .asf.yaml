@@ -1,15 +1,29 @@
 notifications:
-  commits:      commits@logging.apache.org
-  issues:       notifications@logging.apache.org
+  commits: commits@logging.apache.org
+  issues: notifications@logging.apache.org
   pullrequests: notifications@logging.apache.org
-  jira_options: link label comment 
+  jira_options: link label comment
 
 staging:
-  profile: ~
+  profile:
   whoami: asf-staging
   subdir: log4net
 
 publish:
-  profile: ~
+  profile:
   whoami: asf-site
   subdir: log4net
+github:
+  rulesets:
+    - name: "Default Branch Protection"
+      type: branch
+      branches:
+        includes:
+          - "~DEFAULT_BRANCH"
+          - "release/*"
+          - "rel/*"
+        excludes: []
+      bypass_teams:
+        - root
+      restrict_deletion: true
+      restrict_force_push: true
