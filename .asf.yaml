@@ -38,6 +38,7 @@ github:
     # The raw rules need to follow the syntax given in:
     # https://docs.github.com/en/rest/repos/rules?apiVersion=2026-03-10#update-a-repository-ruleset
     - name: "No tags"
+      enforcement: true
       target: tag
       conditions:
         include:
