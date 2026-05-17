@@ -38,11 +38,14 @@ github:
     # The raw rules need to follow the syntax given in:
     # https://docs.github.com/en/rest/repos/rules?apiVersion=2026-03-10#update-a-repository-ruleset
     - name: "No tags"
-      enforcement: active
       target: tag
+      enforcement: active
+      bypass_actors: []
       conditions:
-        include:
-          - "refs/tags/*"
+        ref_name:
+          include:
+            - "refs/tags/*"
+          exclude: []
       rules:
         - type: creation
         - type: deletion
