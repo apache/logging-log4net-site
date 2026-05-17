@@ -10,20 +10,42 @@ staging:
   subdir: log4net
 
 publish:
-  profile:
   whoami: asf-site
   subdir: log4net
+
 github:
   rulesets:
+    # Default rules preventing deletion and force-push
     - name: "Default Branch Protection"
       type: branch
       branches:
         includes:
           - "~DEFAULT_BRANCH"
-          - "release/*"
-          - "rel/*"
-        excludes: []
+          - "asf-site"
       bypass_teams:
         - root
-      restrict_deletion: true
-      restrict_force_push: true
+    # Staging branch allows force-pushes
+    - name: "Staging Branch Protection"
+      type: branch
+      branches:
+        includes:
+          - "asf-staging"
+      bypass_teams:
+        - root
+      restrict_force_push: false
+    # There is no convenience notation for `creation` and `update`, so we need to use the raw rule syntax.
+    #
+    # The raw rules need to follow the syntax given in:
+    # https://docs.github.com/en/rest/repos/rules?apiVersion=2026-03-10#update-a-repository-ruleset
+    - name: "No tags"
+      type: tag
+      branches:
+        includes:
+          - "*"
+      bypass_teams:
+        - root
+      rules:
+        - type: creation
+        - type: deletion
+        - type: non_fast_forward
+        - type: update
