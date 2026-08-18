@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SmtpAppender :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/appenders/smtpappender.html">
+    <meta name="generator" content="Antora 3.2.0-rc.2">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/../_images/favicon.ico" type="image/x-icon">
+<!-- `@asciidoctor/tabs` extension styles -->
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+<style>
+  /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
+  .doc .admonitionblock.important .icon { background-color: #f70; }
+  .doc .admonitionblock.warning .icon { background-color: #e40046; }
+  /* Default `h4`, `h5`, and `h6` are smaller than the normal text, fix header font sizing: */
+  .doc h1 { font-size: 1.9rem; }
+  .doc h2 { font-size: 1.7rem; }
+  .doc h3 { font-size: 1.5rem; font-weight: 400; }
+  .doc h4 { font-size: 1.3rem; font-weight: 500; }
+  .doc h5 { font-size: 1.1rem; font-weight: 500; text-decoration: underline; }
+  .doc h6 { font-size: 0.9rem; font-weight: 500; text-decoration: underline; }
+  /* Default `code`, `pre`, and `.colist` (source code annotations) fonts are too big, adjust them: */
+  .doc .colist>table code, .doc p code, .doc thead code { font-size: 0.8em; }
+  .doc pre { font-size: 0.7rem; }
+  .doc .colist { font-size: 0.75rem; }
+  /* Make links more visible: */
+  .doc a { text-decoration: underline; }
+  .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
+  /* Tab header fonts aren't rendered good, adjusting the font weight: */
+  .tablist > ul li { font-weight: 500; }
+  /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
+  .toc .toc-menu li[data-level="4"] a {
+    padding-left: 2.75rem;
+  }
+  /* Replace the default highlight.js color for strings from red (unnecessarily signaling something negative) to green: */
+  .hljs-string {
+    color: #0f8532;
+  }
+  /* Colors for maintenance policies */
+  .development { color: #8A4FFF; }
+  .active { color: #28A745; }
+  .eol { color: #DC3545; }
+</style>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="../../../_/../_images/log4net.svg" alt="Apache log4net"/>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../supported-frameworks.html">Supported Frameworks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="telnetappender.html">TelnetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="udpappender.html">UdpAppender</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../filters.html">Filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../layouts.html">Layouts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../native-aot.html">Native AOT and trimming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../release-review.html">Release verification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../versioning.html">Versioning and support policy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Home</a></li>
+    <li><a href="../../index.html">Manual</a></li>
+    <li><a href="../../configuration.html">Configuration</a></li>
+    <li><a href="../appenders.html">Appenders</a></li>
+    <li><a href="smtpappender.html">SmtpAppender</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/configuration/appenders/smtpappender.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">SmtpAppender</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>SmtpAppender</code> sends log events via email using the Simple Mail Transfer Protocol (SMTP).
+This appender is useful for sending email notifications when certain events occur, such as errors or critical failures in your application.</p>
+</div>
+<div class="paragraph">
+<p>There are two implementations to choose from:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Assembly</th>
+<th class="tableblock halign-left valign-top">SMTP client</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Ext.Mail.Appender.SmtpAppender</code> (recommended)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Ext.Mail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jstedfast/MailKit">MailKit</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net.Appender.SmtpAppender</code> (deprecated)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>log4net</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>System.Net.Mail.SmtpClient</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The built-in <code>log4net.Appender.SmtpAppender</code> is <strong>no longer recommended</strong>.</p>
+</div>
+<div class="paragraph">
+<p>It sends mail through <a href="https://learn.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient#remarks">System.Net.Mail.SmtpClient</a>, which Microsoft no longer recommends for new development because it does not support many modern protocols.
+In practice this shows up as connection failures against modern mail servers, most often around SSL/TLS negotiation.</p>
+</div>
+<div class="paragraph">
+<p>Use the <a href="#mailkit-smtpappender">MailKit based <code>SmtpAppender</code></a> instead.
+It offers the same configuration options, so migrating usually means changing nothing but the <code>type</code> attribute.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mailkit-smtpappender"><a class="anchor" href="#mailkit-smtpappender"></a>MailKit based SmtpAppender (recommended)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This appender lives in the separate <code>log4net.Ext.Mail</code> package, so that log4net itself does not take on a mail dependency.
+Add it to your project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">dotnet add package log4net.Ext.Mail</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because the appender is not part of the <code>log4net</code> assembly, the <code>type</code> attribute must be assembly-qualified:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">type="log4net.Ext.Mail.Appender.SmtpAppender, log4net.Ext.Mail"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows how to configure the <code>SmtpAppender</code> to deliver log events via SMTP email.
+The <code>To</code>, <code>From</code>, <code>Subject</code> and <code>SmtpHost</code> are required parameters.
+This example shows how to deliver only significant events.</p>
+</div>
+<div class="paragraph">
+<p>A LevelEvaluator is specified with a threshold of WARN.
+This means that an email will be sent for each WARN or higher level message that is logged.
+Each email will also contain up to 512 (BufferSize) previous messages of any level to provide context.</p>
+</div>
+<div class="paragraph">
+<p>Messages not sent will be discarded.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="SmtpAppender" type="log4net.Ext.Mail.Appender.SmtpAppender, log4net.Ext.Mail"&gt;
+  &lt;to value="to@example.com" /&gt;
+  &lt;from value="from@example.com" /&gt;
+  &lt;subject value="test logging message" /&gt;
+  &lt;smtpHost value="smtp.example.com" /&gt;
+  &lt;bufferSize value="512" /&gt;
+  &lt;lossy value="true" /&gt;
+  &lt;evaluator type="log4net.Core.LevelEvaluator"&gt;
+    &lt;threshold value="WARN"/&gt;
+  &lt;/evaluator&gt;
+  &lt;layout type="log4net.Layout.PatternLayout"&gt;
+    &lt;conversionPattern value="%newline%date [%thread] %-5level %logger - %message%newline%newline%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example shows how to configure the <code>SmtpAppender</code> to deliver all messages in emails with 512 <code>bufferSize</code> messages per email.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="SmtpAppender" type="log4net.Ext.Mail.Appender.SmtpAppender, log4net.Ext.Mail"&gt;
+  &lt;to value="to@example.com" /&gt;
+  &lt;from value="from@example.com" /&gt;
+  &lt;subject value="test logging message" /&gt;
+  &lt;smtpHost value="smtp.example.com" /&gt;
+  &lt;bufferSize value="512" /&gt;
+  &lt;lossy value="false" /&gt;
+  &lt;layout type="log4net.Layout.PatternLayout"&gt;
+    &lt;conversionPattern value="%newline%date [%thread] %-5level %logger - %message%newline%newline%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example shows a more verbose formatting layout for the mail messages.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="SmtpAppender" type="log4net.Ext.Mail.Appender.SmtpAppender, log4net.Ext.Mail"&gt;
+  &lt;to value="to@example.com" /&gt;
+  &lt;from value="from@example.com" /&gt;
+  &lt;subject value="test logging message" /&gt;
+  &lt;smtpHost value="smtp.example.com" /&gt;
+  &lt;bufferSize value="512" /&gt;
+  &lt;lossy value="false" /&gt;
+  &lt;evaluator type="log4net.Core.LevelEvaluator,log4net"&gt;
+    &lt;threshold value="WARN" /&gt;
+  &lt;/evaluator&gt;
+  &lt;layout type="log4net.Layout.PatternLayout,log4net"&gt;
+    &lt;conversionPattern value="%property{log4net:HostName} :: %level :: %message %newlineLogger: %logger%newlineThread: %thread%newlineDate: %date%newline%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example authenticates against a mail server that requires an encrypted connection on the submission port.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="SmtpAppender" type="log4net.Ext.Mail.Appender.SmtpAppender, log4net.Ext.Mail"&gt;
+  &lt;to value="ops@example.com,oncall@example.com" /&gt;
+  &lt;cc value="team@example.com" /&gt;
+  &lt;from value="log4net@example.com" /&gt;
+  &lt;replyTo value="noreply@example.com" /&gt;
+  &lt;subject value="Errors from the payment service" /&gt;
+  &lt;smtpHost value="smtp.example.com" /&gt;
+  &lt;port value="587" /&gt;
+  &lt;enableSsl value="true" /&gt;
+  &lt;authentication value="Basic" /&gt;
+  &lt;username value="log4net@example.com" /&gt;
+  &lt;password value="secret" /&gt;
+  &lt;priority value="High" /&gt;
+  &lt;bufferSize value="512" /&gt;
+  &lt;lossy value="true" /&gt;
+  &lt;evaluator type="log4net.Core.LevelEvaluator"&gt;
+    &lt;threshold value="ERROR"/&gt;
+  &lt;/evaluator&gt;
+  &lt;layout type="log4net.Layout.PatternLayout"&gt;
+    &lt;conversionPattern value="%newline%date [%thread] %-5level %logger - %message%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mailkit-smtpappender-options"><a class="anchor" href="#mailkit-smtpappender-options"></a>Options</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>to</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required.</strong> Comma-delimited list of recipient email addresses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>from</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required.</strong> The sender&#8217;s email address.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subject</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required.</strong> The subject line of the email.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>smtpHost</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Required.</strong> The name or address of the SMTP relay server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-delimited list of addresses to carbon copy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bcc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comma-delimited list of addresses to blind carbon copy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>replyTo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The reply-to address.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>port</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The port the SMTP server listens on. Defaults to <code>25</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableSsl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to require transport security. Defaults to <code>false</code>.
+Shorthand for <code>transportSecurity</code>: <code>true</code> selects <code>Required</code>, <code>false</code> selects <code>None</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>transportSecurity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How the connection is secured. One of <code>None</code> (default), <code>Required</code>, <code>ImplicitTls</code>, <code>StartTls</code> or <code>StartTlsWhenAvailable</code>.
+See <a href="#mailkit-smtpappender-transport-security">Transport security</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>authentication</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One of <code>None</code> (default), <code>Basic</code> or <code>Ntlm</code>. <code>Basic</code> and <code>Ntlm</code> both require <code>username</code> and <code>password</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user name to authenticate with. Ignored when <code>authentication</code> is <code>None</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>password</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The password to authenticate with. Ignored when <code>authentication</code> is <code>None</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>priority</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One of <code>Low</code>, <code>Normal</code> (default) or <code>High</code>, mapped onto the MIME <code>Priority</code> header.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subjectEncoding</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The encoding of the subject line, for example <code>utf-8</code>. Defaults to <code>utf-8</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bodyEncoding</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The encoding of the message body, for example <code>utf-8</code>. Defaults to <code>utf-8</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bufferSize</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How many log events to buffer into one email. See <a href="../appenders.html" class="xref page">Appenders</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lossy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether buffered events may be discarded rather than sent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>evaluator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>ITriggeringEventEvaluator</code> deciding which events trigger a send.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>to</code>, <code>cc</code> and <code>bcc</code> also accept semicolons as separators, and quoted display names such as <code>"Doe, John" &lt;<a href="mailto:john@example.com">john@example.com</a>&gt;</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mailkit-smtpappender-transport-security"><a class="anchor" href="#mailkit-smtpappender-transport-security"></a>Transport security</h3>
+<div class="paragraph">
+<p><code>enableSsl</code> covers the usual cases and behaves as it does in the legacy appender: <code>true</code> requires
+transport security, so connecting fails when the server does not offer it rather than continuing
+unencrypted.</p>
+</div>
+<div class="paragraph">
+<p><code>transportSecurity</code> is the same setting expressed precisely, for servers that need something else.
+The two properties cannot disagree: whichever is assigned last wins.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>None</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The connection is not encrypted. Equivalent to <code>enableSsl</code> set to <code>false</code>, and the default.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Required</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transport security is required and the mechanism follows the port: implicit TLS on port 465,
+<code>STARTTLS</code> on every other port. Equivalent to <code>enableSsl</code> set to <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ImplicitTls</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The session is encrypted before the SMTP greeting, whatever the port.
+Use this for a server expecting implicit TLS on a port other than 465, which <code>Required</code> would try
+to negotiate with <code>STARTTLS</code> instead.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>StartTls</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>STARTTLS</code> is required, whatever the port.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>StartTlsWhenAvailable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>STARTTLS</code> is used when the server advertises it, and the connection continues unencrypted when it
+does not.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>StartTlsWhenAvailable</code> is opportunistic.
+An attacker able to modify the traffic can remove the server&#8217;s <code>STARTTLS</code> advertisement, and the
+session then proceeds in plaintext, exposing the credentials sent by <code>authentication</code> and the log
+content itself.
+Only choose it for a network where that is acceptable, and prefer <code>Required</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mailkit-smtpappender-differences"><a class="anchor" href="#mailkit-smtpappender-differences"></a>Differences from the legacy appender</h3>
+<div class="paragraph">
+<p>The options above are named exactly as in the legacy appender, but a few behave differently:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>smtpHost</code> is <strong>required</strong>. MailKit has no notion of a machine-wide default SMTP server, so there is nothing to fall back on when the option is omitted.</p>
+</li>
+<li>
+<p><code>authentication</code> set to <code>Ntlm</code> requires <code>username</code> and <code>password</code>.
+MailKit cannot reuse the Windows logon session of the current thread or process, which the legacy appender did.</p>
+</li>
+<li>
+<p>Semicolon-delimited recipient lists in <code>to</code>, <code>cc</code> and <code>bcc</code> are parsed correctly.</p>
+</li>
+<li>
+<p><code>transportSecurity</code> has no counterpart in the legacy appender, which offers only <code>enableSsl</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>enableSsl</code> keeps its meaning, so a migrated configuration secures the connection exactly as before.
+If the legacy appender reached your server with <code>enableSsl</code> set to <code>true</code>, so does this one.
+The new <code>transportSecurity</code> option is only needed for a server that the legacy appender could not
+reach either, such as one expecting implicit TLS on a port other than 465.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="legacy-smtpappender"><a class="anchor" href="#legacy-smtpappender"></a>Built-in SmtpAppender (deprecated)</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This appender is still shipped and still works, but it is marked <code>[Obsolete]</code>, so referencing
+<code>log4net.Appender.SmtpAppender</code> from code produces a compiler warning.
+Configuring it from XML keeps working without any warning.
+See the note at the <a href="#smtpappender">top of this page</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The built-in appender is configured with the same options, except for the differences listed in <a href="#mailkit-smtpappender-differences">Differences from the legacy appender</a>.
+It needs no assembly-qualified type name, because it is part of the <code>log4net</code> assembly.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="SmtpAppender" type="log4net.Appender.SmtpAppender"&gt;
+  &lt;to value="to@example.com" /&gt;
+  &lt;from value="from@example.com" /&gt;
+  &lt;subject value="test logging message" /&gt;
+  &lt;smtpHost value="smtp.example.com" /&gt;
+  &lt;bufferSize value="512" /&gt;
+  &lt;lossy value="true" /&gt;
+  &lt;evaluator type="log4net.Core.LevelEvaluator"&gt;
+    &lt;threshold value="WARN"/&gt;
+  &lt;/evaluator&gt;
+  &lt;layout type="log4net.Layout.PatternLayout"&gt;
+    &lt;conversionPattern value="%newline%date [%thread] %-5level %logger - %message%newline%newline%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you cannot take on the MailKit dependency, <a href="smtppickupdirappender.html" class="xref page">SmtpPickupDirAppender</a> is an alternative that avoids an SMTP client altogether by writing the emails to a pickup directory.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Copyright © 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
+  </p>
+  <p>
+    Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+    Other names may be trademarks of their respective owners.
+  </p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<!-- `@asciidoctor/tabs` extension scripts -->
+<script async src="../../../_/js/vendor/tabs.js"></script>
+  </body>
+</html>
