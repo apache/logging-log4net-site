@@ -375,11 +375,7 @@ wget --cut-dirs=6 \
 <p>Extract sources:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mkdir -p src
-cd src
-unzip -q -o ../*source*.zip
-
-cd src</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">unzip -q -o *source*.zip -d src</code></pre>
 </div>
 </div>
 </li>
@@ -387,6 +383,18 @@ cd src</code></pre>
 </div>
 </div>
 </details>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Switch to the extracted sources, which is the directory holding the <code>Dockerfile</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">cd src</code></pre>
+</div>
+</div>
 </li>
 <li>
 <p>Verify the build (install <a href="https://docs.docker.com/engine/install">docker</a>, if you haven&#8217;t already):</p>
