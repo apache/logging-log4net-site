@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TelnetAppender :: Apache log4net</title>
+    <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/appenders/telnetappender.html">
+    <meta name="generator" content="Antora 3.2.0-rc.2">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="icon" href="../../../_/../_images/favicon.ico" type="image/x-icon">
+<!-- `@asciidoctor/tabs` extension styles -->
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+<style>
+  /* Swap colors of `IMPORTANT` and `WARNING` blocks */ 
+  .doc .admonitionblock.important .icon { background-color: #f70; }
+  .doc .admonitionblock.warning .icon { background-color: #e40046; }
+  /* Default `h4`, `h5`, and `h6` are smaller than the normal text, fix header font sizing: */
+  .doc h1 { font-size: 1.9rem; }
+  .doc h2 { font-size: 1.7rem; }
+  .doc h3 { font-size: 1.5rem; font-weight: 400; }
+  .doc h4 { font-size: 1.3rem; font-weight: 500; }
+  .doc h5 { font-size: 1.1rem; font-weight: 500; text-decoration: underline; }
+  .doc h6 { font-size: 0.9rem; font-weight: 500; text-decoration: underline; }
+  /* Default `code`, `pre`, and `.colist` (source code annotations) fonts are too big, adjust them: */
+  .doc .colist>table code, .doc p code, .doc thead code { font-size: 0.8em; }
+  .doc pre { font-size: 0.7rem; }
+  .doc .colist { font-size: 0.75rem; }
+  /* Make links more visible: */
+  .doc a { text-decoration: underline; }
+  .doc a code { text-decoration: underline; color: #1565c0; }
+  /* Make nav bar wider */
+  .nav-container { width:19rem; }
+  /* Tab header fonts aren't rendered good, adjusting the font weight: */
+  .tablist > ul li { font-weight: 500; }
+  /* `page-toclevels` greater than 4 are not supported by Antora UI, patching it: */
+  .toc .toc-menu li[data-level="4"] a {
+    padding-left: 2.75rem;
+  }
+  /* Replace the default highlight.js color for strings from red (unnecessarily signaling something negative) to green: */
+  .hljs-string {
+    color: #0f8532;
+  }
+  /* Colors for maintenance policies */
+  .development { color: #8A4FFF; }
+  .active { color: #28A745; }
+  .eol { color: #DC3545; }
+</style>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="../../../_/../_images/log4net.svg" alt="Apache log4net"/>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://logging.apache.org">a subproject of&nbsp;<strong>Apache Logging Services</strong></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ROOT" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Home</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../download.html">Download</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../development.html">Development</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../supported-frameworks.html">Supported Frameworks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../installation.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../configuration.html">Configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../appenders.html">Appenders</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="adonetappender.html">AdoNetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="bufferingforwardingappender.html">BufferingForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="coloredconsoleappender.html">ColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="consoleappender.html">ConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="eventlogappender.html">EventLogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="fileappender.html">FileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="forwardingappender.html">ForwardingAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="localsyslogappender.html">LocalSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="managedcoloredconsoleappender.html">ManagedColoredConsoleAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="memoryappender.html">MemoryAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="outputdebugstringappender.html">OutputDebugStringAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="remotesyslogappender.html">RemoteSyslogAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rollingfileappender.html">RollingFileAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="smtpappender.html">SmtpAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="smtppickupdirappender.html">SmtpPickupDirAppender</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="telnetappender.html">TelnetAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="traceappender.html">TraceAppender</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="udpappender.html">UdpAppender</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../filters.html">Filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../layouts.html">Layouts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../native-aot.html">Native AOT and trimming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../release-review.html">Release verification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="https://logging.apache.org/support.html">Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../versioning.html">Versioning and support policy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://logging.apache.org/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Home</a></li>
+    <li><a href="../../index.html">Manual</a></li>
+    <li><a href="../../configuration.html">Configuration</a></li>
+    <li><a href="../appenders.html">Appenders</a></li>
+    <li><a href="telnetappender.html">TelnetAppender</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/apache/logging-log4net/edit/master/src/site/antora/modules/ROOT/pages/manual/configuration/appenders/telnetappender.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">TelnetAppender</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>TelnetAppender</code> listens for incoming TCP connections and streams rendered log events to
+every connected client, so that a running application&#8217;s log can be watched over a socket with a
+telnet client.
+Unlike every other appender, it does not write to a destination you configure: it accepts
+connections from clients that reach it.
+It is intended for diagnostic use on trusted networks; see <a href="#telnetappender-trust">Intended use and trust model</a>.</p>
+</div>
+<div class="paragraph">
+<p>At most 20 clients may be connected at the same time; further connection attempts are answered
+with a message and closed.</p>
+</div>
+<div class="paragraph">
+<p>The following example configures the appender to listen on port 8023.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;appender name="TelnetAppender" type="log4net.Appender.TelnetAppender"&gt;
+  &lt;listenAddress value="127.0.0.1" /&gt;
+  &lt;port value="8023" /&gt;
+  &lt;sendTimeoutMillis value="5000" /&gt;
+  &lt;layout type="log4net.Layout.PatternLayout"&gt;
+    &lt;conversionPattern value="%date %-5level %logger - %message%newline" /&gt;
+  &lt;/layout&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="telnetappender-settings"><a class="anchor" href="#telnetappender-settings"></a>Settings</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>port</code></dt>
+<dd>
+<p>The TCP port to listen on.
+The default is <code>23</code>, the telnet port.</p>
+</dd>
+<dt class="hdlist1"><code>listenAddress</code></dt>
+<dd>
+<p>The local address to accept connections on.
+The default is <code>0.0.0.0</code>, every interface of the machine.</p>
+<div class="paragraph">
+<p>Set it to <code>127.0.0.1</code> to accept connections only from the machine the application runs on, which is
+what diagnostic use usually needs.
+An IPv6 address may be given instead, and the listening socket follows its family.</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>sendTimeoutMillis</code></dt>
+<dd>
+<p>How long, in milliseconds, a write to a client may block before that client is treated as dead
+and disconnected.
+The default is <code>5000</code>.</p>
+<div class="paragraph">
+<p>Clients are written to synchronously while the appender lock is held, so a client that connects
+and then stops reading lets TCP flow control fill its receive window.
+A finite timeout bounds how long that client can hold up the threads that log through this
+appender.
+Setting the value to <code>0</code> restores blocking indefinitely and is not recommended.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="telnetappender-trust"><a class="anchor" href="#telnetappender-trust"></a>Intended use and trust model</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This appender is a <strong>diagnostic tool for trusted networks</strong>.
+It is meant for watching the log of a running application during development or while
+investigating a problem, not as a general-purpose logging destination.</p>
+</div>
+<div class="paragraph">
+<p>Like every other appender destination, the connecting client is <strong>trusted</strong>: by enabling the
+appender the operator declares that whoever can reach the port is allowed to read the
+application&#8217;s log.
+The appender therefore performs no authentication of its own.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The connection is <strong>unauthenticated</strong> and <strong>unencrypted</strong>, and by default the appender listens on <strong>all
+network interfaces</strong>.
+There is no option to require a credential or to enable TLS.</p>
+</div>
+<div class="paragraph">
+<p>Any client that can reach the port receives the full rendered log stream, including whatever the
+layout renders: user names, session identifiers, request parameters, stack traces.
+Keeping untrusted parties away from the port is the operator&#8217;s responsibility, exactly as it is
+for a log file:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set <code>listenAddress</code> to <code>127.0.0.1</code> unless clients on other machines really have to connect.</p>
+</li>
+<li>
+<p>Only enable this appender on a trusted network.</p>
+</li>
+<li>
+<p>Restrict access to the port with a host firewall or network policy.</p>
+</li>
+<li>
+<p>Prefer it for local or short-lived diagnostics rather than as a permanent logging destination.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>
+    Copyright © 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
+  </p>
+  <p>
+    Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation.
+    Other names may be trademarks of their respective owners.
+  </p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<!-- `@asciidoctor/tabs` extension scripts -->
+<script async src="../../../_/js/vendor/tabs.js"></script>
+  </body>
+</html>
