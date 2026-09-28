@@ -456,12 +456,12 @@ The mail goes out under the appender lock, so an unresponsive server would other
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>enableSsl</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to require transport security. Defaults to <code>false</code>.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to require transport security. Defaults to <code>true</code>.
 Shorthand for <code>transportSecurity</code>: <code>true</code> selects <code>Required</code>, <code>false</code> selects <code>None</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>transportSecurity</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">How the connection is secured. One of <code>None</code> (default), <code>Required</code>, <code>ImplicitTls</code>, <code>StartTls</code> or <code>StartTlsWhenAvailable</code>.
+<td class="tableblock halign-left valign-top"><p class="tableblock">How the connection is secured. One of <code>Required</code> (default), <code>None</code>, <code>ImplicitTls</code>, <code>StartTls</code> or <code>StartTlsWhenAvailable</code>.
 See <a href="#mailkit-smtpappender-transport-security">Transport security</a>.</p></td>
 </tr>
 <tr>
@@ -540,12 +540,12 @@ The two properties cannot disagree: whichever is assigned last wins.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>None</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The connection is not encrypted. Equivalent to <code>enableSsl</code> set to <code>false</code>, and the default.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The connection is not encrypted. Equivalent to <code>enableSsl</code> set to <code>false</code>, and the opt-out from the secure default.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Required</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Transport security is required and the mechanism follows the port: implicit TLS on port 465,
-<code>STARTTLS</code> on every other port. Equivalent to <code>enableSsl</code> set to <code>true</code>.</p></td>
+<code>STARTTLS</code> on every other port. Equivalent to <code>enableSsl</code> set to <code>true</code>, and the default.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ImplicitTls</code></p></td>
@@ -616,7 +616,8 @@ the logging call has returned, and mail still queued is lost if the process is k
 </ul>
 </div>
 <div class="paragraph">
-<p><code>enableSsl</code> keeps its meaning, so a migrated configuration secures the connection exactly as before.
+<p><code>enableSsl</code> keeps its meaning but not its default: it is <code>true</code> here and <code>false</code> in the legacy
+appender, so a configuration that set neither option now requires transport security.
 If the legacy appender reached your server with <code>enableSsl</code> set to <code>true</code>, so does this one.
 The new <code>transportSecurity</code> option is only needed for a server that the legacy appender could not
 reach either, such as one expecting implicit TLS on a port other than 465.</p>

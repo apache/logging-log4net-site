@@ -286,6 +286,9 @@
 <li>
 <p>release the <code>FormatMessage</code> buffer in <code>NativeError</code> with <code>LocalFree</code>, the allocator that API uses, instead of letting the marshaller free it as COM task memory. Both hit the process heap on current Windows, so this is hygiene rather than a fix (audit da18b6fd-f045, fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/325">325</a>)</p>
 </li>
+<li>
+<p>require transport security by default in the <code>log4net.Ext.Mail</code> <code>SmtpAppender</code>: its <code>TransportSecurity</code> now defaults to <code>Required</code> instead of <code>None</code>, so body and credentials no longer cross the network in cleartext (CWE-319). A relay without <code>STARTTLS</code> stops working on upgrade; set <code>transportSecurity</code> to <code>None</code>, or <code>enableSsl</code> to <code>false</code>, to keep the old behaviour (audit da18b6fd-f026, implemented by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/329">329</a>)</p>
+</li>
 </ul>
 </div>
 </div>
@@ -303,16 +306,16 @@
 <p>stop the release verification scripts from importing a <code>KEYS</code> file that came with the artifacts instead of the one they download. <code>wget</code> refuses to overwrite, so a planted <code>KEYS</code> stayed in place and was imported into the verification key ring, and artifacts signed by whoever placed it verified (CWE-347). The scripts now verify in a GnuPG home of their own, filled from a copy downloaded there, rather than with <code>--keyring</code>, which <code>gpg</code> ignores where <code>common.conf</code> sets <code>use-keyboxd</code>. Present in 3.2.0 onward, since the script was added (audit da18b6fd-f003, reported by @swebb2066, fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/313">313</a>)</p>
 </li>
 <li>
-<p>stop <code>AdoNetAppender</code> from retrying a whole batch one event at a time when none of them can be written. Retrying after a rolled back transaction was added in 3.4.0 to save the events around the one the database rejected, but a batch that fails outright, such as a missing table or a missing permission, then cost one round trip per event: 513 instead of 1 for a full buffer. It now gives up after five consecutive failures (implemented by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/314">314</a>)</p>
+<p>stop <code>AdoNetAppender</code> from retrying a whole batch one event at a time when none of them can be written. Retrying after a rolled back transaction was added in 3.4.0 to save the events around the one the database rejected, but a batch that fails outright, such as a missing table or a missing permission, then cost one round trip per event: 513 instead of 1 for a full buffer. It now gives up after five consecutive failures (fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/314">314</a>)</p>
 </li>
 <li>
-<p>report a buffering appender that is still holding events from <code>Flush</code>. It returned <code>true</code> unconditionally, including for a <code>lossy</code> appender, where flushing deliberately does nothing and every buffered event stays where it was (implemented by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/314">314</a>)</p>
+<p>report a buffering appender that is still holding events from <code>Flush</code>. It returned <code>true</code> unconditionally, including for a <code>lossy</code> appender, where flushing deliberately does nothing and every buffered event stays where it was (fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/314">314</a>)</p>
 </li>
 <li>
-<p>bound the queue <code>RemoteSyslogAppender</code> sends from. It was unbounded, so a syslog server that stopped accepting datagrams grew it until the process ran out of memory, and shutdown waited five seconds and then abandoned a drain that had no limit of its own. It now holds <code>sendQueueSize</code> datagrams (500), a logging call waits at most <code>enqueueTimeoutMillis</code> (5000) for room, losses are counted and reported, and <code>Flush</code> honours its timeout (audit da18b6fd-f034, implemented by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/314">314</a>)</p>
+<p>bound the queue <code>RemoteSyslogAppender</code> sends from. It was unbounded, so a syslog server that stopped accepting datagrams grew it until the process ran out of memory, and shutdown waited five seconds and then abandoned a drain that had no limit of its own. It now holds <code>sendQueueSize</code> datagrams (500), a logging call waits at most <code>enqueueTimeoutMillis</code> (5000) for room, losses are counted and reported, and <code>Flush</code> honours its timeout (audit da18b6fd-f034, fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/314">314</a>)</p>
 </li>
 <li>
-<p>stop <code>RemoteSyslogAppender</code> from opening a second, unused UDP socket. It sends through the connection its background pump owns, but also inherited one from <code>UdpAppender</code> that nothing ever used, which bound <code>localPort</code> twice. A pump that cannot connect now reports it as well, instead of ending unobserved and leaving every later event queued behind a sender that is gone (audit da18b6fd-f034, implemented by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/314">314</a>)</p>
+<p>stop <code>RemoteSyslogAppender</code> from opening a second, unused UDP socket. It sends through the connection its background pump owns, but also inherited one from <code>UdpAppender</code> that nothing ever used, which bound <code>localPort</code> twice. A pump that cannot connect now reports it as well, instead of ending unobserved and leaving every later event queued behind a sender that is gone (audit da18b6fd-f034, fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/314">314</a>)</p>
 </li>
 <li>
 <p>escape NUL characters in <code>EventLogAppender</code> content. <code>ReportEventW</code> takes a null terminated string, so a NUL in logged content ended the stored record there and silently dropped whatever the layout rendered after it, exception text and trailing fields included (CWE-158). <code>WriteEntry</code> raises nothing, so the record simply stored short. Measured on Windows 11 build 26200: of a 45 character message with a NUL at 23, the 23 character prefix was stored and the rest was gone (audit da18b6fd-f007, fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/315">315</a>)</p>
@@ -373,6 +376,12 @@
 </li>
 <li>
 <p>stop <code>LocalSyslogAppender</code> passing a variadic argument to <code>syslog(3)</code>, which on Apple arm64 travels differently from a fixed one, so the callee read a pointer the runtime never wrote there and logged stack bytes or crashed. Only the two fixed parameters are declared now, and the record is passed as the format string with its percent signs escaped. The logged text is unchanged (audit da18b6fd-f046, fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/325">325</a>)</p>
+</li>
+<li>
+<p>bind a release to a single commit. <code>build-release.ps1</code> built the binaries from the working tree but archived the local <code>master</code> ref, so the signed source zip need not match the signed binaries. It now refuses an unclean working tree, archives <code>HEAD</code>, and ships a signed <code>.manifest</code> recording that commit and the artifact set, which the verification scripts check against the zip archive comment and against the files present (audit da18b6fd-f025, fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/330">330</a>)</p>
+</li>
+<li>
+<p>report an unexpected failure while writing to a Telnet client instead of disconnecting it. <code>TelnetAppender</code> read every non-fatal exception as a hung up connection, so a defect in what was written cost the connection of every client in turn. Only <code>SocketException</code>, <code>IOException</code> and <code>ObjectDisposedException</code> disconnect now; anything else is raised once the remaining clients have been served and is reported through the error handler. <code>SocketHandler</code> is protected, so a subclass calling <code>Send</code> sees those exceptions where it saw none (fixed by @FreeAndNil) (<a href="https://github.com/apache/logging-log4net/pull/331">331</a>)</p>
 </li>
 </ul>
 </div>
