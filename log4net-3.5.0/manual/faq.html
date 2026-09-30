@@ -480,6 +480,26 @@ For example:</p>
 </div>
 </div>
 <div class="sect2">
+<h3 id="default-repository"><a class="anchor" href="#default-repository"></a>How do I configure log4net without naming a repository?</h3>
+<div class="paragraph">
+<p>Use the overloads without a repository argument; they pick the default repository for you.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">XmlConfigurator.Configure(new FileInfo("log4net.config"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>LogManager.GetRepository()</code> returns that same repository.
+To target the repository of a specific assembly, pass a type known at compile time:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">ILoggerRepository repository = LogManager.GetRepository(typeof(Program).Assembly);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="performance"><a class="anchor" href="#performance"></a>What is the fastest way to (not) log?</h3>
 <div class="paragraph">
 <p>Concatenating strings in log statements, such as:</p>
