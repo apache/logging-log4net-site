@@ -122,12 +122,6 @@ Class LogicalThreadContext
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -142,33 +136,37 @@ Class LogicalThreadContext
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
   </dd></dl>
 
 
 
   <h2 id="log4net_LogicalThreadContext_examples">Examples</h2>
   <p>Example of using the thread context properties to store a username.</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;LogicalThreadContext.Properties[&quot;user&quot;] = userName;
-</code></pre>
-<p>log.Info(&quot;This log message has a LogicalThreadContext Property called 'user'&quot;);</p>
+<pre><code class="lang-csharp">LogicalThreadContext.Properties["user"] = userName;
+log.Info("This log message has a LogicalThreadContext Property called 'user'");</code></pre>
 
   <p>Example of how to push a message into the context stack</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;using(LogicalThreadContext.Stacks[&quot;LDC&quot;].Push(&quot;my context message&quot;))
-</code></pre>
-<p>{
-log.Info(&quot;This log message has a LogicalThreadContext Stack message that includes 'my context message'&quot;);</p>
-<p>} // at the end of the using block the message is automatically popped</p>
+<pre><code class="lang-csharp">using (LogicalThreadContext.Stacks["LDC"].Push("my context message"))
+{
+  log.Info("This log message has a LogicalThreadContext Stack message that includes 'my context message'");
+} // at the end of the using block the message is automatically popped</code></pre>
 
 
   <h2 id="log4net_LogicalThreadContext_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>
-The <a class="xref" href="log4net.LogicalThreadContext.html">LogicalThreadContext</a> provides a location for <span class="xref">System.Runtime.Remoting.Messaging.CallContext</span> specific debugging 
+The <a class="xref" href="log4net.LogicalThreadContext.html">LogicalThreadContext</a> provides a location for <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.remoting.messaging.callcontext">CallContext</a> specific debugging 
 information to be stored.
 The <a class="xref" href="log4net.LogicalThreadContext.html">LogicalThreadContext</a> properties override any <a class="xref" href="log4net.ThreadContext.html">ThreadContext</a> or <a class="xref" href="log4net.GlobalContext.html">GlobalContext</a>
 properties with the same name.
 </p>
 <p>
-For .NET Standard this class uses System.Threading.AsyncLocal rather than <span class="xref">System.Runtime.Remoting.Messaging.CallContext</span>.
+For .NET Standard this class uses System.Threading.AsyncLocal rather than <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.remoting.messaging.callcontext">CallContext</a>.
 </p>
 <p>
 The Logical Thread Context has a properties map and a stack.
@@ -183,11 +181,11 @@ output from different sources. Log output is typically interleaved
 when a server handles multiple clients near-simultaneously.
 </p>
 <p>
-The Logical Thread Context is managed on a per <span class="xref">System.Runtime.Remoting.Messaging.CallContext</span> basis.
+The Logical Thread Context is managed on a per <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.remoting.messaging.callcontext">CallContext</a> basis.
 </p>
 <p>
-The <span class="xref">System.Runtime.Remoting.Messaging.CallContext</span> requires a link time 
-<span class="xref">System.Security.Permissions.SecurityPermission</span> for the
+The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.remoting.messaging.callcontext">CallContext</a> requires a link time 
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.permissions.securitypermission">SecurityPermission</a> for the
 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.permissions.securitypermissionflag#system-security-permissions-securitypermissionflag-infrastructure">Infrastructure</a>.
 If the calling code does not have this permission then this context will be disabled.
 It will not store any property values set on it.

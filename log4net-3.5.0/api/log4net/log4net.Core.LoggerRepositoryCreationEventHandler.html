@@ -102,7 +102,9 @@ Delegate LoggerRepositoryCreationEventHandler
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void LoggerRepositoryCreationEventHandler(object sender, LoggerRepositoryCreationEventArgs e)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1003:Use generic event handler instances&quot;)]
+[SuppressMessage(&quot;Naming&quot;, &quot;CA1711:Identifiers should not have incorrect suffix&quot;)]
+public delegate void LoggerRepositoryCreationEventHandler(object sender, LoggerRepositoryCreationEventArgs e)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -130,153 +132,6 @@ that holds the <a class="xref" href="log4net.Repository.ILoggerRepository.html">
 Delegate used to handle logger repository creation event notifications.
 </p>
 </div>
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="log4net_Core_LoggerRepositoryCreationEventHandler__ctor_" data-uid="log4net.Core.LoggerRepositoryCreationEventHandler.#ctor*"></a>
-
-  <h3 id="log4net_Core_LoggerRepositoryCreationEventHandler__ctor_System_Object_System_IntPtr_" data-uid="log4net.Core.LoggerRepositoryCreationEventHandler.#ctor(System.Object,System.IntPtr)">
-  LoggerRepositoryCreationEventHandler(object, nint)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LoggerRepositoryCreationEventHandler(object @object, nint method)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>method</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="log4net_Core_LoggerRepositoryCreationEventHandler_BeginInvoke_" data-uid="log4net.Core.LoggerRepositoryCreationEventHandler.BeginInvoke*"></a>
-
-  <h3 id="log4net_Core_LoggerRepositoryCreationEventHandler_BeginInvoke_System_Object_log4net_Core_LoggerRepositoryCreationEventArgs_System_AsyncCallback_System_Object_" data-uid="log4net.Core.LoggerRepositoryCreationEventHandler.BeginInvoke(System.Object,log4net.Core.LoggerRepositoryCreationEventArgs,System.AsyncCallback,System.Object)">
-  BeginInvoke(object, LoggerRepositoryCreationEventArgs, AsyncCallback, object)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IAsyncResult BeginInvoke(object sender, LoggerRepositoryCreationEventArgs e, AsyncCallback callback, object @object)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>e</code> <a class="xref" href="log4net.Core.LoggerRepositoryCreationEventArgs.html">LoggerRepositoryCreationEventArgs</a></dt>
-    <dd></dd>
-    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></dt>
-    <dd></dd>
-    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="log4net_Core_LoggerRepositoryCreationEventHandler_EndInvoke_" data-uid="log4net.Core.LoggerRepositoryCreationEventHandler.EndInvoke*"></a>
-
-  <h3 id="log4net_Core_LoggerRepositoryCreationEventHandler_EndInvoke_System_IAsyncResult_" data-uid="log4net.Core.LoggerRepositoryCreationEventHandler.EndInvoke(System.IAsyncResult)">
-  EndInvoke(IAsyncResult)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void EndInvoke(IAsyncResult result)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="log4net_Core_LoggerRepositoryCreationEventHandler_Invoke_" data-uid="log4net.Core.LoggerRepositoryCreationEventHandler.Invoke*"></a>
-
-  <h3 id="log4net_Core_LoggerRepositoryCreationEventHandler_Invoke_System_Object_log4net_Core_LoggerRepositoryCreationEventArgs_" data-uid="log4net.Core.LoggerRepositoryCreationEventHandler.Invoke(System.Object,log4net.Core.LoggerRepositoryCreationEventArgs)">
-  Invoke(object, LoggerRepositoryCreationEventArgs)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Invoke(object sender, LoggerRepositoryCreationEventArgs e)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>e</code> <a class="xref" href="log4net.Core.LoggerRepositoryCreationEventArgs.html">LoggerRepositoryCreationEventArgs</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
 
 
 

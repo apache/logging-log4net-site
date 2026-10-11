@@ -103,7 +103,7 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class TextWriterAdapter : TextWriter, IDisposable, IAsyncDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class TextWriterAdapter : TextWriter, IDisposable</code></pre>
   </div>
 
 
@@ -123,7 +123,6 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
     </dd>
   </dl>
 
@@ -148,13 +147,10 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose">TextWriter.Dispose()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.disposeasync">TextWriter.DisposeAsync()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.synchronized">TextWriter.Synchronized(TextWriter)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char())">TextWriter.Write(char[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-readonlyspan((system-char)))">TextWriter.Write(ReadOnlySpan&lt;char&gt;)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-boolean)">TextWriter.Write(bool)</a>
@@ -184,9 +180,6 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-object)">TextWriter.Write(object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-text-stringbuilder)">TextWriter.Write(StringBuilder)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object)">TextWriter.Write(string, object)</a>
     </div>
     <div>
@@ -199,9 +192,6 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object())">TextWriter.Write(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-readonlyspan((system-object)))">TextWriter.Write(string, params ReadOnlySpan&lt;object&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline">TextWriter.WriteLine()</a>
     </div>
     <div>
@@ -212,9 +202,6 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char()-system-int32-system-int32)">TextWriter.WriteLine(char[], int, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-readonlyspan((system-char)))">TextWriter.WriteLine(ReadOnlySpan&lt;char&gt;)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-boolean)">TextWriter.WriteLine(bool)</a>
@@ -244,9 +231,6 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string)">TextWriter.WriteLine(string)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-text-stringbuilder)">TextWriter.WriteLine(StringBuilder)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-object)">TextWriter.WriteLine(object)</a>
     </div>
     <div>
@@ -262,16 +246,10 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object())">TextWriter.WriteLine(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-readonlyspan((system-object)))">TextWriter.WriteLine(string, params ReadOnlySpan&lt;object&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char)">TextWriter.WriteAsync(char)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-string)">TextWriter.WriteAsync(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-text-stringbuilder-system-threading-cancellationtoken)">TextWriter.WriteAsync(StringBuilder, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char())">TextWriter.WriteAsync(char[])</a>
@@ -280,16 +258,10 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char()-system-int32-system-int32)">TextWriter.WriteAsync(char[], int, int)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)">TextWriter.WriteAsync(ReadOnlyMemory&lt;char&gt;, CancellationToken)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char)">TextWriter.WriteLineAsync(char)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-string)">TextWriter.WriteLineAsync(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-text-stringbuilder-system-threading-cancellationtoken)">TextWriter.WriteLineAsync(StringBuilder, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char())">TextWriter.WriteLineAsync(char[])</a>
@@ -298,22 +270,13 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char()-system-int32-system-int32)">TextWriter.WriteLineAsync(char[], int, int)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)">TextWriter.WriteLineAsync(ReadOnlyMemory&lt;char&gt;, CancellationToken)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync">TextWriter.WriteLineAsync()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync#system-io-textwriter-flushasync">TextWriter.FlushAsync()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync">TextWriter.FlushAsync()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync#system-io-textwriter-flushasync(system-threading-cancellationtoken)">TextWriter.FlushAsync(CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.synchronized">TextWriter.Synchronized(TextWriter)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.createbroadcasting">TextWriter.CreateBroadcasting(params TextWriter[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone">MarshalByRefObject.MemberwiseClone(bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice">MarshalByRefObject.GetLifetimeService()</a>
@@ -322,13 +285,7 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice">MarshalByRefObject.InitializeLifetimeService()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone">MarshalByRefObject.MemberwiseClone(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.createobjref">MarshalByRefObject.CreateObjRef(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -344,6 +301,12 @@ messages to an instance of <a class="xref" href="https://learn.microsoft.com/dot
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 

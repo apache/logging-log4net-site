@@ -102,7 +102,9 @@ Delegate LoggerCreationEventHandler
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void LoggerCreationEventHandler(object sender, LoggerCreationEventArgs e)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1003:Use generic event handler instances&quot;)]
+[SuppressMessage(&quot;Naming&quot;, &quot;CA1711:Identifiers should not have incorrect suffix&quot;)]
+public delegate void LoggerCreationEventHandler(object sender, LoggerCreationEventArgs e)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -113,153 +115,6 @@ Delegate LoggerCreationEventHandler
     <dt><code>e</code> <a class="xref" href="log4net.Repository.Hierarchy.LoggerCreationEventArgs.html">LoggerCreationEventArgs</a></dt>
     <dd><p>The <a class="xref" href="log4net.Repository.Hierarchy.LoggerCreationEventArgs.html">LoggerCreationEventArgs</a> event args that hold the <a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a> instance that has been created.</p>
 </dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="log4net_Repository_Hierarchy_LoggerCreationEventHandler__ctor_" data-uid="log4net.Repository.Hierarchy.LoggerCreationEventHandler.#ctor*"></a>
-
-  <h3 id="log4net_Repository_Hierarchy_LoggerCreationEventHandler__ctor_System_Object_System_IntPtr_" data-uid="log4net.Repository.Hierarchy.LoggerCreationEventHandler.#ctor(System.Object,System.IntPtr)">
-  LoggerCreationEventHandler(object, nint)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LoggerCreationEventHandler(object @object, nint method)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>method</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="log4net_Repository_Hierarchy_LoggerCreationEventHandler_BeginInvoke_" data-uid="log4net.Repository.Hierarchy.LoggerCreationEventHandler.BeginInvoke*"></a>
-
-  <h3 id="log4net_Repository_Hierarchy_LoggerCreationEventHandler_BeginInvoke_System_Object_log4net_Repository_Hierarchy_LoggerCreationEventArgs_System_AsyncCallback_System_Object_" data-uid="log4net.Repository.Hierarchy.LoggerCreationEventHandler.BeginInvoke(System.Object,log4net.Repository.Hierarchy.LoggerCreationEventArgs,System.AsyncCallback,System.Object)">
-  BeginInvoke(object, LoggerCreationEventArgs, AsyncCallback, object)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IAsyncResult BeginInvoke(object sender, LoggerCreationEventArgs e, AsyncCallback callback, object @object)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>e</code> <a class="xref" href="log4net.Repository.Hierarchy.LoggerCreationEventArgs.html">LoggerCreationEventArgs</a></dt>
-    <dd></dd>
-    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></dt>
-    <dd></dd>
-    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="log4net_Repository_Hierarchy_LoggerCreationEventHandler_EndInvoke_" data-uid="log4net.Repository.Hierarchy.LoggerCreationEventHandler.EndInvoke*"></a>
-
-  <h3 id="log4net_Repository_Hierarchy_LoggerCreationEventHandler_EndInvoke_System_IAsyncResult_" data-uid="log4net.Repository.Hierarchy.LoggerCreationEventHandler.EndInvoke(System.IAsyncResult)">
-  EndInvoke(IAsyncResult)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void EndInvoke(IAsyncResult result)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="log4net_Repository_Hierarchy_LoggerCreationEventHandler_Invoke_" data-uid="log4net.Repository.Hierarchy.LoggerCreationEventHandler.Invoke*"></a>
-
-  <h3 id="log4net_Repository_Hierarchy_LoggerCreationEventHandler_Invoke_System_Object_log4net_Repository_Hierarchy_LoggerCreationEventArgs_" data-uid="log4net.Repository.Hierarchy.LoggerCreationEventHandler.Invoke(System.Object,log4net.Repository.Hierarchy.LoggerCreationEventArgs)">
-  Invoke(object, LoggerCreationEventArgs)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Invoke(object sender, LoggerCreationEventArgs e)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>e</code> <a class="xref" href="log4net.Repository.Hierarchy.LoggerCreationEventArgs.html">LoggerCreationEventArgs</a></dt>
-    <dd></dd>
   </dl>
 
 

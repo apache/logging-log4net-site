@@ -132,6 +132,21 @@ Class ColoredConsoleAppender
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
     </div>
     <div>
@@ -174,28 +189,7 @@ Class ColoredConsoleAppender
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Flush_System_Int32_">AppenderSkeleton.Flush(int)</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -211,6 +205,12 @@ Class ColoredConsoleAppender
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -241,7 +241,15 @@ must be used.
 When configuring the colored console appender, mapping should be
 specified to map a logging level to a color. For example:
 </p>
-<pre><code class="lang-csharp"></code></pre>
+<pre><code class="lang-xml">&lt;mapping&gt;
+  &lt;level value="ERROR" /&gt;
+  &lt;foreColor value="White" /&gt;
+  &lt;backColor value="Red, HighIntensity" /&gt;
+&lt;/mapping&gt;
+&lt;mapping&gt;
+  &lt;level value="DEBUG" /&gt;
+  &lt;backColor value="Green" /&gt;
+&lt;/mapping&gt;</code></pre>
 <p>
 The Level is the standard log4net logging level and ForeColor and BackColor can be any
 combination of the following values:
@@ -446,7 +454,8 @@ This is either <code>"Console.Out"</code> or <code>"Console.Error"</code>.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+    <pre><code class="lang-csharp hljs">[SecurityPermission(SecurityAction.Demand, UnmanagedCode = true)]
+public override void ActivateOptions()</code></pre>
   </div>
 
 
@@ -513,7 +522,8 @@ for a level.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent loggingEvent)</code></pre>
+    <pre><code class="lang-csharp hljs">[SecurityPermission(SecurityAction.Demand, UnmanagedCode = true)]
+protected override void Append(LoggingEvent loggingEvent)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

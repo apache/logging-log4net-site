@@ -102,7 +102,8 @@ Class Level
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Level : IComparable, ISerializable, IEquatable&lt;Level&gt;, IComparable&lt;Level&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class Level : IComparable, ISerializable, IEquatable&lt;Level&gt;, IComparable&lt;Level&gt;</code></pre>
   </div>
 
 
@@ -131,16 +132,16 @@ Class Level
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -283,7 +284,8 @@ the specified level name and value.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Level(SerializationInfo info, StreamingContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Style&quot;, &quot;IDE0060:Remove unused parameter&quot;)]
+protected Level(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1279,6 +1281,7 @@ Returns the hash code of the level <a class="xref" href="log4net.Core.Level.html
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SecurityCritical]
+[SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
 public virtual void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
 

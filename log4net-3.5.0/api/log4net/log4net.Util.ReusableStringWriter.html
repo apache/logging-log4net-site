@@ -102,7 +102,7 @@ Class ReusableStringWriter
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReusableStringWriter : StringWriter, IDisposable, IAsyncDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ReusableStringWriter : StringWriter, IDisposable</code></pre>
   </div>
 
 
@@ -123,7 +123,6 @@ Class ReusableStringWriter
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
     </dd>
   </dl>
 
@@ -144,19 +143,7 @@ Class ReusableStringWriter
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.write#system-io-stringwriter-write(system-char()-system-int32-system-int32)">StringWriter.Write(char[], int, int)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.write#system-io-stringwriter-write(system-readonlyspan((system-char)))">StringWriter.Write(ReadOnlySpan&lt;char&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.write#system-io-stringwriter-write(system-string)">StringWriter.Write(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.write#system-io-stringwriter-write(system-text-stringbuilder)">StringWriter.Write(StringBuilder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writeline#system-io-stringwriter-writeline(system-readonlyspan((system-char)))">StringWriter.WriteLine(ReadOnlySpan&lt;char&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writeline#system-io-stringwriter-writeline(system-text-stringbuilder)">StringWriter.WriteLine(StringBuilder)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writeasync#system-io-stringwriter-writeasync(system-char)">StringWriter.WriteAsync(char)</a>
@@ -168,25 +155,13 @@ Class ReusableStringWriter
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writeasync#system-io-stringwriter-writeasync(system-char()-system-int32-system-int32)">StringWriter.WriteAsync(char[], int, int)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writeasync#system-io-stringwriter-writeasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)">StringWriter.WriteAsync(ReadOnlyMemory&lt;char&gt;, CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writeasync#system-io-stringwriter-writeasync(system-text-stringbuilder-system-threading-cancellationtoken)">StringWriter.WriteAsync(StringBuilder, CancellationToken)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writelineasync#system-io-stringwriter-writelineasync(system-char)">StringWriter.WriteLineAsync(char)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writelineasync#system-io-stringwriter-writelineasync(system-string)">StringWriter.WriteLineAsync(string)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writelineasync#system-io-stringwriter-writelineasync(system-text-stringbuilder-system-threading-cancellationtoken)">StringWriter.WriteLineAsync(StringBuilder, CancellationToken)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writelineasync#system-io-stringwriter-writelineasync(system-char()-system-int32-system-int32)">StringWriter.WriteLineAsync(char[], int, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.writelineasync#system-io-stringwriter-writelineasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)">StringWriter.WriteLineAsync(ReadOnlyMemory&lt;char&gt;, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter.flushasync">StringWriter.FlushAsync()</a>
@@ -207,10 +182,10 @@ Class ReusableStringWriter
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose">TextWriter.Dispose()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.disposeasync">TextWriter.DisposeAsync()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.flush">TextWriter.Flush()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.flush">TextWriter.Flush()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.synchronized">TextWriter.Synchronized(TextWriter)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char())">TextWriter.Write(char[])</a>
@@ -253,9 +228,6 @@ Class ReusableStringWriter
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object())">TextWriter.Write(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-readonlyspan((system-object)))">TextWriter.Write(string, params ReadOnlySpan&lt;object&gt;)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline">TextWriter.WriteLine()</a>
@@ -312,9 +284,6 @@ Class ReusableStringWriter
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object())">TextWriter.WriteLine(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-readonlyspan((system-object)))">TextWriter.WriteLine(string, params ReadOnlySpan&lt;object&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char())">TextWriter.WriteAsync(char[])</a>
     </div>
     <div>
@@ -324,19 +293,13 @@ Class ReusableStringWriter
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync">TextWriter.WriteLineAsync()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync#system-io-textwriter-flushasync(system-threading-cancellationtoken)">TextWriter.FlushAsync(CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.synchronized">TextWriter.Synchronized(TextWriter)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.createbroadcasting">TextWriter.CreateBroadcasting(params TextWriter[])</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.formatprovider">TextWriter.FormatProvider</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.newline">TextWriter.NewLine</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone">MarshalByRefObject.MemberwiseClone(bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice">MarshalByRefObject.GetLifetimeService()</a>
@@ -345,13 +308,7 @@ Class ReusableStringWriter
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice">MarshalByRefObject.InitializeLifetimeService()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone">MarshalByRefObject.MemberwiseClone(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.createobjref">MarshalByRefObject.CreateObjRef(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -364,6 +321,12 @@ Class ReusableStringWriter
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 

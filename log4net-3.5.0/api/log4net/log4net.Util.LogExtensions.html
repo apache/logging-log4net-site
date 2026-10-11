@@ -123,12 +123,6 @@ methods that ease the interaction with the ILog interface implementations.</p>
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -143,17 +137,24 @@ methods that ease the interaction with the ILog interface implementations.</p>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
   </dd></dl>
 
 
 
   <h2 id="log4net_Util_LogExtensions_examples">Examples</h2>
   <p>Simple example of logging messages</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;using log4net.Util;
-</code></pre>
-<p>ILog log = LogManager.GetLogger(&quot;application-log&quot;);</p>
-<p>log.InfoExt(&quot;Application Start&quot;);
-log.DebugExt(&quot;This is a debug message&quot;);</p>
+<pre><code class="lang-csharp">using log4net.Util;
+
+ILog log = LogManager.GetLogger("application-log");
+
+log.InfoExt("Application Start");
+log.DebugExt("This is a debug message");</code></pre>
 
 
   <h2 id="log4net_Util_LogExtensions_remarks">Remarks</h2>

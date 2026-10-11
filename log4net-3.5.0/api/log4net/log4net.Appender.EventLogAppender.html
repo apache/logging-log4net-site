@@ -132,6 +132,21 @@ Class EventLogAppender
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
     </div>
     <div>
@@ -174,28 +189,7 @@ Class EventLogAppender
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Flush_System_Int32_">AppenderSkeleton.Flush(int)</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -211,6 +205,12 @@ Class EventLogAppender
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -239,7 +239,7 @@ There is a limit of 32K characters for an event log message
 When configuring the EventLogAppender a mapping can be
 specified to map a logging level to an event log entry type. For example:
 </p>
-<pre><code class="lang-csharp">&lt;mapping&gt;
+<pre><code class="lang-xml">&lt;mapping&gt;
   &lt;level value="ERROR" /&gt;
   &lt;eventLogEntryType value="Error" /&gt;
 &lt;/mapping&gt;
@@ -249,7 +249,7 @@ specified to map a logging level to an event log entry type. For example:
 &lt;/mapping&gt;</code></pre>
 <p>
 The Level is the standard log4net logging level and eventLogEntryType can be any value
-from the <span class="xref">System.Diagnostics.EventLogEntryType</span> enum, i.e.:
+from the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.eventlogentrytype">EventLogEntryType</a> enum, i.e.:
 <ul><li><span class="term">Error</span>an error event</li><li><span class="term">Warning</span>a warning event</li><li><span class="term">Information</span>an informational event</li></ul>
 
 </div>
@@ -625,7 +625,7 @@ If any of the configuration properties are modified then
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Add a mapping of level to <span class="xref">System.Diagnostics.EventLogEntryType</span> - done by the config file</p>
+  <div class="markdown level1 summary"><p>Add a mapping of level to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.eventlogentrytype">EventLogEntryType</a> - done by the config file</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -707,12 +707,12 @@ There is a limit of 32K characters for an event log message
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Get the equivalent <span class="xref">System.Diagnostics.EventLogEntryType</span> for a <a class="xref" href="log4net.Core.Level.html">Level</a> <code class="paramref">level</code></p>
+  <div class="markdown level1 summary"><p>Get the equivalent <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.eventlogentrytype">EventLogEntryType</a> for a <a class="xref" href="log4net.Core.Level.html">Level</a> <code class="paramref">level</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual EventLogEntryType? GetEntryType(Level? level)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual EventLogEntryType GetEntryType(Level? level)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -724,8 +724,8 @@ There is a limit of 32K characters for an event log message
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">EventLogEntryType</span></dt>
-    <dd><p>The equivalent <span class="xref">System.Diagnostics.EventLogEntryType</span> for a <a class="xref" href="log4net.Core.Level.html">Level</a> <code class="paramref">level</code></p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.eventlogentrytype">EventLogEntryType</a></dt>
+    <dd><p>The equivalent <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.eventlogentrytype">EventLogEntryType</a> for a <a class="xref" href="log4net.Core.Level.html">Level</a> <code class="paramref">level</code></p>
 </dd>
   </dl>
 
@@ -736,7 +736,7 @@ There is a limit of 32K characters for an event log message
 
 
   <h4 class="section" id="log4net_Appender_EventLogAppender_GetEntryType_log4net_Core_Level__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>Because there are fewer applicable <span class="xref">System.Diagnostics.EventLogEntryType</span>
+  <div class="markdown level1 remarks"><p>Because there are fewer applicable <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.eventlogentrytype">EventLogEntryType</a>
 values to use in logging levels than there are in the
 <a class="xref" href="log4net.Core.Level.html">Level</a> this is a one way mapping. There is
 a loss of information during the conversion.</p>

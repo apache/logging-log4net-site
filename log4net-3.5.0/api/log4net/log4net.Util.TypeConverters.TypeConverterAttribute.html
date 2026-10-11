@@ -103,7 +103,7 @@ Class TypeConverterAttribute
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class|AttributeTargets.Enum|AttributeTargets.Interface)]
-public sealed class TypeConverterAttribute : Attribute</code></pre>
+public sealed class TypeConverterAttribute : Attribute, _Attribute</code></pre>
   </div>
 
 
@@ -118,6 +118,12 @@ public sealed class TypeConverterAttribute : Attribute</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices._attribute">_Attribute</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -235,9 +241,6 @@ public sealed class TypeConverterAttribute : Attribute</code></pre>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.typeid">Attribute.TypeId</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -245,6 +248,9 @@ public sealed class TypeConverterAttribute : Attribute</code></pre>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
   </dd></dl>
 
@@ -280,7 +286,8 @@ type of the type converter on the attribute.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TypeConverterAttribute(string typeName)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1019:Define accessors for attribute arguments&quot;)]
+public TypeConverterAttribute(string typeName)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -319,7 +326,8 @@ or the <a class="xref" href="log4net.Util.TypeConverters.IConvertTo.html">IConve
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TypeConverterAttribute(Type converterType)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1019:Define accessors for attribute arguments&quot;)]
+public TypeConverterAttribute(Type converterType)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

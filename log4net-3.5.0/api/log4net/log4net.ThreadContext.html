@@ -122,12 +122,6 @@ Class ThreadContext
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -142,22 +136,26 @@ Class ThreadContext
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
   </dd></dl>
 
 
 
   <h2 id="log4net_ThreadContext_examples">Examples</h2>
   <p>Example of using the thread context properties to store a username.</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;ThreadContext.Properties[&quot;user&quot;] = userName;
-</code></pre>
-<p>log.Info(&quot;This log message has a ThreadContext Property called 'user'&quot;);</p>
+<pre><code class="lang-csharp">ThreadContext.Properties["user"] = userName;
+log.Info("This log message has a ThreadContext Property called 'user'");</code></pre>
 
   <p>Example of how to push a message into the context stack</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;using(ThreadContext.Stacks[&quot;NDC&quot;].Push(&quot;my context message&quot;))
-</code></pre>
-<p>{
-log.Info(&quot;This log message has a ThreadContext Stack message that includes 'my context message'&quot;);</p>
-<p>} // at the end of the using block the message is automatically popped</p>
+<pre><code class="lang-csharp">using (ThreadContext.Stacks["NDC"].Push("my context message"))
+{
+  log.Info("This log message has a ThreadContext Stack message that includes 'my context message'");
+} // at the end of the using block the message is automatically popped</code></pre>
 
 
   <h2 id="log4net_ThreadContext_remarks">Remarks</h2>

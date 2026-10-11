@@ -132,6 +132,21 @@ Class ManagedColoredConsoleAppender
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
     </div>
     <div>
@@ -174,28 +189,7 @@ Class ManagedColoredConsoleAppender
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Flush_System_Int32_">AppenderSkeleton.Flush(int)</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -211,6 +205,12 @@ Class ManagedColoredConsoleAppender
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -232,7 +232,23 @@ error stream.
 When configuring the colored console appender, mappings should be
 specified to map logging levels to colors. For example:
 </p>
-<pre><code class="lang-csharp"></code></pre>
+<pre><code class="lang-xml">&lt;mapping&gt;
+ &lt;level value="ERROR" /&gt;
+ &lt;foreColor value="DarkRed" /&gt;
+ &lt;backColor value="White" /&gt;
+&lt;/mapping&gt;
+&lt;mapping&gt;
+ &lt;level value="WARN" /&gt;
+ &lt;foreColor value="Yellow" /&gt;
+&lt;/mapping&gt;
+&lt;mapping&gt;
+ &lt;level value="INFO" /&gt;
+ &lt;foreColor value="White" /&gt;
+&lt;/mapping&gt;
+&lt;mapping&gt;
+ &lt;level value="DEBUG" /&gt;
+ &lt;foreColor value="Blue" /&gt;
+&lt;/mapping&gt;</code></pre>
 <p>
 The Level is the standard log4net logging level while
 ForeColor and BackColor are the values of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.consolecolor">ConsoleColor</a>
@@ -242,36 +258,6 @@ enumeration.
 Based on the ColoredConsoleAppender
 </p>
 </div>
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="log4net_Appender_ManagedColoredConsoleAppender__ctor_" data-uid="log4net.Appender.ManagedColoredConsoleAppender.#ctor*"></a>
-
-  <h3 id="log4net_Appender_ManagedColoredConsoleAppender__ctor" data-uid="log4net.Appender.ManagedColoredConsoleAppender.#ctor">
-  ManagedColoredConsoleAppender()
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManagedColoredConsoleAppender()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
   <h2 class="section" id="fields">Fields

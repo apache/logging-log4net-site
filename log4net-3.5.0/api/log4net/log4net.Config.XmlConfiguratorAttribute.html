@@ -103,7 +103,8 @@ Class XmlConfiguratorAttribute
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Assembly)]
-public sealed class XmlConfiguratorAttribute : ConfiguratorAttribute, IComparable</code></pre>
+[Serializable]
+public sealed class XmlConfiguratorAttribute : ConfiguratorAttribute, _Attribute, IComparable</code></pre>
   </div>
 
 
@@ -122,6 +123,7 @@ public sealed class XmlConfiguratorAttribute : ConfiguratorAttribute, IComparabl
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices._attribute">_Attribute</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
     </dd>
   </dl>
@@ -245,9 +247,6 @@ public sealed class XmlConfiguratorAttribute : ConfiguratorAttribute, IComparabl
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.typeid">Attribute.TypeId</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -255,6 +254,9 @@ public sealed class XmlConfiguratorAttribute : ConfiguratorAttribute, IComparabl
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
   </dd></dl>
 

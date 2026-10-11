@@ -135,7 +135,8 @@ recent configuration process.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ICollection ConfigurationMessages { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Usage&quot;, &quot;CA2227:Collection properties should be read only&quot;)]
+ICollection ConfigurationMessages { get; set; }</code></pre>
   </div>
 
 

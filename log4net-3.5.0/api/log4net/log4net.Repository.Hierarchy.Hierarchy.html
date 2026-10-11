@@ -102,7 +102,8 @@ Class Hierarchy
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Hierarchy : LoggerRepositorySkeleton, ILoggerRepository, IFlushable, IBasicRepositoryConfigurator, IXmlRepositoryConfigurator</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Naming&quot;, &quot;CA1724:TypeNamesShouldNotMatchNamespaces&quot;)]
+public class Hierarchy : LoggerRepositorySkeleton, ILoggerRepository, IFlushable, IBasicRepositoryConfigurator, IXmlRepositoryConfigurator</code></pre>
   </div>
 
 
@@ -132,24 +133,6 @@ Class Hierarchy
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_AddRenderer_System_Type_log4net_ObjectRenderer_IObjectRenderer_">LoggerRepositorySkeleton.AddRenderer(Type, IObjectRenderer)</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnShutdown_System_EventArgs_">LoggerRepositorySkeleton.OnShutdown(EventArgs)</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnConfigurationReset_System_EventArgs_">LoggerRepositorySkeleton.OnConfigurationReset(EventArgs)</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnConfigurationChanged_System_EventArgs_">LoggerRepositorySkeleton.OnConfigurationChanged(EventArgs)</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_RaiseConfigurationChanged_System_EventArgs_">LoggerRepositorySkeleton.RaiseConfigurationChanged(EventArgs)</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Flush_System_Int32_">LoggerRepositorySkeleton.Flush(int)</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Name">LoggerRepositorySkeleton.Name</a>
     </div>
     <div>
@@ -171,9 +154,6 @@ Class Hierarchy
       <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_ConfigurationMessages">LoggerRepositorySkeleton.ConfigurationMessages</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Properties">LoggerRepositorySkeleton.Properties</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_ShutdownEvent">LoggerRepositorySkeleton.ShutdownEvent</a>
     </div>
     <div>
@@ -183,10 +163,25 @@ Class Hierarchy
       <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_ConfigurationChanged">LoggerRepositorySkeleton.ConfigurationChanged</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Properties">LoggerRepositorySkeleton.Properties</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_AddRenderer_System_Type_log4net_ObjectRenderer_IObjectRenderer_">LoggerRepositorySkeleton.AddRenderer(Type, IObjectRenderer)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnShutdown_System_EventArgs_">LoggerRepositorySkeleton.OnShutdown(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnConfigurationReset_System_EventArgs_">LoggerRepositorySkeleton.OnConfigurationReset(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnConfigurationChanged_System_EventArgs_">LoggerRepositorySkeleton.OnConfigurationChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_RaiseConfigurationChanged_System_EventArgs_">LoggerRepositorySkeleton.RaiseConfigurationChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Flush_System_Int32_">LoggerRepositorySkeleton.Flush(int)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -202,6 +197,12 @@ Class Hierarchy
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -559,7 +560,8 @@ its reference, otherwise returns <a href="https://learn.microsoft.com/dotnet/csh
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IAppender[] GetAppenders()</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Style&quot;, &quot;IDE0305:Simplify collection initialization&quot;)]
+public override IAppender[] GetAppenders()</code></pre>
   </div>
 
 
@@ -956,7 +958,7 @@ and again to a nested appender.
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>element</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>the element containing the root of the config</p>
 </dd>
   </dl>

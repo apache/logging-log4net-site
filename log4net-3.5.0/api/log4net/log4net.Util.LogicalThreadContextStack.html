@@ -102,7 +102,8 @@ Class LogicalThreadContextStack
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class LogicalThreadContextStack : IFixingRequired</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Naming&quot;, &quot;CA1711:Identifiers should not have incorrect suffix&quot;)]
+public sealed class LogicalThreadContextStack : IFixingRequired</code></pre>
   </div>
 
 
@@ -128,9 +129,6 @@ Class LogicalThreadContextStack
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
@@ -141,6 +139,9 @@ Class LogicalThreadContextStack
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
   </dd></dl>
 
@@ -227,7 +228,7 @@ a previous call execution which may not have completed correctly.
 You do not need to use this method if you always guarantee to call
 the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> method of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
 returned from <a class="xref" href="log4net.Util.LogicalThreadContextStack.html#log4net_Util_LogicalThreadContextStack_Push_System_String_">Push(string?)</a> even in exceptional circumstances,
-for example by using the <code>using(log4net.LogicalThreadContext.Stacks["NDC"].Push("Stack_Message"))</code> 
+for example by using the <code>using (log4net.LogicalThreadContext.Stacks["NDC"].Push("Stack_Message"))</code> 
 syntax.
 </p>
 </div>
@@ -350,11 +351,10 @@ empty string (not <a href="https://learn.microsoft.com/dotnet/csharp/language-re
 
   <h4 class="section" id="log4net_Util_LogicalThreadContextStack_Push_System_String__examples">Examples</h4>
   <p>Simple example of using the <a class="xref" href="log4net.Util.LogicalThreadContextStack.html#log4net_Util_LogicalThreadContextStack_Push_System_String_">Push(string?)</a> method with the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/using">using</a> keyword.</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;using(log4net.LogicalThreadContext.Stacks[&quot;NDC&quot;].Push(&quot;Stack_Message&quot;))
-</code></pre>
-<p>{
-log.Warn(&quot;This should have an ThreadContext Stack message&quot;);
-}</p>
+<pre><code class="lang-csharp">using (log4net.LogicalThreadContext.Stacks["NDC"].Push("Stack_Message"))
+{
+  log.Warn("This should have an ThreadContext Stack message");
+}</code></pre>
 
 
   <h4 class="section" id="log4net_Util_LogicalThreadContextStack_Push_System_String__remarks">Remarks</h4>

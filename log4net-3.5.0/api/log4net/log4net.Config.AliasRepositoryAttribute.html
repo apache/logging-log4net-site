@@ -103,7 +103,8 @@ Class AliasRepositoryAttribute
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
-public sealed class AliasRepositoryAttribute : Attribute</code></pre>
+[Serializable]
+public sealed class AliasRepositoryAttribute : Attribute, _Attribute</code></pre>
   </div>
 
 
@@ -118,6 +119,12 @@ public sealed class AliasRepositoryAttribute : Attribute</code></pre>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices._attribute">_Attribute</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -235,9 +242,6 @@ public sealed class AliasRepositoryAttribute : Attribute</code></pre>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.typeid">Attribute.TypeId</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -245,6 +249,9 @@ public sealed class AliasRepositoryAttribute : Attribute</code></pre>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
   </dd></dl>
 

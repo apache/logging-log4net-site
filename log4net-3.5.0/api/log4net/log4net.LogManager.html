@@ -122,12 +122,6 @@ Class LogManager
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -142,20 +136,27 @@ Class LogManager
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
   </dd></dl>
 
 
 
   <h2 id="log4net_LogManager_examples">Examples</h2>
   <p>Simple example of logging messages</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;ILog log = LogManager.GetLogger(&quot;application-log&quot;);
-</code></pre>
-<p>log.Info(&quot;Application Start&quot;);
-log.Debug(&quot;This is a debug message&quot;);</p>
-<p>if (log.IsDebugEnabled)
+<pre><code class="lang-csharp">ILog log = LogManager.GetLogger("application-log");
+
+log.Info("Application Start");
+log.Debug("This is a debug message");
+
+if (log.IsDebugEnabled)
 {
-log.Debug(&quot;This is another debug message&quot;);
-}</p>
+   log.Debug("This is another debug message");
+}</code></pre>
 
 
   <h2 id="log4net_LogManager_remarks">Remarks</h2>

@@ -123,9 +123,6 @@ Class LogicalThreadContextProperties
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -140,6 +137,9 @@ Class LogicalThreadContextProperties
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
   </dd></dl>
 
 
@@ -151,7 +151,7 @@ Class implements a collection of properties that is specific to each thread.
 The class is not synchronized as each thread has its own <a class="xref" href="log4net.Util.PropertiesDictionary.html">PropertiesDictionary</a>.
 </p>
 <p>
-This class stores its properties in a slot on the <span class="xref">System.Runtime.Remoting.Messaging.CallContext</span> named
+This class stores its properties in a slot on the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.remoting.messaging.callcontext">CallContext</a> named
 <a class="xref" href="log4net.Util.LogicalThreadContextProperties.html">LogicalThreadContextProperties</a> for .net4x,
 otherwise System.Threading.AsyncLocal
 </p>

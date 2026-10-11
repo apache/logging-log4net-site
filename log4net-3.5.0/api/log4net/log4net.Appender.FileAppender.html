@@ -139,19 +139,13 @@ Class FileAppender
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_PreAppendCheck">TextWriterAppender.PreAppendCheck()</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_WriteFooterAndCloseWriter">TextWriterAppender.WriteFooterAndCloseWriter()</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_Flush_System_Int32_">TextWriterAppender.Flush(int)</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_ImmediateFlush">TextWriterAppender.ImmediateFlush</a>
     </div>
     <div>
       <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_Writer">TextWriterAppender.Writer</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_PreAppendCheck">TextWriterAppender.PreAppendCheck()</a>
     </div>
     <div>
       <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_ErrorHandler">TextWriterAppender.ErrorHandler</a>
@@ -160,7 +154,25 @@ Class FileAppender
       <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_RequiresLayout">TextWriterAppender.RequiresLayout</a>
     </div>
     <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_WriteFooterAndCloseWriter">TextWriterAppender.WriteFooterAndCloseWriter()</a>
+    </div>
+    <div>
       <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_QuietWriter">TextWriterAppender.QuietWriter</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_Flush_System_Int32_">TextWriterAppender.Flush(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
     </div>
     <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
@@ -193,25 +205,7 @@ Class FileAppender
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -227,6 +221,12 @@ Class FileAppender
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -272,36 +272,6 @@ All locking strategies have issues and you should seriously consider using a dif
 avoids having multiple processes logging to the same file.
 </p>
 </div>
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="log4net_Appender_FileAppender__ctor_" data-uid="log4net.Appender.FileAppender.#ctor*"></a>
-
-  <h3 id="log4net_Appender_FileAppender__ctor" data-uid="log4net.Appender.FileAppender.#ctor">
-  FileAppender()
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileAppender()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
   <h2 class="section" id="properties">Properties

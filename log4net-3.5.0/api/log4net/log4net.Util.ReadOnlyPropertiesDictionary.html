@@ -102,7 +102,8 @@ Class ReadOnlyPropertiesDictionary
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReadOnlyPropertiesDictionary : ISerializable, IDictionary, ICollection, IDictionary&lt;string, object?&gt;, ICollection&lt;KeyValuePair&lt;string, object?&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, object?&gt;&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class ReadOnlyPropertiesDictionary : ISerializable, IDictionary, ICollection, IDictionary&lt;string, object?&gt;, ICollection&lt;KeyValuePair&lt;string, object?&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, object?&gt;&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -140,12 +141,6 @@ Class ReadOnlyPropertiesDictionary
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -159,6 +154,12 @@ Class ReadOnlyPropertiesDictionary
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -225,7 +226,8 @@ Initializes a new instance of the <a class="xref" href="log4net.Util.ReadOnlyPro
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ReadOnlyPropertiesDictionary(SerializationInfo info, StreamingContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Style&quot;, &quot;IDE0060:Remove unused parameter&quot;)]
+protected ReadOnlyPropertiesDictionary(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -458,7 +460,8 @@ a serialization operation is performed.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ICollection&lt;string&gt; Keys { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Naming&quot;, &quot;CA1721:Property names should not match get methods&quot;)]
+public ICollection&lt;string&gt; Keys { get; }</code></pre>
   </div>
 
 
@@ -810,6 +813,7 @@ Gets the key names.
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SecurityCritical]
+[SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
 public virtual void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
 

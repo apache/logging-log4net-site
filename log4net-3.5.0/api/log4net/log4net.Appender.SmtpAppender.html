@@ -103,7 +103,7 @@ or fatal errors.</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;SmtpAppender sends through System.Net.Mail.SmtpClient, which Microsoft no longer recommends.\r\nUse the MailKit based SmtpAppender from log4net.Ext.Mail instead, see\r\nhttps://logging.apache.org/log4net/manual/configuration/appenders/smtpappender.html&quot;)]
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;SmtpAppender sends through System.Net.Mail.SmtpClient, which Microsoft no longer recommends.\nUse the MailKit based SmtpAppender from log4net.Ext.Mail instead, see\nhttps://logging.apache.org/log4net/manual/configuration/appenders/smtpappender.html&quot;)]
 public class SmtpAppender : BufferingAppenderSkeleton, IBulkAppender, IAppender, IOptionHandler, IFlushable</code></pre>
   </div>
 
@@ -135,6 +135,21 @@ public class SmtpAppender : BufferingAppenderSkeleton, IBulkAppender, IAppender,
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Lossy">BufferingAppenderSkeleton.Lossy</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_BufferSize">BufferingAppenderSkeleton.BufferSize</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Evaluator">BufferingAppenderSkeleton.Evaluator</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_LossyEvaluator">BufferingAppenderSkeleton.LossyEvaluator</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Fix">BufferingAppenderSkeleton.Fix</a>
+    </div>
+    <div>
       <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Flush_System_Int32_">BufferingAppenderSkeleton.Flush(int)</a>
     </div>
     <div>
@@ -156,19 +171,19 @@ public class SmtpAppender : BufferingAppenderSkeleton, IBulkAppender, IAppender,
       <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_SendFromBuffer_log4net_Core_LoggingEvent_log4net_Util_CyclicBuffer_">BufferingAppenderSkeleton.SendFromBuffer(LoggingEvent, CyclicBuffer)</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Lossy">BufferingAppenderSkeleton.Lossy</a>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_BufferSize">BufferingAppenderSkeleton.BufferSize</a>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Evaluator">BufferingAppenderSkeleton.Evaluator</a>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_LossyEvaluator">BufferingAppenderSkeleton.LossyEvaluator</a>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Fix">BufferingAppenderSkeleton.Fix</a>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
     </div>
     <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
@@ -207,28 +222,7 @@ public class SmtpAppender : BufferingAppenderSkeleton, IBulkAppender, IAppender,
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -244,6 +238,12 @@ public class SmtpAppender : BufferingAppenderSkeleton, IBulkAppender, IAppender,
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 

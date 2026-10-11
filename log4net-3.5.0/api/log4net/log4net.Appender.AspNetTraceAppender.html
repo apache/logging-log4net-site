@@ -98,7 +98,7 @@ Class AspNetTraceAppender
   </div>
 
   <div class="markdown summary"><p>
-Appends log events to the ASP.NET <span class="xref">System.Web.TraceContext</span> system.
+Appends log events to the ASP.NET <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.web.tracecontext">TraceContext</a> system.
 </p>
 </div>
   <div class="markdown conceptual"></div>
@@ -134,7 +134,22 @@ Appends log events to the ASP.NET <span class="xref">System.Web.TraceContext</sp
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ActivateOptions">AppenderSkeleton.ActivateOptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
     </div>
     <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
@@ -179,28 +194,7 @@ Appends log events to the ASP.NET <span class="xref">System.Web.TraceContext</sp
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Flush_System_Int32_">AppenderSkeleton.Flush(int)</a>
     </div>
     <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
-    </div>
-    <div>
-      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
-    </div>
-    <div>
       <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -216,6 +210,12 @@ Appends log events to the ASP.NET <span class="xref">System.Web.TraceContext</sp
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -234,44 +234,14 @@ Trace statements are processed and displayed only when tracing is enabled. You c
 whether tracing is displayed to a page, to the trace viewer, or both.
 </p>
 <p>
-The logging event is passed to the <span class="xref">System.Web.TraceContext.Write(System.String)</span> or 
-<span class="xref">System.Web.TraceContext.Warn(System.String)</span> method depending on the level of the logging event.
+The logging event is passed to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.web.tracecontext.write#system-web-tracecontext-write(system-string)">Write(string)</a> or 
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.web.tracecontext.warn#system-web-tracecontext-warn(system-string)">Warn(string)</a> method depending on the level of the logging event.
 The event's logger name is the default value for the category parameter of the Write/Warn method. 
 </p>
 <p>
 Writes to the request current on the appending thread, so it must not be wrapped in a buffering appender.
 </p>
 </div>
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="log4net_Appender_AspNetTraceAppender__ctor_" data-uid="log4net.Appender.AspNetTraceAppender.#ctor*"></a>
-
-  <h3 id="log4net_Appender_AspNetTraceAppender__ctor" data-uid="log4net.Appender.AspNetTraceAppender.#ctor">
-  AspNetTraceAppender()
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AspNetTraceAppender()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
   <h2 class="section" id="properties">Properties

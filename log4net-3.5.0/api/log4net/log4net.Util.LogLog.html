@@ -122,9 +122,6 @@ Class LogLog
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
@@ -135,6 +132,9 @@ Class LogLog
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
   </dd></dl>
 
@@ -303,7 +303,11 @@ is enabled or disabled.</p>
 The following example enables internal debugging using the 
 application configuration file :
 </p>
-<pre><code class="lang-csharp"></code></pre>
+<pre><code class="lang-xml">&lt;configuration&gt;
+   &lt;appSettings&gt;
+     &lt;add key="log4net.Internal.Debug" value="true" /&gt;
+   &lt;/appSettings&gt;
+&lt;/configuration&gt;</code></pre>
 
 
   <h4 class="section" id="log4net_Util_LogLog_InternalDebugging_remarks">Remarks</h4>
@@ -536,7 +540,11 @@ logging, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-r
   <h4 class="section" id="log4net_Util_LogLog_QuietMode_examples">Examples</h4>
   <p>The following example disables internal logging using the
 application configuration file :</p>
-<pre><code class="lang-csharp"></code></pre>
+<pre><code class="lang-xml">&lt;configuration&gt;
+   &lt;appSettings&gt;
+     &lt;add key="log4net.Internal.Quiet" value="true" /&gt;
+   &lt;/appSettings&gt;
+&lt;/configuration&gt;</code></pre>
 
 
   <h4 class="section" id="log4net_Util_LogLog_QuietMode_remarks">Remarks</h4>

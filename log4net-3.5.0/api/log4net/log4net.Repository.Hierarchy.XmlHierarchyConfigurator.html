@@ -122,12 +122,6 @@ Class XmlHierarchyConfigurator
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -141,6 +135,12 @@ Class XmlHierarchyConfigurator
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -207,7 +207,7 @@ Class XmlHierarchyConfigurator
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>element</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The root element to parse.</p>
 </dd>
   </dl>
@@ -290,7 +290,7 @@ An object of type <code class="paramref">type</code> with value <code class="par
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>element</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The XML element that contains the definition of the object.</p>
 </dd>
     <dt><code>defaultTargetType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
@@ -347,7 +347,7 @@ as the type. However the type is specified it must support the
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>appenderRef</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>appenderRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The appender ref element.</p>
 </dd>
   </dl>
@@ -392,7 +392,7 @@ the appender.
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>appenderElement</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>appenderElement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The appender element.</p>
 </dd>
   </dl>
@@ -437,7 +437,7 @@ the appender instance.
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>catElement</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>catElement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The category element.</p>
 </dd>
     <dt><code>log</code> <a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a></dt>
@@ -486,7 +486,7 @@ which the logger has no appenders and silent log event loss can occur.
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>element</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The level element.</p>
 </dd>
     <dt><code>log</code> <a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a></dt>
@@ -530,7 +530,7 @@ Parse an XML element that represents a level.
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>loggerElement</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>loggerElement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The logger element.</p>
 </dd>
   </dl>
@@ -568,7 +568,7 @@ Parse an XML element that represents a logger.
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>element</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The renderer element.</p>
 </dd>
   </dl>
@@ -606,7 +606,7 @@ Parse an XML element that represents a renderer.
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>rootElement</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>rootElement</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The root element.</p>
 </dd>
   </dl>
@@ -639,12 +639,13 @@ Parse an XML element that represents the root logger.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void SetParameter(XmlElement element, object target)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Maintainability&quot;, &quot;CA1502:AvoidExcessiveComplexity&quot;)]
+protected void SetParameter(XmlElement element, object target)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dt><code>element</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlelement">XmlElement</a></dt>
     <dd><p>The parameter element.</p>
 </dd>
     <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>

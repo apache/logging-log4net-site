@@ -102,7 +102,9 @@ Delegate LogReceivedEventHandler
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void LogReceivedEventHandler(object? source, LogReceivedEventArgs e)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1003:Use generic event handler instances&quot;)]
+[SuppressMessage(&quot;Naming&quot;, &quot;CA1711:Identifiers should not have incorrect suffix&quot;)]
+public delegate void LogReceivedEventHandler(object? source, LogReceivedEventArgs e)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -111,153 +113,6 @@ Delegate LogReceivedEventHandler
     <dd>LogReceivedEventHandler</dd>
     <dt><code>e</code> <a class="xref" href="log4net.Util.LogReceivedEventArgs.html">LogReceivedEventArgs</a></dt>
     <dd>LogReceivedEventHandler</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="log4net_Util_LogReceivedEventHandler__ctor_" data-uid="log4net.Util.LogReceivedEventHandler.#ctor*"></a>
-
-  <h3 id="log4net_Util_LogReceivedEventHandler__ctor_System_Object_System_IntPtr_" data-uid="log4net.Util.LogReceivedEventHandler.#ctor(System.Object,System.IntPtr)">
-  LogReceivedEventHandler(object, nint)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LogReceivedEventHandler(object @object, nint method)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>method</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="log4net_Util_LogReceivedEventHandler_BeginInvoke_" data-uid="log4net.Util.LogReceivedEventHandler.BeginInvoke*"></a>
-
-  <h3 id="log4net_Util_LogReceivedEventHandler_BeginInvoke_System_Object_log4net_Util_LogReceivedEventArgs_System_AsyncCallback_System_Object_" data-uid="log4net.Util.LogReceivedEventHandler.BeginInvoke(System.Object,log4net.Util.LogReceivedEventArgs,System.AsyncCallback,System.Object)">
-  BeginInvoke(object?, LogReceivedEventArgs, AsyncCallback, object)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IAsyncResult BeginInvoke(object? source, LogReceivedEventArgs e, AsyncCallback callback, object @object)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>e</code> <a class="xref" href="log4net.Util.LogReceivedEventArgs.html">LogReceivedEventArgs</a></dt>
-    <dd></dd>
-    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></dt>
-    <dd></dd>
-    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="log4net_Util_LogReceivedEventHandler_EndInvoke_" data-uid="log4net.Util.LogReceivedEventHandler.EndInvoke*"></a>
-
-  <h3 id="log4net_Util_LogReceivedEventHandler_EndInvoke_System_IAsyncResult_" data-uid="log4net.Util.LogReceivedEventHandler.EndInvoke(System.IAsyncResult)">
-  EndInvoke(IAsyncResult)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void EndInvoke(IAsyncResult result)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="log4net_Util_LogReceivedEventHandler_Invoke_" data-uid="log4net.Util.LogReceivedEventHandler.Invoke*"></a>
-
-  <h3 id="log4net_Util_LogReceivedEventHandler_Invoke_System_Object_log4net_Util_LogReceivedEventArgs_" data-uid="log4net.Util.LogReceivedEventHandler.Invoke(System.Object,log4net.Util.LogReceivedEventArgs)">
-  Invoke(object?, LogReceivedEventArgs)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Invoke(object? source, LogReceivedEventArgs e)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>e</code> <a class="xref" href="log4net.Util.LogReceivedEventArgs.html">LogReceivedEventArgs</a></dt>
-    <dd></dd>
   </dl>
 
 

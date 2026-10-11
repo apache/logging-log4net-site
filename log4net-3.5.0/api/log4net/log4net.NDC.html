@@ -122,12 +122,6 @@ Class NDC
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -142,17 +136,22 @@ Class NDC
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
   </dd></dl>
 
 
 
   <h2 id="log4net_NDC_examples">Examples</h2>
   <p>How to push a message into the context</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;using (NDC.Push(&quot;my context message&quot;))
-</code></pre>
-<p>{
-... all log calls will have 'my context message' included ...</p>
-<p>} // at the end of the using block the message is automatically removed</p>
+<pre><code class="lang-csharp">using (NDC.Push("my context message"))
+{
+  ... all log calls will have 'my context message' included ...
+} // at the end of the using block the message is automatically removed</code></pre>
 
 
   <h2 id="log4net_NDC_remarks">Remarks</h2>
@@ -461,11 +460,10 @@ the context stack.</p>
 
   <h4 class="section" id="log4net_NDC_Push_System_String__examples">Examples</h4>
   <p>Simple example of using the <a class="xref" href="log4net.NDC.html#log4net_NDC_Push_System_String_">Push(string)</a> method with the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/using">using</a> keyword.</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;using(log4net.NDC.Push(&quot;NDC_Message&quot;))
-</code></pre>
-<p>{
-log.Warn(&quot;This should have an NDC message&quot;);
-}</p>
+<pre><code class="lang-csharp">using (log4net.NDC.Push("NDC_Message"))
+{
+  log.Warn("This should have an NDC message");
+}</code></pre>
 
 
   <h4 class="section" id="log4net_NDC_Push_System_String__remarks">Remarks</h4>
@@ -526,12 +524,11 @@ the context stack.</p>
 
   <h4 class="section" id="log4net_NDC_PushFormat_System_String_System_Object____examples">Examples</h4>
   <p>Simple example of using the <a class="xref" href="log4net.NDC.html#log4net_NDC_Push_System_String_">Push(string)</a> method with the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/using">using</a> keyword.</p>
-<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;var someValue = &quot;ExampleContext&quot;
-</code></pre>
-<p>using(log4net.NDC.PushFormat(&quot;NDC_Message {0}&quot;, someValue))
+<pre><code class="lang-csharp">var someValue = "ExampleContext";
+using (log4net.NDC.PushFormat("NDC_Message {0}", someValue))
 {
-log.Warn(&quot;This should have an NDC message&quot;);
-}</p>
+  log.Warn("This should have an NDC message");
+}</code></pre>
 
 
   <h4 class="section" id="log4net_NDC_PushFormat_System_String_System_Object____remarks">Remarks</h4>

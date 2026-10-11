@@ -128,12 +128,6 @@ Class PatternString
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -147,6 +141,12 @@ Class PatternString
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -358,7 +358,8 @@ Initialize a new instance of <a class="xref" href="log4net.Util.PatternString.ht
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PatternString(string? pattern)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Usage&quot;, &quot;CA2214:Do not call overridable methods in constructors&quot;)]
+public PatternString(string? pattern)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>

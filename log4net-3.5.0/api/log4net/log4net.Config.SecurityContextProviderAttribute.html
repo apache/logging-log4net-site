@@ -103,7 +103,8 @@ Class SecurityContextProviderAttribute
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Assembly)]
-public sealed class SecurityContextProviderAttribute : ConfiguratorAttribute, IComparable</code></pre>
+[Serializable]
+public sealed class SecurityContextProviderAttribute : ConfiguratorAttribute, _Attribute, IComparable</code></pre>
   </div>
 
 
@@ -122,6 +123,7 @@ public sealed class SecurityContextProviderAttribute : ConfiguratorAttribute, IC
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices._attribute">_Attribute</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
     </dd>
   </dl>
@@ -245,9 +247,6 @@ public sealed class SecurityContextProviderAttribute : ConfiguratorAttribute, IC
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.typeid">Attribute.TypeId</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -255,6 +254,9 @@ public sealed class SecurityContextProviderAttribute : ConfiguratorAttribute, IC
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
   </dd></dl>
 
@@ -338,7 +340,8 @@ methods.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Type ProviderType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1019:Define accessors for attribute arguments&quot;)]
+public Type ProviderType { get; set; }</code></pre>
   </div>
 
 

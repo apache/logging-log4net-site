@@ -129,12 +129,6 @@ Class WindowsSecurityContext
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -148,6 +142,12 @@ Class WindowsSecurityContext
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -164,36 +164,6 @@ This allows the context to either impersonate a set of user credentials specifie
 using username, domain name and password or to revert to the process credentials.
 </p>
 </div>
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="log4net_Util_WindowsSecurityContext__ctor_" data-uid="log4net.Util.WindowsSecurityContext.#ctor*"></a>
-
-  <h3 id="log4net_Util_WindowsSecurityContext__ctor" data-uid="log4net.Util.WindowsSecurityContext.#ctor">
-  WindowsSecurityContext()
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WindowsSecurityContext()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
   <h2 class="section" id="properties">Properties
@@ -310,7 +280,8 @@ is set to <a class="xref" href="log4net.Util.WindowsSecurityContext.Impersonatio
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Password { set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1044:Properties should not be write only&quot;, Justification = &quot;Password must be write only&quot;)]
+public string Password { set; }</code></pre>
   </div>
 
 

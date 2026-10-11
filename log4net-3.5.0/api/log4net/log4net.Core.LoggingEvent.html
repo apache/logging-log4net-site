@@ -102,7 +102,8 @@ Class LoggingEvent
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LoggingEvent : ISerializable</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class LoggingEvent : ISerializable</code></pre>
   </div>
 
 
@@ -128,12 +129,6 @@ Class LoggingEvent
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -147,6 +142,12 @@ Class LoggingEvent
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -231,7 +232,8 @@ This constructor sets this objects <a class="xref" href="log4net.Core.LoggingEve
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected LoggingEvent(SerializationInfo info, StreamingContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Style&quot;, &quot;IDE0060:Remove unused parameter&quot;)]
+protected LoggingEvent(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -947,7 +949,8 @@ null will be returned.
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PropertiesDictionary Properties { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Naming&quot;, &quot;CA1721:Property names should not match get methods&quot;)]
+public PropertiesDictionary Properties { get; }</code></pre>
   </div>
 
 
@@ -1516,6 +1519,7 @@ A new <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> can
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SecurityCritical]
+[SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
 public virtual void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
 

@@ -102,7 +102,9 @@ Delegate LoggerRepositoryShutdownEventHandler
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate void LoggerRepositoryShutdownEventHandler(object sender, EventArgs e)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1003:Use generic event handler instances&quot;)]
+[SuppressMessage(&quot;Naming&quot;, &quot;CA1711:Identifiers should not have incorrect suffix&quot;)]
+public delegate void LoggerRepositoryShutdownEventHandler(object sender, EventArgs e)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -113,153 +115,6 @@ Delegate LoggerRepositoryShutdownEventHandler
     <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
     <dd><p>Empty event args</p>
 </dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="log4net_Repository_LoggerRepositoryShutdownEventHandler__ctor_" data-uid="log4net.Repository.LoggerRepositoryShutdownEventHandler.#ctor*"></a>
-
-  <h3 id="log4net_Repository_LoggerRepositoryShutdownEventHandler__ctor_System_Object_System_IntPtr_" data-uid="log4net.Repository.LoggerRepositoryShutdownEventHandler.#ctor(System.Object,System.IntPtr)">
-  LoggerRepositoryShutdownEventHandler(object, nint)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LoggerRepositoryShutdownEventHandler(object @object, nint method)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>method</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="log4net_Repository_LoggerRepositoryShutdownEventHandler_BeginInvoke_" data-uid="log4net.Repository.LoggerRepositoryShutdownEventHandler.BeginInvoke*"></a>
-
-  <h3 id="log4net_Repository_LoggerRepositoryShutdownEventHandler_BeginInvoke_System_Object_System_EventArgs_System_AsyncCallback_System_Object_" data-uid="log4net.Repository.LoggerRepositoryShutdownEventHandler.BeginInvoke(System.Object,System.EventArgs,System.AsyncCallback,System.Object)">
-  BeginInvoke(object, EventArgs, AsyncCallback, object)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IAsyncResult BeginInvoke(object sender, EventArgs e, AsyncCallback callback, object @object)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
-    <dd></dd>
-    <dt><code>callback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></dt>
-    <dd></dd>
-    <dt><code>object</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="log4net_Repository_LoggerRepositoryShutdownEventHandler_EndInvoke_" data-uid="log4net.Repository.LoggerRepositoryShutdownEventHandler.EndInvoke*"></a>
-
-  <h3 id="log4net_Repository_LoggerRepositoryShutdownEventHandler_EndInvoke_System_IAsyncResult_" data-uid="log4net.Repository.LoggerRepositoryShutdownEventHandler.EndInvoke(System.IAsyncResult)">
-  EndInvoke(IAsyncResult)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void EndInvoke(IAsyncResult result)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="log4net_Repository_LoggerRepositoryShutdownEventHandler_Invoke_" data-uid="log4net.Repository.LoggerRepositoryShutdownEventHandler.Invoke*"></a>
-
-  <h3 id="log4net_Repository_LoggerRepositoryShutdownEventHandler_Invoke_System_Object_System_EventArgs_" data-uid="log4net.Repository.LoggerRepositoryShutdownEventHandler.Invoke(System.Object,System.EventArgs)">
-  Invoke(object, EventArgs)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Invoke(object sender, EventArgs e)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
-    <dd></dd>
   </dl>
 
 
