@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RollingFileAppender | Apache log4net 2.0.17 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RollingFileAppender | Apache log4net 2.0.17 API Reference ">
+      
+      <meta name="description" content="Appender that rolls log files based on size or date or both.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.RollingFileAppender">
+
+
+
+  <h1 id="log4net_Appender_RollingFileAppender" data-uid="log4net.Appender.RollingFileAppender" class="text-break">
+Class RollingFileAppender  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Appender that rolls log files based on size or date or both.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RollingFileAppender : FileAppender, IBulkAppender, IAppender, IOptionHandler, IFlushable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a></div>
+      <div><a class="xref" href="log4net.Appender.TextWriterAppender.html">TextWriterAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.FileAppender.html">FileAppender</a></div>
+      <div><span class="xref">RollingFileAppender</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.IBulkAppender.html">IBulkAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+      <div><a class="xref" href="log4net.Appender.IFlushable.html">IFlushable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_SetDefaultLockingModelType__1">FileAppender.SetDefaultLockingModelType&lt;TLockingModel&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_Reset">FileAppender.Reset()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_OnClose">FileAppender.OnClose()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_PrepareWriter">FileAppender.PrepareWriter()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_WriteFooter">FileAppender.WriteFooter()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_WriteHeader">FileAppender.WriteHeader()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_CloseWriter">FileAppender.CloseWriter()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_CloseFile">FileAppender.CloseFile()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_SafeOpenFile_System_String_System_Boolean_">FileAppender.SafeOpenFile(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_SetQWForFiles_System_IO_Stream_">FileAppender.SetQWForFiles(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_ConvertToFullPath_System_String_">FileAppender.ConvertToFullPath(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_File">FileAppender.File</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_AppendToFile">FileAppender.AppendToFile</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_Encoding">FileAppender.Encoding</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_SecurityContext">FileAppender.SecurityContext</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_LockingModel">FileAppender.LockingModel</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_PreAppendCheck">TextWriterAppender.PreAppendCheck()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_WriteFooterAndCloseWriter">TextWriterAppender.WriteFooterAndCloseWriter()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_Flush_System_Int32_">TextWriterAppender.Flush(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_ImmediateFlush">TextWriterAppender.ImmediateFlush</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_Writer">TextWriterAppender.Writer</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_ErrorHandler">TextWriterAppender.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_RequiresLayout">TextWriterAppender.RequiresLayout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_QuietWriter">TextWriterAppender.QuietWriter</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_">AppenderSkeleton.DoAppend(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent___">AppenderSkeleton.DoAppend(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.FilterEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter_">AppenderSkeleton.AddFilter(IFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ClearFilters">AppenderSkeleton.ClearFilters()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level_">AppenderSkeleton.IsAsSevereAsThreshold(Level)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Appender_RollingFileAppender_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+RollingFileAppender can roll log files based on size or date or both
+depending on the setting of the <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_RollingStyle">RollingStyle</a> property.
+When set to <a class="xref" href="log4net.Appender.RollingFileAppender.RollingMode.html#log4net_Appender_RollingFileAppender_RollingMode_Size">Size</a> the log file will be rolled
+once its size exceeds the <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_MaximumFileSize">MaximumFileSize</a>.
+When set to <a class="xref" href="log4net.Appender.RollingFileAppender.RollingMode.html#log4net_Appender_RollingFileAppender_RollingMode_Date">Date</a> the log file will be rolled
+once the date boundary specified in the <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_DatePattern">DatePattern</a> property
+is crossed.
+When set to <a class="xref" href="log4net.Appender.RollingFileAppender.RollingMode.html#log4net_Appender_RollingFileAppender_RollingMode_Composite">Composite</a> the log file will be
+rolled once the date boundary specified in the <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_DatePattern">DatePattern</a> property
+is crossed, but within a date boundary the file will also be rolled
+once its size exceeds the <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_MaximumFileSize">MaximumFileSize</a>.
+When set to <a class="xref" href="log4net.Appender.RollingFileAppender.RollingMode.html#log4net_Appender_RollingFileAppender_RollingMode_Once">Once</a> the log file will be rolled when
+the appender is configured. This effectively means that the log file can be
+rolled once per program execution.
+</p>
+<p>
+A of few additional optional features have been added:
+<ul><li>Attach date pattern for current log file <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_StaticLogFileName">StaticLogFileName</a></li><li>Backup number increments for newer files <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_CountDirection">CountDirection</a></li><li>Infinite number of backups by file size <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_MaxSizeRollBackups">MaxSizeRollBackups</a></li></ul>
+
+<div class="NOTE"><h5>note</h5><p>
+<p>
+For large or infinite numbers of backup files a <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_CountDirection">CountDirection</a> 
+greater than zero is highly recommended, otherwise all the backup files need
+to be renamed each time a new backup is created.
+</p>
+<p>
+When Date/Time based rolling is used setting <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_StaticLogFileName">StaticLogFileName</a> 
+to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> will reduce the number of file renamings to few or none.
+</p>
+</div>
+<div class="CAUTION"><h5>caution</h5><p>
+<p>
+Changing <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_StaticLogFileName">StaticLogFileName</a> or <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_CountDirection">CountDirection</a> without clearing
+the log file directory of backup files will cause unexpected and unwanted side effects.  
+</p>
+</div>
+<p>
+If Date/Time based rolling is enabled this appender will attempt to roll existing files
+in the directory without a Date/Time tag based on the last write date of the base log file.
+The appender only rolls the log file when a message is logged. If Date/Time based rolling 
+is enabled then the appender will not roll the log file at the Date/Time boundary but
+at the point when the next message is logged after the boundary has been crossed.
+</p>
+<p>
+The <a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender</a> extends the <a class="xref" href="log4net.Appender.FileAppender.html">FileAppender</a> and
+has the same behavior when opening the log file.
+The appender will first try to open the file for writing when <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_ActivateOptions">ActivateOptions()</a>
+is called. This will typically be during configuration.
+If the file cannot be opened for writing the appender will attempt
+to open the file again each time a message is logged to the appender.
+If the file cannot be opened for writing when a message is logged then
+the message will be discarded by this appender.
+</p>
+<p>
+When rolling a backup file necessitates deleting an older backup file the
+file to be deleted is moved to a temporary name before being deleted.
+</p>
+<div class="CAUTION"><h5>caution</h5><p>
+<p>
+A maximum number of backup files when rolling on date/time boundaries is not supported.
+</p>
+</div>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_RollingFileAppender__ctor_" data-uid="log4net.Appender.RollingFileAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender__ctor" data-uid="log4net.Appender.RollingFileAppender.#ctor">
+  RollingFileAppender()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RollingFileAppender()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Default constructor.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Appender_RollingFileAppender_CountDirection_" data-uid="log4net.Appender.RollingFileAppender.CountDirection*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_CountDirection" data-uid="log4net.Appender.RollingFileAppender.CountDirection">
+  CountDirection
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the rolling file count direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CountDirection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The rolling file count direction.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_CountDirection_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Indicates if the current file is the lowest numbered file or the
+highest numbered file.
+</p>
+<p>
+By default newer files have lower numbers (<a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_CountDirection">CountDirection</a> &lt; 0),
+i.e. log.1 is most recent, log.5 is the 5th backup, etc...
+</p>
+<p>
+<a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_CountDirection">CountDirection</a> &gt;= 0 does the opposite i.e.
+log.1 is the first backup made, log.5 is the 5th backup made, etc.
+For infinite backups use <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_CountDirection">CountDirection</a> &gt;= 0 to reduce 
+rollover costs.
+</p>
+<p>The default file count direction is -1.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_DatePattern_" data-uid="log4net.Appender.RollingFileAppender.DatePattern*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_DatePattern" data-uid="log4net.Appender.RollingFileAppender.DatePattern">
+  DatePattern
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the date pattern to be used for generating file names
+when rolling over on date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DatePattern { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The date pattern to be used for generating file names when rolling
+over on date.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_DatePattern_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Takes a string in the same format as expected by 
+<a class="xref" href="log4net.DateFormatter.SimpleDateFormatter.html">SimpleDateFormatter</a>.
+</p>
+<p>
+This property determines the rollover schedule when rolling over
+on date.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_DateTimeStrategy_" data-uid="log4net.Appender.RollingFileAppender.DateTimeStrategy*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_DateTimeStrategy" data-uid="log4net.Appender.RollingFileAppender.DateTimeStrategy">
+  DateTimeStrategy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the strategy for determining the current date and time. The default
+implementation is to use LocalDateTime which internally calls through to DateTime.Now.
+DateTime.UtcNow may be used on frameworks newer than .NET 1.0 by specifying
+<a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender.UniversalDateTime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RollingFileAppender.IDateTime DateTimeStrategy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender</a>.<a class="xref" href="log4net.Appender.RollingFileAppender.IDateTime.html">IDateTime</a></dt>
+    <dd><p>An implementation of the <a class="xref" href="log4net.Appender.RollingFileAppender.IDateTime.html">RollingFileAppender.IDateTime</a> interface which returns the current date and time.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_DateTimeStrategy_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets or sets the <a class="xref" href="log4net.Appender.RollingFileAppender.IDateTime.html">RollingFileAppender.IDateTime</a> used to return the current date and time.
+</p>
+<p>
+There are two built strategies for determining the current date and time, 
+<a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender.LocalDateTime</a>
+and <a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender.UniversalDateTime</a>.
+</p>
+<p>
+The default strategy is <a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender.LocalDateTime</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_MaxFileSize_" data-uid="log4net.Appender.RollingFileAppender.MaxFileSize*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_MaxFileSize" data-uid="log4net.Appender.RollingFileAppender.MaxFileSize">
+  MaxFileSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum size that the output file is allowed to reach
+before being rolled over to backup files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaxFileSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The maximum size in bytes that the output file is allowed to reach before being
+rolled over to backup files.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_MaxFileSize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This property is equivalent to <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_MaximumFileSize">MaximumFileSize</a> except
+that it is required for differentiating the setter taking a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> argument from the setter taking a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> 
+argument.
+</p>
+<p>
+The default maximum file size is 10MB (10*1024*1024).
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_MaxSizeRollBackups_" data-uid="log4net.Appender.RollingFileAppender.MaxSizeRollBackups*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_MaxSizeRollBackups" data-uid="log4net.Appender.RollingFileAppender.MaxSizeRollBackups">
+  MaxSizeRollBackups
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of backup files that are kept before
+the oldest is erased.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxSizeRollBackups { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of backup files that are kept before the oldest is
+erased.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_MaxSizeRollBackups_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If set to zero, then there will be no backup files and the log file 
+will be truncated when it reaches <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_MaxFileSize">MaxFileSize</a>.  
+</p>
+<p>
+If a negative number is supplied then no deletions will be made.  Note 
+that this could result in very slow performance as a large number of 
+files are rolled over unless <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_CountDirection">CountDirection</a> is used.
+</p>
+<p>
+The maximum applies to <b>each</b> time based group of files and 
+<b>not</b> the total.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_MaximumFileSize_" data-uid="log4net.Appender.RollingFileAppender.MaximumFileSize*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_MaximumFileSize" data-uid="log4net.Appender.RollingFileAppender.MaximumFileSize">
+  MaximumFileSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum size that the output file is allowed to reach
+before being rolled over to backup files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MaximumFileSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The maximum size that the output file is allowed to reach before being
+rolled over to backup files.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_MaximumFileSize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This property allows you to specify the maximum size with the
+suffixes "KB", "MB" or "GB" so that the size is interpreted being 
+expressed respectively in kilobytes, megabytes or gigabytes. 
+</p>
+<p>
+For example, the value "10KB" will be interpreted as 10240 bytes.
+</p>
+<p>
+The default maximum file size is 10MB.
+</p>
+<p>
+If you have the option to set the maximum file size programmatically
+consider using the <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_MaxFileSize">MaxFileSize</a> property instead as this
+allows you to set the size in bytes as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_PreserveLogFileNameExtension_" data-uid="log4net.Appender.RollingFileAppender.PreserveLogFileNameExtension*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_PreserveLogFileNameExtension" data-uid="log4net.Appender.RollingFileAppender.PreserveLogFileNameExtension">
+  PreserveLogFileNameExtension
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to preserve the file name extension when rolling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PreserveLogFileNameExtension { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the file name extension should be preserved.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_PreserveLogFileNameExtension_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+By default file.log is rolled to file.log.yyyy-MM-dd or file.log.curSizeRollBackup.
+However, under Windows the new file name will loose any program associations as the
+extension is changed. Optionally file.log can be renamed to file.yyyy-MM-dd.log or
+file.curSizeRollBackup.log to maintain any program associations.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_RollingStyle_" data-uid="log4net.Appender.RollingFileAppender.RollingStyle*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_RollingStyle" data-uid="log4net.Appender.RollingFileAppender.RollingStyle">
+  RollingStyle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the rolling style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RollingFileAppender.RollingMode RollingStyle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender</a>.<a class="xref" href="log4net.Appender.RollingFileAppender.RollingMode.html">RollingMode</a></dt>
+    <dd><p>The rolling style.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_RollingStyle_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The default rolling style is <a class="xref" href="log4net.Appender.RollingFileAppender.RollingMode.html#log4net_Appender_RollingFileAppender_RollingMode_Composite">Composite</a>.
+</p>
+<p>
+When set to <a class="xref" href="log4net.Appender.RollingFileAppender.RollingMode.html#log4net_Appender_RollingFileAppender_RollingMode_Once">Once</a> this appender's
+<a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_AppendToFile">AppendToFile</a> property is set to <code>false</code>, otherwise
+the appender would append to a single file rather than rolling
+the file each time it is opened.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_StaticLogFileName_" data-uid="log4net.Appender.RollingFileAppender.StaticLogFileName*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_StaticLogFileName" data-uid="log4net.Appender.RollingFileAppender.StaticLogFileName">
+  StaticLogFileName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to always log to
+the same file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StaticLogFileName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if always should be logged to the same file, otherwise <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_StaticLogFileName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+By default file.log is always the current file.  Optionally
+file.log.yyyy-mm-dd for current formatted datePattern can by the currently
+logging file (or file.log.curSizeRollBackup or even
+file.log.yyyy-mm-dd.curSizeRollBackup).
+</p>
+<p>
+This will make time based rollovers with a large number of backups 
+much faster as the appender it won't have to rename all the backups!
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_RollingFileAppender_ActivateOptions_" data-uid="log4net.Appender.RollingFileAppender.ActivateOptions*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_ActivateOptions" data-uid="log4net.Appender.RollingFileAppender.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize the appender based on the options set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_ActivateOptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is part of the <a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a> delayed object
+activation scheme. The <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_ActivateOptions">ActivateOptions()</a> method must 
+be called on this object after the configuration properties have
+been set. Until <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_ActivateOptions">ActivateOptions()</a> is called this
+object is in an undefined state and must not be used. 
+</p>
+<p>
+If any of the configuration properties are modified then 
+<a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_ActivateOptions">ActivateOptions()</a> must be called again.
+</p>
+<p>
+Sets initial conditions including date/time roll over information, first check,
+scheduledFilename, and calls <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_ExistingInit">ExistingInit()</a> to initialize
+the current number of backups.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_AdjustFileBeforeAppend_" data-uid="log4net.Appender.RollingFileAppender.AdjustFileBeforeAppend*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_AdjustFileBeforeAppend" data-uid="log4net.Appender.RollingFileAppender.AdjustFileBeforeAppend">
+  AdjustFileBeforeAppend()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs any required rolling before outputting the next event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AdjustFileBeforeAppend()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_AdjustFileBeforeAppend_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Handles append time behavior for RollingFileAppender.  This checks
+if a roll over either by date (checked first) or time (checked second)
+is need and then appends to the file last.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_Append_" data-uid="log4net.Appender.RollingFileAppender.Append*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_Append_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.RollingFileAppender.Append(log4net.Core.LoggingEvent)">
+  Append(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write out a logging event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>the event to write to file.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_Append_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Handles append time behavior for RollingFileAppender.  This checks
+if a roll over either by date (checked first) or time (checked second)
+is need and then appends to the file last.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_Append_" data-uid="log4net.Appender.RollingFileAppender.Append*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_Append_log4net_Core_LoggingEvent___" data-uid="log4net.Appender.RollingFileAppender.Append(log4net.Core.LoggingEvent[])">
+  Append(LoggingEvent[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write out an array of logging events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent[] loggingEvents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvents</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>[]</dt>
+    <dd><p>the events to write to file.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_Append_log4net_Core_LoggingEvent____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Handles append time behavior for RollingFileAppender.  This checks
+if a roll over either by date (checked first) or time (checked second)
+is need and then appends to the file last.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_DeleteFile_" data-uid="log4net.Appender.RollingFileAppender.DeleteFile*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_DeleteFile_System_String_" data-uid="log4net.Appender.RollingFileAppender.DeleteFile(System.String)">
+  DeleteFile(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes the specified file if it exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void DeleteFile(string fileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file to delete.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_DeleteFile_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Delete a file if is exists.
+The file is first moved to a new filename then deleted.
+This allows the file to be removed even when it cannot
+be deleted, but it still can be moved.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_ExistingInit_" data-uid="log4net.Appender.RollingFileAppender.ExistingInit*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_ExistingInit" data-uid="log4net.Appender.RollingFileAppender.ExistingInit">
+  ExistingInit()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes based on existing conditions at time of <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_ActivateOptions">ActivateOptions()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ExistingInit()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_ExistingInit_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes based on existing conditions at time of <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_ActivateOptions">ActivateOptions()</a>.
+The following is done
+<ul><li>determine curSizeRollBackups (only within the current roll point)</li><li>initiates a roll over if needed for crossing a date boundary since the last run.</li></ul>
+ 
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_FileExists_" data-uid="log4net.Appender.RollingFileAppender.FileExists*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_FileExists_System_String_" data-uid="log4net.Appender.RollingFileAppender.FileExists(System.String)">
+  FileExists(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Test if a file exists at a specified path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool FileExists(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the path to the file</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the file exists</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_FileExists_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Test if a file exists at a specified path
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_Finalize_" data-uid="log4net.Appender.RollingFileAppender.Finalize*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_Finalize" data-uid="log4net.Appender.RollingFileAppender.Finalize">
+  ~RollingFileAppender()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cleans up all resources used by this appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~RollingFileAppender()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_GetNextOutputFileName_" data-uid="log4net.Appender.RollingFileAppender.GetNextOutputFileName*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_GetNextOutputFileName_System_String_" data-uid="log4net.Appender.RollingFileAppender.GetNextOutputFileName(System.String)">
+  GetNextOutputFileName(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the current output file name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string GetNextOutputFileName(string fileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the base file name</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the output file name</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_GetNextOutputFileName_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The output file name is based on the base fileName specified.
+If <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_StaticLogFileName">StaticLogFileName</a> is set then the output
+file name is the same as the base file passed in. Otherwise
+the output file depends on the date pattern, on the count
+direction or both.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_NextCheckDate_" data-uid="log4net.Appender.RollingFileAppender.NextCheckDate*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_NextCheckDate_System_DateTime_log4net_Appender_RollingFileAppender_RollPoint_" data-uid="log4net.Appender.RollingFileAppender.NextCheckDate(System.DateTime,log4net.Appender.RollingFileAppender.RollPoint)">
+  NextCheckDate(DateTime, RollPoint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the start time of the next window for the current rollpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DateTime NextCheckDate(DateTime currentDateTime, RollingFileAppender.RollPoint rollPoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentDateTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>the current date</p>
+</dd>
+    <dt><code>rollPoint</code> <a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender</a>.<a class="xref" href="log4net.Appender.RollingFileAppender.RollPoint.html">RollPoint</a></dt>
+    <dd><p>the type of roll point we are working with</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>the start time for the next roll point an interval after the currentDateTime date</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_NextCheckDate_System_DateTime_log4net_Appender_RollingFileAppender_RollPoint__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Returns the date of the next roll point after the currentDateTime date passed to the method.
+</p>
+<p>
+The basic strategy is to subtract the time parts that are less significant
+than the rollpoint from the current time. This should roll the time back to
+the start of the time window for the current rollpoint. Then we add 1 window
+worth of time and get the start time of the next window for the rollpoint.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_OpenFile_" data-uid="log4net.Appender.RollingFileAppender.OpenFile*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_OpenFile_System_String_System_Boolean_" data-uid="log4net.Appender.RollingFileAppender.OpenFile(System.String,System.Boolean)">
+  OpenFile(string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates and opens the file for logging.  If <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_StaticLogFileName">StaticLogFileName</a>
+is false then the fully qualified name is determined and used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OpenFile(string fileName, bool append)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the name of the file to open</p>
+</dd>
+    <dt><code>append</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true to append to existing file</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_OpenFile_System_String_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method will ensure that the directory structure
+for the <code class="paramref">fileName</code> specified exists.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_RollFile_" data-uid="log4net.Appender.RollingFileAppender.RollFile*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_RollFile_System_String_System_String_" data-uid="log4net.Appender.RollingFileAppender.RollFile(System.String,System.String)">
+  RollFile(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renames file <code class="paramref">fromFile</code> to file <code class="paramref">toFile</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RollFile(string fromFile, string toFile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fromFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Name of existing file to roll.</p>
+</dd>
+    <dt><code>toFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>New name for file.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_RollFile_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Renames file <code class="paramref">fromFile</code> to file <code class="paramref">toFile</code>. It
+also checks for existence of target file and deletes if it does.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_RollOverRenameFiles_" data-uid="log4net.Appender.RollingFileAppender.RollOverRenameFiles*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_RollOverRenameFiles_System_String_" data-uid="log4net.Appender.RollingFileAppender.RollOverRenameFiles(System.String)">
+  RollOverRenameFiles(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implements file roll.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RollOverRenameFiles(string baseFileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the base name to rename</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_RollOverRenameFiles_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the maximum number of size based backups is reached
+(<code>curSizeRollBackups == maxSizeRollBackups</code>) then the oldest
+file is deleted -- its index determined by the sign of countDirection.
+If <code>countDirection</code> &lt; 0, then files
+{<code>File.1</code>, ..., <code>File.curSizeRollBackups -1</code>}
+are renamed to {<code>File.2</code>, ...,
+<code>File.curSizeRollBackups</code>}. 
+</p>
+<p>
+If <code>maxSizeRollBackups</code> is equal to zero, then the
+<code>File</code> is truncated with no backup files created.
+</p>
+<p>
+If <code>maxSizeRollBackups</code> &lt; 0, then <code>File</code> is
+renamed if needed and no files are deleted.
+</p>
+<p>
+This is called by <a class="xref" href="log4net.Appender.RollingFileAppender.html#log4net_Appender_RollingFileAppender_RollOverSize">RollOverSize()</a> to rename the files.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_RollOverSize_" data-uid="log4net.Appender.RollingFileAppender.RollOverSize*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_RollOverSize" data-uid="log4net.Appender.RollingFileAppender.RollOverSize">
+  RollOverSize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implements file roll base on file size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RollOverSize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_RollOverSize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the maximum number of size based backups is reached
+(<code>curSizeRollBackups == maxSizeRollBackups</code>) then the oldest
+file is deleted -- its index determined by the sign of countDirection.
+If <code>countDirection</code> &lt; 0, then files
+{<code>File.1</code>, ..., <code>File.curSizeRollBackups -1</code>}
+are renamed to {<code>File.2</code>, ...,
+<code>File.curSizeRollBackups</code>}. Moreover, <code>File</code> is
+renamed <code>File.1</code> and closed.
+</p>
+<p>
+A new file is created to receive further log output.
+</p>
+<p>
+If <code>maxSizeRollBackups</code> is equal to zero, then the
+<code>File</code> is truncated with no backup files created.
+</p>
+<p>
+If <code>maxSizeRollBackups</code> &lt; 0, then <code>File</code> is
+renamed if needed and no files are deleted.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_RollOverTime_" data-uid="log4net.Appender.RollingFileAppender.RollOverTime*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_RollOverTime_System_Boolean_" data-uid="log4net.Appender.RollingFileAppender.RollOverTime(System.Boolean)">
+  RollOverTime(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rollover the file(s) to date/time tagged file(s).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RollOverTime(bool fileIsOpen)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileIsOpen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>set to true if the file to be rolled is currently open</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_RollOverTime_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Rollover the file(s) to date/time tagged file(s).
+Resets curSizeRollBackups. 
+If fileIsOpen is set then the new file is opened (through SafeOpenFile).
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_RollingFileAppender_SetQWForFiles_" data-uid="log4net.Appender.RollingFileAppender.SetQWForFiles*"></a>
+
+  <h3 id="log4net_Appender_RollingFileAppender_SetQWForFiles_System_IO_TextWriter_" data-uid="log4net.Appender.RollingFileAppender.SetQWForFiles(System.IO.TextWriter)">
+  SetQWForFiles(TextWriter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the quiet writer being used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SetQWForFiles(TextWriter writer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>the writer to set</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_RollingFileAppender_SetQWForFiles_System_IO_TextWriter__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method can be overridden by sub classes.</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

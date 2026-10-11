@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AppenderSkeleton | Apache log4net 2.0.12 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AppenderSkeleton | Apache log4net 2.0.12 API Reference ">
+      
+      <meta name="description" content="Abstract base class implementation of .">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.AppenderSkeleton">
+
+
+
+  <h1 id="log4net_Appender_AppenderSkeleton" data-uid="log4net.Appender.AppenderSkeleton" class="text-break">
+Class AppenderSkeleton  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Abstract base class implementation of <a class="xref" href="log4net.Appender.IAppender.html">IAppender</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class AppenderSkeleton : IBulkAppender, IAppender, IOptionHandler, IFlushable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AppenderSkeleton</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.IBulkAppender.html">IBulkAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+      <div><a class="xref" href="log4net.Appender.IFlushable.html">IFlushable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.AnsiColorTerminalAppender.html">AnsiColorTerminalAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.AspNetTraceAppender.html">AspNetTraceAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html">BufferingAppenderSkeleton</a></div>
+      <div><a class="xref" href="log4net.Appender.ColoredConsoleAppender.html">ColoredConsoleAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.ConsoleAppender.html">ConsoleAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.DebugAppender.html">DebugAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.EventLogAppender.html">EventLogAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.ForwardingAppender.html">ForwardingAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.LocalSyslogAppender.html">LocalSyslogAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.ManagedColoredConsoleAppender.html">ManagedColoredConsoleAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.MemoryAppender.html">MemoryAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.NetSendAppender.html">NetSendAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.OutputDebugStringAppender.html">OutputDebugStringAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.TelnetAppender.html">TelnetAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.TextWriterAppender.html">TextWriterAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.TraceAppender.html">TraceAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.UdpAppender.html">UdpAppender</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Appender_AppenderSkeleton_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+This class provides the code for common functionality, such 
+as support for threshold filtering and support for general filters.
+</p>
+<p>
+Appenders can also implement the <a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a> interface. Therefore
+they would require that the <span class="xref">IOptionHandler.ActivateOptions()</span> method
+be called after the appenders properties have been configured.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_AppenderSkeleton__ctor_" data-uid="log4net.Appender.AppenderSkeleton.#ctor*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton__ctor" data-uid="log4net.Appender.AppenderSkeleton.#ctor">
+  AppenderSkeleton()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AppenderSkeleton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Empty default constructor</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Appender_AppenderSkeleton_ErrorHandler_" data-uid="log4net.Appender.AppenderSkeleton.ErrorHandler*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_ErrorHandler" data-uid="log4net.Appender.AppenderSkeleton.ErrorHandler">
+  ErrorHandler
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="log4net.Core.IErrorHandler.html">IErrorHandler</a> for this appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IErrorHandler ErrorHandler { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.IErrorHandler.html">IErrorHandler</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Core.IErrorHandler.html">IErrorHandler</a> of the appender</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_ErrorHandler_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a> provides a default 
+implementation for the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">ErrorHandler</a> property. 
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_FilterHead_" data-uid="log4net.Appender.AppenderSkeleton.FilterHead*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_FilterHead" data-uid="log4net.Appender.AppenderSkeleton.FilterHead">
+  FilterHead
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The filter chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IFilter FilterHead { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Filter.IFilter.html">IFilter</a></dt>
+    <dd><p>The head of the filter chain filter chain.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_FilterHead_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Returns the head Filter. The Filters are organized in a linked list
+and so all Filters on this Appender are available through the result.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_Layout_" data-uid="log4net.Appender.AppenderSkeleton.Layout*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_Layout" data-uid="log4net.Appender.AppenderSkeleton.Layout">
+  Layout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="log4net.Layout.ILayout.html">ILayout</a> for this appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ILayout Layout { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Layout.ILayout.html">ILayout</a></dt>
+    <dd><p>The layout of the appender.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_Layout_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+See <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RequiresLayout">RequiresLayout</a> for more information.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RequiresLayout">RequiresLayout</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Appender_AppenderSkeleton_Name_" data-uid="log4net.Appender.AppenderSkeleton.Name*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_Name" data-uid="log4net.Appender.AppenderSkeleton.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name of this appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the appender.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_Name_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The name uniquely identifies the appender.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_RequiresLayout_" data-uid="log4net.Appender.AppenderSkeleton.RequiresLayout*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_RequiresLayout" data-uid="log4net.Appender.AppenderSkeleton.RequiresLayout">
+  RequiresLayout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tests if this appender requires a <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">Layout</a> to be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool RequiresLayout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the appender requires a layout object, otherwise <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_RequiresLayout_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+In the rather exceptional case, where the appender 
+implementation admits a layout but can also work without it, 
+then the appender should return <code>true</code>.
+</p>
+<p>
+This default implementation always returns <code>false</code>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_Threshold_" data-uid="log4net.Appender.AppenderSkeleton.Threshold*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_Threshold" data-uid="log4net.Appender.AppenderSkeleton.Threshold">
+  Threshold
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the threshold <a class="xref" href="log4net.Core.Level.html">Level</a> of this appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Level Threshold { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>The threshold <a class="xref" href="log4net.Core.Level.html">Level</a> of the appender.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_Threshold_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+All log events with lower level than the threshold level are ignored 
+by the appender.
+</p>
+<p>
+In configuration files this option is specified by setting the
+value of the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">Threshold</a> option to a level
+string, such as "DEBUG", "INFO" and so on.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_AppenderSkeleton_ActivateOptions_" data-uid="log4net.Appender.AppenderSkeleton.ActivateOptions*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_ActivateOptions" data-uid="log4net.Appender.AppenderSkeleton.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize the appender based on the options set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_ActivateOptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is part of the <a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a> delayed object
+activation scheme. The <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ActivateOptions">ActivateOptions()</a> method must 
+be called on this object after the configuration properties have
+been set. Until <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ActivateOptions">ActivateOptions()</a> is called this
+object is in an undefined state and must not be used. 
+</p>
+<p>
+If any of the configuration properties are modified then 
+<a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ActivateOptions">ActivateOptions()</a> must be called again.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_AddFilter_" data-uid="log4net.Appender.AppenderSkeleton.AddFilter*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter_" data-uid="log4net.Appender.AppenderSkeleton.AddFilter(log4net.Filter.IFilter)">
+  AddFilter(IFilter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a filter to the end of the filter chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddFilter(IFilter filter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <a class="xref" href="log4net.Filter.IFilter.html">IFilter</a></dt>
+    <dd><p>the filter to add to this appender</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The Filters are organized in a linked list.
+</p>
+<p>
+Setting this property causes the new filter to be pushed onto the 
+back of the filter chain.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_Append_" data-uid="log4net.Appender.AppenderSkeleton.Append*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent)">
+  Append(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subclasses of <a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a> should implement this method
+to perform actual logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Append(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event to append.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A subclass must implement this method to perform
+logging of the <code class="paramref">loggingEvent</code>.
+</p>
+<p>This method will be called by <span class="xref">DoAppend(LoggingEvent)</span>
+if all the conditions listed for that method are met.
+</p>
+<p>
+To restrict the logging of events in the appender
+override the <span class="xref">PreAppendCheck()</span> method.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_Append_" data-uid="log4net.Appender.AppenderSkeleton.Append*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent___" data-uid="log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent[])">
+  Append(LoggingEvent[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Append a bulk array of logging events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Append(LoggingEvent[] loggingEvents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvents</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>[]</dt>
+    <dd><p>the array of logging events</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This base class implementation calls the <span class="xref">Append(LoggingEvent)</span>
+method for each element in the bulk array.
+</p>
+<p>
+A sub class that can better process a bulk array of events should
+override this method in addition to <span class="xref">Append(LoggingEvent)</span>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_ClearFilters_" data-uid="log4net.Appender.AppenderSkeleton.ClearFilters*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_ClearFilters" data-uid="log4net.Appender.AppenderSkeleton.ClearFilters">
+  ClearFilters()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the filter list for this appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ClearFilters()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_ClearFilters_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Clears the filter list for this appender.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_Close_" data-uid="log4net.Appender.AppenderSkeleton.Close*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_Close" data-uid="log4net.Appender.AppenderSkeleton.Close">
+  Close()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the appender and release resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_Close_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Release any resources allocated within the appender such as file handles, 
+network connections, etc.
+</p>
+<p>
+It is a programming error to append to a closed appender.
+</p>
+<p>
+This method cannot be overridden by subclasses. This method 
+delegates the closing of the appender to the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_OnClose">OnClose()</a>
+method which must be overridden in the subclass.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_DoAppend_" data-uid="log4net.Appender.AppenderSkeleton.DoAppend*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.AppenderSkeleton.DoAppend(log4net.Core.LoggingEvent)">
+  DoAppend(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs threshold checks and invokes filters before
+delegating actual logging to the subclasses specific
+<span class="xref">Append(LoggingEvent)</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DoAppend(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method cannot be overridden by derived classes. A
+derived class should override the <span class="xref">Append(LoggingEvent)</span> method
+which is called by this method.
+</p>
+<p>
+The implementation of this method is as follows:
+</p>
+<p>
+<ul><li>
+		Checks that the severity of the <code class="paramref">loggingEvent</code>
+		is greater than or equal to the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">Threshold</a> of this
+		appender.</li><li>
+		Checks that the <a class="xref" href="log4net.Filter.IFilter.html">IFilter</a> chain accepts the 
+		<code class="paramref">loggingEvent</code>.
+		</li><li>
+		Calls <span class="xref">PreAppendCheck()</span> and checks that 
+		it returns <code>true</code>.</li></ul>
+
+<p>
+If all of the above steps succeed then the <code class="paramref">loggingEvent</code>
+will be passed to the abstract <span class="xref">Append(LoggingEvent)</span> method.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_DoAppend_" data-uid="log4net.Appender.AppenderSkeleton.DoAppend*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent___" data-uid="log4net.Appender.AppenderSkeleton.DoAppend(log4net.Core.LoggingEvent[])">
+  DoAppend(LoggingEvent[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs threshold checks and invokes filters before
+delegating actual logging to the subclasses specific
+<span class="xref">Append(LoggingEvent[])</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DoAppend(LoggingEvent[] loggingEvents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvents</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>[]</dt>
+    <dd><p>The array of events to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method cannot be overridden by derived classes. A
+derived class should override the <span class="xref">Append(LoggingEvent[])</span> method
+which is called by this method.
+</p>
+<p>
+The implementation of this method is as follows:
+</p>
+<p>
+<ul><li>
+		Checks that the severity of the <code class="paramref">loggingEvents</code>
+		is greater than or equal to the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">Threshold</a> of this
+		appender.</li><li>
+		Checks that the <a class="xref" href="log4net.Filter.IFilter.html">IFilter</a> chain accepts the 
+		<code class="paramref">loggingEvents</code>.
+		</li><li>
+		Calls <span class="xref">PreAppendCheck()</span> and checks that 
+		it returns <code>true</code>.</li></ul>
+
+<p>
+If all of the above steps succeed then the <code class="paramref">loggingEvents</code>
+will be passed to the <span class="xref">Append(LoggingEvent[])</span> method.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_FilterEvent_" data-uid="log4net.Appender.AppenderSkeleton.FilterEvent*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.AppenderSkeleton.FilterEvent(log4net.Core.LoggingEvent)">
+  FilterEvent(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Test if the logging event should we output by this appender</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool FilterEvent(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>the event to test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the event should be output, <code>false</code> if the event should be ignored</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method checks the logging event against the threshold level set
+on this appender and also against the filters specified on this
+appender.
+</p>
+<p>
+The implementation of this method is as follows:
+</p>
+<p>
+<ul><li>
+		Checks that the severity of the <code class="paramref">loggingEvent</code>
+		is greater than or equal to the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">Threshold</a> of this
+		appender.</li><li>
+		Checks that the <a class="xref" href="log4net.Filter.IFilter.html">IFilter</a> chain accepts the 
+		<code class="paramref">loggingEvent</code>.
+		</li></ul>
+
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_Finalize_" data-uid="log4net.Appender.AppenderSkeleton.Finalize*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_Finalize" data-uid="log4net.Appender.AppenderSkeleton.Finalize">
+  ~AppenderSkeleton()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finalizes this appender by calling the implementation's
+<a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">Close()</a> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~AppenderSkeleton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_Finalize_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If this appender has not been closed then the <code>Finalize</code> method
+will call <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">Close()</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_Flush_" data-uid="log4net.Appender.AppenderSkeleton.Flush*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_Flush_System_Int32_" data-uid="log4net.Appender.AppenderSkeleton.Flush(System.Int32)">
+  Flush(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flushes any buffered log data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Flush(int millisecondsTimeout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>millisecondsTimeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>True</code> if all logging events were flushed successfully, else <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_Flush_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This implementation doesn't flush anything and always returns true</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_" data-uid="log4net.Appender.AppenderSkeleton.IsAsSevereAsThreshold*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level_" data-uid="log4net.Appender.AppenderSkeleton.IsAsSevereAsThreshold(log4net.Core.Level)">
+  IsAsSevereAsThreshold(Level)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the message level is below this appender's threshold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool IsAsSevereAsThreshold(Level level)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p><a class="xref" href="log4net.Core.Level.html">Level</a> to test against.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the <code class="paramref">level</code> meets the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">Threshold</a>
+requirements of this appender.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If there is no threshold set, then the return value is always <code>true</code>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_OnClose_" data-uid="log4net.Appender.AppenderSkeleton.OnClose*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_OnClose" data-uid="log4net.Appender.AppenderSkeleton.OnClose">
+  OnClose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is called when the appender is closed. Derived classes should override
+this method if resources need to be released.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnClose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_OnClose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Releases any resources allocated within the appender such as file handles, 
+network connections, etc.
+</p>
+<p>
+It is a programming error to append to a closed appender.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_PreAppendCheck_" data-uid="log4net.Appender.AppenderSkeleton.PreAppendCheck*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_PreAppendCheck" data-uid="log4net.Appender.AppenderSkeleton.PreAppendCheck">
+  PreAppendCheck()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called before <span class="xref">Append(LoggingEvent)</span> as a precondition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool PreAppendCheck()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the call to <span class="xref">Append(LoggingEvent)</span> should proceed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_PreAppendCheck_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method is called by <span class="xref">DoAppend(LoggingEvent)</span>
+before the call to the abstract <span class="xref">Append(LoggingEvent)</span> method.
+</p>
+<p>
+This method can be overridden in a subclass to extend the checks 
+made before the event is passed to the <span class="xref">Append(LoggingEvent)</span> method.
+</p>
+<p>
+A subclass should ensure that they delegate this call to
+this base class if it is overridden.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_RenderLoggingEvent_" data-uid="log4net.Appender.AppenderSkeleton.RenderLoggingEvent*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.AppenderSkeleton.RenderLoggingEvent(System.IO.TextWriter,log4net.Core.LoggingEvent)">
+  RenderLoggingEvent(TextWriter, LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> to a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RenderLoggingEvent(TextWriter writer, LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>The TextWriter to write the formatted event to</p>
+</dd>
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event to render.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Helper method to render a <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> to 
+a string. This appender must have a <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">Layout</a>
+set to render the <code class="paramref">loggingEvent</code> to 
+a string.
+</p>
+<p>If there is exception data in the logging event and 
+the layout does not process the exception, this method 
+will append the exception text to the rendered string.
+</p>
+<p>
+Use this method in preference to <span class="xref">RenderLoggingEvent(LoggingEvent)</span>
+where possible. If, however, the caller needs to render the event
+to a string then <span class="xref">RenderLoggingEvent(LoggingEvent)</span> does
+provide an efficient mechanism for doing so.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AppenderSkeleton_RenderLoggingEvent_" data-uid="log4net.Appender.AppenderSkeleton.RenderLoggingEvent*"></a>
+
+  <h3 id="log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.AppenderSkeleton.RenderLoggingEvent(log4net.Core.LoggingEvent)">
+  RenderLoggingEvent(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Renders the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> to a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string RenderLoggingEvent(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event to render.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The event rendered as a string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Helper method to render a <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> to 
+a string. This appender must have a <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">Layout</a>
+set to render the <code class="paramref">loggingEvent</code> to 
+a string.
+</p>
+<p>If there is exception data in the logging event and 
+the layout does not process the exception, this method 
+will append the exception text to the rendered string.
+</p>
+<p>
+Where possible use the alternative version of this method
+<span class="xref">RenderLoggingEvent(TextWriter,LoggingEvent)</span>.
+That method streams the rendering onto an existing Writer
+which can give better performance if the caller already has
+a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> open and ready for writing.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

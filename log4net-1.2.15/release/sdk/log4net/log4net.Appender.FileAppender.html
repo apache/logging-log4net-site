@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FileAppender | Apache log4net 1.2.15 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FileAppender | Apache log4net 1.2.15 API Reference ">
+      
+      <meta name="description" content="Appends logging events to a file.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.FileAppender">
+
+
+
+  <h1 id="log4net_Appender_FileAppender" data-uid="log4net.Appender.FileAppender" class="text-break">
+Class FileAppender  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Appends logging events to a file.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FileAppender : TextWriterAppender, IBulkAppender, IAppender, IOptionHandler</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a></div>
+      <div><a class="xref" href="log4net.Appender.TextWriterAppender.html">TextWriterAppender</a></div>
+      <div><span class="xref">FileAppender</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.IBulkAppender.html">IBulkAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.RollingFileAppender.html">RollingFileAppender</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_PreAppendCheck">TextWriterAppender.PreAppendCheck()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_WriteFooterAndCloseWriter">TextWriterAppender.WriteFooterAndCloseWriter()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_ImmediateFlush">TextWriterAppender.ImmediateFlush</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_Writer">TextWriterAppender.Writer</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_ErrorHandler">TextWriterAppender.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_RequiresLayout">TextWriterAppender.RequiresLayout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_QuietWriter">TextWriterAppender.QuietWriter</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_">AppenderSkeleton.DoAppend(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent___">AppenderSkeleton.DoAppend(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.FilterEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter_">AppenderSkeleton.AddFilter(IFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ClearFilters">AppenderSkeleton.ClearFilters()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level_">AppenderSkeleton.IsAsSevereAsThreshold(Level)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Appender_FileAppender_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Logging events are sent to the file specified by
+the <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_File">File</a> property.
+</p>
+<p>
+The file can be opened in either append or overwrite mode 
+by specifying the <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_AppendToFile">AppendToFile</a> property.
+If the file path is relative it is taken as relative from 
+the application base directory. The file encoding can be
+specified by setting the <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_Encoding">Encoding</a> property.
+</p>
+<p>
+The layout's <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Header">Header</a> and <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Footer">Footer</a>
+values will be written each time the file is opened and closed
+respectively. If the <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_AppendToFile">AppendToFile</a> property is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>
+then the file may contain multiple copies of the header and footer.
+</p>
+<p>
+This appender will first try to open the file for writing when <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_ActivateOptions">ActivateOptions()</a>
+is called. This will typically be during configuration.
+If the file cannot be opened for writing the appender will attempt
+to open the file again each time a message is logged to the appender.
+If the file cannot be opened for writing when a message is logged then
+the message will be discarded by this appender.
+</p>
+<p>
+The <a class="xref" href="log4net.Appender.FileAppender.html">FileAppender</a> supports pluggable file locking models via
+the <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_LockingModel">LockingModel</a> property.
+The default behavior, implemented by <a class="xref" href="log4net.Appender.FileAppender.ExclusiveLock.html">FileAppender.ExclusiveLock</a> 
+is to obtain an exclusive write lock on the file until this appender is closed.
+The alternative models only hold a
+write lock while the appender is writing a logging event (<a class="xref" href="log4net.Appender.FileAppender.MinimalLock.html">FileAppender.MinimalLock</a>)
+or synchronize by using a named system wide Mutex (<a class="xref" href="log4net.Appender.FileAppender.InterProcessLock.html">FileAppender.InterProcessLock</a>).
+</p>
+<p>
+All locking strategies have issues and you should seriously consider using a different strategy that
+avoids having multiple processes logging to the same file.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_FileAppender__ctor_" data-uid="log4net.Appender.FileAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_FileAppender__ctor" data-uid="log4net.Appender.FileAppender.#ctor">
+  FileAppender()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileAppender()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Default constructor
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender__ctor_" data-uid="log4net.Appender.FileAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_FileAppender__ctor_log4net_Layout_ILayout_System_String_" data-uid="log4net.Appender.FileAppender.#ctor(log4net.Layout.ILayout,System.String)">
+  FileAppender(ILayout, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new appender using the layout and file specified.
+The file will be appended to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Instead use the default constructor and set the Layout &amp; File properties&quot;)]
+public FileAppender(ILayout layout, string filename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>layout</code> <a class="xref" href="log4net.Layout.ILayout.html">ILayout</a></dt>
+    <dd><p>the layout to use with this appender</p>
+</dd>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the full path to the file to write to</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender__ctor_log4net_Layout_ILayout_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Obsolete constructor.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender__ctor_" data-uid="log4net.Appender.FileAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_FileAppender__ctor_log4net_Layout_ILayout_System_String_System_Boolean_" data-uid="log4net.Appender.FileAppender.#ctor(log4net.Layout.ILayout,System.String,System.Boolean)">
+  FileAppender(ILayout, string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new appender using the layout, file and append mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Instead use the default constructor and set the Layout, File &amp; AppendToFile properties&quot;)]
+public FileAppender(ILayout layout, string filename, bool append)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>layout</code> <a class="xref" href="log4net.Layout.ILayout.html">ILayout</a></dt>
+    <dd><p>the layout to use with this appender</p>
+</dd>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the full path to the file to write to</p>
+</dd>
+    <dt><code>append</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>flag to indicate if the file should be appended to</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender__ctor_log4net_Layout_ILayout_System_String_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Obsolete constructor.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Appender_FileAppender_AppendToFile_" data-uid="log4net.Appender.FileAppender.AppendToFile*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_AppendToFile" data-uid="log4net.Appender.FileAppender.AppendToFile">
+  AppendToFile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag that indicates whether the file should be
+appended to or overwritten.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AppendToFile { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether the file should be appended to or overwritten.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_AppendToFile_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the value is set to false then the file will be overwritten, if 
+it is set to true then the file will be appended to.
+</p>
+<p>The default value is true.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_Encoding_" data-uid="log4net.Appender.FileAppender.Encoding*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_Encoding" data-uid="log4net.Appender.FileAppender.Encoding">
+  Encoding
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_Encoding">Encoding</a> used to write to the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Encoding Encoding { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_Encoding">Encoding</a> used to write to the file.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_Encoding_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The default encoding set is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding.default">Default</a>
+which is the encoding for the system's current ANSI code page.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_File_" data-uid="log4net.Appender.FileAppender.File*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_File" data-uid="log4net.Appender.FileAppender.File">
+  File
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the path to the file that logging will be written to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string File { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the file that logging will be written to.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_File_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the path is relative it is taken as relative from 
+the application base directory.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_LockingModel_" data-uid="log4net.Appender.FileAppender.LockingModel*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_LockingModel" data-uid="log4net.Appender.FileAppender.LockingModel">
+  LockingModel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_LockingModel">LockingModel</a> used to handle locking of the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileAppender.LockingModelBase LockingModel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Appender.FileAppender.html">FileAppender</a>.<a class="xref" href="log4net.Appender.FileAppender.LockingModelBase.html">LockingModelBase</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_LockingModel">LockingModel</a> used to lock the file.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_LockingModel_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets or sets the <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_LockingModel">LockingModel</a> used to handle locking of the file.
+</p>
+<p>
+There are three built in locking models, <a class="xref" href="log4net.Appender.FileAppender.ExclusiveLock.html">FileAppender.ExclusiveLock</a>, <a class="xref" href="log4net.Appender.FileAppender.MinimalLock.html">FileAppender.MinimalLock</a> and <a class="xref" href="log4net.Appender.FileAppender.InterProcessLock.html">FileAppender.InterProcessLock</a> .
+The first locks the file from the start of logging to the end, the 
+second locks only for the minimal amount of time when logging each message
+and the last synchronizes processes using a named system wide Mutex.
+</p>
+<p>
+The default locking model is the <a class="xref" href="log4net.Appender.FileAppender.ExclusiveLock.html">FileAppender.ExclusiveLock</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_SecurityContext_" data-uid="log4net.Appender.FileAppender.SecurityContext*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_SecurityContext" data-uid="log4net.Appender.FileAppender.SecurityContext">
+  SecurityContext
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_SecurityContext">SecurityContext</a> used to write to the file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SecurityContext SecurityContext { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.SecurityContext.html">SecurityContext</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_SecurityContext">SecurityContext</a> used to write to the file.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_SecurityContext_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Unless a <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_SecurityContext">SecurityContext</a> specified here for this appender
+the <a class="xref" href="log4net.Core.SecurityContextProvider.html#log4net_Core_SecurityContextProvider_DefaultProvider">DefaultProvider</a> is queried for the
+security context to use. The default behavior is to use the security context
+of the current thread.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_FileAppender_ActivateOptions_" data-uid="log4net.Appender.FileAppender.ActivateOptions*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ActivateOptions" data-uid="log4net.Appender.FileAppender.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activate the options on the file appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_ActivateOptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is part of the <a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a> delayed object
+activation scheme. The <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_ActivateOptions">ActivateOptions()</a> method must 
+be called on this object after the configuration properties have
+been set. Until <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_ActivateOptions">ActivateOptions()</a> is called this
+object is in an undefined state and must not be used. 
+</p>
+<p>
+If any of the configuration properties are modified then 
+<a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_ActivateOptions">ActivateOptions()</a> must be called again.
+</p>
+<p>
+This will cause the file to be opened.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_Append_" data-uid="log4net.Appender.FileAppender.Append*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_Append_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.FileAppender.Append(log4net.Core.LoggingEvent)">
+  Append(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called by the <span class="xref">AppenderSkeleton.DoAppend(LoggingEvent)</span>
+method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_Append_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes a log statement to the output stream if the output stream exists 
+and is writable.  
+</p>
+<p>
+The format of the output will depend on the appender's layout.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_Append_" data-uid="log4net.Appender.FileAppender.Append*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_Append_log4net_Core_LoggingEvent___" data-uid="log4net.Appender.FileAppender.Append(log4net.Core.LoggingEvent[])">
+  Append(LoggingEvent[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called by the <span class="xref">AppenderSkeleton.DoAppend(LoggingEvent[])</span>
+method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent[] loggingEvents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvents</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>[]</dt>
+    <dd><p>The array of events to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_Append_log4net_Core_LoggingEvent____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Acquires the output file locks once before writing all the events to
+the stream.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_CloseFile_" data-uid="log4net.Appender.FileAppender.CloseFile*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_CloseFile" data-uid="log4net.Appender.FileAppender.CloseFile">
+  CloseFile()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the previously opened file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CloseFile()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_CloseFile_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes the <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Footer">Footer</a> to the file and then
+closes the file.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_CloseWriter_" data-uid="log4net.Appender.FileAppender.CloseWriter*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_CloseWriter" data-uid="log4net.Appender.FileAppender.CloseWriter">
+  CloseWriter()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void CloseWriter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_CloseWriter_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Closes the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_ConvertToFullPath_" data-uid="log4net.Appender.FileAppender.ConvertToFullPath*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ConvertToFullPath_System_String_" data-uid="log4net.Appender.FileAppender.ConvertToFullPath(System.String)">
+  ConvertToFullPath(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert a path into a fully qualified path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static string ConvertToFullPath(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified path.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_ConvertToFullPath_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Converts the path specified to a fully
+qualified path. If the path is relative it is
+taken as relative from the application base 
+directory.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_OnClose_" data-uid="log4net.Appender.FileAppender.OnClose*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_OnClose" data-uid="log4net.Appender.FileAppender.OnClose">
+  OnClose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Close this appender instance. The underlying stream or writer is also closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnClose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_FileAppender_OpenFile_" data-uid="log4net.Appender.FileAppender.OpenFile*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_OpenFile_System_String_System_Boolean_" data-uid="log4net.Appender.FileAppender.OpenFile(System.String,System.Boolean)">
+  OpenFile(string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets and <i>opens</i> the file where the log output will go. The specified file must be writable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OpenFile(string fileName, bool append)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the log file. Must be a fully qualified path.</p>
+</dd>
+    <dt><code>append</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true will append to fileName. Otherwise will truncate fileName</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_OpenFile_System_String_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If there was already an opened file, then the previous file
+is closed first.
+</p>
+<p>
+This method will ensure that the directory structure
+for the <code class="paramref">fileName</code> specified exists.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_PrepareWriter_" data-uid="log4net.Appender.FileAppender.PrepareWriter*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_PrepareWriter" data-uid="log4net.Appender.FileAppender.PrepareWriter">
+  PrepareWriter()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called to initialize the file writer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void PrepareWriter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_PrepareWriter_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Will be called for each logged message until the file is
+successfully opened.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_Reset_" data-uid="log4net.Appender.FileAppender.Reset*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_Reset" data-uid="log4net.Appender.FileAppender.Reset">
+  Reset()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes any previously opened file and calls the parent's <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_Reset">Reset()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_Reset_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Resets the filename and the file stream.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_SafeOpenFile_" data-uid="log4net.Appender.FileAppender.SafeOpenFile*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_SafeOpenFile_System_String_System_Boolean_" data-uid="log4net.Appender.FileAppender.SafeOpenFile(System.String,System.Boolean)">
+  SafeOpenFile(string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets and <i>opens</i> the file where the log output will go. The specified file must be writable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SafeOpenFile(string fileName, bool append)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the log file. Must be a fully qualified path.</p>
+</dd>
+    <dt><code>append</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true will append to fileName. Otherwise will truncate fileName</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_SafeOpenFile_System_String_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Calls <a class="xref" href="log4net.Appender.FileAppender.html#log4net_Appender_FileAppender_OpenFile_System_String_System_Boolean_">OpenFile(string, bool)</a> but guarantees not to throw an exception.
+Errors are passed to the <a class="xref" href="log4net.Appender.TextWriterAppender.html#log4net_Appender_TextWriterAppender_ErrorHandler">ErrorHandler</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_SetQWForFiles_" data-uid="log4net.Appender.FileAppender.SetQWForFiles*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_SetQWForFiles_System_IO_Stream_" data-uid="log4net.Appender.FileAppender.SetQWForFiles(System.IO.Stream)">
+  SetQWForFiles(Stream)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the quiet writer used for file output</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetQWForFiles(Stream fileStream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>the file stream that has been opened for writing</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_SetQWForFiles_System_IO_Stream__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This implementation of <span class="xref">SetQWForFiles(Stream)</span> creates a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.streamwriter">StreamWriter</a>
+over the <code class="paramref">fileStream</code> and passes it to the 
+<span class="xref">SetQWForFiles(TextWriter)</span> method.
+</p>
+<p>
+This method can be overridden by sub classes that want to wrap the
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> in some way, for example to encrypt the output
+data using a <code>System.Security.Cryptography.CryptoStream</code>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_SetQWForFiles_" data-uid="log4net.Appender.FileAppender.SetQWForFiles*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_SetQWForFiles_System_IO_TextWriter_" data-uid="log4net.Appender.FileAppender.SetQWForFiles(System.IO.TextWriter)">
+  SetQWForFiles(TextWriter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the quiet writer being used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetQWForFiles(TextWriter writer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>the writer over the file stream that has been opened for writing</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_SetQWForFiles_System_IO_TextWriter__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method can be overridden by sub classes that want to
+wrap the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> in some way.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_WriteFooter_" data-uid="log4net.Appender.FileAppender.WriteFooter*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_WriteFooter" data-uid="log4net.Appender.FileAppender.WriteFooter">
+  WriteFooter()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a footer as produced by the embedded layout's <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Footer">Footer</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void WriteFooter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_WriteFooter_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes a footer as produced by the embedded layout's <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Footer">Footer</a> property.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_WriteHeader_" data-uid="log4net.Appender.FileAppender.WriteHeader*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_WriteHeader" data-uid="log4net.Appender.FileAppender.WriteHeader">
+  WriteHeader()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a header produced by the embedded layout's <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Header">Header</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void WriteHeader()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_WriteHeader_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes a header produced by the embedded layout's <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Header">Header</a> property.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

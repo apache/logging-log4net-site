@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NDC | Apache log4net 2.0.9 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NDC | Apache log4net 2.0.9 API Reference ">
+      
+      <meta name="description" content="Implementation of Nested Diagnostic Contexts.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.NDC">
+
+
+
+  <h1 id="log4net_NDC" data-uid="log4net.NDC" class="text-break">
+Class NDC  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Implementation of Nested Diagnostic Contexts.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NDC</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NDC</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="log4net_NDC_examples">Examples</h2>
+  <p>How to push a message into the context</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;using(NDC.Push(&quot;my context message&quot;))
+</code></pre>
+<p>{
+... all log calls will have 'my context message' included ...</p>
+<p>} // at the end of the using block the message is automatically removed</p>
+
+
+  <h2 id="log4net_NDC_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+A Nested Diagnostic Context, or NDC in short, is an instrument
+to distinguish interleaved log output from different sources. Log
+output is typically interleaved when a server handles multiple
+clients near-simultaneously.
+</p>
+<p>
+Interleaved log output can still be meaningful if each log entry
+from different contexts had a distinctive stamp. This is where NDCs
+come into play.
+</p>
+<p>
+Note that NDCs are managed on a per thread basis. The NDC class
+is made up of static methods that operate on the context of the
+calling thread.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_NDC_Depth_" data-uid="log4net.NDC.Depth*"></a>
+
+  <h3 id="log4net_NDC_Depth" data-uid="log4net.NDC.Depth">
+  Depth
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current context depth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Depth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The current context depth.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_NDC_Depth_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+The number of context values pushed onto the context stack.
+</p>
+<p>
+Used to record the current depth of the context. This can then 
+be restored using the <a class="xref" href="log4net.NDC.html#log4net_NDC_SetMaxDepth_System_Int32_">SetMaxDepth(int)</a> method.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="log4net.NDC.html#log4net_NDC_SetMaxDepth_System_Int32_">SetMaxDepth(int)</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_NDC_Clear_" data-uid="log4net.NDC.Clear*"></a>
+
+  <h3 id="log4net_NDC_Clear" data-uid="log4net.NDC.Clear">
+  Clear()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears all the contextual information held on the current thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_NDC_Clear_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+Clears the stack of NDC data held on the current thread.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_NDC_CloneStack_" data-uid="log4net.NDC.CloneStack*"></a>
+
+  <h3 id="log4net_NDC_CloneStack" data-uid="log4net.NDC.CloneStack">
+  CloneStack()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a clone of the stack of context information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Stack CloneStack()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.stack">Stack</a></dt>
+    <dd><p>A clone of the context info for this thread.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_NDC_CloneStack_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+The results of this method can be passed to the <a class="xref" href="log4net.NDC.html#log4net_NDC_Inherit_System_Collections_Stack_">Inherit(Stack)</a> 
+method to allow child threads to inherit the context of their 
+parent thread.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_NDC_Inherit_" data-uid="log4net.NDC.Inherit*"></a>
+
+  <h3 id="log4net_NDC_Inherit_System_Collections_Stack_" data-uid="log4net.NDC.Inherit(System.Collections.Stack)">
+  Inherit(Stack)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inherits the contextual information from another thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Inherit(Stack stack)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stack</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.stack">Stack</a></dt>
+    <dd><p>The context stack to inherit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_NDC_Inherit_System_Collections_Stack__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+This thread will use the context information from the stack
+supplied. This can be used to initialize child threads with
+the same contextual information as their parent threads. These
+contexts will <b>NOT</b> be shared. Any further contexts that
+are pushed onto the stack will not be visible to the other.
+Call <a class="xref" href="log4net.NDC.html#log4net_NDC_CloneStack">CloneStack()</a> to obtain a stack to pass to
+this method.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_NDC_Pop_" data-uid="log4net.NDC.Pop*"></a>
+
+  <h3 id="log4net_NDC_Pop" data-uid="log4net.NDC.Pop">
+  Pop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the top context from the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Pop()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message in the context that was removed from the top
+of the stack.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_NDC_Pop_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+Remove the top context from the stack, and return
+it to the caller. If the stack is empty then an
+empty string (not <code>null</code>) is returned.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_NDC_Push_" data-uid="log4net.NDC.Push*"></a>
+
+  <h3 id="log4net_NDC_Push_System_String_" data-uid="log4net.NDC.Push(System.String)">
+  Push(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pushes a new context message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDisposable Push(string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The new context message.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a> that can be used to clean up
+the context stack.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="log4net_NDC_Push_System_String__examples">Examples</h4>
+  <p>Simple example of using the <code>Push</code> method with the <code>using</code> keyword.</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;using(log4net.NDC.Push(&quot;NDC_Message&quot;))
+</code></pre>
+<p>{
+log.Warn(&quot;This should have an NDC message&quot;);
+}</p>
+
+
+  <h4 class="section" id="log4net_NDC_Push_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+Pushes a new context onto the context stack. An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
+is returned that can be used to clean up the context stack. This
+can be easily combined with the <code>using</code> keyword to scope the
+context.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_NDC_PushFormat_" data-uid="log4net.NDC.PushFormat*"></a>
+
+  <h3 id="log4net_NDC_PushFormat_System_String_System_Object___" data-uid="log4net.NDC.PushFormat(System.String,System.Object[])">
+  PushFormat(string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pushes a new context message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDisposable PushFormat(string messageFormat, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messageFormat</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The new context message string format.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Arguments to be passed into messageFormat.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a> that can be used to clean up
+the context stack.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="log4net_NDC_PushFormat_System_String_System_Object____examples">Examples</h4>
+  <p>Simple example of using the <code>Push</code> method with the <code>using</code> keyword.</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;var someValue = &quot;ExampleContext&quot;
+</code></pre>
+<p>using(log4net.NDC.PushFormat(&quot;NDC_Message {0}&quot;, someValue))
+{
+log.Warn(&quot;This should have an NDC message&quot;);
+}</p>
+
+
+  <h4 class="section" id="log4net_NDC_PushFormat_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+Pushes a new context onto the context stack. An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
+is returned that can be used to clean up the context stack. This
+can be easily combined with the <code>using</code> keyword to scope the
+context.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_NDC_Remove_" data-uid="log4net.NDC.Remove*"></a>
+
+  <h3 id="log4net_NDC_Remove" data-uid="log4net.NDC.Remove">
+  Remove()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the context information for this thread. It is
+not required to call this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Remove()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_NDC_Remove_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+This method is not implemented.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_NDC_SetMaxDepth_" data-uid="log4net.NDC.SetMaxDepth*"></a>
+
+  <h3 id="log4net_NDC_SetMaxDepth_System_Int32_" data-uid="log4net.NDC.SetMaxDepth(System.Int32)">
+  SetMaxDepth(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces the stack depth to be at most <code class="paramref">maxDepth</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetMaxDepth(int maxDepth)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxDepth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum depth of the stack</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_NDC_SetMaxDepth_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>note</h5><p>
+<p>
+The NDC is deprecated and has been replaced by the <a class="xref" href="log4net.ThreadContext.html#log4net_ThreadContext_Stacks">Stacks</a>.
+The current NDC implementation forwards to the <code>ThreadContext.Stacks["NDC"]</code>.
+</p>
+</div>
+<p>
+Forces the stack depth to be at most <code class="paramref">maxDepth</code>.
+This may truncate the head of the stack. This only affects the 
+stack in the current thread. Also it does not prevent it from
+growing, it only sets the maximum depth at the time of the
+call. This can be used to return to a known context depth.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

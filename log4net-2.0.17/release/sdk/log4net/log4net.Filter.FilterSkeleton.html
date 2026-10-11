@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FilterSkeleton | Apache log4net 2.0.17 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FilterSkeleton | Apache log4net 2.0.17 API Reference ">
+      
+      <meta name="description" content="Subclass this type to implement customized logging event filtering">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Filter.FilterSkeleton">
+
+
+
+  <h1 id="log4net_Filter_FilterSkeleton" data-uid="log4net.Filter.FilterSkeleton" class="text-break">
+Class FilterSkeleton  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Filter.html">Filter</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Subclass this type to implement customized logging event filtering</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class FilterSkeleton : IFilter, IOptionHandler</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">FilterSkeleton</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Filter.IFilter.html">IFilter</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Filter.DenyAllFilter.html">DenyAllFilter</a></div>
+      <div><a class="xref" href="log4net.Filter.LevelMatchFilter.html">LevelMatchFilter</a></div>
+      <div><a class="xref" href="log4net.Filter.LevelRangeFilter.html">LevelRangeFilter</a></div>
+      <div><a class="xref" href="log4net.Filter.LoggerMatchFilter.html">LoggerMatchFilter</a></div>
+      <div><a class="xref" href="log4net.Filter.StringMatchFilter.html">StringMatchFilter</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Filter_FilterSkeleton_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Users should extend this class to implement customized logging
+event filtering. Note that <a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a> and 
+<a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a>, the parent class of all standard
+appenders, have built-in filtering rules. It is suggested that you
+first use and understand the built-in rules before rushing to write
+your own custom filters.
+</p>
+<p>
+This abstract class assumes and also imposes that filters be
+organized in a linear chain. The <a class="xref" href="log4net.Filter.FilterSkeleton.html#log4net_Filter_FilterSkeleton_Decide_log4net_Core_LoggingEvent_">Decide(LoggingEvent)</a>
+method of each filter is called sequentially, in the order of their 
+addition to the chain.
+</p>
+<p>
+The <a class="xref" href="log4net.Filter.FilterSkeleton.html#log4net_Filter_FilterSkeleton_Decide_log4net_Core_LoggingEvent_">Decide(LoggingEvent)</a> method must return one
+of the integer constants <a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Deny">Deny</a>, 
+<a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Neutral">Neutral</a> or <a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Accept">Accept</a>.
+</p>
+<p>
+If the value <a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Deny">Deny</a> is returned, then the log event is dropped 
+immediately without consulting with the remaining filters.
+</p>
+<p>
+If the value <a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Neutral">Neutral</a> is returned, then the next filter
+in the chain is consulted. If there are no more filters in the
+chain, then the log event is logged. Thus, in the presence of no
+filters, the default behavior is to log all logging events.
+</p>
+<p>
+If the value <a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Accept">Accept</a> is returned, then the log
+event is logged without consulting the remaining filters.
+</p>
+<p>
+The philosophy of log4net filters is largely inspired from the
+Linux ipchains.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Filter_FilterSkeleton__ctor_" data-uid="log4net.Filter.FilterSkeleton.#ctor*"></a>
+
+  <h3 id="log4net_Filter_FilterSkeleton__ctor" data-uid="log4net.Filter.FilterSkeleton.#ctor">
+  FilterSkeleton()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected FilterSkeleton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Filter_FilterSkeleton_Next_" data-uid="log4net.Filter.FilterSkeleton.Next*"></a>
+
+  <h3 id="log4net_Filter_FilterSkeleton_Next" data-uid="log4net.Filter.FilterSkeleton.Next">
+  Next
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Property to get and set the next filter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IFilter Next { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Filter.IFilter.html">IFilter</a></dt>
+    <dd><p>The next filter in the chain</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Filter_FilterSkeleton_Next_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Filters are typically composed into chains. This property allows the next filter in 
+the chain to be accessed.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Filter_FilterSkeleton_ActivateOptions_" data-uid="log4net.Filter.FilterSkeleton.ActivateOptions*"></a>
+
+  <h3 id="log4net_Filter_FilterSkeleton_ActivateOptions" data-uid="log4net.Filter.FilterSkeleton.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize the filter with the options set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Filter_FilterSkeleton_ActivateOptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is part of the <a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a> delayed object
+activation scheme. The <a class="xref" href="log4net.Filter.FilterSkeleton.html#log4net_Filter_FilterSkeleton_ActivateOptions">ActivateOptions()</a> method must 
+be called on this object after the configuration properties have
+been set. Until <a class="xref" href="log4net.Filter.FilterSkeleton.html#log4net_Filter_FilterSkeleton_ActivateOptions">ActivateOptions()</a> is called this
+object is in an undefined state and must not be used. 
+</p>
+<p>
+If any of the configuration properties are modified then 
+<a class="xref" href="log4net.Filter.FilterSkeleton.html#log4net_Filter_FilterSkeleton_ActivateOptions">ActivateOptions()</a> must be called again.
+</p>
+<p>
+Typically filter's options become active immediately on set, 
+however this method must still be called. 
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Filter_FilterSkeleton_Decide_" data-uid="log4net.Filter.FilterSkeleton.Decide*"></a>
+
+  <h3 id="log4net_Filter_FilterSkeleton_Decide_log4net_Core_LoggingEvent_" data-uid="log4net.Filter.FilterSkeleton.Decide(log4net.Core.LoggingEvent)">
+  Decide(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decide if the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> should be logged through an appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract FilterDecision Decide(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> to decide upon</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Filter.FilterDecision.html">FilterDecision</a></dt>
+    <dd><p>The decision of the filter</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Filter_FilterSkeleton_Decide_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the decision is <a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Deny">Deny</a>, then the event will be
+dropped. If the decision is <a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Neutral">Neutral</a>, then the next
+filter, if any, will be invoked. If the decision is <a class="xref" href="log4net.Filter.FilterDecision.html#log4net_Filter_FilterDecision_Accept">Accept</a> then
+the event will be logged without consulting with other filters in
+the chain.
+</p>
+<p>
+This method is marked <code>abstract</code> and must be implemented
+in a subclass.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

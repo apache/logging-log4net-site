@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class XmlLayoutSchemaLog4j | Apache log4net 2.0.16 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class XmlLayoutSchemaLog4j | Apache log4net 2.0.16 API Reference ">
+      
+      <meta name="description" content="Layout that formats the log events as XML elements compatible with the log4j schema">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Layout.XmlLayoutSchemaLog4j">
+
+
+
+  <h1 id="log4net_Layout_XmlLayoutSchemaLog4j" data-uid="log4net.Layout.XmlLayoutSchemaLog4j" class="text-break">
+Class XmlLayoutSchemaLog4j  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Layout.html">Layout</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Layout that formats the log events as XML elements compatible with the log4j schema</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class XmlLayoutSchemaLog4j : XmlLayoutBase, ILayout, IOptionHandler</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Layout.LayoutSkeleton.html">LayoutSkeleton</a></div>
+      <div><a class="xref" href="log4net.Layout.XmlLayoutBase.html">XmlLayoutBase</a></div>
+      <div><span class="xref">XmlLayoutSchemaLog4j</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Layout.ILayout.html">ILayout</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Layout.XmlLayoutBase.html#log4net_Layout_XmlLayoutBase_ActivateOptions">XmlLayoutBase.ActivateOptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Layout.XmlLayoutBase.html#log4net_Layout_XmlLayoutBase_Format_System_IO_TextWriter_log4net_Core_LoggingEvent_">XmlLayoutBase.Format(TextWriter, LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Layout.XmlLayoutBase.html#log4net_Layout_XmlLayoutBase_LocationInfo">XmlLayoutBase.LocationInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Layout.XmlLayoutBase.html#log4net_Layout_XmlLayoutBase_InvalidCharReplacement">XmlLayoutBase.InvalidCharReplacement</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Layout.XmlLayoutBase.html#log4net_Layout_XmlLayoutBase_ContentType">XmlLayoutBase.ContentType</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Layout.LayoutSkeleton.html#log4net_Layout_LayoutSkeleton_Format_log4net_Core_LoggingEvent_">LayoutSkeleton.Format(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Layout.LayoutSkeleton.html#log4net_Layout_LayoutSkeleton_Header">LayoutSkeleton.Header</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Layout.LayoutSkeleton.html#log4net_Layout_LayoutSkeleton_Footer">LayoutSkeleton.Footer</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Layout.LayoutSkeleton.html#log4net_Layout_LayoutSkeleton_IgnoresException">LayoutSkeleton.IgnoresException</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Layout_XmlLayoutSchemaLog4j_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Formats the log events according to the http://logging.apache.org/log4j schema.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Layout_XmlLayoutSchemaLog4j__ctor_" data-uid="log4net.Layout.XmlLayoutSchemaLog4j.#ctor*"></a>
+
+  <h3 id="log4net_Layout_XmlLayoutSchemaLog4j__ctor" data-uid="log4net.Layout.XmlLayoutSchemaLog4j.#ctor">
+  XmlLayoutSchemaLog4j()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an XMLLayoutSchemaLog4j</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XmlLayoutSchemaLog4j()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Layout_XmlLayoutSchemaLog4j__ctor_" data-uid="log4net.Layout.XmlLayoutSchemaLog4j.#ctor*"></a>
+
+  <h3 id="log4net_Layout_XmlLayoutSchemaLog4j__ctor_System_Boolean_" data-uid="log4net.Layout.XmlLayoutSchemaLog4j.#ctor(System.Boolean)">
+  XmlLayoutSchemaLog4j(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an XMLLayoutSchemaLog4j.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XmlLayoutSchemaLog4j(bool locationInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>locationInfo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Layout_XmlLayoutSchemaLog4j__ctor_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <b>LocationInfo</b> option takes a boolean value. By
+default, it is set to false which means there will be no location
+information output by this layout. If the the option is set to
+true, then the file name and line number of the statement
+at the origin of the log statement will be output. 
+</p>
+<p>
+If you are embedding this layout within an SMTPAppender
+then make sure to set the <b>LocationInfo</b> option of that 
+appender as well.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Layout_XmlLayoutSchemaLog4j_Version_" data-uid="log4net.Layout.XmlLayoutSchemaLog4j.Version*"></a>
+
+  <h3 id="log4net_Layout_XmlLayoutSchemaLog4j_Version" data-uid="log4net.Layout.XmlLayoutSchemaLog4j.Version">
+  Version
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The version of the log4j schema to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Layout_XmlLayoutSchemaLog4j_Version_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Only version 1.2 of the log4j schema is supported.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Layout_XmlLayoutSchemaLog4j_FormatXml_" data-uid="log4net.Layout.XmlLayoutSchemaLog4j.FormatXml*"></a>
+
+  <h3 id="log4net_Layout_XmlLayoutSchemaLog4j_FormatXml_System_Xml_XmlWriter_log4net_Core_LoggingEvent_" data-uid="log4net.Layout.XmlLayoutSchemaLog4j.FormatXml(System.Xml.XmlWriter,log4net.Core.LoggingEvent)">
+  FormatXml(XmlWriter, LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actually do the writing of the xml</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void FormatXml(XmlWriter writer, LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <span class="xref">XmlWriter</span></dt>
+    <dd><p>the writer to use</p>
+</dd>
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>the event to write</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Layout_XmlLayoutSchemaLog4j_FormatXml_System_Xml_XmlWriter_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Generate XML that is compatible with the log4j schema.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

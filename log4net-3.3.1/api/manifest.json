@@ -1,0 +1,3268 @@
+{
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
+  "source_base_path": "/apache/logging-log4net/target/old-api/3.3.1/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AdoNetAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AdoNetAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AdoNetAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AdoNetAppender.yml\" sourcestartlinenumber=\"1\">Appender that logs to a database.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AdoNetAppenderParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AdoNetAppenderParameter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AdoNetAppenderParameter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AdoNetAppenderParameter.yml\" sourcestartlinenumber=\"1\">Parameter type used by the <xref href=\"log4net.Appender.AdoNetAppender\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AnsiColorTerminalAppender.AnsiAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AnsiColorTerminalAppender.AnsiAttributes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AnsiColorTerminalAppender.AnsiAttributes",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AnsiColorTerminalAppender.AnsiAttributes.yml\" sourcestartlinenumber=\"1\">The enum of possible display attributes that can be combined to form the ANSI color attributes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AnsiColorTerminalAppender.AnsiColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AnsiColorTerminalAppender.AnsiColor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AnsiColorTerminalAppender.AnsiColor",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AnsiColorTerminalAppender.AnsiColor.yml\" sourcestartlinenumber=\"1\">The enum of possible foreground or background color values for\nuse with the color mapping method</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AnsiColorTerminalAppender.LevelColors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AnsiColorTerminalAppender.LevelColors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AnsiColorTerminalAppender.LevelColors",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AnsiColorTerminalAppender.LevelColors.yml\" sourcestartlinenumber=\"1\">A class to act as a mapping between the level that a logging call is made at and\nthe color it should be displayed as.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AnsiColorTerminalAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AnsiColorTerminalAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AnsiColorTerminalAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AnsiColorTerminalAppender.yml\" sourcestartlinenumber=\"1\">Appends logging events to the terminal using ANSI color escape sequences.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AppenderCollection.IAppenderCollectionEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AppenderCollection.IAppenderCollectionEnumerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AppenderCollection.IAppenderCollectionEnumerator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AppenderCollection.IAppenderCollectionEnumerator.yml\" sourcestartlinenumber=\"1\">Supports type-safe iteration over a <xref href=\"log4net.Appender.AppenderCollection\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AppenderCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AppenderCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AppenderCollection",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AppenderCollection.yml\" sourcestartlinenumber=\"1\">A strongly-typed collection of <xref href=\"log4net.Appender.IAppender\" data-throw-if-not-resolved=\"false\"></xref> objects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AppenderSkeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AppenderSkeleton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AppenderSkeleton",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.AppenderSkeleton.yml\" sourcestartlinenumber=\"1\">Abstract base class implementation of <xref href=\"log4net.Appender.IAppender\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.AspNetTraceAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.AspNetTraceAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.AspNetTraceAppender",
+      "Summary": "<p>\nAppends log events to the ASP.NET <xref href=\"System.Web.TraceContext\" data-throw-if-not-resolved=\"false\"></xref> system.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.BufferingAppenderSkeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.BufferingAppenderSkeleton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.BufferingAppenderSkeleton",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.BufferingAppenderSkeleton.yml\" sourcestartlinenumber=\"1\">Abstract base class implementation of <xref href=\"log4net.Appender.IAppender\" data-throw-if-not-resolved=\"false\"></xref> that\nbuffers events in a fixed size buffer.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.BufferingForwardingAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.BufferingForwardingAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.BufferingForwardingAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.BufferingForwardingAppender.yml\" sourcestartlinenumber=\"1\">Buffers events and then forwards them to attached appenders.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.ColoredConsoleAppender.Colors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.ColoredConsoleAppender.Colors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.ColoredConsoleAppender.Colors",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.ColoredConsoleAppender.Colors.yml\" sourcestartlinenumber=\"1\">The enum of possible color values for use with the color mapping method</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.ColoredConsoleAppender.LevelColors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.ColoredConsoleAppender.LevelColors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.ColoredConsoleAppender.LevelColors",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.ColoredConsoleAppender.LevelColors.yml\" sourcestartlinenumber=\"1\">A class to act as a mapping between the level that a logging call is made at and\nthe color it should be displayed as.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.ColoredConsoleAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.ColoredConsoleAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.ColoredConsoleAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.ColoredConsoleAppender.yml\" sourcestartlinenumber=\"1\">Appends logging events to the console.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.ConsoleAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.ConsoleAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.ConsoleAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.ConsoleAppender.yml\" sourcestartlinenumber=\"1\">Appends logging events to the console.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.DebugAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.DebugAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.DebugAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.DebugAppender.yml\" sourcestartlinenumber=\"1\">Appends log events to the <xref href=\"System.Diagnostics.Debug\" data-throw-if-not-resolved=\"false\"></xref> system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.EventLogAppender.Level2EventLogEntryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.EventLogAppender.Level2EventLogEntryType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.EventLogAppender.Level2EventLogEntryType",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.EventLogAppender.Level2EventLogEntryType.yml\" sourcestartlinenumber=\"1\">A class to act as a mapping between the level that a logging call is made at and\nthe color it should be displayed as.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.EventLogAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.EventLogAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.EventLogAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.EventLogAppender.yml\" sourcestartlinenumber=\"1\">Writes events to the system event log.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.FileAppender.ExclusiveLock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.FileAppender.ExclusiveLock.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.FileAppender.ExclusiveLock",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.FileAppender.ExclusiveLock.yml\" sourcestartlinenumber=\"1\">Hold an exclusive lock on the output file</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.FileAppender.InterProcessLock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.FileAppender.InterProcessLock.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.FileAppender.InterProcessLock",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.FileAppender.InterProcessLock.yml\" sourcestartlinenumber=\"1\">Provides cross-process file locking.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.FileAppender.LockingModelBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.FileAppender.LockingModelBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.FileAppender.LockingModelBase",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.FileAppender.LockingModelBase.yml\" sourcestartlinenumber=\"1\">Locking model base class</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.FileAppender.MinimalLock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.FileAppender.MinimalLock.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.FileAppender.MinimalLock",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.FileAppender.MinimalLock.yml\" sourcestartlinenumber=\"1\">Acquires the file lock for each write</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.FileAppender.NoLock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.FileAppender.NoLock.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.FileAppender.NoLock",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.FileAppender.NoLock.yml\" sourcestartlinenumber=\"1\">Hold no lock on the output file</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.FileAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.FileAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.FileAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.FileAppender.yml\" sourcestartlinenumber=\"1\">Appends logging events to a file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.ForwardingAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.ForwardingAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.ForwardingAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.ForwardingAppender.yml\" sourcestartlinenumber=\"1\">This appender forwards logging events to attached appenders.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.IAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.IAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.IAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.IAppender.yml\" sourcestartlinenumber=\"1\">Implement this interface for your own strategies for printing log statements.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.IBulkAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.IBulkAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.IBulkAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.IBulkAppender.yml\" sourcestartlinenumber=\"1\">Interface for appenders that support bulk logging.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.IFlushable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.IFlushable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.IFlushable",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.IFlushable.yml\" sourcestartlinenumber=\"1\">Interface that can be implemented by Appenders that buffer logging data and expose a <xref href=\"log4net.Appender.IFlushable.Flush(System.Int32)\" data-throw-if-not-resolved=\"false\"></xref> method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.LocalSyslogAppender.LevelSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.LocalSyslogAppender.LevelSeverity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.LocalSyslogAppender.LevelSeverity",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.LocalSyslogAppender.LevelSeverity.yml\" sourcestartlinenumber=\"1\">A class to act as a mapping between the level that a logging call is made at and\nthe syslog severity that is should be logged at.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.LocalSyslogAppender.SyslogFacility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.LocalSyslogAppender.SyslogFacility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.LocalSyslogAppender.SyslogFacility",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.LocalSyslogAppender.SyslogFacility.yml\" sourcestartlinenumber=\"1\">syslog facilities</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.LocalSyslogAppender.SyslogSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.LocalSyslogAppender.SyslogSeverity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.LocalSyslogAppender.SyslogSeverity",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.LocalSyslogAppender.SyslogSeverity.yml\" sourcestartlinenumber=\"1\">syslog severities</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.LocalSyslogAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.LocalSyslogAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.LocalSyslogAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.LocalSyslogAppender.yml\" sourcestartlinenumber=\"1\">Logs events to a local syslog service.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.ManagedColoredConsoleAppender.LevelColors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.ManagedColoredConsoleAppender.LevelColors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.ManagedColoredConsoleAppender.LevelColors",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.ManagedColoredConsoleAppender.LevelColors.yml\" sourcestartlinenumber=\"1\">A class to act as a mapping between the level that a logging call is made at and\nthe color it should be displayed as.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.ManagedColoredConsoleAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.ManagedColoredConsoleAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.ManagedColoredConsoleAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.ManagedColoredConsoleAppender.yml\" sourcestartlinenumber=\"1\">Appends colorful logging events to the console, using .NET built-in capabilities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.MemoryAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.MemoryAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.MemoryAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.MemoryAppender.yml\" sourcestartlinenumber=\"1\">Stores logging events in an array.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.OutputDebugStringAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.OutputDebugStringAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.OutputDebugStringAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.OutputDebugStringAppender.yml\" sourcestartlinenumber=\"1\">Appends log events to the OutputDebugString system</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.LevelSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.LevelSeverity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.RemoteSyslogAppender.LevelSeverity",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.RemoteSyslogAppender.LevelSeverity.yml\" sourcestartlinenumber=\"1\">A class to act as a mapping between the level that a logging call is made at and\nthe syslog severity that it should be logged at.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.SyslogFacility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.SyslogFacility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.RemoteSyslogAppender.SyslogFacility",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.RemoteSyslogAppender.SyslogFacility.yml\" sourcestartlinenumber=\"1\">syslog facilities</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.SyslogNewLineHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.SyslogNewLineHandling.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.RemoteSyslogAppender.SyslogNewLineHandling",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.RemoteSyslogAppender.SyslogNewLineHandling.yml\" sourcestartlinenumber=\"1\">Options for handling newlines (\\r or \\n) in <see ref=\"AppendMessage\"></see></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.SyslogSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.SyslogSeverity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.RemoteSyslogAppender.SyslogSeverity",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.RemoteSyslogAppender.SyslogSeverity.yml\" sourcestartlinenumber=\"1\">syslog severities</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.RemoteSyslogAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.RemoteSyslogAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.RemoteSyslogAppender.yml\" sourcestartlinenumber=\"1\">Logs events to a remote syslog daemon.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.RollingFileAppender.IDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.RollingFileAppender.IDateTime.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.RollingFileAppender.IDateTime",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.RollingFileAppender.IDateTime.yml\" sourcestartlinenumber=\"1\">This interface is used to supply Date/Time information to the <xref href=\"log4net.Appender.RollingFileAppender\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.RollingFileAppender.RollingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.RollingFileAppender.RollingMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.RollingFileAppender.RollingMode",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.RollingFileAppender.RollingMode.yml\" sourcestartlinenumber=\"1\">Style of rolling to use</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.RollingFileAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.RollingFileAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.RollingFileAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.RollingFileAppender.yml\" sourcestartlinenumber=\"1\">Appender that rolls log files based on size or date or both.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.SmtpAppender.SmtpAuthentication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.SmtpAppender.SmtpAuthentication.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.SmtpAppender.SmtpAuthentication",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.SmtpAppender.SmtpAuthentication.yml\" sourcestartlinenumber=\"1\">Values for the <xref href=\"log4net.Appender.SmtpAppender.Authentication\" data-throw-if-not-resolved=\"false\"></xref> property.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.SmtpAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.SmtpAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.SmtpAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.SmtpAppender.yml\" sourcestartlinenumber=\"1\">Send an e-mail when a specific logging event occurs, typically on errors\nor fatal errors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.SmtpPickupDirAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.SmtpPickupDirAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.SmtpPickupDirAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.SmtpPickupDirAppender.yml\" sourcestartlinenumber=\"1\">Send an email when a specific logging event occurs, typically on errors\nor fatal errors. Rather than sending via smtp it writes a file into the\ndirectory specified by <xref href=\"log4net.Appender.SmtpPickupDirAppender.PickupDir\" data-throw-if-not-resolved=\"false\"></xref>. This allows services such\nas the IIS SMTP agent to manage sending the messages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.TelnetAppender.SocketHandler.SocketClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.TelnetAppender.SocketHandler.SocketClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.TelnetAppender.SocketHandler.SocketClient",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.TelnetAppender.SocketHandler.SocketClient.yml\" sourcestartlinenumber=\"1\">Class that represents a client connected to this handler</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.TelnetAppender.SocketHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.TelnetAppender.SocketHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.TelnetAppender.SocketHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.TelnetAppender.SocketHandler.yml\" sourcestartlinenumber=\"1\">Helper class to manage connected clients</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.TelnetAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.TelnetAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.TelnetAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.TelnetAppender.yml\" sourcestartlinenumber=\"1\">Appender that allows clients to connect via Telnet to receive log messages</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.TextWriterAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.TextWriterAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.TextWriterAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.TextWriterAppender.yml\" sourcestartlinenumber=\"1\">Sends logging events to a <xref href=\"System.IO.TextWriter\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.TraceAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.TraceAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.TraceAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.TraceAppender.yml\" sourcestartlinenumber=\"1\">Appends log events to the <xref href=\"System.Diagnostics.Trace\" data-throw-if-not-resolved=\"false\"></xref> system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.UdpAppender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.UdpAppender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender.UdpAppender",
+      "Summary": "<p sourcefile=\"log4net/log4net.Appender.UdpAppender.yml\" sourcestartlinenumber=\"1\">Sends logging events as connectionless UDP datagrams to a remote host or a\nmulticast group using an <xref href=\"System.Net.Sockets.UdpClient\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Appender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Appender.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Appender",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.AliasRepositoryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.AliasRepositoryAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.AliasRepositoryAttribute",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.AliasRepositoryAttribute.yml\" sourcestartlinenumber=\"1\">Assembly level attribute that specifies a repository to alias to this assembly's repository.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.BasicConfigurator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.BasicConfigurator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.BasicConfigurator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.BasicConfigurator.yml\" sourcestartlinenumber=\"1\">Use this class to quickly configure a <xref href=\"log4net.Repository.Hierarchy.Hierarchy\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.ConfiguratorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.ConfiguratorAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.ConfiguratorAttribute",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.ConfiguratorAttribute.yml\" sourcestartlinenumber=\"1\">Base class for all log4net configuration attributes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.Log4NetConfigurationSectionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.Log4NetConfigurationSectionHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.Log4NetConfigurationSectionHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.Log4NetConfigurationSectionHandler.yml\" sourcestartlinenumber=\"1\">Class to register for the log4net section of the configuration file</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.PluginAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.PluginAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.PluginAttribute",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.PluginAttribute.yml\" sourcestartlinenumber=\"1\">Assembly level attribute that specifies a plugin to attach to\nthe repository.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.RepositoryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.RepositoryAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.RepositoryAttribute",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.RepositoryAttribute.yml\" sourcestartlinenumber=\"1\">Assembly level attribute that specifies the logging repository for the assembly.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.SecurityContextProviderAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.SecurityContextProviderAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.SecurityContextProviderAttribute",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.SecurityContextProviderAttribute.yml\" sourcestartlinenumber=\"1\">Assembly level attribute to configure the <xref href=\"log4net.Core.SecurityContextProvider\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.XmlConfigurator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.XmlConfigurator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.XmlConfigurator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.XmlConfigurator.yml\" sourcestartlinenumber=\"1\">Configures a <xref href=\"log4net.Repository.ILoggerRepository\" data-throw-if-not-resolved=\"false\"></xref> using an XML tree.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.XmlConfiguratorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.XmlConfiguratorAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config.XmlConfiguratorAttribute",
+      "Summary": "<p sourcefile=\"log4net/log4net.Config.XmlConfiguratorAttribute.yml\" sourcestartlinenumber=\"1\">Assembly level attribute to configure the <xref href=\"log4net.Config.XmlConfigurator\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Config.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Config",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.DefaultRepositorySelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.DefaultRepositorySelector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.DefaultRepositorySelector",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.DefaultRepositorySelector.yml\" sourcestartlinenumber=\"1\">The default implementation of the <xref href=\"log4net.Core.IRepositorySelector\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.ErrorCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.ErrorCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.ErrorCode",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.ErrorCode.yml\" sourcestartlinenumber=\"1\">Defined error codes that can be passed to the <xref href=\"log4net.Core.IErrorHandler.Error(System.String%2cSystem.Exception%2clog4net.Core.ErrorCode)\" data-throw-if-not-resolved=\"false\"></xref> method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.ExceptionEvaluator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.ExceptionEvaluator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.ExceptionEvaluator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.ExceptionEvaluator.yml\" sourcestartlinenumber=\"1\">An evaluator that triggers on an Exception type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.FixFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.FixFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.FixFlags",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.FixFlags.yml\" sourcestartlinenumber=\"1\">Flags passed to the <xref href=\"log4net.Core.LoggingEvent.Fix\" data-throw-if-not-resolved=\"false\"></xref> property</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.IAppenderAttachable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.IAppenderAttachable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.IAppenderAttachable",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.IAppenderAttachable.yml\" sourcestartlinenumber=\"1\">Interface for attaching appenders to objects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.IErrorHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.IErrorHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.IErrorHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.IErrorHandler.yml\" sourcestartlinenumber=\"1\">Appenders may delegate their error handling to an <xref href=\"log4net.Core.IErrorHandler\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.IFixingRequired.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.IFixingRequired.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.IFixingRequired",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.IFixingRequired.yml\" sourcestartlinenumber=\"1\">Interface for objects that require fixing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.ILogger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.ILogger",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.ILogger.yml\" sourcestartlinenumber=\"1\">Interface that all loggers implement to support logging events and testing if a level\nis enabled for logging.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.ILoggerWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.ILoggerWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.ILoggerWrapper",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.ILoggerWrapper.yml\" sourcestartlinenumber=\"1\">Base interface for all wrappers</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.IOptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.IOptionHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.IOptionHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.IOptionHandler.yml\" sourcestartlinenumber=\"1\">Interface used to delay activate a configured object.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.IRepositorySelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.IRepositorySelector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.IRepositorySelector",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.IRepositorySelector.yml\" sourcestartlinenumber=\"1\">Interface used by the <xref href=\"log4net.LogManager\" data-throw-if-not-resolved=\"false\"></xref> to select the <xref href=\"log4net.Repository.ILoggerRepository\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.ITriggeringEventEvaluator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.ITriggeringEventEvaluator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.ITriggeringEventEvaluator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.ITriggeringEventEvaluator.yml\" sourcestartlinenumber=\"1\">Test if an <xref href=\"log4net.Core.LoggingEvent\" data-throw-if-not-resolved=\"false\"></xref> triggers an action</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.Level.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.Level.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.Level",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.Level.yml\" sourcestartlinenumber=\"1\">Defines the default set of levels recognized by the system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LevelCollection.ILevelCollectionEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LevelCollection.ILevelCollectionEnumerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LevelCollection.ILevelCollectionEnumerator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LevelCollection.ILevelCollectionEnumerator.yml\" sourcestartlinenumber=\"1\">Supports type-safe iteration over a <xref href=\"log4net.Core.LevelCollection\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LevelCollection.Tag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LevelCollection.Tag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LevelCollection.Tag",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LevelCollection.Tag.yml\" sourcestartlinenumber=\"1\">Type visible only to our subclasses\nUsed to access protected constructor</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LevelCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LevelCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LevelCollection",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LevelCollection.yml\" sourcestartlinenumber=\"1\">A strongly-typed collection of <xref href=\"log4net.Core.Level\" data-throw-if-not-resolved=\"false\"></xref> objects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LevelEvaluator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LevelEvaluator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LevelEvaluator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LevelEvaluator.yml\" sourcestartlinenumber=\"1\">An evaluator that triggers at a threshold level</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LevelMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LevelMap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LevelMap",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LevelMap.yml\" sourcestartlinenumber=\"1\">Maps between string name and Level object.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LocationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LocationInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LocationInfo",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LocationInfo.yml\" sourcestartlinenumber=\"1\">The internal representation of caller location information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LogException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LogException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LogException",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LogException.yml\" sourcestartlinenumber=\"1\">Exception base type for log4net.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LogImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LogImpl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LogImpl",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LogImpl.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"log4net.ILog\" data-throw-if-not-resolved=\"false\"></xref> wrapper interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LoggerManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LoggerManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LoggerManager",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LoggerManager.yml\" sourcestartlinenumber=\"1\">Static manager that controls the creation of repositories</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LoggerRepositoryCreationEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LoggerRepositoryCreationEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LoggerRepositoryCreationEventArgs",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LoggerRepositoryCreationEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"log4net.Core.IRepositorySelector.LoggerRepositoryCreatedEvent\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LoggerRepositoryCreationEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LoggerRepositoryCreationEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LoggerRepositoryCreationEventHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LoggerRepositoryCreationEventHandler.yml\" sourcestartlinenumber=\"1\">Delegate used to handle logger repository creation event notifications</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LoggerWrapperImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LoggerWrapperImpl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LoggerWrapperImpl",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LoggerWrapperImpl.yml\" sourcestartlinenumber=\"1\">Implementation of the <xref href=\"log4net.Core.ILoggerWrapper\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LoggingEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LoggingEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LoggingEvent",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LoggingEvent.yml\" sourcestartlinenumber=\"1\">The internal representation of logging events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.LoggingEventData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.LoggingEventData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.LoggingEventData",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.LoggingEventData.yml\" sourcestartlinenumber=\"1\">Portable data structure used by <xref href=\"log4net.Core.LoggingEvent\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.MethodItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.MethodItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.MethodItem",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.MethodItem.yml\" sourcestartlinenumber=\"1\">provides method information without actually referencing a System.Reflection.MethodBase\nas that would require that the containing assembly is loaded.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.SecurityContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.SecurityContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.SecurityContext",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.SecurityContext.yml\" sourcestartlinenumber=\"1\">A SecurityContext used by log4net when interacting with protected resources</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.SecurityContextProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.SecurityContextProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.SecurityContextProvider",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.SecurityContextProvider.yml\" sourcestartlinenumber=\"1\">The <xref href=\"log4net.Core.SecurityContextProvider\" data-throw-if-not-resolved=\"false\"></xref> providers default <xref href=\"log4net.Core.SecurityContext\" data-throw-if-not-resolved=\"false\"></xref> instances.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.StackFrameItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.StackFrameItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.StackFrameItem",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.StackFrameItem.yml\" sourcestartlinenumber=\"1\">Provides stack frame information without actually referencing a System.Diagnostics.StackFrame\nas that would require that the containing assembly is loaded.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.TimeEvaluator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.TimeEvaluator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.TimeEvaluator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.TimeEvaluator.yml\" sourcestartlinenumber=\"1\">An evaluator that triggers after specified number of seconds.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.WrapperCreationHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.WrapperCreationHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.WrapperCreationHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.WrapperCreationHandler.yml\" sourcestartlinenumber=\"1\">Delegate used to handle creation of new wrappers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.WrapperMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.WrapperMap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core.WrapperMap",
+      "Summary": "<p sourcefile=\"log4net/log4net.Core.WrapperMap.yml\" sourcestartlinenumber=\"1\">Maps between logger objects and wrapper objects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Core",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.DateFormatter.AbsoluteTimeDateFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.DateFormatter.AbsoluteTimeDateFormatter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.DateFormatter.AbsoluteTimeDateFormatter",
+      "Summary": "<p sourcefile=\"log4net/log4net.DateFormatter.AbsoluteTimeDateFormatter.yml\" sourcestartlinenumber=\"1\">Formats a <xref href=\"System.DateTime\" data-throw-if-not-resolved=\"false\"></xref> as <code>&quot;HH:mm:ss,fff&quot;</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.DateFormatter.DateTimeDateFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.DateFormatter.DateTimeDateFormatter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.DateFormatter.DateTimeDateFormatter",
+      "Summary": "<p sourcefile=\"log4net/log4net.DateFormatter.DateTimeDateFormatter.yml\" sourcestartlinenumber=\"1\">Formats a <xref href=\"System.DateTime\" data-throw-if-not-resolved=\"false\"></xref> as <code>&quot;dd MMM yyyy HH:mm:ss,fff&quot;</code></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.DateFormatter.IDateFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.DateFormatter.IDateFormatter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.DateFormatter.IDateFormatter",
+      "Summary": "<p sourcefile=\"log4net/log4net.DateFormatter.IDateFormatter.yml\" sourcestartlinenumber=\"1\">Render a <xref href=\"System.DateTime\" data-throw-if-not-resolved=\"false\"></xref> as a string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.DateFormatter.Iso8601DateFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.DateFormatter.Iso8601DateFormatter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.DateFormatter.Iso8601DateFormatter",
+      "Summary": "<p sourcefile=\"log4net/log4net.DateFormatter.Iso8601DateFormatter.yml\" sourcestartlinenumber=\"1\">Formats the <xref href=\"System.DateTime\" data-throw-if-not-resolved=\"false\"></xref> as <code>&quot;yyyy-MM-dd HH:mm:ss,fff&quot;</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.DateFormatter.SimpleDateFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.DateFormatter.SimpleDateFormatter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.DateFormatter.SimpleDateFormatter",
+      "Summary": "<p sourcefile=\"log4net/log4net.DateFormatter.SimpleDateFormatter.yml\" sourcestartlinenumber=\"1\">Formats the <xref href=\"System.DateTime\" data-throw-if-not-resolved=\"false\"></xref> using the <xref href=\"System.DateTime.ToString(System.String%2cSystem.IFormatProvider)\" data-throw-if-not-resolved=\"false\"></xref> method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.DateFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.DateFormatter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.DateFormatter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.DenyAllFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.DenyAllFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.DenyAllFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.DenyAllFilter.yml\" sourcestartlinenumber=\"1\">This filter drops all <xref href=\"log4net.Core.LoggingEvent\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.FilterDecision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.FilterDecision.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.FilterDecision",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.FilterDecision.yml\" sourcestartlinenumber=\"1\">The return result from <xref href=\"log4net.Filter.IFilter.Decide(log4net.Core.LoggingEvent)\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.FilterSkeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.FilterSkeleton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.FilterSkeleton",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.FilterSkeleton.yml\" sourcestartlinenumber=\"1\">Subclass this type to implement customized logging event filtering</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.IFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.IFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.IFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.IFilter.yml\" sourcestartlinenumber=\"1\">Implement this interface to provide customized logging event filtering</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.LevelMatchFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.LevelMatchFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.LevelMatchFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.LevelMatchFilter.yml\" sourcestartlinenumber=\"1\">This is a very simple filter based on <xref href=\"log4net.Core.Level\" data-throw-if-not-resolved=\"false\"></xref> matching.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.LevelRangeFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.LevelRangeFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.LevelRangeFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.LevelRangeFilter.yml\" sourcestartlinenumber=\"1\">This is a simple filter based on <xref href=\"log4net.Core.Level\" data-throw-if-not-resolved=\"false\"></xref> matching.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.LoggerMatchFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.LoggerMatchFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.LoggerMatchFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.LoggerMatchFilter.yml\" sourcestartlinenumber=\"1\">Simple filter to match a string in the event's logger name.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.MdcFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.MdcFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.MdcFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.MdcFilter.yml\" sourcestartlinenumber=\"1\">Simple filter to match a keyed string in the <xref href=\"log4net.MDC\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.NdcFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.NdcFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.NdcFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.NdcFilter.yml\" sourcestartlinenumber=\"1\">Simple filter to match a string in the <xref href=\"log4net.NDC\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.PropertyFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.PropertyFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.PropertyFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.PropertyFilter.yml\" sourcestartlinenumber=\"1\">Simple filter to match a string an event property</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.StringMatchFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.StringMatchFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter.StringMatchFilter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Filter.StringMatchFilter.yml\" sourcestartlinenumber=\"1\">Simple filter to match a string in the rendered message.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Filter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Filter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Filter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.GlobalContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.GlobalContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.GlobalContext",
+      "Summary": "<p sourcefile=\"log4net/log4net.GlobalContext.yml\" sourcestartlinenumber=\"1\">The log4net Global Context.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.ILog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.ILog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.ILog",
+      "Summary": "<p sourcefile=\"log4net/log4net.ILog.yml\" sourcestartlinenumber=\"1\">The ILog interface is use by application to log messages into\nthe log4net framework.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.DynamicPatternLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.DynamicPatternLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.DynamicPatternLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.DynamicPatternLayout.yml\" sourcestartlinenumber=\"1\">A flexible layout configurable with pattern string that re-evaluates on each call.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.ExceptionLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.ExceptionLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.ExceptionLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.ExceptionLayout.yml\" sourcestartlinenumber=\"1\">A Layout that renders only the Exception text from the logging event</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.ILayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.ILayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.ILayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.ILayout.yml\" sourcestartlinenumber=\"1\">Interface implemented by layout objects</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.IRawLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.IRawLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.IRawLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.IRawLayout.yml\" sourcestartlinenumber=\"1\">Interface for raw layout objects</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.Layout2RawLayoutAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.Layout2RawLayoutAdapter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.Layout2RawLayoutAdapter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.Layout2RawLayoutAdapter.yml\" sourcestartlinenumber=\"1\">Adapts any <xref href=\"log4net.Layout.ILayout\" data-throw-if-not-resolved=\"false\"></xref> to a <xref href=\"log4net.Layout.IRawLayout\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.LayoutSkeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.LayoutSkeleton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.LayoutSkeleton",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.LayoutSkeleton.yml\" sourcestartlinenumber=\"1\">Extend this abstract class to create your own log layout format.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.Pattern.NamedPatternConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.Pattern.NamedPatternConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.Pattern.NamedPatternConverter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.Pattern.NamedPatternConverter.yml\" sourcestartlinenumber=\"1\">Converter to output and truncate <code>'.'</code> separated strings</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.Pattern.PatternLayoutConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.Pattern.PatternLayoutConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.Pattern.PatternLayoutConverter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.Pattern.PatternLayoutConverter.yml\" sourcestartlinenumber=\"1\">Abstract class that provides the formatting functionality that\nderived classes need.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.Pattern.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.Pattern.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.Pattern",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.PatternLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.PatternLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.PatternLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.PatternLayout.yml\" sourcestartlinenumber=\"1\">A flexible layout configurable with pattern string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.RawLayoutConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.RawLayoutConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.RawLayoutConverter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.RawLayoutConverter.yml\" sourcestartlinenumber=\"1\">Type converter for the <xref href=\"log4net.Layout.IRawLayout\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.RawPropertyLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.RawPropertyLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.RawPropertyLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.RawPropertyLayout.yml\" sourcestartlinenumber=\"1\">Extracts the value of a property from the <xref href=\"log4net.Core.LoggingEvent\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.RawTimeStampLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.RawTimeStampLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.RawTimeStampLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.RawTimeStampLayout.yml\" sourcestartlinenumber=\"1\">Extracts the date from the <xref href=\"log4net.Core.LoggingEvent\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.RawUtcTimeStampLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.RawUtcTimeStampLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.RawUtcTimeStampLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.RawUtcTimeStampLayout.yml\" sourcestartlinenumber=\"1\">Extracts the date from the <xref href=\"log4net.Core.LoggingEvent\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.SimpleLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.SimpleLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.SimpleLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.SimpleLayout.yml\" sourcestartlinenumber=\"1\">A very simple layout</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.XmlLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.XmlLayout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.XmlLayout",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.XmlLayout.yml\" sourcestartlinenumber=\"1\">Layout that formats the log events as XML elements.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.XmlLayoutBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.XmlLayoutBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.XmlLayoutBase",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.XmlLayoutBase.yml\" sourcestartlinenumber=\"1\">Layout that formats the log events as XML elements.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.XmlLayoutSchemaLog4J.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.XmlLayoutSchemaLog4J.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout.XmlLayoutSchemaLog4J",
+      "Summary": "<p sourcefile=\"log4net/log4net.Layout.XmlLayoutSchemaLog4J.yml\" sourcestartlinenumber=\"1\">Layout that formats the log events as XML elements compatible with the log4j schema</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Layout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Layout.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Layout",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.LogManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.LogManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.LogManager",
+      "Summary": "<p sourcefile=\"log4net/log4net.LogManager.yml\" sourcestartlinenumber=\"1\">This class is used by client applications to request logger instances.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.LogicalThreadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.LogicalThreadContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.LogicalThreadContext",
+      "Summary": "<p sourcefile=\"log4net/log4net.LogicalThreadContext.yml\" sourcestartlinenumber=\"1\">The log4net Logical Thread Context.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.MDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.MDC.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.MDC",
+      "Summary": "<p sourcefile=\"log4net/log4net.MDC.yml\" sourcestartlinenumber=\"1\">Implementation of Mapped Diagnostic Contexts.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.NDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.NDC.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.NDC",
+      "Summary": "<p sourcefile=\"log4net/log4net.NDC.yml\" sourcestartlinenumber=\"1\">Implementation of Nested Diagnostic Contexts.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.ObjectRenderer.DefaultRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.ObjectRenderer.DefaultRenderer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.ObjectRenderer.DefaultRenderer",
+      "Summary": "<p sourcefile=\"log4net/log4net.ObjectRenderer.DefaultRenderer.yml\" sourcestartlinenumber=\"1\">The default object Renderer.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.ObjectRenderer.IObjectRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.ObjectRenderer.IObjectRenderer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.ObjectRenderer.IObjectRenderer",
+      "Summary": "<p sourcefile=\"log4net/log4net.ObjectRenderer.IObjectRenderer.yml\" sourcestartlinenumber=\"1\">Implement this interface in order to render objects as strings</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.ObjectRenderer.RendererMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.ObjectRenderer.RendererMap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.ObjectRenderer.RendererMap",
+      "Summary": "<p sourcefile=\"log4net/log4net.ObjectRenderer.RendererMap.yml\" sourcestartlinenumber=\"1\">Maps types to <xref href=\"log4net.ObjectRenderer.IObjectRenderer\" data-throw-if-not-resolved=\"false\"></xref> instances for types that require custom\nrendering.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.ObjectRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.ObjectRenderer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.ObjectRenderer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Plugin.IPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Plugin.IPlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Plugin.IPlugin",
+      "Summary": "<p sourcefile=\"log4net/log4net.Plugin.IPlugin.yml\" sourcestartlinenumber=\"1\">Interface implemented by logger repository plugins.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Plugin.IPluginFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Plugin.IPluginFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Plugin.IPluginFactory",
+      "Summary": "<p sourcefile=\"log4net/log4net.Plugin.IPluginFactory.yml\" sourcestartlinenumber=\"1\">Interface used to create plugins.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Plugin.PluginCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Plugin.PluginCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Plugin.PluginCollection",
+      "Summary": "<p sourcefile=\"log4net/log4net.Plugin.PluginCollection.yml\" sourcestartlinenumber=\"1\">A strongly-typed collection of <xref href=\"log4net.Plugin.IPlugin\" data-throw-if-not-resolved=\"false\"></xref> objects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Plugin.PluginMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Plugin.PluginMap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Plugin.PluginMap",
+      "Summary": "<p sourcefile=\"log4net/log4net.Plugin.PluginMap.yml\" sourcestartlinenumber=\"1\">Map of repository plugins.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Plugin.PluginSkeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Plugin.PluginSkeleton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Plugin.PluginSkeleton",
+      "Summary": "<p sourcefile=\"log4net/log4net.Plugin.PluginSkeleton.yml\" sourcestartlinenumber=\"1\">Base implementation of <xref href=\"log4net.Plugin.IPlugin\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Plugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Plugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Plugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.ConfigurationChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.ConfigurationChangedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.ConfigurationChangedEventArgs",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.Hierarchy.Hierarchy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.Hierarchy.Hierarchy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.Hierarchy.Hierarchy",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.Hierarchy.Hierarchy.yml\" sourcestartlinenumber=\"1\">Hierarchical organization of loggers</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.Hierarchy.ILoggerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.Hierarchy.ILoggerFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.Hierarchy.ILoggerFactory",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.Hierarchy.ILoggerFactory.yml\" sourcestartlinenumber=\"1\">Interface abstracts creation of <xref href=\"log4net.Repository.Hierarchy.Logger\" data-throw-if-not-resolved=\"false\"></xref> instances</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.Hierarchy.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.Hierarchy.Logger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.Hierarchy.Logger",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.Hierarchy.Logger.yml\" sourcestartlinenumber=\"1\">Implementation of <xref href=\"log4net.Core.ILogger\" data-throw-if-not-resolved=\"false\"></xref> used by <xref href=\"log4net.Repository.Hierarchy.Logger.Hierarchy\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.Hierarchy.LoggerCreationEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.Hierarchy.LoggerCreationEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.Hierarchy.LoggerCreationEventArgs",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.Hierarchy.LoggerCreationEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"log4net.Repository.Hierarchy.Hierarchy.LoggerCreatedEvent\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.Hierarchy.LoggerCreationEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.Hierarchy.LoggerCreationEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.Hierarchy.LoggerCreationEventHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.Hierarchy.LoggerCreationEventHandler.yml\" sourcestartlinenumber=\"1\">Delegate used to handle logger creation event notifications.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.Hierarchy.RootLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.Hierarchy.RootLogger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.Hierarchy.RootLogger",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.Hierarchy.RootLogger.yml\" sourcestartlinenumber=\"1\">The <xref href=\"log4net.Repository.Hierarchy.RootLogger\" data-throw-if-not-resolved=\"false\"></xref> sits at the root of the logger hierarchy tree.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.Hierarchy.XmlHierarchyConfigurator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.Hierarchy.XmlHierarchyConfigurator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.Hierarchy.XmlHierarchyConfigurator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.Hierarchy.XmlHierarchyConfigurator.yml\" sourcestartlinenumber=\"1\">Initializes the log4net environment using an XML DOM.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.Hierarchy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.Hierarchy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.Hierarchy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.IBasicRepositoryConfigurator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.IBasicRepositoryConfigurator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.IBasicRepositoryConfigurator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.IBasicRepositoryConfigurator.yml\" sourcestartlinenumber=\"1\">Basic Configurator interface for repositories</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.ILoggerRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.ILoggerRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.ILoggerRepository",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.ILoggerRepository.yml\" sourcestartlinenumber=\"1\">Interface implemented by logger repositories, e.g. <xref href=\"log4net.Repository.Hierarchy\" data-throw-if-not-resolved=\"false\"></xref>, and used by the\n<xref href=\"log4net.LogManager\" data-throw-if-not-resolved=\"false\"></xref> to obtain <xref href=\"log4net.ILog\" data-throw-if-not-resolved=\"false\"></xref> instances.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.IXmlRepositoryConfigurator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.IXmlRepositoryConfigurator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.IXmlRepositoryConfigurator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.IXmlRepositoryConfigurator.yml\" sourcestartlinenumber=\"1\">Configure repository using XML</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.LoggerRepositoryConfigurationChangedEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.LoggerRepositoryConfigurationChangedEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.LoggerRepositoryConfigurationChangedEventHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.LoggerRepositoryConfigurationChangedEventHandler.yml\" sourcestartlinenumber=\"1\">Delegate used to handle event notifications for logger repository configuration changes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.LoggerRepositoryConfigurationResetEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.LoggerRepositoryConfigurationResetEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.LoggerRepositoryConfigurationResetEventHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.LoggerRepositoryConfigurationResetEventHandler.yml\" sourcestartlinenumber=\"1\">Delegate used to handle logger repository configuration reset event notifications.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.LoggerRepositoryShutdownEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.LoggerRepositoryShutdownEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.LoggerRepositoryShutdownEventHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.LoggerRepositoryShutdownEventHandler.yml\" sourcestartlinenumber=\"1\">Delegate used to handle logger repository shutdown event notifications.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.LoggerRepositorySkeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.LoggerRepositorySkeleton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository.LoggerRepositorySkeleton",
+      "Summary": "<p sourcefile=\"log4net/log4net.Repository.LoggerRepositorySkeleton.yml\" sourcestartlinenumber=\"1\">Base implementation of <xref href=\"log4net.Repository.ILoggerRepository\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Repository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Repository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Repository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.ThreadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.ThreadContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.ThreadContext",
+      "Summary": "<p sourcefile=\"log4net/log4net.ThreadContext.yml\" sourcestartlinenumber=\"1\">The log4net Thread Context.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.AppenderAttachedImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.AppenderAttachedImpl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.AppenderAttachedImpl",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.AppenderAttachedImpl.yml\" sourcestartlinenumber=\"1\">A straightforward implementation of the <xref href=\"log4net.Core.IAppenderAttachable\" data-throw-if-not-resolved=\"false\"></xref> interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.CompositeProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.CompositeProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.CompositeProperties",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.CompositeProperties.yml\" sourcestartlinenumber=\"1\">This class aggregates several PropertiesDictionary collections together.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ContextPropertiesBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ContextPropertiesBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ContextPropertiesBase",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ContextPropertiesBase.yml\" sourcestartlinenumber=\"1\">Base class for Context Properties implementations</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ConverterInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ConverterInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ConverterInfo",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ConverterInfo.yml\" sourcestartlinenumber=\"1\">Wrapper class used to map converter names to converter types</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.CountingQuietTextWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.CountingQuietTextWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.CountingQuietTextWriter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.CountingQuietTextWriter.yml\" sourcestartlinenumber=\"1\">Subclass of <xref href=\"log4net.Util.QuietTextWriter\" data-throw-if-not-resolved=\"false\"></xref> that maintains a count of\nthe number of bytes written.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.CyclicBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.CyclicBuffer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.CyclicBuffer",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.CyclicBuffer.yml\" sourcestartlinenumber=\"1\">A fixed size rolling buffer of logging events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.EmptyCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.EmptyCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.EmptyCollection",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.EmptyCollection.yml\" sourcestartlinenumber=\"1\">An always empty <xref href=\"System.Collections.ICollection\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.EmptyDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.EmptyDictionary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.EmptyDictionary",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.EmptyDictionary.yml\" sourcestartlinenumber=\"1\">An always empty <xref href=\"System.Collections.IDictionary\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.FormattingInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.FormattingInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.FormattingInfo",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.FormattingInfo.yml\" sourcestartlinenumber=\"1\">Contain the information obtained when parsing formatting modifiers\nin conversion modifiers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.GlobalContextProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.GlobalContextProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.GlobalContextProperties",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.GlobalContextProperties.yml\" sourcestartlinenumber=\"1\">Implementation of Properties collection for the <xref href=\"log4net.GlobalContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LevelMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LevelMapping.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LevelMapping",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LevelMapping.yml\" sourcestartlinenumber=\"1\">Manages an ordered mapping from <xref href=\"log4net.Core.Level\" data-throw-if-not-resolved=\"false\"></xref> instances\nto <xref href=\"log4net.Util.LevelMappingEntry\" data-throw-if-not-resolved=\"false\"></xref> subclasses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LevelMappingEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LevelMappingEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LevelMappingEntry",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LevelMappingEntry.yml\" sourcestartlinenumber=\"1\">An abstract base class for types that are stored in the\n<xref href=\"log4net.Util.LevelMapping\" data-throw-if-not-resolved=\"false\"></xref> object.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LogExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LogExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LogExtensions",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LogExtensions.yml\" sourcestartlinenumber=\"1\">The static class ILogExtensions contains a set of widely used\nmethods that ease the interaction with the ILog interface implementations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LogLog.LogReceivedAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LogLog.LogReceivedAdapter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LogLog.LogReceivedAdapter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LogLog.LogReceivedAdapter.yml\" sourcestartlinenumber=\"1\">Subscribes to the LogLog.LogReceived event and stores messages\nto the supplied IList instance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LogLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LogLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LogLog",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LogLog.yml\" sourcestartlinenumber=\"1\">Outputs log statements from within the log4net assembly.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LogReceivedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LogReceivedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LogReceivedEventArgs",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LogReceivedEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LogReceivedEventHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LogReceivedEventHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LogReceivedEventHandler.yml\" sourcestartlinenumber=\"1\">LogReceivedEventHandler</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LogicalThreadContextProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LogicalThreadContextProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LogicalThreadContextProperties",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LogicalThreadContextProperties.yml\" sourcestartlinenumber=\"1\">Implementation of Properties collection for the <xref href=\"log4net.LogicalThreadContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LogicalThreadContextStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LogicalThreadContextStack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LogicalThreadContextStack",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LogicalThreadContextStack.yml\" sourcestartlinenumber=\"1\">Implementation of Stack for the <xref href=\"log4net.LogicalThreadContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.LogicalThreadContextStacks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.LogicalThreadContextStacks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.LogicalThreadContextStacks",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.LogicalThreadContextStacks.yml\" sourcestartlinenumber=\"1\">Implementation of Stacks collection for the <xref href=\"log4net.LogicalThreadContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.NativeError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.NativeError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.NativeError",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.NativeError.yml\" sourcestartlinenumber=\"1\">Represents a Win32 native error code and message.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.NullDictionaryEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.NullDictionaryEnumerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.NullDictionaryEnumerator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.NullDictionaryEnumerator.yml\" sourcestartlinenumber=\"1\">An always empty <xref href=\"System.Collections.IDictionaryEnumerator\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.NullEnumerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.NullEnumerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.NullEnumerator",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.NullEnumerator.yml\" sourcestartlinenumber=\"1\">An always empty <xref href=\"System.Collections.IEnumerator\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.NullSecurityContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.NullSecurityContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.NullSecurityContext",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.NullSecurityContext.yml\" sourcestartlinenumber=\"1\">A SecurityContext used when a SecurityContext is not required</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.OnlyOnceErrorHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.OnlyOnceErrorHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.OnlyOnceErrorHandler",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.OnlyOnceErrorHandler.yml\" sourcestartlinenumber=\"1\">Implements log4net's default error handling policy which consists\nof emitting a message for the first error in an appender and\nignoring all subsequent errors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.OptionConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.OptionConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.OptionConverter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.OptionConverter.yml\" sourcestartlinenumber=\"1\">A convenience class to convert property values to specific types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.PatternConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.PatternConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.PatternConverter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.PatternConverter.yml\" sourcestartlinenumber=\"1\">Abstract class that provides the formatting functionality that\nderived classes need.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.PatternParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.PatternParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.PatternParser",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.PatternParser.yml\" sourcestartlinenumber=\"1\">Most of the work of the <xref href=\"log4net.Layout.PatternLayout\" data-throw-if-not-resolved=\"false\"></xref> class\nis delegated to the PatternParser class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.PatternString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.PatternString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.PatternString",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.PatternString.yml\" sourcestartlinenumber=\"1\">This class implements a patterned string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.PatternStringConverters.EnvironmentPatternConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.PatternStringConverters.EnvironmentPatternConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.PatternStringConverters.EnvironmentPatternConverter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.PatternStringConverters.EnvironmentPatternConverter.yml\" sourcestartlinenumber=\"1\">Write an environment variable to the output</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.PatternStringConverters.RandomStringPatternConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.PatternStringConverters.RandomStringPatternConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.PatternStringConverters.RandomStringPatternConverter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.PatternStringConverters.RandomStringPatternConverter.yml\" sourcestartlinenumber=\"1\">A Pattern converter that generates a string of random characters</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.PatternStringConverters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.PatternStringConverters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.PatternStringConverters",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.PropertiesDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.PropertiesDictionary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.PropertiesDictionary",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.PropertiesDictionary.yml\" sourcestartlinenumber=\"1\">String keyed object map.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.PropertyEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.PropertyEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.PropertyEntry",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.PropertyEntry.yml\" sourcestartlinenumber=\"1\">A class to hold the key and data for a property set in the config file</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ProtectCloseTextWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ProtectCloseTextWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ProtectCloseTextWriter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ProtectCloseTextWriter.yml\" sourcestartlinenumber=\"1\">A <xref href=\"System.IO.TextWriter\" data-throw-if-not-resolved=\"false\"></xref> that ignores the <xref href=\"log4net.Util.ProtectCloseTextWriter.Close\" data-throw-if-not-resolved=\"false\"></xref> message</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.QuietTextWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.QuietTextWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.QuietTextWriter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.QuietTextWriter.yml\" sourcestartlinenumber=\"1\"><xref href=\"System.IO.TextWriter\" data-throw-if-not-resolved=\"false\"></xref> that does not leak exceptions</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ReadOnlyPropertiesDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ReadOnlyPropertiesDictionary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ReadOnlyPropertiesDictionary",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ReadOnlyPropertiesDictionary.yml\" sourcestartlinenumber=\"1\">String keyed object map that is read only.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ReaderWriterLock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ReaderWriterLock.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ReaderWriterLock",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ReaderWriterLock.yml\" sourcestartlinenumber=\"1\">Defines a lock that supports single writers and multiple readers</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ReusableStringWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ReusableStringWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ReusableStringWriter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ReusableStringWriter.yml\" sourcestartlinenumber=\"1\">A <xref href=\"System.IO.StringWriter\" data-throw-if-not-resolved=\"false\"></xref> that can be <xref href=\"log4net.Util.ReusableStringWriter.Reset(System.Int32%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref> and reused</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.SystemInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.SystemInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.SystemInfo",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.SystemInfo.yml\" sourcestartlinenumber=\"1\">Utility class for system specific information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.SystemStringFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.SystemStringFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.SystemStringFormat",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.SystemStringFormat.yml\" sourcestartlinenumber=\"1\">Utility class that represents a format string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.TextWriterAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.TextWriterAdapter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.TextWriterAdapter",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.TextWriterAdapter.yml\" sourcestartlinenumber=\"1\">Adapter that extends <xref href=\"System.IO.TextWriter\" data-throw-if-not-resolved=\"false\"></xref> and forwards all\nmessages to an instance of <xref href=\"System.IO.TextWriter\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ThreadContextProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ThreadContextProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ThreadContextProperties",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ThreadContextProperties.yml\" sourcestartlinenumber=\"1\">Implementation of Properties collection for the <xref href=\"log4net.ThreadContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ThreadContextStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ThreadContextStack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ThreadContextStack",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ThreadContextStack.yml\" sourcestartlinenumber=\"1\">Implementation of Stack for the <xref href=\"log4net.ThreadContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.ThreadContextStacks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.ThreadContextStacks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.ThreadContextStacks",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.ThreadContextStacks.yml\" sourcestartlinenumber=\"1\">Implementation of Stacks collection for the <xref href=\"log4net.ThreadContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.Transform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.Transform.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.Transform",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.Transform.yml\" sourcestartlinenumber=\"1\">Utility class for transforming strings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.TwoArgAction-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.TwoArgAction-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.TwoArgAction<T1, T2>",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.TwoArgAction-2.yml\" sourcestartlinenumber=\"1\">Delegate type used for LogicalThreadContextStack's callbacks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.TypeConverters.ConversionNotSupportedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.TypeConverters.ConversionNotSupportedException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.TypeConverters.ConversionNotSupportedException",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.TypeConverters.ConversionNotSupportedException.yml\" sourcestartlinenumber=\"1\">Exception base type for conversion errors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.TypeConverters.ConverterRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.TypeConverters.ConverterRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.TypeConverters.ConverterRegistry",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.TypeConverters.ConverterRegistry.yml\" sourcestartlinenumber=\"1\">Register of type converters for specific types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.TypeConverters.IConvertFrom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.TypeConverters.IConvertFrom.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.TypeConverters.IConvertFrom",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.TypeConverters.IConvertFrom.yml\" sourcestartlinenumber=\"1\">Interface supported by type converters</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.TypeConverters.IConvertTo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.TypeConverters.IConvertTo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.TypeConverters.IConvertTo",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.TypeConverters.IConvertTo.yml\" sourcestartlinenumber=\"1\">Interface supported by type converters</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.TypeConverters.TypeConverterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.TypeConverters.TypeConverterAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.TypeConverters.TypeConverterAttribute",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.TypeConverters.TypeConverterAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used to associate a type converter</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.TypeConverters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.TypeConverters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.TypeConverters",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.WindowsSecurityContext.ImpersonationMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.WindowsSecurityContext.ImpersonationMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.WindowsSecurityContext.ImpersonationMode",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.WindowsSecurityContext.ImpersonationMode.yml\" sourcestartlinenumber=\"1\">The impersonation modes for the <xref href=\"log4net.Util.WindowsSecurityContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.WindowsSecurityContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.WindowsSecurityContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util.WindowsSecurityContext",
+      "Summary": "<p sourcefile=\"log4net/log4net.Util.WindowsSecurityContext.yml\" sourcestartlinenumber=\"1\">Impersonate a Windows Account</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.Util.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net.Util",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "log4net/log4net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/log4net.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "log4net",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "log4net/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "log4net/toc.html"
+        },
+        ".json": {
+          "relative_path": "log4net/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Redirection",
+      "source_relative_path": "manual.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

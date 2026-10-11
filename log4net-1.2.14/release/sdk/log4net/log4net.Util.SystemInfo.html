@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SystemInfo | Apache log4net 1.2.14 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SystemInfo | Apache log4net 1.2.14 API Reference ">
+      
+      <meta name="description" content="Utility class for system specific information.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Util.SystemInfo">
+
+
+
+  <h1 id="log4net_Util_SystemInfo" data-uid="log4net.Util.SystemInfo" class="text-break">
+Class SystemInfo  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Util.html">Util</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Utility class for system specific information.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SystemInfo</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SystemInfo</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Util_SystemInfo_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Utility class of static methods for system specific information.
+</p>
+</div>
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="log4net_Util_SystemInfo_EmptyTypes" data-uid="log4net.Util.SystemInfo.EmptyTypes">
+  EmptyTypes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an empty array of types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Type[] EmptyTypes</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_EmptyTypes_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <code>Type.EmptyTypes</code> field is not available on
+the .NET Compact Framework 1.0.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Util_SystemInfo_ApplicationBaseDirectory_" data-uid="log4net.Util.SystemInfo.ApplicationBaseDirectory*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_ApplicationBaseDirectory" data-uid="log4net.Util.SystemInfo.ApplicationBaseDirectory">
+  ApplicationBaseDirectory
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the base directory for this <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ApplicationBaseDirectory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The base directory path for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_ApplicationBaseDirectory_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the base directory for this <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a>.
+</p>
+<p>
+The value returned may be either a local file path or a URI.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_ApplicationFriendlyName_" data-uid="log4net.Util.SystemInfo.ApplicationFriendlyName*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_ApplicationFriendlyName" data-uid="log4net.Util.SystemInfo.ApplicationFriendlyName">
+  ApplicationFriendlyName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get this application's friendly name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ApplicationFriendlyName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The friendly name of this application as a string</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_ApplicationFriendlyName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If available the name of the application is retrieved from
+the <code>AppDomain</code> using <code>AppDomain.CurrentDomain.FriendlyName</code>.
+</p>
+<p>
+Otherwise the file name of the entry assembly is used.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_ConfigurationFileLocation_" data-uid="log4net.Util.SystemInfo.ConfigurationFileLocation*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_ConfigurationFileLocation" data-uid="log4net.Util.SystemInfo.ConfigurationFileLocation">
+  ConfigurationFileLocation
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the path to the configuration file for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ConfigurationFileLocation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the configuration file for the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_ConfigurationFileLocation_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The .NET Compact Framework 1.0 does not have a concept of a configuration
+file. For this runtime, we use the entry assembly location as the root for
+the configuration file name.
+</p>
+<p>
+The value returned may be either a local file path or a URI.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_CurrentThreadId_" data-uid="log4net.Util.SystemInfo.CurrentThreadId*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_CurrentThreadId" data-uid="log4net.Util.SystemInfo.CurrentThreadId">
+  CurrentThreadId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the ID of the current thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CurrentThreadId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The ID of the current thread.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_CurrentThreadId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+On the .NET framework, the <code>AppDomain.GetCurrentThreadId</code> method
+is used to obtain the thread ID for the current thread. This is the 
+operating system ID for the thread.
+</p>
+<p>
+On the .NET Compact Framework 1.0 it is not possible to get the 
+operating system thread ID for the current thread. The native method 
+<code>GetCurrentThreadId</code> is implemented inline in a header file
+and cannot be called.
+</p>
+<p>
+On the .NET Framework 2.0 the <code>Thread.ManagedThreadId</code> is used as this
+gives a stable id unrelated to the operating system thread ID which may 
+change if the runtime is using fibers.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_EntryAssemblyLocation_" data-uid="log4net.Util.SystemInfo.EntryAssemblyLocation*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_EntryAssemblyLocation" data-uid="log4net.Util.SystemInfo.EntryAssemblyLocation">
+  EntryAssemblyLocation
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the path to the file that first executed in the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string EntryAssemblyLocation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the entry assembly.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_EntryAssemblyLocation_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the path to the file that first executed in the current <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_HostName_" data-uid="log4net.Util.SystemInfo.HostName*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_HostName" data-uid="log4net.Util.SystemInfo.HostName">
+  HostName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the host name or machine name for the current machine</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string HostName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The hostname or machine name</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_HostName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Get the host name or machine name for the current machine
+</p>
+<p>
+The host name (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.dns.gethostname">GetHostName()</a>) or
+the machine name (<code>Environment.MachineName</code>) for
+the current machine, or if neither of these are available
+then <code>NOT AVAILABLE</code> is returned.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_NewLine_" data-uid="log4net.Util.SystemInfo.NewLine*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_NewLine" data-uid="log4net.Util.SystemInfo.NewLine">
+  NewLine
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system dependent line terminator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string NewLine { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The system dependent line terminator.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_NewLine_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the system dependent line terminator.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_NotAvailableText_" data-uid="log4net.Util.SystemInfo.NotAvailableText*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_NotAvailableText" data-uid="log4net.Util.SystemInfo.NotAvailableText">
+  NotAvailableText
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Text to output when an unsupported feature is requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string NotAvailableText { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_NotAvailableText_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Use this value when an unsupported feature is requested.
+</p>
+<p>
+The default value is <code>NOT AVAILABLE</code>. This value can be overridden by specifying
+a value for the <code>log4net.NotAvailableText</code> appSetting in the application's
+.config file.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_NullText_" data-uid="log4net.Util.SystemInfo.NullText*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_NullText" data-uid="log4net.Util.SystemInfo.NullText">
+  NullText
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Text to output when a <code>null</code> is encountered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string NullText { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_NullText_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Use this value to indicate a <code>null</code> has been encountered while
+outputting a string representation of an item.
+</p>
+<p>
+The default value is <code>(null)</code>. This value can be overridden by specifying
+a value for the <code>log4net.NullText</code> appSetting in the application's
+.config file.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_ProcessStartTime_" data-uid="log4net.Util.SystemInfo.ProcessStartTime*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_ProcessStartTime" data-uid="log4net.Util.SystemInfo.ProcessStartTime">
+  ProcessStartTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the start time for the current process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTime ProcessStartTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_ProcessStartTime_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is the time at which the log4net library was loaded into the
+AppDomain. Due to reports of a hang in the call to <code>System.Diagnostics.Process.StartTime</code>
+this is not the start time for the current process.
+</p>
+<p>
+The log4net library should be loaded by an application early during its
+startup, therefore this start time should be a good approximation for
+the actual start time.
+</p>
+<p>
+Note that AppDomains may be loaded and unloaded within the
+same process without the process terminating, however this start time
+will be set per AppDomain.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Util_SystemInfo_AssemblyFileName_" data-uid="log4net.Util.SystemInfo.AssemblyFileName*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_AssemblyFileName_System_Reflection_Assembly_" data-uid="log4net.Util.SystemInfo.AssemblyFileName(System.Reflection.Assembly)">
+  AssemblyFileName(Assembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the file name portion of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a>, including the extension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string AssemblyFileName(Assembly myAssembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>myAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a> to get the file name for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name of the assembly.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_AssemblyFileName_System_Reflection_Assembly__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the file name portion of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a>, including the extension.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_AssemblyLocationInfo_" data-uid="log4net.Util.SystemInfo.AssemblyLocationInfo*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_AssemblyLocationInfo_System_Reflection_Assembly_" data-uid="log4net.Util.SystemInfo.AssemblyLocationInfo(System.Reflection.Assembly)">
+  AssemblyLocationInfo(Assembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the assembly location path for the specified assembly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string AssemblyLocationInfo(Assembly myAssembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>myAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to get the location for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The location of the assembly.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_AssemblyLocationInfo_System_Reflection_Assembly__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method does not guarantee to return the correct path
+to the assembly. If only tries to give an indication as to
+where the assembly was loaded from.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_AssemblyQualifiedName_" data-uid="log4net.Util.SystemInfo.AssemblyQualifiedName*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_AssemblyQualifiedName_System_Type_" data-uid="log4net.Util.SystemInfo.AssemblyQualifiedName(System.Type)">
+  AssemblyQualifiedName(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the fully qualified name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, including
+the name of the assembly from which the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> was
+loaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string AssemblyQualifiedName(Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> to get the fully qualified name for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified name for the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_AssemblyQualifiedName_System_Type__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is equivalent to the <code>Type.AssemblyQualifiedName</code> property,
+but this method works on the .NET Compact Framework 1.0 as well as
+the full .NET runtime.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_AssemblyShortName_" data-uid="log4net.Util.SystemInfo.AssemblyShortName*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_AssemblyShortName_System_Reflection_Assembly_" data-uid="log4net.Util.SystemInfo.AssemblyShortName(System.Reflection.Assembly)">
+  AssemblyShortName(Assembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the short name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string AssemblyShortName(Assembly myAssembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>myAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a> to get the name for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The short name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_AssemblyShortName_System_Reflection_Assembly__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The short name of the assembly is the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly.fullname">FullName</a> 
+without the version, culture, or public key. i.e. it is just the 
+assembly's file name without the extension.
+</p>
+<p>
+Use this rather than <code>Assembly.GetName().Name</code> because that
+is not available on the Compact Framework.
+</p>
+<p>
+Because of a FileIOPermission security demand we cannot do
+the obvious Assembly.GetName().Name. We are allowed to get
+the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly.fullname">FullName</a> of the assembly so we 
+start from there and strip out just the assembly name.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_ConvertToFullPath_" data-uid="log4net.Util.SystemInfo.ConvertToFullPath*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_ConvertToFullPath_System_String_" data-uid="log4net.Util.SystemInfo.ConvertToFullPath(System.String)">
+  ConvertToFullPath(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert a path into a fully qualified local file path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ConvertToFullPath(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified path.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_ConvertToFullPath_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Converts the path specified to a fully
+qualified path. If the path is relative it is
+taken as relative from the application base 
+directory.
+</p>
+<p>
+The path specified must be a local file path, a URI is not supported.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_CreateArgumentOutOfRangeException_" data-uid="log4net.Util.SystemInfo.CreateArgumentOutOfRangeException*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_CreateArgumentOutOfRangeException_System_String_System_Object_System_String_" data-uid="log4net.Util.SystemInfo.CreateArgumentOutOfRangeException(System.String,System.Object,System.String)">
+  CreateArgumentOutOfRangeException(string, object, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ArgumentOutOfRangeException CreateArgumentOutOfRangeException(string parameterName, object actualValue, string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameterName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the parameter that caused the exception</p>
+</dd>
+    <dt><code>actualValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The value of the argument that causes this exception</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message that describes the error</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>the ArgumentOutOfRangeException object</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_CreateArgumentOutOfRangeException_System_String_System_Object_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Create a new instance of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a> class 
+with a specified error message, the parameter name, and the value 
+of the argument.
+</p>
+<p>
+The Compact Framework does not support the 3 parameter constructor for the
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a> type. This method provides an
+implementation that works for all platforms.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_CreateCaseInsensitiveHashtable_" data-uid="log4net.Util.SystemInfo.CreateCaseInsensitiveHashtable*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_CreateCaseInsensitiveHashtable" data-uid="log4net.Util.SystemInfo.CreateCaseInsensitiveHashtable">
+  CreateCaseInsensitiveHashtable()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new case-insensitive instance of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.hashtable">Hashtable</a> class with the default initial capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Hashtable CreateCaseInsensitiveHashtable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.hashtable">Hashtable</a></dt>
+    <dd><p>A new case-insensitive instance of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.hashtable">Hashtable</a> class with the default initial capacity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_CreateCaseInsensitiveHashtable_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The new Hashtable instance uses the default load factor, the CaseInsensitiveHashCodeProvider, and the CaseInsensitiveComparer.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_GetAppSetting_" data-uid="log4net.Util.SystemInfo.GetAppSetting*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_GetAppSetting_System_String_" data-uid="log4net.Util.SystemInfo.GetAppSetting(System.String)">
+  GetAppSetting(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lookup an application setting</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetAppSetting(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the application settings key to lookup</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the value for the key, or <code>null</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_GetAppSetting_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Configuration APIs are not supported under the Compact Framework
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_GetTypeFromString_" data-uid="log4net.Util.SystemInfo.GetTypeFromString*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_GetTypeFromString_System_Reflection_Assembly_System_String_System_Boolean_System_Boolean_" data-uid="log4net.Util.SystemInfo.GetTypeFromString(System.Reflection.Assembly,System.String,System.Boolean,System.Boolean)">
+  GetTypeFromString(Assembly, string, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the type specified in the type string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Type GetTypeFromString(Assembly relativeAssembly, string typeName, bool throwOnError, bool ignoreCase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>relativeAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>An assembly to load the type from.</p>
+</dd>
+    <dt><code>typeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the type to load.</p>
+</dd>
+    <dt><code>throwOnError</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag set to <code>true</code> to throw an exception if the type cannot be loaded.</p>
+</dd>
+    <dt><code>ignoreCase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> to ignore the case of the type name; otherwise, <code>false</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type loaded or <code>null</code> if it could not be loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_GetTypeFromString_System_Reflection_Assembly_System_String_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the type name is fully qualified, i.e. if contains an assembly name in 
+the type name, the type will be loaded from the system using 
+<span class="xref">Type.GetType(string,bool)</span>.
+</p>
+<p>
+If the type name is not fully qualified it will be loaded from the specified
+assembly. If the type is not found in the assembly then all the loaded assemblies 
+will be searched for the type.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_GetTypeFromString_" data-uid="log4net.Util.SystemInfo.GetTypeFromString*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_GetTypeFromString_System_String_System_Boolean_System_Boolean_" data-uid="log4net.Util.SystemInfo.GetTypeFromString(System.String,System.Boolean,System.Boolean)">
+  GetTypeFromString(string, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the type specified in the type string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Type GetTypeFromString(string typeName, bool throwOnError, bool ignoreCase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>typeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the type to load.</p>
+</dd>
+    <dt><code>throwOnError</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag set to <code>true</code> to throw an exception if the type cannot be loaded.</p>
+</dd>
+    <dt><code>ignoreCase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> to ignore the case of the type name; otherwise, <code>false</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type loaded or <code>null</code> if it could not be loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_GetTypeFromString_System_String_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the type name is fully qualified, i.e. if contains an assembly name in 
+the type name, the type will be loaded from the system using 
+<span class="xref">Type.GetType(string,bool)</span>.
+</p>
+<p>
+If the type name is not fully qualified it will be loaded from the
+assembly that is directly calling this method. If the type is not found 
+in the assembly then all the loaded assemblies will be searched for the type.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_GetTypeFromString_" data-uid="log4net.Util.SystemInfo.GetTypeFromString*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_GetTypeFromString_System_Type_System_String_System_Boolean_System_Boolean_" data-uid="log4net.Util.SystemInfo.GetTypeFromString(System.Type,System.String,System.Boolean,System.Boolean)">
+  GetTypeFromString(Type, string, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the type specified in the type string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Type GetTypeFromString(Type relativeType, string typeName, bool throwOnError, bool ignoreCase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>relativeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>A sibling type to use to load the type.</p>
+</dd>
+    <dt><code>typeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the type to load.</p>
+</dd>
+    <dt><code>throwOnError</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag set to <code>true</code> to throw an exception if the type cannot be loaded.</p>
+</dd>
+    <dt><code>ignoreCase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> to ignore the case of the type name; otherwise, <code>false</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type loaded or <code>null</code> if it could not be loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_GetTypeFromString_System_Type_System_String_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the type name is fully qualified, i.e. if contains an assembly name in 
+the type name, the type will be loaded from the system using 
+<span class="xref">Type.GetType(string,bool)</span>.
+</p>
+<p>
+If the type name is not fully qualified, it will be loaded from the assembly
+containing the specified relative type. If the type is not found in the assembly 
+then all the loaded assemblies will be searched for the type.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_NewGuid_" data-uid="log4net.Util.SystemInfo.NewGuid*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_NewGuid" data-uid="log4net.Util.SystemInfo.NewGuid">
+  NewGuid()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generate a new guid</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Guid NewGuid()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>A new Guid</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_NewGuid_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Generate a new guid
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_TryParse_" data-uid="log4net.Util.SystemInfo.TryParse*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_TryParse_System_String_System_Int16__" data-uid="log4net.Util.SystemInfo.TryParse(System.String,System.Int16@)">
+  TryParse(string, out short)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parse a string into an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a> value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string s, out short val)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>s</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the string to parse</p>
+</dd>
+    <dt><code>val</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>out param where the parsed value is placed</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the string was able to be parsed into an integer</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_TryParse_System_String_System_Int16___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Attempts to parse the string into an integer. If the string cannot
+be parsed then this method returns <code>false</code>. The method does not throw an exception.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_TryParse_" data-uid="log4net.Util.SystemInfo.TryParse*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_TryParse_System_String_System_Int32__" data-uid="log4net.Util.SystemInfo.TryParse(System.String,System.Int32@)">
+  TryParse(string, out int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parse a string into an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string s, out int val)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>s</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the string to parse</p>
+</dd>
+    <dt><code>val</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>out param where the parsed value is placed</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the string was able to be parsed into an integer</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_TryParse_System_String_System_Int32___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Attempts to parse the string into an integer. If the string cannot
+be parsed then this method returns <code>false</code>. The method does not throw an exception.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_SystemInfo_TryParse_" data-uid="log4net.Util.SystemInfo.TryParse*"></a>
+
+  <h3 id="log4net_Util_SystemInfo_TryParse_System_String_System_Int64__" data-uid="log4net.Util.SystemInfo.TryParse(System.String,System.Int64@)">
+  TryParse(string, out long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parse a string into an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string s, out long val)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>s</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the string to parse</p>
+</dd>
+    <dt><code>val</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>out param where the parsed value is placed</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the string was able to be parsed into an integer</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_SystemInfo_TryParse_System_String_System_Int64___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Attempts to parse the string into an integer. If the string cannot
+be parsed then this method returns <code>false</code>. The method does not throw an exception.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

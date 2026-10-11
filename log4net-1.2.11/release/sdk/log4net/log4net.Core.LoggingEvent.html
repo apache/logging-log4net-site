@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LoggingEvent | Apache log4net 1.2.11 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LoggingEvent | Apache log4net 1.2.11 API Reference ">
+      
+      <meta name="description" content="The internal representation of logging events.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Core.LoggingEvent">
+
+
+
+  <h1 id="log4net_Core_LoggingEvent" data-uid="log4net.Core.LoggingEvent" class="text-break">
+Class LoggingEvent  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The internal representation of logging events.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LoggingEvent : ISerializable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LoggingEvent</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Core_LoggingEvent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+When an affirmative decision is made to log then a 
+<a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> instance is created. This instance 
+is passed around to the different log4net components.
+</p>
+<p>
+This class is of concern to those wishing to extend log4net.
+</p>
+<p>
+Some of the values in instances of <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>
+are considered volatile, that is the values are correct at the
+time the event is delivered to appenders, but will not be consistent
+at any time afterwards. If an event is to be stored and then processed
+at a later time these volatile values must be fixed by calling
+<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a>. There is a performance penalty
+for incurred by calling <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a> but it
+is essential to maintaining data consistency.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Core_LoggingEvent__ctor_" data-uid="log4net.Core.LoggingEvent.#ctor*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="log4net.Core.LoggingEvent.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+  LoggingEvent(SerializationInfo, StreamingContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serialization constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected LoggingEvent(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> that holds the serialized object data.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext">StreamingContext</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext">StreamingContext</a> that contains contextual information about the source or destination.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> class 
+with serialized data.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent__ctor_" data-uid="log4net.Core.LoggingEvent.#ctor*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent__ctor_System_Type_log4net_Repository_ILoggerRepository_System_String_log4net_Core_Level_System_Object_System_Exception_" data-uid="log4net.Core.LoggingEvent.#ctor(System.Type,log4net.Repository.ILoggerRepository,System.String,log4net.Core.Level,System.Object,System.Exception)">
+  LoggingEvent(Type, ILoggerRepository, string, Level, object, Exception)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> class
+from the supplied parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggingEvent(Type callerStackBoundaryDeclaringType, ILoggerRepository repository, string loggerName, Level level, object message, Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callerStackBoundaryDeclaringType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The declaring type of the method that is
+the stack boundary into the logging system for this call.</p>
+</dd>
+    <dt><code>repository</code> <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The repository this event is logged in.</p>
+</dd>
+    <dt><code>loggerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the logger of this event.</p>
+</dd>
+    <dt><code>level</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>The level of this event.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message of this event.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception for this event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent__ctor_System_Type_log4net_Repository_ILoggerRepository_System_String_log4net_Core_Level_System_Object_System_Exception__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Except <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_TimeStamp">TimeStamp</a>, <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Level">Level</a> and <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_LoggerName">LoggerName</a>, 
+all fields of <code>LoggingEvent</code> are filled when actually needed. Call
+<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a> to cache all data locally
+to prevent inconsistencies.
+</p>
+<p>This method is called by the log4net framework
+to create a logging event.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent__ctor_" data-uid="log4net.Core.LoggingEvent.#ctor*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent__ctor_System_Type_log4net_Repository_ILoggerRepository_log4net_Core_LoggingEventData_" data-uid="log4net.Core.LoggingEvent.#ctor(System.Type,log4net.Repository.ILoggerRepository,log4net.Core.LoggingEventData)">
+  LoggingEvent(Type, ILoggerRepository, LoggingEventData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> class
+using specific data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggingEvent(Type callerStackBoundaryDeclaringType, ILoggerRepository repository, LoggingEventData data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callerStackBoundaryDeclaringType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The declaring type of the method that is
+the stack boundary into the logging system for this call.</p>
+</dd>
+    <dt><code>repository</code> <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The repository this event is logged in.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a></dt>
+    <dd><p>Data used to initialize the logging event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent__ctor_System_Type_log4net_Repository_ILoggerRepository_log4net_Core_LoggingEventData__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This constructor is provided to allow a <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>
+to be created independently of the log4net framework. This can
+be useful if you require a custom serialization scheme.
+</p>
+<p>
+Use the <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_GetLoggingEventData_log4net_Core_FixFlags_">GetLoggingEventData(FixFlags)</a> method to obtain an 
+instance of the <a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a> class.
+</p>
+<p>
+This constructor sets this objects <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Fix">Fix</a> flags to <a class="xref" href="log4net.Core.FixFlags.html#log4net_Core_FixFlags_All">All</a>,
+this assumes that all the data relating to this event is passed in via the <code class="paramref">data</code>
+parameter and no other data should be captured from the environment.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent__ctor_" data-uid="log4net.Core.LoggingEvent.#ctor*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent__ctor_System_Type_log4net_Repository_ILoggerRepository_log4net_Core_LoggingEventData_log4net_Core_FixFlags_" data-uid="log4net.Core.LoggingEvent.#ctor(System.Type,log4net.Repository.ILoggerRepository,log4net.Core.LoggingEventData,log4net.Core.FixFlags)">
+  LoggingEvent(Type, ILoggerRepository, LoggingEventData, FixFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> class
+using specific data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggingEvent(Type callerStackBoundaryDeclaringType, ILoggerRepository repository, LoggingEventData data, FixFlags fixedData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>callerStackBoundaryDeclaringType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The declaring type of the method that is
+the stack boundary into the logging system for this call.</p>
+</dd>
+    <dt><code>repository</code> <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The repository this event is logged in.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a></dt>
+    <dd><p>Data used to initialize the logging event.</p>
+</dd>
+    <dt><code>fixedData</code> <a class="xref" href="log4net.Core.FixFlags.html">FixFlags</a></dt>
+    <dd><p>The fields in the <paranref name="data"></paranref> struct that have already been fixed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent__ctor_System_Type_log4net_Repository_ILoggerRepository_log4net_Core_LoggingEventData_log4net_Core_FixFlags__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This constructor is provided to allow a <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>
+to be created independently of the log4net framework. This can
+be useful if you require a custom serialization scheme.
+</p>
+<p>
+Use the <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_GetLoggingEventData_log4net_Core_FixFlags_">GetLoggingEventData(FixFlags)</a> method to obtain an 
+instance of the <a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a> class.
+</p>
+<p>
+The <code class="paramref">fixedData</code> parameter should be used to specify which fields in the
+<code class="paramref">data</code> struct have been preset. Fields not specified in the <code class="paramref">fixedData</code>
+will be captured from the environment if requested or fixed.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent__ctor_" data-uid="log4net.Core.LoggingEvent.#ctor*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent__ctor_log4net_Core_LoggingEventData_" data-uid="log4net.Core.LoggingEvent.#ctor(log4net.Core.LoggingEventData)">
+  LoggingEvent(LoggingEventData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> class
+using specific data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggingEvent(LoggingEventData data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a></dt>
+    <dd><p>Data used to initialize the logging event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent__ctor_log4net_Core_LoggingEventData__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This constructor is provided to allow a <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>
+to be created independently of the log4net framework. This can
+be useful if you require a custom serialization scheme.
+</p>
+<p>
+Use the <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_GetLoggingEventData_log4net_Core_FixFlags_">GetLoggingEventData(FixFlags)</a> method to obtain an 
+instance of the <a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a> class.
+</p>
+<p>
+This constructor sets this objects <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Fix">Fix</a> flags to <a class="xref" href="log4net.Core.FixFlags.html#log4net_Core_FixFlags_All">All</a>,
+this assumes that all the data relating to this event is passed in via the <code class="paramref">data</code>
+parameter and no other data should be captured from the environment.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="log4net_Core_LoggingEvent_HostNameProperty" data-uid="log4net.Core.LoggingEvent.HostNameProperty">
+  HostNameProperty
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The key into the Properties map for the host name value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string HostNameProperty = &quot;log4net:HostName&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_LoggingEvent_IdentityProperty" data-uid="log4net.Core.LoggingEvent.IdentityProperty">
+  IdentityProperty
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The key into the Properties map for the thread identity value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string IdentityProperty = &quot;log4net:Identity&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_LoggingEvent_UserNameProperty" data-uid="log4net.Core.LoggingEvent.UserNameProperty">
+  UserNameProperty
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The key into the Properties map for the user name value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UserNameProperty = &quot;log4net:UserName&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Core_LoggingEvent_Domain_" data-uid="log4net.Core.LoggingEvent.Domain*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_Domain" data-uid="log4net.Core.LoggingEvent.Domain">
+  Domain
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the AppDomain friendly name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Domain { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The AppDomain friendly name.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_Domain_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the AppDomain friendly name.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_ExceptionObject_" data-uid="log4net.Core.LoggingEvent.ExceptionObject*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_ExceptionObject" data-uid="log4net.Core.LoggingEvent.ExceptionObject">
+  ExceptionObject
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the exception object used to initialize this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Exception ExceptionObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception object used to initialize this event.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_ExceptionObject_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the exception object used to initialize this event.
+Note that this event may not have a valid exception object.
+If the event is serialized the exception object will not 
+be transferred. To get the text of the exception the
+<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_GetExceptionString">GetExceptionString()</a> method must be used 
+not this property.
+</p>
+<p>
+If there is no defined exception object for this event then
+null will be returned.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_Fix_" data-uid="log4net.Core.LoggingEvent.Fix*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_Fix" data-uid="log4net.Core.LoggingEvent.Fix">
+  Fix
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The fixed fields in this event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixFlags Fix { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.FixFlags.html">FixFlags</a></dt>
+    <dd><p>The set of fields that are fixed in this event</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_Fix_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Fields will not be fixed if they have previously been fixed.
+It is not possible to 'unfix' a field.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_Identity_" data-uid="log4net.Core.LoggingEvent.Identity*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_Identity" data-uid="log4net.Core.LoggingEvent.Identity">
+  Identity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the identity of the current thread principal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Identity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string name of the identity of the current thread principal.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_Identity_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Calls <code>System.Threading.Thread.CurrentPrincipal.Identity.Name</code> to get
+the name of the current thread principal.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_Level_" data-uid="log4net.Core.LoggingEvent.Level*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_Level" data-uid="log4net.Core.LoggingEvent.Level">
+  Level
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Level">Level</a> of the logging event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Level Level { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Level">Level</a> of the logging event.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_Level_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Level">Level</a> of the logging event.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_LocationInformation_" data-uid="log4net.Core.LoggingEvent.LocationInformation*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_LocationInformation" data-uid="log4net.Core.LoggingEvent.LocationInformation">
+  LocationInformation
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the location information for this logging event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocationInfo LocationInformation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.LocationInfo.html">LocationInfo</a></dt>
+    <dd><p>The location information for this logging event.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_LocationInformation_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The collected information is cached for future use.
+</p>
+<p>
+See the <a class="xref" href="log4net.Core.LocationInfo.html">LocationInfo</a> class for more information on
+supported frameworks and the different behavior in Debug and
+Release builds.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_LoggerName_" data-uid="log4net.Core.LoggingEvent.LoggerName*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_LoggerName" data-uid="log4net.Core.LoggingEvent.LoggerName">
+  LoggerName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the logger that logged the event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LoggerName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the logger that logged the event.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_LoggerName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the name of the logger that logged the event.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_MessageObject_" data-uid="log4net.Core.LoggingEvent.MessageObject*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_MessageObject" data-uid="log4net.Core.LoggingEvent.MessageObject">
+  MessageObject
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the message object used to initialize this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object MessageObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object used to initialize this event.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_MessageObject_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the message object used to initialize this event.
+Note that this event may not have a valid message object.
+If the event is serialized the message object will not 
+be transferred. To get the text of the message the
+<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_RenderedMessage">RenderedMessage</a> property must be used 
+not this property.
+</p>
+<p>
+If there is no defined message object for this event then
+null will be returned.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_Properties_" data-uid="log4net.Core.LoggingEvent.Properties*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_Properties" data-uid="log4net.Core.LoggingEvent.Properties">
+  Properties
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional event specific properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertiesDictionary Properties { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Util.PropertiesDictionary.html">PropertiesDictionary</a></dt>
+    <dd><p>Additional event specific properties.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_Properties_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A logger or an appender may attach additional
+properties to specific events. These properties
+have a string key and an object value.
+</p>
+<p>
+This property is for events that have been added directly to
+this event. The aggregate properties (which include these
+event properties) can be retrieved using <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_LookupProperty_System_String_">LookupProperty(string)</a>
+and <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_GetProperties">GetProperties()</a>.
+</p>
+<p>
+Once the properties have been fixed <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Fix">Fix</a> this property
+returns the combined cached properties. This ensures that updates to
+this property are always reflected in the underlying storage. When
+returning the combined properties there may be more keys in the
+Dictionary than expected.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_RenderedMessage_" data-uid="log4net.Core.LoggingEvent.RenderedMessage*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_RenderedMessage" data-uid="log4net.Core.LoggingEvent.RenderedMessage">
+  RenderedMessage
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the message, rendered through the <a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_RendererMap">RendererMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RenderedMessage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message rendered through the <a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_RendererMap">RendererMap</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_RenderedMessage_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The collected information is cached for future use.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_Repository_" data-uid="log4net.Core.LoggingEvent.Repository*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_Repository" data-uid="log4net.Core.LoggingEvent.Repository">
+  Repository
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> that this event was created in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILoggerRepository Repository { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_Repository_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> that this event was created in.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_StartTime_" data-uid="log4net.Core.LoggingEvent.StartTime*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_StartTime" data-uid="log4net.Core.LoggingEvent.StartTime">
+  StartTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the time when the current process started.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTime StartTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>This is the time when this process started.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_StartTime_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The TimeStamp is stored in the local time zone for this computer.
+</p>
+<p>
+Tries to get the start time for the current process.
+Failing that it returns the time of the first call to
+this property.
+</p>
+<p>
+Note that AppDomains may be loaded and unloaded within the
+same process without the process terminating and therefore
+without the process start time being reset.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_ThreadName_" data-uid="log4net.Core.LoggingEvent.ThreadName*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_ThreadName" data-uid="log4net.Core.LoggingEvent.ThreadName">
+  ThreadName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the current thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ThreadName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the current thread, or the thread ID when
+the name is not available.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_ThreadName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The collected information is cached for future use.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_TimeStamp_" data-uid="log4net.Core.LoggingEvent.TimeStamp*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_TimeStamp" data-uid="log4net.Core.LoggingEvent.TimeStamp">
+  TimeStamp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the time of the logging event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime TimeStamp { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The time of the logging event.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_TimeStamp_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The TimeStamp is stored in the local time zone for this computer.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_UserName_" data-uid="log4net.Core.LoggingEvent.UserName*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_UserName" data-uid="log4net.Core.LoggingEvent.UserName">
+  UserName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the current user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UserName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the current user, or <code>NOT AVAILABLE</code> when the
+underlying runtime has no support for retrieving the name of the
+current user.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_UserName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Calls <code>WindowsIdentity.GetCurrent().Name</code> to get the name of
+the current windows user.
+</p>
+<p>
+To improve performance, we could cache the string representation of 
+the name, and reuse that as long as the identity stayed constant.  
+Once the identity changed, we would need to re-assign and re-render 
+the string.
+</p>
+<p>
+However, the <code>WindowsIdentity.GetCurrent()</code> call seems to 
+return different objects every time, so the current implementation 
+doesn't do this type of caching.
+</p>
+<p>
+Timing for these operations:
+</p>
+<table><thead><tr><th class="term">Method</th><th class="description">Results</th></tr></thead><tbody><tr><td class="term"><code>WindowsIdentity.GetCurrent()</code></td><td class="description">10000 loops, 00:00:00.2031250 seconds</td></tr><tr><td class="term"><code>WindowsIdentity.GetCurrent().Name</code></td><td class="description">10000 loops, 00:00:08.0468750 seconds</td></tr></tbody></table>
+<p>
+This means we could speed things up almost 40 times by caching the 
+value of the <code>WindowsIdentity.GetCurrent().Name</code> property, since 
+this takes (8.04-0.20) = 7.84375 seconds.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Core_LoggingEvent_FixVolatileData_" data-uid="log4net.Core.LoggingEvent.FixVolatileData*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_FixVolatileData" data-uid="log4net.Core.LoggingEvent.FixVolatileData">
+  FixVolatileData()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fix instance fields that hold volatile data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Fix property&quot;)]
+public void FixVolatileData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_FixVolatileData_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Some of the values in instances of <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>
+are considered volatile, that is the values are correct at the
+time the event is delivered to appenders, but will not be consistent
+at any time afterwards. If an event is to be stored and then processed
+at a later time these volatile values must be fixed by calling
+<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a>. There is a performance penalty
+incurred by calling <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a> but it
+is essential to maintaining data consistency.
+</p>
+<p>
+Calling <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a> is equivalent to
+calling <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData_System_Boolean_">FixVolatileData(bool)</a> passing the parameter
+<code>false</code>.
+</p>
+<p>
+See <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData_System_Boolean_">FixVolatileData(bool)</a> for more
+information.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_FixVolatileData_" data-uid="log4net.Core.LoggingEvent.FixVolatileData*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_FixVolatileData_System_Boolean_" data-uid="log4net.Core.LoggingEvent.FixVolatileData(System.Boolean)">
+  FixVolatileData(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fixes instance fields that hold volatile data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Fix property&quot;)]
+public void FixVolatileData(bool fastButLoose)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fastButLoose</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set to <code>true</code> to not fix data that takes a long time to fix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_FixVolatileData_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Some of the values in instances of <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>
+are considered volatile, that is the values are correct at the
+time the event is delivered to appenders, but will not be consistent
+at any time afterwards. If an event is to be stored and then processed
+at a later time these volatile values must be fixed by calling
+<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a>. There is a performance penalty
+for incurred by calling <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a> but it
+is essential to maintaining data consistency.
+</p>
+<p>
+The <code class="paramref">fastButLoose</code> param controls the data that
+is fixed. Some of the data that can be fixed takes a long time to 
+generate, therefore if you do not require those settings to be fixed
+they can be ignored by setting the <code class="paramref">fastButLoose</code> param
+to <code>true</code>. This setting will ignore the <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_LocationInformation">LocationInformation</a>
+and <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_UserName">UserName</a> settings.
+</p>
+<p>
+Set <code class="paramref">fastButLoose</code> to <code>false</code> to ensure that all 
+settings are fixed.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_FixVolatileData_" data-uid="log4net.Core.LoggingEvent.FixVolatileData*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_FixVolatileData_log4net_Core_FixFlags_" data-uid="log4net.Core.LoggingEvent.FixVolatileData(log4net.Core.FixFlags)">
+  FixVolatileData(FixFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fix the fields specified by the <a class="xref" href="log4net.Core.FixFlags.html">FixFlags</a> parameter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void FixVolatileData(FixFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flags</code> <a class="xref" href="log4net.Core.FixFlags.html">FixFlags</a></dt>
+    <dd><p>the fields to fix</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_FixVolatileData_log4net_Core_FixFlags__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Only fields specified in the <code class="paramref">flags</code> will be fixed.
+Fields will not be fixed if they have previously been fixed.
+It is not possible to 'unfix' a field.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_GetExceptionStrRep_" data-uid="log4net.Core.LoggingEvent.GetExceptionStrRep*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_GetExceptionStrRep" data-uid="log4net.Core.LoggingEvent.GetExceptionStrRep">
+  GetExceptionStrRep()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns this event's exception's rendered using the
+<a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_RendererMap">RendererMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use GetExceptionString instead&quot;)]
+public string GetExceptionStrRep()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>This event's exception's rendered using the <a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_RendererMap">RendererMap</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_GetExceptionStrRep_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<b>Obsolete. Use <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_GetExceptionString">GetExceptionString()</a> instead.</b>
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_GetExceptionString_" data-uid="log4net.Core.LoggingEvent.GetExceptionString*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_GetExceptionString" data-uid="log4net.Core.LoggingEvent.GetExceptionString">
+  GetExceptionString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns this event's exception's rendered using the
+<a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_RendererMap">RendererMap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetExceptionString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>This event's exception's rendered using the <a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_RendererMap">RendererMap</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_GetExceptionString_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Returns this event's exception's rendered using the 
+<a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_RendererMap">RendererMap</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_GetLoggingEventData_" data-uid="log4net.Core.LoggingEvent.GetLoggingEventData*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_GetLoggingEventData" data-uid="log4net.Core.LoggingEvent.GetLoggingEventData">
+  GetLoggingEventData()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the portable data for this <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggingEventData GetLoggingEventData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a> for this event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_GetLoggingEventData_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A new <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> can be constructed using a
+<a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a> instance.
+</p>
+<p>
+Does a <a class="xref" href="log4net.Core.FixFlags.html#log4net_Core_FixFlags_Partial">Partial</a> fix of the data
+in the logging event before returning the event data.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_GetLoggingEventData_" data-uid="log4net.Core.LoggingEvent.GetLoggingEventData*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_GetLoggingEventData_log4net_Core_FixFlags_" data-uid="log4net.Core.LoggingEvent.GetLoggingEventData(log4net.Core.FixFlags)">
+  GetLoggingEventData(FixFlags)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the portable data for this <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoggingEventData GetLoggingEventData(FixFlags fixFlags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fixFlags</code> <a class="xref" href="log4net.Core.FixFlags.html">FixFlags</a></dt>
+    <dd><p>The set of data to ensure is fixed in the LoggingEventData</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a> for this event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_GetLoggingEventData_log4net_Core_FixFlags__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A new <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> can be constructed using a
+<a class="xref" href="log4net.Core.LoggingEventData.html">LoggingEventData</a> instance.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_GetObjectData_" data-uid="log4net.Core.LoggingEvent.GetObjectData*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="log4net.Core.LoggingEvent.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+  GetObjectData(SerializationInfo, StreamingContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serializes this object into the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityCritical]
+public virtual void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> to populate with data.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext">StreamingContext</a></dt>
+    <dd><p>The destination for this serialization.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The data in this event must be fixed before it can be serialized.
+</p>
+<p>
+The <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_FixVolatileData">FixVolatileData()</a> method must be called during the
+<a class="xref" href="log4net.Appender.IAppender.html#log4net_Appender_IAppender_DoAppend_log4net_Core_LoggingEvent_">DoAppend(LoggingEvent)</a> method call if this event 
+is to be used outside that method.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_GetProperties_" data-uid="log4net.Core.LoggingEvent.GetProperties*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_GetProperties" data-uid="log4net.Core.LoggingEvent.GetProperties">
+  GetProperties()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get all the composite properties in this event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertiesDictionary GetProperties()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Util.PropertiesDictionary.html">PropertiesDictionary</a></dt>
+    <dd><p>the <a class="xref" href="log4net.Util.PropertiesDictionary.html">PropertiesDictionary</a> containing all the properties</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_GetProperties_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+See <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_LookupProperty_System_String_">LookupProperty(string)</a> for details of the composite properties 
+stored by the event.
+</p>
+<p>
+This method returns a single <a class="xref" href="log4net.Util.PropertiesDictionary.html">PropertiesDictionary</a> containing all the
+properties defined for this event.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_LookupProperty_" data-uid="log4net.Core.LoggingEvent.LookupProperty*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_LookupProperty_System_String_" data-uid="log4net.Core.LoggingEvent.LookupProperty(System.String)">
+  LookupProperty(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lookup a composite property in this event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object LookupProperty(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the key for the property to lookup</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>the value for the property</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_LookupProperty_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This event has composite properties that combine together properties from
+several different contexts in the following order:
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggingEvent_WriteRenderedMessage_" data-uid="log4net.Core.LoggingEvent.WriteRenderedMessage*"></a>
+
+  <h3 id="log4net_Core_LoggingEvent_WriteRenderedMessage_System_IO_TextWriter_" data-uid="log4net.Core.LoggingEvent.WriteRenderedMessage(System.IO.TextWriter)">
+  WriteRenderedMessage(TextWriter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write the rendered message to a TextWriter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteRenderedMessage(TextWriter writer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>the writer to write the message to</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggingEvent_WriteRenderedMessage_System_IO_TextWriter__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Unlike the <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_RenderedMessage">RenderedMessage</a> property this method
+does store the message data in the internal cache. Therefore 
+if called only once this method should be faster than the
+<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_RenderedMessage">RenderedMessage</a> property, however if the message is
+to be accessed multiple times then the property will be more efficient.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

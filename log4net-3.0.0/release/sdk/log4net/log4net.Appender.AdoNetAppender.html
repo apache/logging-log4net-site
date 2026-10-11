@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AdoNetAppender | Apache log4net 3.0.0 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AdoNetAppender | Apache log4net 3.0.0 API Reference ">
+      
+      <meta name="description" content="Appender that logs to a database.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.AdoNetAppender">
+
+
+
+  <h1 id="log4net_Appender_AdoNetAppender" data-uid="log4net.Appender.AdoNetAppender" class="text-break">
+Class AdoNetAppender  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Appender that logs to a database.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AdoNetAppender : BufferingAppenderSkeleton, IBulkAppender, IAppender, IOptionHandler, IFlushable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a></div>
+      <div><a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html">BufferingAppenderSkeleton</a></div>
+      <div><span class="xref">AdoNetAppender</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.IBulkAppender.html">IBulkAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+      <div><a class="xref" href="log4net.Appender.IFlushable.html">IFlushable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Flush_System_Int32_">BufferingAppenderSkeleton.Flush(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Flush">BufferingAppenderSkeleton.Flush()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Flush_System_Boolean_">BufferingAppenderSkeleton.Flush(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Append_log4net_Core_LoggingEvent_">BufferingAppenderSkeleton.Append(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_SendFromBuffer_log4net_Core_LoggingEvent_log4net_Util_CyclicBuffer_">BufferingAppenderSkeleton.SendFromBuffer(LoggingEvent, CyclicBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Lossy">BufferingAppenderSkeleton.Lossy</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_BufferSize">BufferingAppenderSkeleton.BufferSize</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Evaluator">BufferingAppenderSkeleton.Evaluator</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_LossyEvaluator">BufferingAppenderSkeleton.LossyEvaluator</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Fix">BufferingAppenderSkeleton.Fix</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_">AppenderSkeleton.DoAppend(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent___">AppenderSkeleton.DoAppend(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.FilterEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter_">AppenderSkeleton.AddFilter(IFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ClearFilters">AppenderSkeleton.ClearFilters()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level_">AppenderSkeleton.IsAsSevereAsThreshold(Level)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent___">AppenderSkeleton.Append(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_System_Collections_Generic_IEnumerable_log4net_Core_LoggingEvent__">AppenderSkeleton.Append(IEnumerable&lt;LoggingEvent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_PreAppendCheck">AppenderSkeleton.PreAppendCheck()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RequiresLayout">AppenderSkeleton.RequiresLayout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="log4net_Appender_AdoNetAppender_examples">Examples</h2>
+  <p>An example of a SQL Server table that could be logged to:</p>
+<pre><code class="lang-csharp">CREATE TABLE [dbo].[Log] ( 
+  [ID] [int] IDENTITY (1, 1) NOT NULL ,
+  [Date] [datetime] NOT NULL ,
+  [Thread] [varchar] (255) NOT NULL ,
+  [Level] [varchar] (20) NOT NULL ,
+  [Logger] [varchar] (255) NOT NULL ,
+  [Message] [varchar] (4000) NOT NULL 
+) ON [PRIMARY]</code></pre>
+
+  <p>An example configuration to log to the above table:</p>
+<pre><code class="lang-csharp"></code></pre>
+
+
+  <h2 id="log4net_Appender_AdoNetAppender_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="log4net.Appender.AdoNetAppender.html">AdoNetAppender</a> appends logging events to a table within a
+database. The appender can be configured to specify the connection 
+string by setting the <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_ConnectionString">ConnectionString</a> property. 
+The connection type (provider) can be specified by setting the <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_ConnectionType">ConnectionType</a>
+property. For more information on database connection strings for
+your specific database see <a href="http://www.connectionstrings.com/">http://www.connectionstrings.com/</a>.
+</p>
+<p>
+Records are written into the database either using a prepared
+statement or a stored procedure. The <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_CommandType">CommandType</a> property
+is set to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.commandtype#system-data-commandtype-text">Text</a> (<code>System.Data.CommandType.Text</code>) to specify a prepared statement
+or to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.commandtype#system-data-commandtype-storedprocedure">StoredProcedure</a> (<code>System.Data.CommandType.StoredProcedure</code>) to specify a stored
+procedure.
+</p>
+<p>
+The prepared statement text or the name of the stored procedure
+must be set in the <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_CommandText">CommandText</a> property.
+</p>
+<p>
+The prepared statement or stored procedure can take a number
+of parameters. Parameters are added using the <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_AddParameter_log4net_Appender_AdoNetAppenderParameter_">AddParameter(AdoNetAppenderParameter)</a>
+method. This adds a single <a class="xref" href="log4net.Appender.AdoNetAppenderParameter.html">AdoNetAppenderParameter</a> to the
+ordered list of parameters. The <a class="xref" href="log4net.Appender.AdoNetAppenderParameter.html">AdoNetAppenderParameter</a>
+type may be subclassed if required to provide database specific
+functionality. The <a class="xref" href="log4net.Appender.AdoNetAppenderParameter.html">AdoNetAppenderParameter</a> specifies
+the parameter name, database type, size, and how the value should
+be generated using a <a class="xref" href="log4net.Layout.ILayout.html">ILayout</a>.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_AdoNetAppender__ctor_" data-uid="log4net.Appender.AdoNetAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender__ctor" data-uid="log4net.Appender.AdoNetAppender.#ctor">
+  AdoNetAppender()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Appender.AdoNetAppender.html">AdoNetAppender</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdoNetAppender()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Public default constructor to initialize a new instance of this class.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="log4net_Appender_AdoNetAppender_m_parameters" data-uid="log4net.Appender.AdoNetAppender.m_parameters">
+  m_parameters
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The list of <a class="xref" href="log4net.Appender.AdoNetAppenderParameter.html">AdoNetAppenderParameter</a> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;AdoNetAppenderParameter&gt; m_parameters</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="log4net.Appender.AdoNetAppenderParameter.html">AdoNetAppenderParameter</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_m_parameters_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The list of <a class="xref" href="log4net.Appender.AdoNetAppenderParameter.html">AdoNetAppenderParameter</a> objects.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Appender_AdoNetAppender_AppSettingsKey_" data-uid="log4net.Appender.AdoNetAppender.AppSettingsKey*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_AppSettingsKey" data-uid="log4net.Appender.AdoNetAppender.AppSettingsKey">
+  AppSettingsKey
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The appSettings key from App.Config that contains the connection string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? AppSettingsKey { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_CommandText_" data-uid="log4net.Appender.AdoNetAppender.CommandText*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_CommandText" data-uid="log4net.Appender.AdoNetAppender.CommandText">
+  CommandText
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the command text that is used to insert logging events
+into the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? CommandText { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The command text used to insert logging events into the database.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_CommandText_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Either the text of the prepared statement or the
+name of the stored procedure to execute to write into
+the database.
+</p>
+<p>
+The <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_CommandType">CommandType</a> property determines if
+this text is a prepared statement or a stored procedure.
+</p>
+<p>
+If this property is not set, the command text is retrieved by invoking
+<a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_GetLogStatement_log4net_Core_LoggingEvent_">GetLogStatement(LoggingEvent)</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_CommandType_" data-uid="log4net.Appender.AdoNetAppender.CommandType*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_CommandType" data-uid="log4net.Appender.AdoNetAppender.CommandType">
+  CommandType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the command type to execute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandType CommandType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.commandtype">CommandType</a></dt>
+    <dd><p>The command type to execute.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_CommandType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This value may be either <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.commandtype#system-data-commandtype-text">Text</a> (<code>System.Data.CommandType.Text</code>) to specify
+that the <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_CommandText">CommandText</a> is a prepared statement to execute, 
+or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.commandtype#system-data-commandtype-storedprocedure">StoredProcedure</a> (<code>System.Data.CommandType.StoredProcedure</code>) to specify that the
+<a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_CommandText">CommandText</a> property is the name of a stored procedure
+to execute.
+</p>
+<p>
+The default value is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.commandtype#system-data-commandtype-text">Text</a> (<code>System.Data.CommandType.Text</code>).
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_Connection_" data-uid="log4net.Appender.AdoNetAppender.Connection*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_Connection" data-uid="log4net.Appender.AdoNetAppender.Connection">
+  Connection
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDbConnection? Connection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a></dt>
+    <dd><p>The underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_Connection_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="log4net.Appender.AdoNetAppender.html">AdoNetAppender</a> creates a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a> to insert
+logging events into a database.  Classes deriving from <a class="xref" href="log4net.Appender.AdoNetAppender.html">AdoNetAppender</a>
+can use this property to get or set this <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a>.  Use the
+underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a> returned from <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_Connection">Connection</a> if
+you require access beyond that which <a class="xref" href="log4net.Appender.AdoNetAppender.html">AdoNetAppender</a> provides.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_ConnectionString_" data-uid="log4net.Appender.AdoNetAppender.ConnectionString*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_ConnectionString" data-uid="log4net.Appender.AdoNetAppender.ConnectionString">
+  ConnectionString
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the database connection string that is used to connect to
+the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ConnectionString { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The database connection string used to connect to the database.</p>
+</dd>
+  </dl>
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_ConnectionString_examples">Examples</h4>
+  <p>Connection string for MS Access via ODBC:</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;&quot;DSN=MS Access Database;UID=admin;PWD=;SystemDB=C:\data\System.mdw;SafeTransactions = 0;FIL=MS Access;DriverID = 25;DBQ=C:\data\train33.mdb&quot;&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+  <p>Another connection string for MS Access via ODBC:</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;&quot;Driver={Microsoft Access Driver (*.mdb)};DBQ=C:\Work\cvs_root\log4net-1.2\access.mdb;UID=;PWD=;&quot;&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+  <p>Connection string for MS Access via OLE DB:</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;&quot;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Work\cvs_root\log4net-1.2\access.mdb;User Id=;Password=;&quot;&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_ConnectionString_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The connections string is specific to the connection type.
+See <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_ConnectionType">ConnectionType</a> for more information.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_ConnectionStringName_" data-uid="log4net.Appender.AdoNetAppender.ConnectionStringName*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_ConnectionStringName" data-uid="log4net.Appender.AdoNetAppender.ConnectionStringName">
+  ConnectionStringName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The connectionStrings key from App.Config that contains the connection string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ConnectionStringName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_ConnectionType_" data-uid="log4net.Appender.AdoNetAppender.ConnectionType*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_ConnectionType" data-uid="log4net.Appender.AdoNetAppender.ConnectionType">
+  ConnectionType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the type name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a> connection
+that should be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ConnectionType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The type name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a> connection.</p>
+</dd>
+  </dl>
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_ConnectionType_examples">Examples</h4>
+  <p>Use the OLE DB Provider. This is the default value.</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;System.Data.OleDb.OleDbConnection, System.Data, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+  <p>Use the MS SQL Server Provider.</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;System.Data.SqlClient.SqlConnection, System.Data, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+  <p>Use the ODBC Provider.</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;Microsoft.Data.Odbc.OdbcConnection,Microsoft.Data.Odbc,version=1.0.3300.0,publicKeyToken=b77a5c561934e089,culture=neutral&lt;/code&gt;&lt;/pre&gt;
+
+        This is an optional package that you can download from 
+        &lt;a href=&quot;http://msdn.microsoft.com/downloads&quot;&gt;http://msdn.microsoft.com/downloads&lt;/a&gt; 
+        search for &lt;b&gt;ODBC .NET Data Provider&lt;/b&gt;.
+</code></pre>
+
+  <p>Use the Oracle Provider.</p>
+<pre><code>        &lt;pre&gt;&lt;code class=&quot;lang-csharp&quot;&gt;System.Data.OracleClient.OracleConnection, System.Data.OracleClient, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/code&gt;&lt;/pre&gt;
+
+        This is an optional package that you can download from 
+        &lt;a href=&quot;http://msdn.microsoft.com/downloads&quot;&gt;http://msdn.microsoft.com/downloads&lt;/a&gt; 
+        search for &lt;b&gt;.NET Managed Provider for Oracle&lt;/b&gt;.
+</code></pre>
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_ConnectionType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The type name of the ADO.NET provider to use.
+</p>
+<p>
+The default is to use the OLE DB provider.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_ReconnectOnError_" data-uid="log4net.Appender.AdoNetAppender.ReconnectOnError*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_ReconnectOnError" data-uid="log4net.Appender.AdoNetAppender.ReconnectOnError">
+  ReconnectOnError
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should this appender try to reconnect to the database on error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReconnectOnError { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the appender should try to reconnect to the database after an
+error has occurred, otherwise <code>false</code>. The default value is <code>false</code>,
+i.e. not to try to reconnect.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_ReconnectOnError_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The default behaviour is for the appender not to try to reconnect to the
+database if an error occurs. Subsequent logging events are discarded.
+</p>
+<p>
+To force the appender to attempt to reconnect to the database set this
+property to <code>true</code>.
+</p>
+<div class="NOTE"><h5>note</h5><p>
+When the appender attempts to connect to the database there may be a
+delay of up to the connection timeout specified in the connection string.
+This delay will block the calling application's thread. 
+Until the connection can be reestablished this potential delay may occur multiple times.
+</p></div>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_SecurityContext_" data-uid="log4net.Appender.AdoNetAppender.SecurityContext*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_SecurityContext" data-uid="log4net.Appender.AdoNetAppender.SecurityContext">
+  SecurityContext
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_SecurityContext">SecurityContext</a> used to call the NetSend method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SecurityContext? SecurityContext { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.SecurityContext.html">SecurityContext</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_SecurityContext">SecurityContext</a> used to call the NetSend method.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_SecurityContext_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Unless a <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_SecurityContext">SecurityContext</a> specified here for this appender
+the <a class="xref" href="log4net.Core.SecurityContextProvider.html#log4net_Core_SecurityContextProvider_DefaultProvider">DefaultProvider</a> is queried for the
+security context to use. The default behavior is to use the security context
+of the current thread.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_UseTransactions_" data-uid="log4net.Appender.AdoNetAppender.UseTransactions*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_UseTransactions" data-uid="log4net.Appender.AdoNetAppender.UseTransactions">
+  UseTransactions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should transactions be used to insert logging events in the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseTransactions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if transactions should be used to insert logging events in
+the database, otherwise <code>false</code>. The default value is <code>true</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_UseTransactions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets or sets a value that indicates whether transactions should be used
+to insert logging events in the database.
+</p>
+<p>
+When set a single transaction will be used to insert the buffered events
+into the database. Otherwise each event will be inserted without using
+an explicit transaction.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_AdoNetAppender_ActivateOptions_" data-uid="log4net.Appender.AdoNetAppender.ActivateOptions*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_ActivateOptions" data-uid="log4net.Appender.AdoNetAppender.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize the appender based on the options set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_ActivateOptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is part of the <a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a> delayed object
+activation scheme. The <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_ActivateOptions">ActivateOptions()</a> method must 
+be called on this object after the configuration properties have
+been set. Until <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_ActivateOptions">ActivateOptions()</a> is called this
+object is in an undefined state and must not be used. 
+</p>
+<p>
+If any of the configuration properties are modified then 
+<a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_ActivateOptions">ActivateOptions()</a> must be called again.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_AddParameter_" data-uid="log4net.Appender.AdoNetAppender.AddParameter*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_AddParameter_log4net_Appender_AdoNetAppenderParameter_" data-uid="log4net.Appender.AdoNetAppender.AddParameter(log4net.Appender.AdoNetAppenderParameter)">
+  AddParameter(AdoNetAppenderParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a parameter to the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddParameter(AdoNetAppenderParameter parameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameter</code> <a class="xref" href="log4net.Appender.AdoNetAppenderParameter.html">AdoNetAppenderParameter</a></dt>
+    <dd><p>The parameter to add to the command.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_AddParameter_log4net_Appender_AdoNetAppenderParameter__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Adds a parameter to the ordered list of command parameters.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_CreateConnection_" data-uid="log4net.Appender.AdoNetAppender.CreateConnection*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_CreateConnection_System_Type_System_String_" data-uid="log4net.Appender.AdoNetAppender.CreateConnection(System.Type,System.String)">
+  CreateConnection(Type, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a> instance used to connect to the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IDbConnection CreateConnection(Type connectionType, string connectionString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectionType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a> object.</p>
+</dd>
+    <dt><code>connectionString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The connectionString output from the ResolveConnectionString method.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbconnection">IDbConnection</a> instance with a valid connection string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_CreateConnection_System_Type_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method is called whenever a new IDbConnection is needed (i.e. when a reconnect is necessary).</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_GetLogStatement_" data-uid="log4net.Appender.AdoNetAppender.GetLogStatement*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_GetLogStatement_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.AdoNetAppender.GetLogStatement(log4net.Core.LoggingEvent)">
+  GetLogStatement(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the log message into database statement text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string GetLogStatement(LoggingEvent logEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event being logged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Text that can be passed to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbcommand">IDbCommand</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_GetLogStatement_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method can be overridden by subclasses to provide
+more control over the format of the database statement.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_OnClose_" data-uid="log4net.Appender.AdoNetAppender.OnClose*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_OnClose" data-uid="log4net.Appender.AdoNetAppender.OnClose">
+  OnClose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override the parent method to close the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnClose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_OnClose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Closes the database command and database connection.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_Prepare_" data-uid="log4net.Appender.AdoNetAppender.Prepare*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_Prepare_System_Data_IDbCommand_" data-uid="log4net.Appender.AdoNetAppender.Prepare(System.Data.IDbCommand)">
+  Prepare(IDbCommand)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prepare entire database command object to be executed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Prepare(IDbCommand dbCmd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dbCmd</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbcommand">IDbCommand</a></dt>
+    <dd><p>The command to prepare.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_ResolveConnectionString_" data-uid="log4net.Appender.AdoNetAppender.ResolveConnectionString*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_ResolveConnectionString_System_String__" data-uid="log4net.Appender.AdoNetAppender.ResolveConnectionString(System.String@)">
+  ResolveConnectionString(out string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves the connection string from the ConnectionString, ConnectionStringName, or AppSettingsKey
+property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string ResolveConnectionString(out string connectionStringContext)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>connectionStringContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Additional information describing the connection string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A connection string used to connect to the database.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_ResolveConnectionType_" data-uid="log4net.Appender.AdoNetAppender.ResolveConnectionType*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_ResolveConnectionType" data-uid="log4net.Appender.AdoNetAppender.ResolveConnectionType">
+  ResolveConnectionType()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the class type of the ADO.NET provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Type ResolveConnectionType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of the ADO.NET provider</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_ResolveConnectionType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the Type of the ADO.NET provider to use to connect to the
+database. This method resolves the type specified in the 
+<a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_ConnectionType">ConnectionType</a> property.
+</p>
+<p>
+Subclasses can override this method to return a different type
+if necessary.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_SendBuffer_" data-uid="log4net.Appender.AdoNetAppender.SendBuffer*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_SendBuffer_System_Data_IDbTransaction_log4net_Core_LoggingEvent___" data-uid="log4net.Appender.AdoNetAppender.SendBuffer(System.Data.IDbTransaction,log4net.Core.LoggingEvent[])">
+  SendBuffer(IDbTransaction?, LoggingEvent[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes the events to the database using the transaction specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SendBuffer(IDbTransaction? dbTran, LoggingEvent[] events)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dbTran</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.idbtransaction">IDbTransaction</a></dt>
+    <dd><p>The transaction that the events will be executed under.</p>
+</dd>
+    <dt><code>events</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>[]</dt>
+    <dd><p>The array of events to insert into the database.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_SendBuffer_System_Data_IDbTransaction_log4net_Core_LoggingEvent____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The transaction argument can be <code>null</code> if the appender has been
+configured not to use transactions. See <a class="xref" href="log4net.Appender.AdoNetAppender.html#log4net_Appender_AdoNetAppender_UseTransactions">UseTransactions</a>
+property for more information.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_AdoNetAppender_SendBuffer_" data-uid="log4net.Appender.AdoNetAppender.SendBuffer*"></a>
+
+  <h3 id="log4net_Appender_AdoNetAppender_SendBuffer_log4net_Core_LoggingEvent___" data-uid="log4net.Appender.AdoNetAppender.SendBuffer(log4net.Core.LoggingEvent[])">
+  SendBuffer(LoggingEvent[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts the events into the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SendBuffer(LoggingEvent[] events)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>[]</dt>
+    <dd><p>The events to insert into the database.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AdoNetAppender_SendBuffer_log4net_Core_LoggingEvent____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Insert all the events specified in the <code class="paramref">events</code>
+array into the database.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

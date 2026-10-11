@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UdpAppender | Apache log4net 3.1.0 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UdpAppender | Apache log4net 3.1.0 API Reference ">
+      
+      <meta name="description" content="Sends logging events as connectionless UDP datagrams to a remote host or a multicast group using an .">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.UdpAppender">
+
+
+
+  <h1 id="log4net_Appender_UdpAppender" data-uid="log4net.Appender.UdpAppender" class="text-break">
+Class UdpAppender  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Sends logging events as connectionless UDP datagrams to a remote host or a
+multicast group using an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UdpAppender : AppenderSkeleton, IBulkAppender, IAppender, IOptionHandler, IFlushable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a></div>
+      <div><span class="xref">UdpAppender</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.IBulkAppender.html">IBulkAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+      <div><a class="xref" href="log4net.Appender.IFlushable.html">IFlushable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.RemoteSyslogAppender.html">RemoteSyslogAppender</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_">AppenderSkeleton.DoAppend(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent___">AppenderSkeleton.DoAppend(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.FilterEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter_">AppenderSkeleton.AddFilter(IFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ClearFilters">AppenderSkeleton.ClearFilters()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level_">AppenderSkeleton.IsAsSevereAsThreshold(Level)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent___">AppenderSkeleton.Append(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_System_Collections_Generic_IEnumerable_log4net_Core_LoggingEvent__">AppenderSkeleton.Append(IEnumerable&lt;LoggingEvent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_PreAppendCheck">AppenderSkeleton.PreAppendCheck()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Flush_System_Int32_">AppenderSkeleton.Flush(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+  <h2 id="log4net_Appender_UdpAppender_examples">Examples</h2>
+  <p>This example shows how to log receive logging events that are sent
+on IP address 244.0.0.1 and port 8080 to the console. The event is
+encoded in the packet as a unicode string and it is decoded as such.</p>
+<pre><code class="lang-csharp">IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0);
+UdpClient udpClient;
+byte[] buffer;
+string loggingEvent;
+
+try 
+{
+    udpClient = new UdpClient(8080);
+
+    while(true) 
+    {
+        buffer = udpClient.Receive(ref remoteEndPoint);
+        loggingEvent = System.Text.Encoding.Unicode.GetString(buffer);
+        Console.WriteLine(loggingEvent);
+    }
+} 
+catch(Exception e) 
+{
+    Console.WriteLine(e.ToString());
+}</code></pre>
+<pre><code class="lang-csharp">Dim remoteEndPoint as IPEndPoint
+Dim udpClient as UdpClient
+Dim buffer as Byte()
+Dim loggingEvent as String
+
+Try 
+    remoteEndPoint = new IPEndPoint(IPAddress.Any, 0)
+    udpClient = new UdpClient(8080)
+
+    While True
+        buffer = udpClient.Receive(ByRef remoteEndPoint)
+        loggingEvent = System.Text.Encoding.Unicode.GetString(buffer)
+        Console.WriteLine(loggingEvent)
+    Wend
+Catch e As Exception
+    Console.WriteLine(e.ToString())
+End Try</code></pre>
+<p>
+An example configuration section to log information using this appender to the 
+IP 224.0.0.1 on port 8080:
+</p>
+<pre><code class="lang-csharp"></code></pre>
+
+
+  <h2 id="log4net_Appender_UdpAppender_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+UDP guarantees neither that messages arrive, nor that they arrive in the correct order.
+</p>
+<p>
+To view the logging results, a custom application can be developed that listens for logging 
+events.
+</p>
+<p>
+When decoding events send via this appender remember to use the same encoding
+to decode the events as was used to send the events. See the <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_Encoding">Encoding</a>
+property to specify the encoding to use.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_UdpAppender__ctor_" data-uid="log4net.Appender.UdpAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender__ctor" data-uid="log4net.Appender.UdpAppender.#ctor">
+  UdpAppender()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Appender.UdpAppender.html">UdpAppender</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UdpAppender()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default constructor initializes all fields to their default values.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Appender_UdpAppender_Client_" data-uid="log4net.Appender.UdpAppender.Client*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_Client" data-uid="log4net.Appender.UdpAppender.Client">
+  Client
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UdpClient? Client { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a></dt>
+    <dd><p>The underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_Client_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><a class="xref" href="log4net.Appender.UdpAppender.html">UdpAppender</a> creates a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> to send logging events
+over a network.  Classes deriving from <a class="xref" href="log4net.Appender.UdpAppender.html">UdpAppender</a> can use this
+property to get or set this <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a>.  Use the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a>
+returned from <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_Client">Client</a> if you require access beyond that which
+<a class="xref" href="log4net.Appender.UdpAppender.html">UdpAppender</a> provides.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_UdpAppender_Encoding_" data-uid="log4net.Appender.UdpAppender.Encoding*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_Encoding" data-uid="log4net.Appender.UdpAppender.Encoding">
+  Encoding
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_Encoding">Encoding</a> used to write the packets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Encoding Encoding { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_Encoding">Encoding</a> used to write the packets.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_Encoding_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_Encoding">Encoding</a> used to write the packets.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_UdpAppender_LocalPort_" data-uid="log4net.Appender.UdpAppender.LocalPort*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_LocalPort" data-uid="log4net.Appender.UdpAppender.LocalPort">
+  LocalPort
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the TCP port number from which the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> will communicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LocalPort { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An integer value in the range <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.minport">MinPort</a> to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.maxport">MaxPort</a>
+indicating the TCP port number from which the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> will communicate.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_LocalPort_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> will bind to this port for sending messages.
+</p>
+<p>
+Setting the value to 0 (the default) will cause the udp client not to bind to
+a local port.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>The value specified is less than <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.minport">MinPort</a> or greater than <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.maxport">MaxPort</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="log4net_Appender_UdpAppender_RemoteAddress_" data-uid="log4net.Appender.UdpAppender.RemoteAddress*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_RemoteAddress" data-uid="log4net.Appender.UdpAppender.RemoteAddress">
+  RemoteAddress
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the IP address of the remote host or multicast group to which
+the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> should sent the logging event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPAddress? RemoteAddress { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></dt>
+    <dd><p>The IP address of the remote host or multicast group to which the logging event
+will be sent.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_RemoteAddress_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Multicast addresses are identified by IP class <b>D</b> addresses (in the range 224.0.0.0 to
+239.255.255.255).  Multicast packets can pass across different networks through routers, so
+it is possible to use multicasts in an Internet scenario as long as your network provider 
+supports multicasting.
+</p>
+<p>
+Hosts that want to receive particular multicast messages must register their interest by joining
+the multicast group.  Multicast messages are not sent to networks where no host has joined
+the multicast group.  Class <b>D</b> IP addresses are used for multicast groups, to differentiate
+them from normal host addresses, allowing nodes to easily detect if a message is of interest.
+</p>
+<p>
+Static multicast addresses that are needed globally are assigned by IANA.  A few examples are listed in the table below:
+</p>
+<p>
+<table><thead><tr><th class="term">IP Address</th><th class="description">Description</th></tr></thead><tbody><tr><td class="term">224.0.0.1</td><td class="description">
+            <p>
+            Sends a message to all system on the subnet.
+            </p>
+        </td></tr><tr><td class="term">224.0.0.2</td><td class="description">
+            <p>
+            Sends a message to all routers on the subnet.
+            </p>
+        </td></tr><tr><td class="term">224.0.0.12</td><td class="description">
+            <p>
+            The DHCP server answers messages on the IP address 224.0.0.12, but only on a subnet.
+            </p>
+        </td></tr></tbody></table>
+
+<p>
+A complete list of actually reserved multicast addresses and their owners in the ranges
+defined by RFC 3171 can be found at the <a href="http://www.iana.org/assignments/multicast-addresses">IANA web site</a>. 
+</p>
+<p>
+The address range 239.0.0.0 to 239.255.255.255 is reserved for administrative scope-relative 
+addresses.  These addresses can be reused with other local groups.  Routers are typically 
+configured with filters to prevent multicast traffic in this range from flowing outside
+of the local network.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_UdpAppender_RemoteEndPoint_" data-uid="log4net.Appender.UdpAppender.RemoteEndPoint*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_RemoteEndPoint" data-uid="log4net.Appender.UdpAppender.RemoteEndPoint">
+  RemoteEndPoint
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the cached remote endpoint to which the logging events should be sent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IPEndPoint? RemoteEndPoint { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint">IPEndPoint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_RemoteEndPoint_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_ActivateOptions">ActivateOptions()</a> method will initialize the remote endpoint
+with the values of the <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_RemoteAddress">RemoteAddress</a> and <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_RemotePort">RemotePort</a>
+properties.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_UdpAppender_RemotePort_" data-uid="log4net.Appender.UdpAppender.RemotePort*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_RemotePort" data-uid="log4net.Appender.UdpAppender.RemotePort">
+  RemotePort
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the TCP port number of the remote host or multicast group to which
+the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> should sent the logging event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemotePort { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>An integer value in the range <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.minport">MinPort</a> to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.maxport">MaxPort</a>
+indicating the TCP port number of the remote host or multicast group to which the logging event
+will be sent.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_RemotePort_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> will send messages to this TCP port number
+on the remote host or multicast group.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>The value specified is less than <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.minport">MinPort</a> or greater than <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.maxport">MaxPort</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="log4net_Appender_UdpAppender_RequiresLayout_" data-uid="log4net.Appender.UdpAppender.RequiresLayout*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_RequiresLayout" data-uid="log4net.Appender.UdpAppender.RequiresLayout">
+  RequiresLayout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This appender requires a <a class="xref" href="log4net.Layout.html">log4net.Layout</a> to be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool RequiresLayout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_UdpAppender_ActivateOptions_" data-uid="log4net.Appender.UdpAppender.ActivateOptions*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_ActivateOptions" data-uid="log4net.Appender.UdpAppender.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize the appender based on the options set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_ActivateOptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is part of the <a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a> delayed object
+activation scheme. The <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_ActivateOptions">ActivateOptions()</a> method must 
+be called on this object after the configuration properties have
+been set. Until <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_ActivateOptions">ActivateOptions()</a> is called this
+object is in an undefined state and must not be used. 
+</p>
+<p>
+If any of the configuration properties are modified then 
+<a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_ActivateOptions">ActivateOptions()</a> must be called again.
+</p>
+<p>
+The appender will be ignored if no <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_RemoteAddress">RemoteAddress</a> was specified or 
+an invalid remote or local TCP port number was specified.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The required property <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_RemoteAddress">RemoteAddress</a> was not specified.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>The TCP port number assigned to <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_LocalPort">LocalPort</a> or <a class="xref" href="log4net.Appender.UdpAppender.html#log4net_Appender_UdpAppender_RemotePort">RemotePort</a> is less than <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.minport">MinPort</a> or greater than <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.ipendpoint.maxport">MaxPort</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="log4net_Appender_UdpAppender_Append_" data-uid="log4net.Appender.UdpAppender.Append*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_Append_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.UdpAppender.Append(log4net.Core.LoggingEvent)">
+  Append(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called by the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_">DoAppend(LoggingEvent)</a> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_Append_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Sends the event using an UDP datagram.
+</p>
+<p>
+Exceptions are passed to the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">ErrorHandler</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_UdpAppender_InitializeClientConnection_" data-uid="log4net.Appender.UdpAppender.InitializeClientConnection*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_InitializeClientConnection" data-uid="log4net.Appender.UdpAppender.InitializeClientConnection">
+  InitializeClientConnection()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the underlying  <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeClientConnection()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_InitializeClientConnection_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> is initialized and binds to the 
+port number from which you intend to communicate.
+</p>
+<p>
+Exceptions are passed to the <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">ErrorHandler</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_UdpAppender_OnClose_" data-uid="log4net.Appender.UdpAppender.OnClose*"></a>
+
+  <h3 id="log4net_Appender_UdpAppender_OnClose" data-uid="log4net.Appender.UdpAppender.OnClose">
+  OnClose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the UDP connection and releases all resources associated with
+this <a class="xref" href="log4net.Appender.UdpAppender.html">UdpAppender</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnClose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_UdpAppender_OnClose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Disables the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.sockets.udpclient">UdpClient</a> and releases all managed 
+and unmanaged resources associated with the <a class="xref" href="log4net.Appender.UdpAppender.html">UdpAppender</a>.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
