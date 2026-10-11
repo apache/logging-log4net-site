@@ -2,9 +2,27 @@ RewriteEngine on
 
 RewriteBase "/log4net/"
 
-RewriteCond %{REQUEST_URI} !^/log4net/log4net-1.*$
-RewriteRule ^(.*)/release/sdk/html/AllMembers_(.*)$ $1/release/sdk/html/$2
+# The SDK reference of every published version is DocFX output since 3.5.1, with the members on
+# the type page. The rules below take the page names of the Sandcastle output (1.2.14 to 2.0.8)
+# and the NDoc output (1.2.11 to 1.2.13) it replaced to that page.
+
+# Sandcastle: an overload index or constructor suffix goes first, then the last segment of a
+# member page, then the member list pages, then every underscore of the type name becomes a dot.
+# DPI, since html/ is gone and Apache would otherwise carry the page name along as path info.
+RewriteRule ^(.*/release/sdk/)html/([MPFE]|Overload)_(.+)_\d+\.htm$ $1html/$2_$3.htm [DPI]
+RewriteRule ^(.*/release/sdk/)html/([MPFE]|Overload)_(.+)__ctor\.htm$ $1html/T_$3.htm [DPI]
+RewriteRule ^(.*/release/sdk/)html/([MPFE]|Overload)_(.+)_[^_]+\.htm$ $1html/T_$3.htm [DPI]
+RewriteRule ^(.*/release/sdk/)html/(AllMembers|Methods|Properties|Fields|Events|Operators)_T_(.+)\.htm$ $1html/T_$3.htm [DPI]
+RewriteRule ^(.*/release/sdk/)html/[NT]_(.+)\.htm$ $1log4net/$2.html [DPI]
+RewriteRule ^(.*/release/sdk/log4net/[^/]*)_([^/]*)$ $1.$2 [N,DPI]
+
+# NDoc: a name that exists as a type or namespace page is served as such; any other name loses
+# its member list, constructor or overload suffix, or its last segment, until one does.
+RewriteCond %{REQUEST_FILENAME} ^(.*/)log4net-[^/]+/
+RewriteCond %1$1log4net/$2.html -f
+RewriteRule ^(log4net-[^/]+/release/sdk/)(log4net(\.[^/]+)?)\.html$ $1log4net/$2.html [L]
+RewriteRule ^(.*/release/sdk/log4net[^/]*)(Constructor\d*|Members|Methods|Properties|Fields|Events|Operators|_overloads|_overload_\d+)\.html$ $1.html [N]
+RewriteRule ^(.*/release/sdk/log4net\.[^/]+)\.[^./]+\.html$ $1.html [N]
 
 RewriteCond %{REQUEST_URI} !^/log4net/log4net-\d.\d.*$
 RewriteRule ^(.*)$ log4net-3.5.0/$1
-

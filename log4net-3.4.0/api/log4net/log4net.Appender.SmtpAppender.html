@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SmtpAppender | Apache log4net 3.4.0 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SmtpAppender | Apache log4net 3.4.0 API Reference ">
+      
+      <meta name="description" content="Send an e-mail when a specific logging event occurs, typically on errors or fatal errors.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.SmtpAppender">
+
+
+
+  <h1 id="log4net_Appender_SmtpAppender" data-uid="log4net.Appender.SmtpAppender" class="text-break">
+Class SmtpAppender  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Send an e-mail when a specific logging event occurs, typically on errors
+or fatal errors.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;SmtpAppender sends through System.Net.Mail.SmtpClient, which Microsoft no longer recommends.\nUse the MailKit based SmtpAppender from log4net.Ext.Mail instead, see\nhttps://logging.apache.org/log4net/manual/configuration/appenders/smtpappender.html&quot;)]
+public class SmtpAppender : BufferingAppenderSkeleton, IBulkAppender, IAppender, IOptionHandler, IFlushable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a></div>
+      <div><a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html">BufferingAppenderSkeleton</a></div>
+      <div><span class="xref">SmtpAppender</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.IBulkAppender.html">IBulkAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+      <div><a class="xref" href="log4net.Appender.IFlushable.html">IFlushable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Flush_System_Int32_">BufferingAppenderSkeleton.Flush(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Flush">BufferingAppenderSkeleton.Flush()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Flush_System_Boolean_">BufferingAppenderSkeleton.Flush(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_ActivateOptions">BufferingAppenderSkeleton.ActivateOptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_OnClose">BufferingAppenderSkeleton.OnClose()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Append_log4net_Core_LoggingEvent_">BufferingAppenderSkeleton.Append(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_SendFromBuffer_log4net_Core_LoggingEvent_log4net_Util_CyclicBuffer_">BufferingAppenderSkeleton.SendFromBuffer(LoggingEvent, CyclicBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Lossy">BufferingAppenderSkeleton.Lossy</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_BufferSize">BufferingAppenderSkeleton.BufferSize</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Evaluator">BufferingAppenderSkeleton.Evaluator</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_LossyEvaluator">BufferingAppenderSkeleton.LossyEvaluator</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_Fix">BufferingAppenderSkeleton.Fix</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_">AppenderSkeleton.DoAppend(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent___">AppenderSkeleton.DoAppend(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.FilterEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter_">AppenderSkeleton.AddFilter(IFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ClearFilters">AppenderSkeleton.ClearFilters()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level_">AppenderSkeleton.IsAsSevereAsThreshold(Level)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent___">AppenderSkeleton.Append(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_System_Collections_Generic_IEnumerable_log4net_Core_LoggingEvent__">AppenderSkeleton.Append(IEnumerable&lt;LoggingEvent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_PreAppendCheck">AppenderSkeleton.PreAppendCheck()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Appender_SmtpAppender_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The number of logging events delivered in this e-mail depend on
+the value of <a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_BufferSize">BufferSize</a> option. The
+<a class="xref" href="log4net.Appender.SmtpAppender.html">SmtpAppender</a> keeps only the last
+<a class="xref" href="log4net.Appender.BufferingAppenderSkeleton.html#log4net_Appender_BufferingAppenderSkeleton_BufferSize">BufferSize</a> logging events in its 
+cyclic buffer. This keeps memory requirements at a reasonable level while 
+still delivering useful application context.
+</p>
+<p>
+Authentication is supported by setting the <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Authentication">Authentication</a> property to
+either <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Basic">Basic</a> or <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Ntlm">Ntlm</a>.
+If using <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Basic">Basic</a> authentication then the <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Username">Username</a>
+and <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Password">Password</a> properties must also be set.
+</p>
+<p>
+To set the SMTP server port use the <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Port">Port</a> property. The default port is 25.
+</p>
+<p>
+This appender is deprecated, because <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mail.smtpclient">SmtpClient</a> is no longer
+recommended by Microsoft. Use the MailKit based <code>SmtpAppender</code> from
+<code>log4net.Ext.Mail</code> instead.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_SmtpAppender__ctor_" data-uid="log4net.Appender.SmtpAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender__ctor" data-uid="log4net.Appender.SmtpAppender.#ctor">
+  SmtpAppender()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmtpAppender()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Default constructor
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Appender_SmtpAppender_Authentication_" data-uid="log4net.Appender.SmtpAppender.Authentication*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_Authentication" data-uid="log4net.Appender.SmtpAppender.Authentication">
+  Authentication
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The mode to use to authentication with the SMTP server</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SmtpAppender.SmtpAuthentication Authentication { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Appender.SmtpAppender.html">SmtpAppender</a>.<a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html">SmtpAuthentication</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_Authentication_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Valid Authentication mode values are: <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_None">None</a>, 
+<a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Basic">Basic</a>, and <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Ntlm">Ntlm</a>. 
+The default value is <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_None">None</a>. When using 
+<a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Basic">Basic</a> you must specify the <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Username">Username</a> 
+and <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Password">Password</a> to use to authenticate.
+When using <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Ntlm">Ntlm</a> the Windows credentials for the current
+thread, if impersonating, or the process will be used to authenticate. 
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_Bcc_" data-uid="log4net.Appender.SmtpAppender.Bcc*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_Bcc" data-uid="log4net.Appender.SmtpAppender.Bcc">
+  Bcc
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a semicolon-delimited list of recipient e-mail addresses
+that will be blind carbon copied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Bcc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A semicolon-delimited list of e-mail addresses.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_Bcc_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A semicolon-delimited list of recipient e-mail addresses.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_BodyEncoding_" data-uid="log4net.Appender.SmtpAppender.BodyEncoding*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_BodyEncoding" data-uid="log4net.Appender.SmtpAppender.BodyEncoding">
+  BodyEncoding
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the body encoding to be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Encoding BodyEncoding { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_BodyEncoding_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default encoding is the operating system's current ANSI codepage.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_Cc_" data-uid="log4net.Appender.SmtpAppender.Cc*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_Cc" data-uid="log4net.Appender.SmtpAppender.Cc">
+  Cc
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a comma-delimited list of recipient e-mail addresses
+that will be carbon copied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Cc { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_EnableSsl_" data-uid="log4net.Appender.SmtpAppender.EnableSsl*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_EnableSsl" data-uid="log4net.Appender.SmtpAppender.EnableSsl">
+  EnableSsl
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable or disable use of SSL when sending e-mail message</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableSsl { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_EnableSsl_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is available on MS .NET 2.0 runtime and higher</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_From_" data-uid="log4net.Appender.SmtpAppender.From*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_From" data-uid="log4net.Appender.SmtpAppender.From">
+  From
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the e-mail address of the sender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? From { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The e-mail address of the sender.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_From_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The e-mail address of the sender.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_Password_" data-uid="log4net.Appender.SmtpAppender.Password*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_Password" data-uid="log4net.Appender.SmtpAppender.Password">
+  Password
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The password to use to authenticate with the SMTP server</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Password { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_Password_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Username">Username</a> and <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Password">Password</a> must be specified when 
+<a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Authentication">Authentication</a> is set to <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Basic">Basic</a>, 
+otherwise the password will be ignored. 
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_Port_" data-uid="log4net.Appender.SmtpAppender.Port*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_Port" data-uid="log4net.Appender.SmtpAppender.Port">
+  Port
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The port on which the SMTP server is listening</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Port { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_Port_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The port on which the SMTP server is listening. The default
+port is <code>25</code>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_Priority_" data-uid="log4net.Appender.SmtpAppender.Priority*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_Priority" data-uid="log4net.Appender.SmtpAppender.Priority">
+  Priority
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the priority of the e-mail message</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MailPriority Priority { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mail.mailpriority">MailPriority</a></dt>
+    <dd><p>One of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mail.mailpriority">MailPriority</a> values.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_Priority_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Sets the priority of the e-mails generated by this
+appender. The default priority is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mail.mailpriority#system-net-mail-mailpriority-normal">Normal</a>.
+</p>
+<p>
+If you are using this appender to report errors then
+you may want to set the priority to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.mail.mailpriority#system-net-mail-mailpriority-high">High</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_ReplyTo_" data-uid="log4net.Appender.SmtpAppender.ReplyTo*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_ReplyTo" data-uid="log4net.Appender.SmtpAppender.ReplyTo">
+  ReplyTo
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the reply-to e-mail address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ReplyTo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_RequiresLayout_" data-uid="log4net.Appender.SmtpAppender.RequiresLayout*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_RequiresLayout" data-uid="log4net.Appender.SmtpAppender.RequiresLayout">
+  RequiresLayout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This appender requires a <a class="xref" href="log4net.Layout.html">log4net.Layout</a> to be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool RequiresLayout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_SmtpHost_" data-uid="log4net.Appender.SmtpAppender.SmtpHost*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_SmtpHost" data-uid="log4net.Appender.SmtpAppender.SmtpHost">
+  SmtpHost
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name of the SMTP relay mail server to use to send
+the e-mail messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SmtpHost { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the e-mail relay server. If SmtpServer is not set, the
+name of the local SMTP server is used.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_SmtpHost_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The name of the e-mail relay server. If SmtpServer is not set, the 
+name of the local SMTP server is used.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_Subject_" data-uid="log4net.Appender.SmtpAppender.Subject*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_Subject" data-uid="log4net.Appender.SmtpAppender.Subject">
+  Subject
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the subject line of the e-mail message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Subject { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The subject line of the e-mail message.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_Subject_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The subject line of the e-mail message.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_SubjectEncoding_" data-uid="log4net.Appender.SmtpAppender.SubjectEncoding*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_SubjectEncoding" data-uid="log4net.Appender.SmtpAppender.SubjectEncoding">
+  SubjectEncoding
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the subject encoding to be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Encoding SubjectEncoding { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_SubjectEncoding_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The default encoding is the operating system's current ANSI codepage.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_To_" data-uid="log4net.Appender.SmtpAppender.To*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_To" data-uid="log4net.Appender.SmtpAppender.To">
+  To
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a comma-delimited list of recipient e-mail addresses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? To { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_Username_" data-uid="log4net.Appender.SmtpAppender.Username*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_Username" data-uid="log4net.Appender.SmtpAppender.Username">
+  Username
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The username to use to authenticate with the SMTP server</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Username { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_SmtpAppender_Username_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+A <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Username">Username</a> and <a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Password">Password</a> must be specified when 
+<a class="xref" href="log4net.Appender.SmtpAppender.html#log4net_Appender_SmtpAppender_Authentication">Authentication</a> is set to <a class="xref" href="log4net.Appender.SmtpAppender.SmtpAuthentication.html#log4net_Appender_SmtpAppender_SmtpAuthentication_Basic">Basic</a>, 
+otherwise the username will be ignored. 
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_SmtpAppender_SendBuffer_" data-uid="log4net.Appender.SmtpAppender.SendBuffer*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_SendBuffer_log4net_Core_LoggingEvent___" data-uid="log4net.Appender.SmtpAppender.SendBuffer(log4net.Core.LoggingEvent[])">
+  SendBuffer(LoggingEvent[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends the contents of the cyclic buffer as an e-mail message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SendBuffer(LoggingEvent[] events)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>events</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>[]</dt>
+    <dd><p>The logging events to send.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_SmtpAppender_SendEmail_" data-uid="log4net.Appender.SmtpAppender.SendEmail*"></a>
+
+  <h3 id="log4net_Appender_SmtpAppender_SendEmail_System_String_" data-uid="log4net.Appender.SmtpAppender.SendEmail(System.String)">
+  SendEmail(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Send the email message</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SendEmail(string messageBody)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>messageBody</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the body text to include in the mail</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
