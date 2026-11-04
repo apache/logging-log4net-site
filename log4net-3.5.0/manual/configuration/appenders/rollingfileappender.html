@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>RollingFileAppender :: Apache log4net</title>
     <link rel="canonical" href="https://logging.apache.org/log4net/manual/configuration/appenders/rollingfileappender.html">
-    <meta name="generator" content="Antora 3.2.0">
+    <meta name="generator" content="Antora 3.2.1">
 <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="icon" href="../../../_/../_images/favicon.ico" type="image/x-icon">
 <!-- `@asciidoctor/tabs` extension styles -->
@@ -55,7 +55,7 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item" href="../../../api/index.html">API Reference</a>
-        </div>
+      </div>
       <div class="navbar-end">
         <a class="navbar-item" href="https://github.com/apache/logging-log4net">GitHub</a>
       </div>
@@ -310,6 +310,22 @@ For example, a date pattern of "yyyyMMdd" will roll every day.</p>
 &lt;/appender&gt;</code></pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>With <code>staticLogFileName</code> a <code>datePattern</code> that formats as a dot and up to four digits, such as <code>.dd</code>, names dated files like numbered backups.
+Such an appender is reported when activated and uses the dated file name as with <code>staticLogFileName</code> false, so its backups are numbered after the date.
+Use a pattern with a separator, such as the default <code>.yyyy-MM-dd</code>, to keep the static name.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>This example show how to configure the <code>RollingFileAppender</code> to roll log files once per program execution.</p>
 </div>
@@ -343,7 +359,7 @@ For example, a date pattern of "yyyyMMdd" will roll every day.</p>
 <footer class="footer">
   <p>
     Copyright © 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>.
-    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>.
+    Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
     Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>.
   </p>
   <p>
