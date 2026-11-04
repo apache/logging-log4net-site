@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LoggerManager | Apache log4net 1.2.11 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LoggerManager | Apache log4net 1.2.11 API Reference ">
+      
+      <meta name="description" content="Static manager that controls the creation of repositories">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Core.LoggerManager">
+
+
+
+  <h1 id="log4net_Core_LoggerManager" data-uid="log4net.Core.LoggerManager" class="text-break">
+Class LoggerManager  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Static manager that controls the creation of repositories</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LoggerManager</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LoggerManager</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Core_LoggerManager_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Static manager that controls the creation of repositories
+</p>
+<p>
+This class is used by the wrapper managers (e.g. <a class="xref" href="log4net.LogManager.html">LogManager</a>)
+to provide access to the <a class="xref" href="log4net.Core.ILogger.html">ILogger</a> objects.
+</p>
+<p>
+This manager also holds the <a class="xref" href="log4net.Core.IRepositorySelector.html">IRepositorySelector</a> that is used to
+lookup and create repositories. The selector can be set either programmatically using
+the <a class="xref" href="log4net.Core.LoggerManager.html#log4net_Core_LoggerManager_RepositorySelector">RepositorySelector</a> property, or by setting the <code>log4net.RepositorySelector</code>
+AppSetting in the applications config file to the fully qualified type name of the
+selector to use. 
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Core_LoggerManager_RepositorySelector_" data-uid="log4net.Core.LoggerManager.RepositorySelector*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_RepositorySelector" data-uid="log4net.Core.LoggerManager.RepositorySelector">
+  RepositorySelector
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the repository selector used by the <a class="xref" href="log4net.LogManager.html">LogManager</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IRepositorySelector RepositorySelector { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.IRepositorySelector.html">IRepositorySelector</a></dt>
+    <dd><p>The repository selector used by the <a class="xref" href="log4net.LogManager.html">LogManager</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_RepositorySelector_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The repository selector (<a class="xref" href="log4net.Core.IRepositorySelector.html">IRepositorySelector</a>) is used by 
+the <a class="xref" href="log4net.LogManager.html">LogManager</a> to create and select repositories 
+(<a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a>).
+</p>
+<p>
+The caller to <a class="xref" href="log4net.LogManager.html">LogManager</a> supplies either a string name 
+or an assembly (if not supplied the assembly is inferred using 
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly.getcallingassembly">GetCallingAssembly()</a>).
+</p>
+<p>
+This context is used by the selector to lookup a specific repository.
+</p>
+<p>
+For the full .NET Framework, the default repository is <code>DefaultRepositorySelector</code>;
+for the .NET Compact Framework <code>CompactRepositorySelector</code> is the default
+repository.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Core_LoggerManager_CreateDomain_" data-uid="log4net.Core.LoggerManager.CreateDomain*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_CreateDomain_System_Reflection_Assembly_System_Type_" data-uid="log4net.Core.LoggerManager.CreateDomain(System.Reflection.Assembly,System.Type)">
+  CreateDomain(Assembly, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a repository for the specified assembly and repository type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use CreateRepository instead of CreateDomain&quot;)]
+public static ILoggerRepository CreateDomain(Assembly repositoryAssembly, Type repositoryType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to get the name of the repository.</p>
+</dd>
+    <dt><code>repositoryType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that implements <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a>
+and has a no arg constructor. An instance of this type will be created to act
+as the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> for the repository specified.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> created for the repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_CreateDomain_System_Reflection_Assembly_System_Type__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<b>CreateDomain is obsolete. Use CreateRepository instead of CreateDomain.</b>
+</p>
+<p>
+The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> created will be associated with the repository
+specified such that a call to <a class="xref" href="log4net.Core.LoggerManager.html#log4net_Core_LoggerManager_GetRepository_System_Reflection_Assembly_">GetRepository(Assembly)</a> with the
+same assembly specified will return the same repository instance.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_CreateDomain_" data-uid="log4net.Core.LoggerManager.CreateDomain*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_CreateDomain_System_String_" data-uid="log4net.Core.LoggerManager.CreateDomain(System.String)">
+  CreateDomain(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a repository with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use CreateRepository instead of CreateDomain&quot;)]
+public static ILoggerRepository CreateDomain(string repository)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the repository, this must be unique amongst repositories.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> created for the repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_CreateDomain_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<b>CreateDomain is obsolete. Use CreateRepository instead of CreateDomain.</b>
+</p>
+<p>
+Creates the default type of <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> which is a
+<a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a> object.
+</p>
+<p>
+The <code class="paramref">repository</code> name must be unique. Repositories cannot be redefined.
+An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> will be thrown if the repository already exists.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.LogException.html">LogException</a></dt>
+    <dd><p>The specified repository already exists.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="log4net_Core_LoggerManager_CreateDomain_" data-uid="log4net.Core.LoggerManager.CreateDomain*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_CreateDomain_System_String_System_Type_" data-uid="log4net.Core.LoggerManager.CreateDomain(System.String,System.Type)">
+  CreateDomain(string, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a repository with the specified name and repository type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use CreateRepository instead of CreateDomain&quot;)]
+public static ILoggerRepository CreateDomain(string repository, Type repositoryType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the repository, this must be unique to the repository.</p>
+</dd>
+    <dt><code>repositoryType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that implements <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a>
+and has a no arg constructor. An instance of this type will be created to act
+as the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> for the repository specified.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> created for the repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_CreateDomain_System_String_System_Type__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<b>CreateDomain is obsolete. Use CreateRepository instead of CreateDomain.</b>
+</p>
+<p>
+The <code class="paramref">repository</code> name must be unique. Repositories cannot be redefined.
+An Exception will be thrown if the repository already exists.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.LogException.html">LogException</a></dt>
+    <dd><p>The specified repository already exists.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="log4net_Core_LoggerManager_CreateRepository_" data-uid="log4net.Core.LoggerManager.CreateRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_CreateRepository_System_Reflection_Assembly_System_Type_" data-uid="log4net.Core.LoggerManager.CreateRepository(System.Reflection.Assembly,System.Type)">
+  CreateRepository(Assembly, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a repository for the specified assembly and repository type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILoggerRepository CreateRepository(Assembly repositoryAssembly, Type repositoryType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to get the name of the repository.</p>
+</dd>
+    <dt><code>repositoryType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that implements <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a>
+and has a no arg constructor. An instance of this type will be created to act
+as the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> for the repository specified.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> created for the repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_CreateRepository_System_Reflection_Assembly_System_Type__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> created will be associated with the repository
+specified such that a call to <a class="xref" href="log4net.Core.LoggerManager.html#log4net_Core_LoggerManager_GetRepository_System_Reflection_Assembly_">GetRepository(Assembly)</a> with the
+same assembly specified will return the same repository instance.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_CreateRepository_" data-uid="log4net.Core.LoggerManager.CreateRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_CreateRepository_System_String_" data-uid="log4net.Core.LoggerManager.CreateRepository(System.String)">
+  CreateRepository(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a repository with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILoggerRepository CreateRepository(string repository)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the repository, this must be unique amongst repositories.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> created for the repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_CreateRepository_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Creates the default type of <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> which is a
+<a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a> object.
+</p>
+<p>
+The <code class="paramref">repository</code> name must be unique. Repositories cannot be redefined.
+An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> will be thrown if the repository already exists.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.LogException.html">LogException</a></dt>
+    <dd><p>The specified repository already exists.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="log4net_Core_LoggerManager_CreateRepository_" data-uid="log4net.Core.LoggerManager.CreateRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_CreateRepository_System_String_System_Type_" data-uid="log4net.Core.LoggerManager.CreateRepository(System.String,System.Type)">
+  CreateRepository(string, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a repository with the specified name and repository type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILoggerRepository CreateRepository(string repository, Type repositoryType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the repository, this must be unique to the repository.</p>
+</dd>
+    <dt><code>repositoryType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that implements <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a>
+and has a no arg constructor. An instance of this type will be created to act
+as the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> for the repository specified.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> created for the repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_CreateRepository_System_String_System_Type__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <code class="paramref">repository</code> name must be unique. Repositories cannot be redefined.
+An Exception will be thrown if the repository already exists.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.LogException.html">LogException</a></dt>
+    <dd><p>The specified repository already exists.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="log4net_Core_LoggerManager_Exists_" data-uid="log4net.Core.LoggerManager.Exists*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_Exists_System_Reflection_Assembly_System_String_" data-uid="log4net.Core.LoggerManager.Exists(System.Reflection.Assembly,System.String)">
+  Exists(Assembly, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the named logger if it exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILogger Exists(Assembly repositoryAssembly, string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to lookup the repository.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified logger name to look for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger found, or <code>null</code> if the named logger does not exist in the
+specified assembly's repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_Exists_System_Reflection_Assembly_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the named logger exists (in the specified assembly's repository) then it
+returns a reference to the logger, otherwise it returns
+<code>null</code>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_Exists_" data-uid="log4net.Core.LoggerManager.Exists*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_Exists_System_String_System_String_" data-uid="log4net.Core.LoggerManager.Exists(System.String,System.String)">
+  Exists(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the named logger if it exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILogger Exists(string repository, string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The repository to lookup in.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified logger name to look for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger found, or <code>null</code> if the named logger does not exist in the
+specified repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_Exists_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the named logger exists (in the specified repository) then it
+returns a reference to the logger, otherwise it returns
+<code>null</code>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetAllRepositories_" data-uid="log4net.Core.LoggerManager.GetAllRepositories*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetAllRepositories" data-uid="log4net.Core.LoggerManager.GetAllRepositories">
+  GetAllRepositories()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an array of all currently defined repositories.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILoggerRepository[] GetAllRepositories()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a>[]</dt>
+    <dd><p>An array of all the known <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> objects.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetAllRepositories_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets an array of all currently defined repositories.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetCurrentLoggers_" data-uid="log4net.Core.LoggerManager.GetCurrentLoggers*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetCurrentLoggers_System_Reflection_Assembly_" data-uid="log4net.Core.LoggerManager.GetCurrentLoggers(System.Reflection.Assembly)">
+  GetCurrentLoggers(Assembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns all the currently defined loggers in the specified assembly's repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILogger[] GetCurrentLoggers(Assembly repositoryAssembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to lookup the repository.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a>[]</dt>
+    <dd><p>All the defined loggers.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetCurrentLoggers_System_Reflection_Assembly__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The root logger is <b>not</b> included in the returned array.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetCurrentLoggers_" data-uid="log4net.Core.LoggerManager.GetCurrentLoggers*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetCurrentLoggers_System_String_" data-uid="log4net.Core.LoggerManager.GetCurrentLoggers(System.String)">
+  GetCurrentLoggers(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns all the currently defined loggers in the specified repository.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILogger[] GetCurrentLoggers(string repository)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The repository to lookup in.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a>[]</dt>
+    <dd><p>All the defined loggers.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetCurrentLoggers_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The root logger is <b>not</b> included in the returned array.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetLogger_" data-uid="log4net.Core.LoggerManager.GetLogger*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetLogger_System_Reflection_Assembly_System_String_" data-uid="log4net.Core.LoggerManager.GetLogger(System.Reflection.Assembly,System.String)">
+  GetLogger(Assembly, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves or creates a named logger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILogger GetLogger(Assembly repositoryAssembly, string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to lookup the repository.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the logger to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger with the name specified.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetLogger_System_Reflection_Assembly_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Retrieves a logger named as the <code class="paramref">name</code>
+parameter. If the named logger already exists, then the
+existing instance will be returned. Otherwise, a new instance is
+created.
+</p>
+<p>
+By default, loggers do not have a set level but inherit
+it from the hierarchy. This is one of the central features of
+log4net.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetLogger_" data-uid="log4net.Core.LoggerManager.GetLogger*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetLogger_System_Reflection_Assembly_System_Type_" data-uid="log4net.Core.LoggerManager.GetLogger(System.Reflection.Assembly,System.Type)">
+  GetLogger(Assembly, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shorthand for <a class="xref" href="log4net.LogManager.html#log4net_LogManager_GetLogger_System_String_">GetLogger(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILogger GetLogger(Assembly repositoryAssembly, Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>the assembly to use to lookup the repository</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The <code class="paramref">type</code> of which the fullname will be used as the name of the logger to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger with the name specified.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetLogger_System_Reflection_Assembly_System_Type__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the logger for the fully qualified name of the type specified.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetLogger_" data-uid="log4net.Core.LoggerManager.GetLogger*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetLogger_System_String_System_String_" data-uid="log4net.Core.LoggerManager.GetLogger(System.String,System.String)">
+  GetLogger(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves or creates a named logger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILogger GetLogger(string repository, string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The repository to lookup in.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the logger to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger with the name specified.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetLogger_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Retrieves a logger named as the <code class="paramref">name</code>
+parameter. If the named logger already exists, then the
+existing instance will be returned. Otherwise, a new instance is
+created.
+</p>
+<p>
+By default, loggers do not have a set level but inherit
+it from the hierarchy. This is one of the central features of
+log4net.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetLogger_" data-uid="log4net.Core.LoggerManager.GetLogger*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetLogger_System_String_System_Type_" data-uid="log4net.Core.LoggerManager.GetLogger(System.String,System.Type)">
+  GetLogger(string, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shorthand for <a class="xref" href="log4net.LogManager.html#log4net_LogManager_GetLogger_System_String_">GetLogger(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILogger GetLogger(string repository, Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The repository to lookup in.</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The <code class="paramref">type</code> of which the fullname will be used as the name of the logger to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger with the name specified.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetLogger_System_String_System_Type__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the logger for the fully qualified name of the type specified.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetLoggerRepository_" data-uid="log4net.Core.LoggerManager.GetLoggerRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetLoggerRepository_System_Reflection_Assembly_" data-uid="log4net.Core.LoggerManager.GetLoggerRepository(System.Reflection.Assembly)">
+  GetLoggerRepository(Assembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use GetRepository instead of GetLoggerRepository&quot;)]
+public static ILoggerRepository GetLoggerRepository(Assembly repositoryAssembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to lookup the repository.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetLoggerRepository_" data-uid="log4net.Core.LoggerManager.GetLoggerRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetLoggerRepository_System_String_" data-uid="log4net.Core.LoggerManager.GetLoggerRepository(System.String)">
+  GetLoggerRepository(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return the default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use GetRepository instead of GetLoggerRepository&quot;)]
+public static ILoggerRepository GetLoggerRepository(string repository)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the repository to lookup in</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>Return the default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetLoggerRepository_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> for the repository specified
+by the <code class="paramref">repository</code> argument.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetRepository_" data-uid="log4net.Core.LoggerManager.GetRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetRepository_System_Reflection_Assembly_" data-uid="log4net.Core.LoggerManager.GetRepository(System.Reflection.Assembly)">
+  GetRepository(Assembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILoggerRepository GetRepository(Assembly repositoryAssembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to lookup the repository.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>The default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetRepository_System_Reflection_Assembly__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Returns the default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_GetRepository_" data-uid="log4net.Core.LoggerManager.GetRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_GetRepository_System_String_" data-uid="log4net.Core.LoggerManager.GetRepository(System.String)">
+  GetRepository(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return the default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ILoggerRepository GetRepository(string repository)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the repository to lookup in</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>Return the default <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> instance</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_GetRepository_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> for the repository specified
+by the <code class="paramref">repository</code> argument.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_ResetConfiguration_" data-uid="log4net.Core.LoggerManager.ResetConfiguration*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_ResetConfiguration_System_Reflection_Assembly_" data-uid="log4net.Core.LoggerManager.ResetConfiguration(System.Reflection.Assembly)">
+  ResetConfiguration(Assembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets all values contained in this repository instance to their defaults.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ResetConfiguration(Assembly repositoryAssembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to lookup the repository to reset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_ResetConfiguration_System_Reflection_Assembly__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Resets all values contained in the repository instance to their
+defaults.  This removes all appenders from all loggers, sets
+the level of all non-root loggers to <code>null</code>,
+sets their additivity flag to <code>true</code> and sets the level
+of the root logger to <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Debug">Debug</a>. Moreover,
+message disabling is set its default "off" value.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_ResetConfiguration_" data-uid="log4net.Core.LoggerManager.ResetConfiguration*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_ResetConfiguration_System_String_" data-uid="log4net.Core.LoggerManager.ResetConfiguration(System.String)">
+  ResetConfiguration(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets all values contained in this repository instance to their defaults.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ResetConfiguration(string repository)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The repository to reset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_ResetConfiguration_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Resets all values contained in the repository instance to their
+defaults.  This removes all appenders from all loggers, sets
+the level of all non-root loggers to <code>null</code>,
+sets their additivity flag to <code>true</code> and sets the level
+of the root logger to <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Debug">Debug</a>. Moreover,
+message disabling is set its default "off" value.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_Shutdown_" data-uid="log4net.Core.LoggerManager.Shutdown*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_Shutdown" data-uid="log4net.Core.LoggerManager.Shutdown">
+  Shutdown()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuts down the log4net system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Shutdown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_Shutdown_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Calling this method will <b>safely</b> close and remove all
+appenders in all the loggers including root contained in all the
+default repositories.
+</p>
+<p>
+Some appenders need to be closed before the application exists. 
+Otherwise, pending logging events might be lost.
+</p>
+<p>
+The <code>shutdown</code> method is careful to close nested
+appenders before closing regular appenders. This is allows
+configurations where a regular appender is attached to a logger
+and again to a nested appender.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_ShutdownRepository_" data-uid="log4net.Core.LoggerManager.ShutdownRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_ShutdownRepository_System_Reflection_Assembly_" data-uid="log4net.Core.LoggerManager.ShutdownRepository(System.Reflection.Assembly)">
+  ShutdownRepository(Assembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuts down the repository for the repository specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShutdownRepository(Assembly repositoryAssembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repositoryAssembly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></dt>
+    <dd><p>The assembly to use to lookup the repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_ShutdownRepository_System_Reflection_Assembly__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Calling this method will <b>safely</b> close and remove all
+appenders in all the loggers including root contained in the
+repository for the repository. The repository is looked up using
+the <code class="paramref">repositoryAssembly</code> specified.
+</p>
+<p>
+Some appenders need to be closed before the application exists. 
+Otherwise, pending logging events might be lost.
+</p>
+<p>
+The <code>shutdown</code> method is careful to close nested
+appenders before closing regular appenders. This is allows
+configurations where a regular appender is attached to a logger
+and again to a nested appender.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LoggerManager_ShutdownRepository_" data-uid="log4net.Core.LoggerManager.ShutdownRepository*"></a>
+
+  <h3 id="log4net_Core_LoggerManager_ShutdownRepository_System_String_" data-uid="log4net.Core.LoggerManager.ShutdownRepository(System.String)">
+  ShutdownRepository(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuts down the repository for the repository specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShutdownRepository(string repository)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The repository to shutdown.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LoggerManager_ShutdownRepository_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Calling this method will <b>safely</b> close and remove all
+appenders in all the loggers including root contained in the
+repository for the <code class="paramref">repository</code> specified.
+</p>
+<p>
+Some appenders need to be closed before the application exists. 
+Otherwise, pending logging events might be lost.
+</p>
+<p>
+The <code>shutdown</code> method is careful to close nested
+appenders before closing regular appenders. This is allows
+configurations where a regular appender is attached to a logger
+and again to a nested appender.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Hierarchy | Apache log4net 2.0.12 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Hierarchy | Apache log4net 2.0.12 API Reference ">
+      
+      <meta name="description" content="Hierarchical organization of loggers">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Repository.Hierarchy.Hierarchy">
+
+
+
+  <h1 id="log4net_Repository_Hierarchy_Hierarchy" data-uid="log4net.Repository.Hierarchy.Hierarchy" class="text-break">
+Class Hierarchy  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Repository.html">Repository</a>.<a class="xref" href="log4net.Repository.Hierarchy.html">Hierarchy</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Hierarchical organization of loggers</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Hierarchy : LoggerRepositorySkeleton, ILoggerRepository, IFlushable, IBasicRepositoryConfigurator, IXmlRepositoryConfigurator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html">LoggerRepositorySkeleton</a></div>
+      <div><span class="xref">Hierarchy</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></div>
+      <div><a class="xref" href="log4net.Appender.IFlushable.html">IFlushable</a></div>
+      <div><a class="xref" href="log4net.Repository.IBasicRepositoryConfigurator.html">IBasicRepositoryConfigurator</a></div>
+      <div><a class="xref" href="log4net.Repository.IXmlRepositoryConfigurator.html">IXmlRepositoryConfigurator</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_AddRenderer_System_Type_log4net_ObjectRenderer_IObjectRenderer_">LoggerRepositorySkeleton.AddRenderer(Type, IObjectRenderer)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnShutdown_System_EventArgs_">LoggerRepositorySkeleton.OnShutdown(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnConfigurationReset_System_EventArgs_">LoggerRepositorySkeleton.OnConfigurationReset(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_OnConfigurationChanged_System_EventArgs_">LoggerRepositorySkeleton.OnConfigurationChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_RaiseConfigurationChanged_System_EventArgs_">LoggerRepositorySkeleton.RaiseConfigurationChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Flush_System_Int32_">LoggerRepositorySkeleton.Flush(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Name">LoggerRepositorySkeleton.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Threshold">LoggerRepositorySkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_RendererMap">LoggerRepositorySkeleton.RendererMap</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_PluginMap">LoggerRepositorySkeleton.PluginMap</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_LevelMap">LoggerRepositorySkeleton.LevelMap</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Configured">LoggerRepositorySkeleton.Configured</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_ConfigurationMessages">LoggerRepositorySkeleton.ConfigurationMessages</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_Properties">LoggerRepositorySkeleton.Properties</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_ShutdownEvent">LoggerRepositorySkeleton.ShutdownEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_ConfigurationReset">LoggerRepositorySkeleton.ConfigurationReset</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Repository.LoggerRepositorySkeleton.html#log4net_Repository_LoggerRepositorySkeleton_ConfigurationChanged">LoggerRepositorySkeleton.ConfigurationChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Repository_Hierarchy_Hierarchy_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+<i>The casual user should not have to deal with this class
+directly.</i>
+</p>
+<p>
+This class is specialized in retrieving loggers by name and
+also maintaining the logger hierarchy. Implements the 
+<a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> interface.
+</p>
+<p>
+The structure of the logger hierarchy is maintained by the
+<span class="xref">GetLogger(string)</span> method. The hierarchy is such that children
+link to their parent but parents do not have any references to their
+children. Moreover, loggers can be instantiated in any order, in
+particular descendant before ancestor.
+</p>
+<p>
+In case a descendant is created before a particular ancestor,
+then it creates a provision node for the ancestor and adds itself
+to the provision node. Other descendants of the same ancestor add
+themselves to the previously created provision node.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy__ctor_" data-uid="log4net.Repository.Hierarchy.Hierarchy.#ctor*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy__ctor" data-uid="log4net.Repository.Hierarchy.Hierarchy.#ctor">
+  Hierarchy()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Hierarchy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a> class.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy__ctor_" data-uid="log4net.Repository.Hierarchy.Hierarchy.#ctor*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy__ctor_log4net_Repository_Hierarchy_ILoggerFactory_" data-uid="log4net.Repository.Hierarchy.Hierarchy.#ctor(log4net.Repository.Hierarchy.ILoggerFactory)">
+  Hierarchy(ILoggerFactory)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct with a logger factory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Hierarchy(ILoggerFactory loggerFactory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggerFactory</code> <a class="xref" href="log4net.Repository.Hierarchy.ILoggerFactory.html">ILoggerFactory</a></dt>
+    <dd><p>The factory to use to create new logger instances.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy__ctor_log4net_Repository_Hierarchy_ILoggerFactory__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a> class with 
+the specified <a class="xref" href="log4net.Repository.Hierarchy.ILoggerFactory.html">ILoggerFactory</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy__ctor_" data-uid="log4net.Repository.Hierarchy.Hierarchy.#ctor*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy__ctor_log4net_Util_PropertiesDictionary_" data-uid="log4net.Repository.Hierarchy.Hierarchy.#ctor(log4net.Util.PropertiesDictionary)">
+  Hierarchy(PropertiesDictionary)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct with properties</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Hierarchy(PropertiesDictionary properties)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>properties</code> <a class="xref" href="log4net.Util.PropertiesDictionary.html">PropertiesDictionary</a></dt>
+    <dd><p>The properties to pass to this repository.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy__ctor_log4net_Util_PropertiesDictionary__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a> class.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy__ctor_" data-uid="log4net.Repository.Hierarchy.Hierarchy.#ctor*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy__ctor_log4net_Util_PropertiesDictionary_log4net_Repository_Hierarchy_ILoggerFactory_" data-uid="log4net.Repository.Hierarchy.Hierarchy.#ctor(log4net.Util.PropertiesDictionary,log4net.Repository.Hierarchy.ILoggerFactory)">
+  Hierarchy(PropertiesDictionary, ILoggerFactory)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct with properties and a logger factory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Hierarchy(PropertiesDictionary properties, ILoggerFactory loggerFactory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>properties</code> <a class="xref" href="log4net.Util.PropertiesDictionary.html">PropertiesDictionary</a></dt>
+    <dd><p>The properties to pass to this repository.</p>
+</dd>
+    <dt><code>loggerFactory</code> <a class="xref" href="log4net.Repository.Hierarchy.ILoggerFactory.html">ILoggerFactory</a></dt>
+    <dd><p>The factory to use to create new logger instances.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy__ctor_log4net_Util_PropertiesDictionary_log4net_Repository_Hierarchy_ILoggerFactory__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a> class with 
+the specified <a class="xref" href="log4net.Repository.Hierarchy.ILoggerFactory.html">ILoggerFactory</a>.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_EmittedNoAppenderWarning_" data-uid="log4net.Repository.Hierarchy.Hierarchy.EmittedNoAppenderWarning*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_EmittedNoAppenderWarning" data-uid="log4net.Repository.Hierarchy.Hierarchy.EmittedNoAppenderWarning">
+  EmittedNoAppenderWarning
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Has no appender warning been emitted</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EmittedNoAppenderWarning { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_EmittedNoAppenderWarning_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Flag to indicate if we have already issued a warning
+about not having an appender warning.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_LoggerFactory_" data-uid="log4net.Repository.Hierarchy.Hierarchy.LoggerFactory*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_LoggerFactory" data-uid="log4net.Repository.Hierarchy.Hierarchy.LoggerFactory">
+  LoggerFactory
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the default <a class="xref" href="log4net.Repository.Hierarchy.ILoggerFactory.html">ILoggerFactory</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILoggerFactory LoggerFactory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.Hierarchy.ILoggerFactory.html">ILoggerFactory</a></dt>
+    <dd><p>The default <a class="xref" href="log4net.Repository.Hierarchy.ILoggerFactory.html">ILoggerFactory</a></p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_LoggerFactory_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The logger factory is used to create logger instances.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_Root_" data-uid="log4net.Repository.Hierarchy.Hierarchy.Root*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_Root" data-uid="log4net.Repository.Hierarchy.Hierarchy.Root">
+  Root
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the root of this hierarchy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Logger Root { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_Root_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Get the root of this hierarchy.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_BasicRepositoryConfigure_" data-uid="log4net.Repository.Hierarchy.Hierarchy.BasicRepositoryConfigure*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_BasicRepositoryConfigure_log4net_Appender_IAppender___" data-uid="log4net.Repository.Hierarchy.Hierarchy.BasicRepositoryConfigure(log4net.Appender.IAppender[])">
+  BasicRepositoryConfigure(params IAppender[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize the log4net system using the specified appenders</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void BasicRepositoryConfigure(params IAppender[] appenders)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>appenders</code> <a class="xref" href="log4net.Appender.IAppender.html">IAppender</a>[]</dt>
+    <dd><p>the appenders to use to log all logging events</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_BasicRepositoryConfigure_log4net_Appender_IAppender____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method provides the same functionality as the 
+<span class="xref">IBasicRepositoryConfigurator.Configure(IAppender)</span> method implemented
+on this object, but it is protected and therefore can be called by subclasses.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_Clear_" data-uid="log4net.Repository.Hierarchy.Hierarchy.Clear*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_Clear" data-uid="log4net.Repository.Hierarchy.Hierarchy.Clear">
+  Clear()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear all logger definitions from the internal hashtable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_Clear_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This call will clear all logger definitions from the internal
+hashtable. Invoking this method will irrevocably mess up the
+logger hierarchy.
+</p>
+<p>
+You should <b>really</b> know what you are doing before
+invoking this method.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_Exists_" data-uid="log4net.Repository.Hierarchy.Hierarchy.Exists*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_Exists_System_String_" data-uid="log4net.Repository.Hierarchy.Hierarchy.Exists(System.String)">
+  Exists(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Test if a logger exists</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ILogger Exists(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the logger to lookup</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The Logger object with the name specified</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_Exists_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Check if the named logger exists in the hierarchy. If so return
+its reference, otherwise returns <code>null</code>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_GetAppenders_" data-uid="log4net.Repository.Hierarchy.Hierarchy.GetAppenders*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_GetAppenders" data-uid="log4net.Repository.Hierarchy.Hierarchy.GetAppenders">
+  GetAppenders()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns all the Appenders that are currently configured</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IAppender[] GetAppenders()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a>[]</dt>
+    <dd><p>An array containing all the currently configured appenders</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_GetAppenders_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Returns all the <a class="xref" href="log4net.Appender.IAppender.html">IAppender</a> instances that are currently configured.
+All the loggers are searched for appenders. The appenders may also be containers
+for appenders and these are also searched for additional loggers.
+</p>
+<p>
+The list returned is unordered but does not contain duplicates.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_GetCurrentLoggers_" data-uid="log4net.Repository.Hierarchy.Hierarchy.GetCurrentLoggers*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_GetCurrentLoggers" data-uid="log4net.Repository.Hierarchy.Hierarchy.GetCurrentLoggers">
+  GetCurrentLoggers()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns all the currently defined loggers in the hierarchy as an Array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ILogger[] GetCurrentLoggers()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a>[]</dt>
+    <dd><p>All the defined loggers</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_GetCurrentLoggers_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Returns all the currently defined loggers in the hierarchy as an Array.
+The root logger is <b>not</b> included in the returned
+enumeration.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_GetLogger_" data-uid="log4net.Repository.Hierarchy.Hierarchy.GetLogger*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_GetLogger_System_String_" data-uid="log4net.Repository.Hierarchy.Hierarchy.GetLogger(System.String)">
+  GetLogger(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return a new logger instance named as the first parameter using
+the default factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ILogger GetLogger(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the logger to retrieve</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger object with the name specified</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_GetLogger_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Return a new logger instance named as the first parameter using
+the default factory.
+</p>
+<p>
+If a logger of that name already exists, then it will be
+returned.  Otherwise, a new logger will be instantiated and
+then linked with its existing ancestors as well as children.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_GetLogger_" data-uid="log4net.Repository.Hierarchy.Hierarchy.GetLogger*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_GetLogger_System_String_log4net_Repository_Hierarchy_ILoggerFactory_" data-uid="log4net.Repository.Hierarchy.Hierarchy.GetLogger(System.String,log4net.Repository.Hierarchy.ILoggerFactory)">
+  GetLogger(string, ILoggerFactory)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return a new logger instance named as the first parameter using
+<code class="paramref">factory</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Logger GetLogger(string name, ILoggerFactory factory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the logger to retrieve</p>
+</dd>
+    <dt><code>factory</code> <a class="xref" href="log4net.Repository.Hierarchy.ILoggerFactory.html">ILoggerFactory</a></dt>
+    <dd><p>The factory that will make the new logger instance</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a></dt>
+    <dd><p>The logger object with the name specified</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_GetLogger_System_String_log4net_Repository_Hierarchy_ILoggerFactory__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If a logger of that name already exists, then it will be
+returned. Otherwise, a new logger will be instantiated by the
+<code class="paramref">factory</code> parameter and linked with its existing
+ancestors as well as children.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_IsDisabled_" data-uid="log4net.Repository.Hierarchy.Hierarchy.IsDisabled*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_IsDisabled_log4net_Core_Level_" data-uid="log4net.Repository.Hierarchy.Hierarchy.IsDisabled(log4net.Core.Level)">
+  IsDisabled(Level)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Test if this hierarchy is disabled for the specified <a class="xref" href="log4net.Core.Level.html">Level</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisabled(Level level)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>The level to check against.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the repository is disabled for the level argument, <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_IsDisabled_log4net_Core_Level__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If this hierarchy has not been configured then this method will
+always return <code>true</code>.
+</p>
+<p>
+This method will return <code>true</code> if this repository is
+disabled for <code>level</code> object passed as parameter and
+<code>false</code> otherwise.
+</p>
+<p>
+See also the <a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_Threshold">Threshold</a> property.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_Log_" data-uid="log4net.Repository.Hierarchy.Hierarchy.Log*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_Log_log4net_Core_LoggingEvent_" data-uid="log4net.Repository.Hierarchy.Hierarchy.Log(log4net.Core.LoggingEvent)">
+  Log(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Log the logEvent through this hierarchy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Log(LoggingEvent logEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>the event to log</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_Log_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method should not normally be used to log.
+The <a class="xref" href="log4net.ILog.html">ILog</a> interface should be used 
+for routine logging. This interface can be obtained
+using the <span class="xref">log4net.LogManager.GetLogger(string)</span> method.
+</p>
+<p>
+The <code>logEvent</code> is delivered to the appropriate logger and
+that logger is then responsible for logging the event.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_OnLoggerCreationEvent_" data-uid="log4net.Repository.Hierarchy.Hierarchy.OnLoggerCreationEvent*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_OnLoggerCreationEvent_log4net_Repository_Hierarchy_Logger_" data-uid="log4net.Repository.Hierarchy.Hierarchy.OnLoggerCreationEvent(log4net.Repository.Hierarchy.Logger)">
+  OnLoggerCreationEvent(Logger)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a logger creation event to all registered listeners</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnLoggerCreationEvent(Logger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a></dt>
+    <dd><p>The newly created logger</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_OnLoggerCreationEvent_log4net_Repository_Hierarchy_Logger__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Raises the logger creation event.</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_ResetConfiguration_" data-uid="log4net.Repository.Hierarchy.Hierarchy.ResetConfiguration*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_ResetConfiguration" data-uid="log4net.Repository.Hierarchy.Hierarchy.ResetConfiguration">
+  ResetConfiguration()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset all values contained in this hierarchy instance to their default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ResetConfiguration()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_ResetConfiguration_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Reset all values contained in this hierarchy instance to their
+default.  This removes all appenders from all loggers, sets
+the level of all non-root loggers to <code>null</code>,
+sets their additivity flag to <code>true</code> and sets the level
+of the root logger to <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Debug">Debug</a>. Moreover,
+message disabling is set its default "off" value.
+</p>
+<p>
+Existing loggers are not removed. They are just reset.
+</p>
+<p>
+This method should be used sparingly and with care as it will
+block all logging until it is completed.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_Shutdown_" data-uid="log4net.Repository.Hierarchy.Hierarchy.Shutdown*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_Shutdown" data-uid="log4net.Repository.Hierarchy.Hierarchy.Shutdown">
+  Shutdown()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shutting down a hierarchy will <i>safely</i> close and remove
+all appenders in all loggers including the root logger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Shutdown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_Shutdown_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Shutting down a hierarchy will <i>safely</i> close and remove
+all appenders in all loggers including the root logger.
+</p>
+<p>
+Some appenders need to be closed before the
+application exists. Otherwise, pending logging events might be
+lost.
+</p>
+<p>
+The <code>Shutdown</code> method is careful to close nested
+appenders before closing regular appenders. This is allows
+configurations where a regular appender is attached to a logger
+and again to a nested appender.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_Hierarchy_XmlRepositoryConfigure_" data-uid="log4net.Repository.Hierarchy.Hierarchy.XmlRepositoryConfigure*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_XmlRepositoryConfigure_System_Xml_XmlElement_" data-uid="log4net.Repository.Hierarchy.Hierarchy.XmlRepositoryConfigure(System.Xml.XmlElement)">
+  XmlRepositoryConfigure(XmlElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize the log4net system using the specified config</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void XmlRepositoryConfigure(XmlElement element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>the element containing the root of the config</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_XmlRepositoryConfigure_System_Xml_XmlElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method provides the same functionality as the 
+<span class="xref">IBasicRepositoryConfigurator.Configure(IAppender)</span> method implemented
+on this object, but it is protected and therefore can be called by subclasses.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="log4net_Repository_Hierarchy_Hierarchy_LoggerCreatedEvent" data-uid="log4net.Repository.Hierarchy.Hierarchy.LoggerCreatedEvent">
+  LoggerCreatedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event used to notify that a logger has been created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event LoggerCreationEventHandler LoggerCreatedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Repository.Hierarchy.LoggerCreationEventHandler.html">LoggerCreationEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_Hierarchy_LoggerCreatedEvent_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Event raised when a logger is created.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

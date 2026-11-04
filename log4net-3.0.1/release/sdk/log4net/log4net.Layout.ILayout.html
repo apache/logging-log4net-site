@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ILayout | Apache log4net 3.0.1 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ILayout | Apache log4net 3.0.1 API Reference ">
+      
+      <meta name="description" content="Interface implemented by layout objects">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Layout.ILayout">
+
+
+
+  <h1 id="log4net_Layout_ILayout" data-uid="log4net.Layout.ILayout" class="text-break">
+Interface ILayout  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Layout.html">Layout</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Interface implemented by layout objects</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ILayout</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="log4net_Layout_ILayout_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+An <a class="xref" href="log4net.Layout.ILayout.html">ILayout</a> object is used to format a <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>
+as text. The <span class="xref">Format(TextWriter,LoggingEvent)</span> method is called by an
+appender to transform the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> into a string.
+</p>
+<p>
+The layout can also supply <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Header">Header</a> and <a class="xref" href="log4net.Layout.ILayout.html#log4net_Layout_ILayout_Footer">Footer</a>
+text that is appender before any events and after all the events respectively.
+</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Layout_ILayout_ContentType_" data-uid="log4net.Layout.ILayout.ContentType*"></a>
+
+  <h3 id="log4net_Layout_ILayout_ContentType" data-uid="log4net.Layout.ILayout.ContentType">
+  ContentType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The content type output by this layout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ContentType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The content type</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Layout_ILayout_ContentType_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The content type output by this layout.
+</p>
+<p>
+This is a MIME type e.g. <code>"text/plain"</code>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Layout_ILayout_Footer_" data-uid="log4net.Layout.ILayout.Footer*"></a>
+
+  <h3 id="log4net_Layout_ILayout_Footer" data-uid="log4net.Layout.ILayout.Footer">
+  Footer
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The footer for the layout format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? Footer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the layout footer</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Layout_ILayout_Footer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The Footer text will be appended after all the logging events
+have been formatted and appended.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Layout_ILayout_Header_" data-uid="log4net.Layout.ILayout.Header*"></a>
+
+  <h3 id="log4net_Layout_ILayout_Header" data-uid="log4net.Layout.ILayout.Header">
+  Header
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The header for the layout format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? Header { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the layout header</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Layout_ILayout_Header_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The Header text will be appended before any logging events
+are formatted and appended.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Layout_ILayout_IgnoresException_" data-uid="log4net.Layout.ILayout.IgnoresException*"></a>
+
+  <h3 id="log4net_Layout_ILayout_IgnoresException" data-uid="log4net.Layout.ILayout.IgnoresException">
+  IgnoresException
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag indicating if this layout handle exceptions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IgnoresException { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>false</code> if this layout handles exceptions</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Layout_ILayout_IgnoresException_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If this layout handles the exception object contained within
+<a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>, then the layout should return
+<code>false</code>. Otherwise, if the layout ignores the exception
+object, then the layout should return <code>true</code>.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Layout_ILayout_Format_" data-uid="log4net.Layout.ILayout.Format*"></a>
+
+  <h3 id="log4net_Layout_ILayout_Format_System_IO_TextWriter_log4net_Core_LoggingEvent_" data-uid="log4net.Layout.ILayout.Format(System.IO.TextWriter,log4net.Core.LoggingEvent)">
+  Format(TextWriter, LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implement this method to create your own layout format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Format(TextWriter writer, LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>The TextWriter to write the formatted event to</p>
+</dd>
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Layout_ILayout_Format_System_IO_TextWriter_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method is called by an appender to format
+the <code class="paramref">loggingEvent</code> as text and output to a writer.
+</p>
+<p>
+If the caller does not have a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> and prefers the
+event to be formatted as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> then the following
+code can be used to format the event into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stringwriter">StringWriter</a>.
+</p>
+<pre><code class="lang-csharp">StringWriter writer = new StringWriter();
+Layout.Format(writer, loggingEvent);
+string formattedEvent = writer.ToString();</code></pre>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

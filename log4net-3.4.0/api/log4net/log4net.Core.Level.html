@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Level | Apache log4net 3.4.0 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Level | Apache log4net 3.4.0 API Reference ">
+      
+      <meta name="description" content="Defines the default set of levels recognized by the system.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Core.Level">
+
+
+
+  <h1 id="log4net_Core_Level" data-uid="log4net.Core.Level" class="text-break">
+Class Level  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines the default set of levels recognized by the system.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Level : IComparable, ISerializable, IEquatable&lt;Level&gt;, IComparable&lt;Level&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Level</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="log4net.Core.Level.html">Level</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="log4net.Core.Level.html">Level</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Core_Level_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Each <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a> has an associated <a class="xref" href="log4net.Core.Level.html">Level</a>.
+</p>
+<p>
+Levels have a numeric <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Value">Value</a> that defines the relative 
+ordering between levels. Two Levels with the same <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Value">Value</a> 
+are deemed to be equivalent.
+</p>
+<p>
+The levels that are recognized by log4net are set for each <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a>
+and each repository can have different levels defined. The levels are stored
+in the <a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_LevelMap">LevelMap</a> on the repository. Levels are
+looked up by name from the <a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_LevelMap">LevelMap</a>.
+</p>
+<p>
+When logging at level INFO the actual level used is not <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Info">Info</a> but
+the value of <code>LoggerRepository.LevelMap["INFO"]</code>. The default value for this is
+<a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Info">Info</a>, but this can be changed by reconfiguring the level map.
+</p>
+<p>
+Each level has a <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_DisplayName">DisplayName</a> in addition to its <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Name">Name</a>. The 
+<a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_DisplayName">DisplayName</a> is the string that is written into the output log. By default
+the display name is the same as the level name, but this can be used to alias levels
+or to localize the log output.
+</p>
+<p>
+Some of the predefined levels recognized by the system are:
+</p>
+<ul><li><a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Off">Off</a>.</li><li><a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Fatal">Fatal</a>.</li><li><a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Error">Error</a>.</li><li><a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Warn">Warn</a>.</li><li><a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Info">Info</a>.</li><li><a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Debug">Debug</a>.</li><li><a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_All">All</a>.</li></ul>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Core_Level__ctor_" data-uid="log4net.Core.Level.#ctor*"></a>
+
+  <h3 id="log4net_Core_Level__ctor_System_Int32_System_String_" data-uid="log4net.Core.Level.#ctor(System.Int32,System.String)">
+  Level(int, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Level(int level, string levelName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Integer value for this level, higher values represent more severe levels.</p>
+</dd>
+    <dt><code>levelName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string name of this level.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_Level__ctor_System_Int32_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Core.Level.html">Level</a> class with
+the specified level name and value.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_Level__ctor_" data-uid="log4net.Core.Level.#ctor*"></a>
+
+  <h3 id="log4net_Core_Level__ctor_System_Int32_System_String_System_String_" data-uid="log4net.Core.Level.#ctor(System.Int32,System.String,System.String)">
+  Level(int, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Level(int level, string levelName, string displayName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Integer value for this level, higher values represent more severe levels.</p>
+</dd>
+    <dt><code>levelName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string name of this level.</p>
+</dd>
+    <dt><code>displayName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The display name for this level. This may be localized or otherwise different from the name</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_Level__ctor_System_Int32_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Core.Level.html">Level</a> class with
+the specified level name and value.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_Level__ctor_" data-uid="log4net.Core.Level.#ctor*"></a>
+
+  <h3 id="log4net_Core_Level__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="log4net.Core.Level.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+  Level(SerializationInfo, StreamingContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serialization constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Level(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> that holds the serialized object data.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext">StreamingContext</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext">StreamingContext</a> that contains contextual information about the source or destination.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_Level__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Core.Level.html">Level</a> class 
+with serialized data.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="log4net_Core_Level_Alert" data-uid="log4net.Core.Level.Alert">
+  Alert
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Alert">Alert</a> level designates very severe error events.
+Take immediate action, alerts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Alert</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_All" data-uid="log4net.Core.Level.All">
+  All
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_All">All</a> level designates the lowest level possible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level All</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Critical" data-uid="log4net.Core.Level.Critical">
+  Critical
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Critical">Critical</a> level designates very severe error events.
+Critical condition, critical.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Critical</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Debug" data-uid="log4net.Core.Level.Debug">
+  Debug
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Debug">Debug</a> level designates fine-grained informational
+events that are most useful to debug an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Debug</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Emergency" data-uid="log4net.Core.Level.Emergency">
+  Emergency
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Emergency">Emergency</a> level designates very severe error events.
+System unusable, emergencies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Emergency</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Error" data-uid="log4net.Core.Level.Error">
+  Error
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Error">Error</a> level designates error events that might
+still allow the application to continue running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Error</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Fatal" data-uid="log4net.Core.Level.Fatal">
+  Fatal
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Fatal">Fatal</a> level designates very severe error events
+that will presumably lead the application to abort.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Fatal</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Fine" data-uid="log4net.Core.Level.Fine">
+  Fine
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Fine">Fine</a> level designates fine-grained informational
+events that are most useful to debug an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Fine</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Finer" data-uid="log4net.Core.Level.Finer">
+  Finer
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Finer">Finer</a> level designates fine-grained informational
+events that are most useful to debug an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Finer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Finest" data-uid="log4net.Core.Level.Finest">
+  Finest
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Finest">Finest</a> level designates fine-grained informational
+events that are most useful to debug an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Finest</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Info" data-uid="log4net.Core.Level.Info">
+  Info
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Info">Info</a> level designates informational messages that
+highlight the progress of the application at coarse-grained level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Info</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Log4Net_Debug" data-uid="log4net.Core.Level.Log4Net_Debug">
+  Log4Net_Debug
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Emergency">Emergency</a> level designates very severe error events.
+System unusable, emergencies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Log4Net_Debug</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Notice" data-uid="log4net.Core.Level.Notice">
+  Notice
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Notice">Notice</a> level designates informational messages
+that highlight the progress of the application at the highest level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Notice</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Off" data-uid="log4net.Core.Level.Off">
+  Off
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Off">Off</a> level designates a higher level than all the rest.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Off</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Severe" data-uid="log4net.Core.Level.Severe">
+  Severe
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Severe">Severe</a> level designates very severe error events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Severe</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Trace" data-uid="log4net.Core.Level.Trace">
+  Trace
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Trace">Trace</a> level designates fine-grained informational
+events that are most useful to debug an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Trace</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Verbose" data-uid="log4net.Core.Level.Verbose">
+  Verbose
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Verbose">Verbose</a> level designates fine-grained informational
+events that are most useful to debug an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Verbose</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Core_Level_Warn" data-uid="log4net.Core.Level.Warn">
+  Warn
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Warn">Warn</a> level designates potentially harmful
+situations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Level Warn</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Core_Level_DisplayName_" data-uid="log4net.Core.Level.DisplayName*"></a>
+
+  <h3 id="log4net_Core_Level_DisplayName" data-uid="log4net.Core.Level.DisplayName">
+  DisplayName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the display name of this level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DisplayName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_Name_" data-uid="log4net.Core.Level.Name*"></a>
+
+  <h3 id="log4net_Core_Level_Name" data-uid="log4net.Core.Level.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of this level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of this level.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_Level_Name_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets the name of this level.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_Level_Value_" data-uid="log4net.Core.Level.Value*"></a>
+
+  <h3 id="log4net_Core_Level_Value" data-uid="log4net.Core.Level.Value">
+  Value
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the value of this level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Core_Level_Compare_" data-uid="log4net.Core.Level.Compare*"></a>
+
+  <h3 id="log4net_Core_Level_Compare_log4net_Core_Level_log4net_Core_Level_" data-uid="log4net.Core.Level.Compare(log4net.Core.Level,log4net.Core.Level)">
+  Compare(Level?, Level?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two specified <a class="xref" href="log4net.Core.Level.html">Level</a> instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Compare(Level? l, Level? r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>l</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>The first <a class="xref" href="log4net.Core.Level.html">Level</a> to compare.</p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>The second <a class="xref" href="log4net.Core.Level.html">Level</a> to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that indicates the relative order of the
+two values compared. The return value has these meanings:</p>
+<table><thead><tr><th class="term">Value</th><th class="description">Meaning</th></tr></thead><tbody><tr><td class="term">Less than zero</td><td class="description"><code class="paramref">l</code> is less than <code class="paramref">r</code>.</td></tr><tr><td class="term">Zero</td><td class="description"><code class="paramref">l</code> is equal to <code class="paramref">r</code>.</td></tr><tr><td class="term">Greater than zero</td><td class="description"><code class="paramref">l</code> is greater than <code class="paramref">r</code>.</td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_CompareTo_" data-uid="log4net.Core.Level.CompareTo*"></a>
+
+  <h3 id="log4net_Core_Level_CompareTo_System_Object_" data-uid="log4net.Core.Level.CompareTo(System.Object)">
+  CompareTo(object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares this instance to a specified object and returns an
+indication of their relative values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that indicates the relative order of the
+values compared. The return value has these meanings:</p>
+<table><thead><tr><th class="term">Value</th><th class="description">Meaning</th></tr></thead><tbody><tr><td class="term">Less than zero</td><td class="description">This instance is less than <code class="paramref">other</code>.</td></tr><tr><td class="term">Zero</td><td class="description">This instance is equal to <code class="paramref">other</code>.</td></tr><tr><td class="term">Greater than zero</td><td class="description">
+       <p>This instance is greater than <code class="paramref">other</code>.</p>
+       <p>-or-</p>
+       <p><code class="paramref">other</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+       </td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_Level_CompareTo_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<code class="paramref">other</code> must be an instance of <a class="xref" href="log4net.Core.Level.html">Level</a> 
+or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>; otherwise, an exception is thrown.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_Level_CompareTo_" data-uid="log4net.Core.Level.CompareTo*"></a>
+
+  <h3 id="log4net_Core_Level_CompareTo_log4net_Core_Level_" data-uid="log4net.Core.Level.CompareTo(log4net.Core.Level)">
+  CompareTo(Level)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares this instance to a specified object and returns an
+indication of their relative values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(Level other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a> instance or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to compare with this instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that indicates the relative order of the
+values compared. The return value has these meanings:</p>
+<table><thead><tr><th class="term">Value</th><th class="description">Meaning</th></tr></thead><tbody><tr><td class="term">Less than zero</td><td class="description">This instance is less than <code class="paramref">other</code>.</td></tr><tr><td class="term">Zero</td><td class="description">This instance is equal to <code class="paramref">other</code>.</td></tr><tr><td class="term">Greater than zero</td><td class="description">
+       <p>This instance is greater than <code class="paramref">other</code>.</p>
+       <p>-or-</p>
+       <p><code class="paramref">other</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+       </td></tr></tbody></table>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_Level_CompareTo_log4net_Core_Level__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+<code class="paramref">other</code> must be an instance of <a class="xref" href="log4net.Core.Level.html">Level</a> 
+or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>; otherwise, an exception is thrown.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_Level_Equals_" data-uid="log4net.Core.Level.Equals*"></a>
+
+  <h3 id="log4net_Core_Level_Equals_System_Object_" data-uid="log4net.Core.Level.Equals(System.Object)">
+  Equals(object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares levels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the objects are equal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_Equals_" data-uid="log4net.Core.Level.Equals*"></a>
+
+  <h3 id="log4net_Core_Level_Equals_log4net_Core_Level_" data-uid="log4net.Core.Level.Equals(log4net.Core.Level)">
+  Equals(Level?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares levels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Level? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>The object to compare against.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the objects are equal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_GetHashCode_" data-uid="log4net.Core.Level.GetHashCode*"></a>
+
+  <h3 id="log4net_Core_Level_GetHashCode" data-uid="log4net.Core.Level.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a hash code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for the current <a class="xref" href="log4net.Core.Level.html">Level</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_Level_GetHashCode_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Returns a hash code suitable for use in hashing algorithms and data 
+structures like a hash table.
+</p>
+<p>
+Returns the hash code of the level <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Value">Value</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_Level_GetObjectData_" data-uid="log4net.Core.Level.GetObjectData*"></a>
+
+  <h3 id="log4net_Core_Level_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="log4net.Core.Level.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+  GetObjectData(SerializationInfo, StreamingContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Serializes this object into the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityCritical]
+public virtual void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> to populate with data.</p>
+</dd>
+    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext">StreamingContext</a></dt>
+    <dd><p>The destination for this serialization.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_ToString_" data-uid="log4net.Core.Level.ToString*"></a>
+
+  <h3 id="log4net_Core_Level_ToString" data-uid="log4net.Core.Level.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representation of the current
+<a class="xref" href="log4net.Core.Level.html">Level</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representation of the current <a class="xref" href="log4net.Core.Level.html">Level</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_Level_ToString_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Returns the level <a class="xref" href="log4net.Core.Level.html#log4net_Core_Level_Name">Name</a>.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="log4net_Core_Level_op_Equality_" data-uid="log4net.Core.Level.op_Equality*"></a>
+
+  <h3 id="log4net_Core_Level_op_Equality_log4net_Core_Level_log4net_Core_Level_" data-uid="log4net.Core.Level.op_Equality(log4net.Core.Level,log4net.Core.Level)">
+  operator ==(Level?, Level?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a value indicating whether two specified <a class="xref" href="log4net.Core.Level.html">Level</a>
+objects have the same value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Level? l, Level? r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>l</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a> or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a> or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the value of <code class="paramref">l</code> is the same as the
+value of <code class="paramref">r</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_op_GreaterThan_" data-uid="log4net.Core.Level.op_GreaterThan*"></a>
+
+  <h3 id="log4net_Core_Level_op_GreaterThan_log4net_Core_Level_log4net_Core_Level_" data-uid="log4net.Core.Level.op_GreaterThan(log4net.Core.Level,log4net.Core.Level)">
+  operator &gt;(Level?, Level?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a value indicating whether a specified <a class="xref" href="log4net.Core.Level.html">Level</a>
+is greater than another specified <a class="xref" href="log4net.Core.Level.html">Level</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;(Level? l, Level? r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>l</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a></p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">l</code> is greater than
+<code class="paramref">r</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_op_GreaterThanOrEqual_" data-uid="log4net.Core.Level.op_GreaterThanOrEqual*"></a>
+
+  <h3 id="log4net_Core_Level_op_GreaterThanOrEqual_log4net_Core_Level_log4net_Core_Level_" data-uid="log4net.Core.Level.op_GreaterThanOrEqual(log4net.Core.Level,log4net.Core.Level)">
+  operator &gt;=(Level?, Level?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a value indicating whether a specified <a class="xref" href="log4net.Core.Level.html">Level</a>
+is greater than or equal to another specified <a class="xref" href="log4net.Core.Level.html">Level</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;=(Level? l, Level? r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>l</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a></p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">l</code> is greater than or equal to
+<code class="paramref">r</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_op_Inequality_" data-uid="log4net.Core.Level.op_Inequality*"></a>
+
+  <h3 id="log4net_Core_Level_op_Inequality_log4net_Core_Level_log4net_Core_Level_" data-uid="log4net.Core.Level.op_Inequality(log4net.Core.Level,log4net.Core.Level)">
+  operator !=(Level?, Level?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a value indicating whether two specified <a class="xref" href="log4net.Core.Level.html">Level</a>
+objects have different values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Level? l, Level? r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>l</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a> or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a> or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the value of <code class="paramref">l</code> is different from
+the value of <code class="paramref">r</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_op_LessThan_" data-uid="log4net.Core.Level.op_LessThan*"></a>
+
+  <h3 id="log4net_Core_Level_op_LessThan_log4net_Core_Level_log4net_Core_Level_" data-uid="log4net.Core.Level.op_LessThan(log4net.Core.Level,log4net.Core.Level)">
+  operator &lt;(Level?, Level?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a value indicating whether a specified <a class="xref" href="log4net.Core.Level.html">Level</a>
+is less than another specified <a class="xref" href="log4net.Core.Level.html">Level</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;(Level? l, Level? r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>l</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a></p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">l</code> is less than
+<code class="paramref">r</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Core_Level_op_LessThanOrEqual_" data-uid="log4net.Core.Level.op_LessThanOrEqual*"></a>
+
+  <h3 id="log4net_Core_Level_op_LessThanOrEqual_log4net_Core_Level_log4net_Core_Level_" data-uid="log4net.Core.Level.op_LessThanOrEqual(log4net.Core.Level,log4net.Core.Level)">
+  operator &lt;=(Level?, Level?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a value indicating whether a specified <a class="xref" href="log4net.Core.Level.html">Level</a>
+is less than or equal to another specified <a class="xref" href="log4net.Core.Level.html">Level</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;=(Level? l, Level? r)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>l</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a></p>
+</dd>
+    <dt><code>r</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>A <a class="xref" href="log4net.Core.Level.html">Level</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">l</code> is less than or equal to
+<code class="paramref">r</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

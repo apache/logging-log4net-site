@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class XmlHierarchyConfigurator | Apache log4net 3.0.0 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class XmlHierarchyConfigurator | Apache log4net 3.0.0 API Reference ">
+      
+      <meta name="description" content="Initializes the log4net environment using an XML DOM.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator">
+
+
+
+  <h1 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator" class="text-break">
+Class XmlHierarchyConfigurator  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Repository.html">Repository</a>.<a class="xref" href="log4net.Repository.Hierarchy.html">Hierarchy</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Initializes the log4net environment using an XML DOM.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class XmlHierarchyConfigurator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">XmlHierarchyConfigurator</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Configures a <a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a> using an XML DOM.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator__ctor_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.#ctor*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator__ctor_log4net_Repository_Hierarchy_Hierarchy_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.#ctor(log4net.Repository.Hierarchy.Hierarchy)">
+  XmlHierarchyConfigurator(Hierarchy)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct the configurator for a hierarchy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XmlHierarchyConfigurator(Hierarchy hierarchy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hierarchy</code> <a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a></dt>
+    <dd><p>The hierarchy to build.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator__ctor_log4net_Repository_Hierarchy_Hierarchy__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.html">XmlHierarchyConfigurator</a> class
+with the specified <a class="xref" href="log4net.Repository.Hierarchy.Hierarchy.html">Hierarchy</a>.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_Configure_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.Configure*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_Configure_System_Xml_XmlElement_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.Configure(System.Xml.XmlElement)">
+  Configure(XmlElement?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configure the hierarchy by parsing a DOM tree of XML elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Configure(XmlElement? element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The root element to parse.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_Configure_System_Xml_XmlElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Configure the hierarchy by parsing a DOM tree of XML elements.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ConvertStringTo_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ConvertStringTo*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ConvertStringTo_System_Type_System_String_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ConvertStringTo(System.Type,System.String)">
+  ConvertStringTo(Type, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a string value to a target type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object? ConvertStringTo(Type type, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of object to convert the string to.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string value to use as the value of the object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>
+An object of type <code class="paramref">type</code> with value <code class="paramref">value</code> or 
+<code>null</code> when the conversion could not be performed.
+</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_CreateObjectFromXml_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.CreateObjectFromXml*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_CreateObjectFromXml_System_Xml_XmlElement_System_Type_System_Type_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.CreateObjectFromXml(System.Xml.XmlElement,System.Type,System.Type)">
+  CreateObjectFromXml(XmlElement, Type?, Type?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an object as specified in XML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object? CreateObjectFromXml(XmlElement element, Type? defaultTargetType, Type? typeConstraint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The XML element that contains the definition of the object.</p>
+</dd>
+    <dt><code>defaultTargetType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The object type to use if not explicitly specified.</p>
+</dd>
+    <dt><code>typeConstraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type that the returned object must be or must inherit from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object or <code>null</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_CreateObjectFromXml_System_Xml_XmlElement_System_Type_System_Type__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Parse an XML element and create an object instance based on the configuration
+data.
+</p>
+<p>
+The type of the instance may be specified in the XML. If not
+specified then the <code class="paramref">defaultTargetType</code> is used
+as the type. However the type is specified it must support the
+<code class="paramref">typeConstraint</code> type.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_FindAppenderByReference_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.FindAppenderByReference*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_FindAppenderByReference_System_Xml_XmlElement_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.FindAppenderByReference(System.Xml.XmlElement)">
+  FindAppenderByReference(XmlElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parse appenders by IDREF.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IAppender? FindAppenderByReference(XmlElement appenderRef)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>appenderRef</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The appender ref element.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></dt>
+    <dd><p>The instance of the appender that the ref refers to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_FindAppenderByReference_System_Xml_XmlElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Parse an XML element that represents an appender and return 
+the appender.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseAppender_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseAppender*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseAppender_System_Xml_XmlElement_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseAppender(System.Xml.XmlElement)">
+  ParseAppender(XmlElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses an appender element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IAppender? ParseAppender(XmlElement appenderElement)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>appenderElement</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The appender element.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></dt>
+    <dd><p>The appender instance or <code>null</code> when parsing failed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseAppender_System_Xml_XmlElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Parse an XML element that represents an appender and return
+the appender instance.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseChildrenOfLoggerElement_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseChildrenOfLoggerElement*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseChildrenOfLoggerElement_System_Xml_XmlElement_log4net_Repository_Hierarchy_Logger_System_Boolean_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseChildrenOfLoggerElement(System.Xml.XmlElement,log4net.Repository.Hierarchy.Logger,System.Boolean)">
+  ParseChildrenOfLoggerElement(XmlElement, Logger, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses the children of a logger element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ParseChildrenOfLoggerElement(XmlElement catElement, Logger log, bool isRoot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>catElement</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The category element.</p>
+</dd>
+    <dt><code>log</code> <a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a></dt>
+    <dd><p>The logger instance.</p>
+</dd>
+    <dt><code>isRoot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag to indicate if the logger is the root logger.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseChildrenOfLoggerElement_System_Xml_XmlElement_log4net_Repository_Hierarchy_Logger_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Parse the child elements of a &lt;logger&gt; element.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseLevel_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseLevel*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseLevel_System_Xml_XmlElement_log4net_Repository_Hierarchy_Logger_System_Boolean_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseLevel(System.Xml.XmlElement,log4net.Repository.Hierarchy.Logger,System.Boolean)">
+  ParseLevel(XmlElement, Logger, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses a level element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ParseLevel(XmlElement element, Logger log, bool isRoot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The level element.</p>
+</dd>
+    <dt><code>log</code> <a class="xref" href="log4net.Repository.Hierarchy.Logger.html">Logger</a></dt>
+    <dd><p>The logger object to set the level on.</p>
+</dd>
+    <dt><code>isRoot</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag to indicate if the logger is the root logger.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseLevel_System_Xml_XmlElement_log4net_Repository_Hierarchy_Logger_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Parse an XML element that represents a level.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseLogger_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseLogger*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseLogger_System_Xml_XmlElement_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseLogger(System.Xml.XmlElement)">
+  ParseLogger(XmlElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses a logger element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ParseLogger(XmlElement loggerElement)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggerElement</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The logger element.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseLogger_System_Xml_XmlElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Parse an XML element that represents a logger.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseRenderer_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseRenderer*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseRenderer_System_Xml_XmlElement_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseRenderer(System.Xml.XmlElement)">
+  ParseRenderer(XmlElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses an object renderer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ParseRenderer(XmlElement element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The renderer element.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseRenderer_System_Xml_XmlElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Parse an XML element that represents a renderer.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseRoot_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseRoot*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseRoot_System_Xml_XmlElement_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.ParseRoot(System.Xml.XmlElement)">
+  ParseRoot(XmlElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parses the root logger element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ParseRoot(XmlElement rootElement)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rootElement</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The root element.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_ParseRoot_System_Xml_XmlElement__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Parse an XML element that represents the root logger.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_SetParameter_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.SetParameter*"></a>
+
+  <h3 id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_SetParameter_System_Xml_XmlElement_System_Object_" data-uid="log4net.Repository.Hierarchy.XmlHierarchyConfigurator.SetParameter(System.Xml.XmlElement,System.Object)">
+  SetParameter(XmlElement, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a parameter on an object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetParameter(XmlElement element, object target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">XmlElement</span></dt>
+    <dd><p>The parameter element.</p>
+</dd>
+    <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to set the parameter on.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Repository_Hierarchy_XmlHierarchyConfigurator_SetParameter_System_Xml_XmlElement_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The parameter name must correspond to a writable property
+on the object. The value of the parameter is a string,
+therefore this function will attempt to set a string
+property first. If unable to set a string property it
+will inspect the property and its argument type. It will
+attempt to call a static method called <code>Parse</code> on the
+type of the property. This method will take a single
+string argument and return a value that can be used to
+set the property.</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

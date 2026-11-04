@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum FixFlags | Apache log4net 3.3.1 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum FixFlags | Apache log4net 3.3.1 API Reference ">
+      
+      <meta name="description" content="Flags passed to the  property">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Core.FixFlags">
+
+
+
+
+  <h1 id="log4net_Core_FixFlags" data-uid="log4net.Core.FixFlags" class="text-break">
+Enum FixFlags  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Flags passed to the <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Fix">Fix</a> property</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum FixFlags</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="log4net_Core_FixFlags_All"><code>All = 268435455</code></dt>
+  
+  <dd><p>All fields fixed</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_Domain"><code>Domain = 64</code></dt>
+  
+  <dd><p>Fix the domain friendly name</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_Exception"><code>Exception = 256</code></dt>
+  
+  <dd><p>Fix the exception text</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_Identity"><code>Identity = 128</code></dt>
+  <dd><p>Fix the callers principal name</p>
+<p>CAUTION: May be slow to generate</p>
+</dd>
+  
+    <dt id="log4net_Core_FixFlags_LocationInfo"><code>LocationInfo = 16</code></dt>
+  <dd><p>Fix the callers location information</p>
+<p>CAUTION: Very slow to generate</p>
+</dd>
+  
+    <dt id="log4net_Core_FixFlags_Mdc"><code>Mdc = 1</code></dt>
+  
+  <dd><p>Fix the MDC</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_Message"><code>Message = 4</code></dt>
+  
+  <dd><p>Fix the rendered message</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_Ndc"><code>Ndc = 2</code></dt>
+  
+  <dd><p>Fix the NDC</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_None"><code>None = 0</code></dt>
+  
+  <dd><p>No fields fixed</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_Partial"><code>Partial = Message | ThreadName | Domain | Exception | Properties</code></dt>
+  <dd><p>Partial fields fixed</p>
+<p>
+This set of partial fields gives good performance. The following fields are fixed:
+</p>
+<ul><li><a class="xref" href="log4net.Core.FixFlags.html#log4net_Core_FixFlags_Message">Message</a></li><li><a class="xref" href="log4net.Core.FixFlags.html#log4net_Core_FixFlags_ThreadName">ThreadName</a></li><li><a class="xref" href="log4net.Core.FixFlags.html#log4net_Core_FixFlags_Exception">Exception</a></li><li><a class="xref" href="log4net.Core.FixFlags.html#log4net_Core_FixFlags_Domain">Domain</a></li><li><a class="xref" href="log4net.Core.FixFlags.html#log4net_Core_FixFlags_Properties">Properties</a></li></ul>
+</dd>
+  
+    <dt id="log4net_Core_FixFlags_Properties"><code>Properties = 512</code></dt>
+  
+  <dd><p>Fix the event properties. Active properties must implement <a class="xref" href="log4net.Core.IFixingRequired.html">IFixingRequired</a> in order to be eligible for fixing.</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_ThreadName"><code>ThreadName = 8</code></dt>
+  
+  <dd><p>Fix the thread name</p>
+</dd>
+    <dt id="log4net_Core_FixFlags_UserName"><code>UserName = 32</code></dt>
+  <dd><p>Fix the callers windows user name</p>
+<p>CAUTION: Slow to generate</p>
+</dd>
+  
+  </dl>
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

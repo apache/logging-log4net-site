@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EventLogAppender | Apache log4net 1.2.15 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EventLogAppender | Apache log4net 1.2.15 API Reference ">
+      
+      <meta name="description" content="Writes events to the system event log.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.EventLogAppender">
+
+
+
+  <h1 id="log4net_Appender_EventLogAppender" data-uid="log4net.Appender.EventLogAppender" class="text-break">
+Class EventLogAppender  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Writes events to the system event log.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EventLogAppender : AppenderSkeleton, IBulkAppender, IAppender, IOptionHandler</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a></div>
+      <div><span class="xref">EventLogAppender</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.IBulkAppender.html">IBulkAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_">AppenderSkeleton.DoAppend(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent___">AppenderSkeleton.DoAppend(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.FilterEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter_">AppenderSkeleton.AddFilter(IFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ClearFilters">AppenderSkeleton.ClearFilters()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level_">AppenderSkeleton.IsAsSevereAsThreshold(Level)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_OnClose">AppenderSkeleton.OnClose()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent___">AppenderSkeleton.Append(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_PreAppendCheck">AppenderSkeleton.PreAppendCheck()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Appender_EventLogAppender_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+The appender will fail if you try to write using an event source that doesn't exist unless it is running with local administrator privileges.
+See also http://logging.apache.org/log4net/release/faq.html#trouble-EventLog
+</p>
+<p>
+The <code>EventID</code> of the event log entry can be
+set using the <code>EventID</code> property (<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Properties">Properties</a>)
+on the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>.
+</p>
+<p>
+The <code>Category</code> of the event log entry can be
+set using the <code>Category</code> property (<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Properties">Properties</a>)
+on the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>.
+</p>
+<p>
+There is a limit of 32K characters for an event log message
+</p>
+<p>
+When configuring the EventLogAppender a mapping can be
+specified to map a logging level to an event log entry type. For example:
+</p>
+<pre><code class="lang-csharp">&lt;mapping&gt;
+	&lt;level value="ERROR" /&gt;
+	&lt;eventLogEntryType value="Error" /&gt;
+&lt;/mapping&gt;
+&lt;mapping&gt;
+	&lt;level value="DEBUG" /&gt;
+	&lt;eventLogEntryType value="Information" /&gt;
+&lt;/mapping&gt;</code></pre>
+<p>
+The Level is the standard log4net logging level and eventLogEntryType can be any value
+from the <span class="xref">System.Diagnostics.EventLogEntryType</span> enum, i.e.:
+<ul><li><span class="term">Error</span>an error event</li><li><span class="term">Warning</span>a warning event</li><li><span class="term">Information</span>an informational event</li></ul>
+
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_EventLogAppender__ctor_" data-uid="log4net.Appender.EventLogAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender__ctor" data-uid="log4net.Appender.EventLogAppender.#ctor">
+  EventLogAppender()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Appender.EventLogAppender.html">EventLogAppender</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventLogAppender()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Default constructor.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender__ctor_" data-uid="log4net.Appender.EventLogAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender__ctor_log4net_Layout_ILayout_" data-uid="log4net.Appender.EventLogAppender.#ctor(log4net.Layout.ILayout)">
+  EventLogAppender(ILayout)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Appender.EventLogAppender.html">EventLogAppender</a> class
+with the specified <a class="xref" href="log4net.Layout.ILayout.html">ILayout</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Instead use the default constructor and set the Layout property&quot;)]
+public EventLogAppender(ILayout layout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>layout</code> <a class="xref" href="log4net.Layout.ILayout.html">ILayout</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Layout.ILayout.html">ILayout</a> to use with this appender.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender__ctor_log4net_Layout_ILayout__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Obsolete constructor.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Appender_EventLogAppender_ApplicationName_" data-uid="log4net.Appender.EventLogAppender.ApplicationName*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_ApplicationName" data-uid="log4net.Appender.EventLogAppender.ApplicationName">
+  ApplicationName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Property used to set the Application name.  This appears in the
+event logs when logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ApplicationName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string used to distinguish events from different sources.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_ApplicationName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Sets the event log source property.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_Category_" data-uid="log4net.Appender.EventLogAppender.Category*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_Category" data-uid="log4net.Appender.EventLogAppender.Category">
+  Category
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <code>Category</code> to use unless one is explicitly specified via the <code>LoggingEvent</code>'s properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short Category { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_Category_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <code>Category</code> of the event log entry will normally be
+set using the <code>Category</code> property (<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Properties">Properties</a>)
+on the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>.
+This property provides the fallback value which defaults to 0.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_EventId_" data-uid="log4net.Appender.EventLogAppender.EventId*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_EventId" data-uid="log4net.Appender.EventLogAppender.EventId">
+  EventId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <code>EventId</code> to use unless one is explicitly specified via the <code>LoggingEvent</code>'s properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EventId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_EventId_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The <code>EventID</code> of the event log entry will normally be
+set using the <code>EventID</code> property (<a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Properties">Properties</a>)
+on the <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a>.
+This property provides the fallback value which defaults to 0.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_LogName_" data-uid="log4net.Appender.EventLogAppender.LogName*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_LogName" data-uid="log4net.Appender.EventLogAppender.LogName">
+  LogName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the log where messages will be stored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LogName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string name of the log where messages will be stored.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_LogName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is the name of the log as it appears in the Event Viewer
+tree. The default value is to log into the <code>Application</code>
+log, this is where most applications write their events. However
+if you need a separate log for your application (or applications)
+then you should set the <a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_LogName">LogName</a> appropriately.</p>
+<p>This should not be used to distinguish your event log messages
+from those of other applications, the <a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_ApplicationName">ApplicationName</a>
+property should be used to distinguish events. This property should be 
+used to group together events into a single log.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_MachineName_" data-uid="log4net.Appender.EventLogAppender.MachineName*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_MachineName" data-uid="log4net.Appender.EventLogAppender.MachineName">
+  MachineName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This property is used to return the name of the computer to use
+when accessing the event logs.  Currently, this is the current
+computer, denoted by a dot &quot;.&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MachineName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string name of the machine holding the event log that
+will be logged into.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_MachineName_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This property cannot be changed. It is currently set to '.'
+i.e. the local machine. This may be changed in future.</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_RequiresLayout_" data-uid="log4net.Appender.EventLogAppender.RequiresLayout*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_RequiresLayout" data-uid="log4net.Appender.EventLogAppender.RequiresLayout">
+  RequiresLayout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This appender requires a <a class="xref" href="log4net.Layout.html">log4net.Layout</a> to be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool RequiresLayout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code></p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_RequiresLayout_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This appender requires a <a class="xref" href="log4net.Layout.html">log4net.Layout</a> to be set.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_SecurityContext_" data-uid="log4net.Appender.EventLogAppender.SecurityContext*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_SecurityContext" data-uid="log4net.Appender.EventLogAppender.SecurityContext">
+  SecurityContext
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_SecurityContext">SecurityContext</a> used to write to the EventLog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SecurityContext SecurityContext { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Core.SecurityContext.html">SecurityContext</a></dt>
+    <dd><p>The <a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_SecurityContext">SecurityContext</a> used to write to the EventLog.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_SecurityContext_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The system security context used to write to the EventLog.
+</p>
+<p>
+Unless a <a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_SecurityContext">SecurityContext</a> specified here for this appender
+the <a class="xref" href="log4net.Core.SecurityContextProvider.html#log4net_Core_SecurityContextProvider_DefaultProvider">DefaultProvider</a> is queried for the
+security context to use. The default behavior is to use the security context
+of the current thread.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_EventLogAppender_ActivateOptions_" data-uid="log4net.Appender.EventLogAppender.ActivateOptions*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_ActivateOptions" data-uid="log4net.Appender.EventLogAppender.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialize the appender based on the options set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_ActivateOptions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This is part of the <a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a> delayed object
+activation scheme. The <a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_ActivateOptions">ActivateOptions()</a> method must 
+be called on this object after the configuration properties have
+been set. Until <a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_ActivateOptions">ActivateOptions()</a> is called this
+object is in an undefined state and must not be used. 
+</p>
+<p>
+If any of the configuration properties are modified then 
+<a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_ActivateOptions">ActivateOptions()</a> must be called again.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_AddMapping_" data-uid="log4net.Appender.EventLogAppender.AddMapping*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_AddMapping_log4net_Appender_EventLogAppender_Level2EventLogEntryType_" data-uid="log4net.Appender.EventLogAppender.AddMapping(log4net.Appender.EventLogAppender.Level2EventLogEntryType)">
+  AddMapping(Level2EventLogEntryType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a mapping of level to <span class="xref">System.Diagnostics.EventLogEntryType</span> - done by the config file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddMapping(EventLogAppender.Level2EventLogEntryType mapping)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mapping</code> <a class="xref" href="log4net.Appender.EventLogAppender.html">EventLogAppender</a>.<a class="xref" href="log4net.Appender.EventLogAppender.Level2EventLogEntryType.html">Level2EventLogEntryType</a></dt>
+    <dd><p>The mapping to add</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_AddMapping_log4net_Appender_EventLogAppender_Level2EventLogEntryType__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Add a <a class="xref" href="log4net.Appender.EventLogAppender.Level2EventLogEntryType.html">EventLogAppender.Level2EventLogEntryType</a> mapping to this appender.
+Each mapping defines the event log entry type for a level.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_Append_" data-uid="log4net.Appender.EventLogAppender.Append*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_Append_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.EventLogAppender.Append(log4net.Core.LoggingEvent)">
+  Append(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called by the <span class="xref">AppenderSkeleton.DoAppend(LoggingEvent)</span>
+method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>the event to log</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_Append_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Writes the event to the system event log using the 
+<a class="xref" href="log4net.Appender.EventLogAppender.html#log4net_Appender_EventLogAppender_ApplicationName">ApplicationName</a>.</p>
+<p>If the event has an <code>EventID</code> property (see <a class="xref" href="log4net.Core.LoggingEvent.html#log4net_Core_LoggingEvent_Properties">Properties</a>)
+set then this integer will be used as the event log event id.</p>
+<p>
+There is a limit of 32K characters for an event log message
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_EventLogAppender_GetEntryType_" data-uid="log4net.Appender.EventLogAppender.GetEntryType*"></a>
+
+  <h3 id="log4net_Appender_EventLogAppender_GetEntryType_log4net_Core_Level_" data-uid="log4net.Appender.EventLogAppender.GetEntryType(log4net.Core.Level)">
+  GetEntryType(Level)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the equivalent <span class="xref">System.Diagnostics.EventLogEntryType</span> for a <a class="xref" href="log4net.Core.Level.html">Level</a> <code class="paramref">level</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual EventLogEntryType GetEntryType(Level level)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="log4net.Core.Level.html">Level</a></dt>
+    <dd><p>the Level to convert to an EventLogEntryType</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EventLogEntryType</span></dt>
+    <dd><p>The equivalent <span class="xref">System.Diagnostics.EventLogEntryType</span> for a <a class="xref" href="log4net.Core.Level.html">Level</a> <code class="paramref">level</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_EventLogAppender_GetEntryType_log4net_Core_Level__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Because there are fewer applicable <span class="xref">System.Diagnostics.EventLogEntryType</span>
+values to use in logging levels than there are in the
+<a class="xref" href="log4net.Core.Level.html">Level</a> this is a one way mapping. There is
+a loss of information during the conversion.</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

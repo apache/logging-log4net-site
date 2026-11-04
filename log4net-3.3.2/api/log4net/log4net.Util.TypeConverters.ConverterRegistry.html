@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ConverterRegistry | Apache log4net 3.3.2 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConverterRegistry | Apache log4net 3.3.2 API Reference ">
+      
+      <meta name="description" content="Register of type converters for specific types.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Util.TypeConverters.ConverterRegistry">
+
+
+
+  <h1 id="log4net_Util_TypeConverters_ConverterRegistry" data-uid="log4net.Util.TypeConverters.ConverterRegistry" class="text-break">
+Class ConverterRegistry  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Util.html">Util</a>.<a class="xref" href="log4net.Util.TypeConverters.html">TypeConverters</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Register of type converters for specific types.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ConverterRegistry</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ConverterRegistry</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Util_TypeConverters_ConverterRegistry_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Maintains a registry of type converters used to convert between types.
+</p>
+<p>
+Use the <a class="xref" href="log4net.Util.TypeConverters.ConverterRegistry.html#log4net_Util_TypeConverters_ConverterRegistry_AddConverter_System_Type_System_Object_">AddConverter(Type?, object?)</a> and 
+<a class="xref" href="log4net.Util.TypeConverters.ConverterRegistry.html#log4net_Util_TypeConverters_ConverterRegistry_AddConverter_System_Type_System_Type_">AddConverter(Type, Type)</a> methods to register new converters.
+The <a class="xref" href="log4net.Util.TypeConverters.ConverterRegistry.html#log4net_Util_TypeConverters_ConverterRegistry_GetConvertTo_System_Type_System_Type_">GetConvertTo(Type, Type)</a> and <a class="xref" href="log4net.Util.TypeConverters.ConverterRegistry.html#log4net_Util_TypeConverters_ConverterRegistry_GetConvertFrom_System_Type_">GetConvertFrom(Type)</a> methods
+lookup appropriate converters to use.
+</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Util_TypeConverters_ConverterRegistry_AddConverter_" data-uid="log4net.Util.TypeConverters.ConverterRegistry.AddConverter*"></a>
+
+  <h3 id="log4net_Util_TypeConverters_ConverterRegistry_AddConverter_System_Type_System_Object_" data-uid="log4net.Util.TypeConverters.ConverterRegistry.AddConverter(System.Type,System.Object)">
+  AddConverter(Type?, object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a converter for a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddConverter(Type? destinationType, object? converter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destinationType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type being converted to.</p>
+</dd>
+    <dt><code>converter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The type converter to use to convert to the destination type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Util_TypeConverters_ConverterRegistry_AddConverter_" data-uid="log4net.Util.TypeConverters.ConverterRegistry.AddConverter*"></a>
+
+  <h3 id="log4net_Util_TypeConverters_ConverterRegistry_AddConverter_System_Type_System_Type_" data-uid="log4net.Util.TypeConverters.ConverterRegistry.AddConverter(System.Type,System.Type)">
+  AddConverter(Type, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a converter for a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddConverter(Type destinationType, Type converterType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destinationType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type being converted to.</p>
+</dd>
+    <dt><code>converterType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of the type converter to use to convert to the destination type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Util_TypeConverters_ConverterRegistry_GetConvertFrom_" data-uid="log4net.Util.TypeConverters.ConverterRegistry.GetConvertFrom*"></a>
+
+  <h3 id="log4net_Util_TypeConverters_ConverterRegistry_GetConvertFrom_System_Type_" data-uid="log4net.Util.TypeConverters.ConverterRegistry.GetConvertFrom(System.Type)">
+  GetConvertFrom(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type converter to use to convert values to the destination type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IConvertFrom? GetConvertFrom(Type destinationType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destinationType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type being converted to.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Util.TypeConverters.IConvertFrom.html">IConvertFrom</a></dt>
+    <dd><p>The type converter instance to use for type conversions or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+if no type converter is found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Util_TypeConverters_ConverterRegistry_GetConvertTo_" data-uid="log4net.Util.TypeConverters.ConverterRegistry.GetConvertTo*"></a>
+
+  <h3 id="log4net_Util_TypeConverters_ConverterRegistry_GetConvertTo_System_Type_System_Type_" data-uid="log4net.Util.TypeConverters.ConverterRegistry.GetConvertTo(System.Type,System.Type)">
+  GetConvertTo(Type, Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type converter to use to convert values to the destination type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IConvertTo? GetConvertTo(Type sourceType, Type destinationType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type being converted from.</p>
+</dd>
+    <dt><code>destinationType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type being converted to.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Util.TypeConverters.IConvertTo.html">IConvertTo</a></dt>
+    <dd><p>The type converter instance to use for type conversions or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+if no type converter is found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="log4net.Util.TypeConverters.IConvertFrom.html">IConvertFrom</a></div>
+      <div><a class="xref" href="log4net.Util.TypeConverters.IConvertTo.html">IConvertTo</a></div>
+  </div>
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FileAppender.ExclusiveLock | Apache log4net 2.0.7 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FileAppender.ExclusiveLock | Apache log4net 2.0.7 API Reference ">
+      
+      <meta name="description" content="Hold an exclusive lock on the output file">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.FileAppender.ExclusiveLock">
+
+
+
+  <h1 id="log4net_Appender_FileAppender_ExclusiveLock" data-uid="log4net.Appender.FileAppender.ExclusiveLock" class="text-break">
+Class FileAppender.ExclusiveLock  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Hold an exclusive lock on the output file</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FileAppender.ExclusiveLock : FileAppender.LockingModelBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Appender.FileAppender.html">FileAppender</a>.<a class="xref" href="log4net.Appender.FileAppender.LockingModelBase.html">LockingModelBase</a></div>
+      <div><span class="xref">FileAppender.ExclusiveLock</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.LockingModelBase.html#log4net_Appender_FileAppender_LockingModelBase_CreateStream_System_String_System_Boolean_System_IO_FileShare_">FileAppender.LockingModelBase.CreateStream(string, bool, FileShare)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.LockingModelBase.html#log4net_Appender_FileAppender_LockingModelBase_CloseStream_System_IO_Stream_">FileAppender.LockingModelBase.CloseStream(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.FileAppender.LockingModelBase.html#log4net_Appender_FileAppender_LockingModelBase_CurrentAppender">FileAppender.LockingModelBase.CurrentAppender</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Appender_FileAppender_ExclusiveLock_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Open the file once for writing and hold it open until <a class="xref" href="log4net.Appender.FileAppender.ExclusiveLock.html#log4net_Appender_FileAppender_ExclusiveLock_CloseFile">CloseFile()</a> is called. 
+Maintains an exclusive lock on the file during this time.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_FileAppender_ExclusiveLock__ctor_" data-uid="log4net.Appender.FileAppender.ExclusiveLock.#ctor*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ExclusiveLock__ctor" data-uid="log4net.Appender.FileAppender.ExclusiveLock.#ctor">
+  ExclusiveLock()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExclusiveLock()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_FileAppender_ExclusiveLock_AcquireLock_" data-uid="log4net.Appender.FileAppender.ExclusiveLock.AcquireLock*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ExclusiveLock_AcquireLock" data-uid="log4net.Appender.FileAppender.ExclusiveLock.AcquireLock">
+  AcquireLock()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Acquire the lock on the file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Stream AcquireLock()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>A stream that is ready to be written to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_ExclusiveLock_AcquireLock_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Does nothing. The lock is already taken
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_ExclusiveLock_ActivateOptions_" data-uid="log4net.Appender.FileAppender.ExclusiveLock.ActivateOptions*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ExclusiveLock_ActivateOptions" data-uid="log4net.Appender.FileAppender.ExclusiveLock.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes all resources used by this locking model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_FileAppender_ExclusiveLock_CloseFile_" data-uid="log4net.Appender.FileAppender.ExclusiveLock.CloseFile*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ExclusiveLock_CloseFile" data-uid="log4net.Appender.FileAppender.ExclusiveLock.CloseFile">
+  CloseFile()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Close the file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CloseFile()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_ExclusiveLock_CloseFile_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Close the file. No further writes will be made.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_ExclusiveLock_OnClose_" data-uid="log4net.Appender.FileAppender.ExclusiveLock.OnClose*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ExclusiveLock_OnClose" data-uid="log4net.Appender.FileAppender.ExclusiveLock.OnClose">
+  OnClose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes all resources that were initialized by this locking model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnClose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_FileAppender_ExclusiveLock_OpenFile_" data-uid="log4net.Appender.FileAppender.ExclusiveLock.OpenFile*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ExclusiveLock_OpenFile_System_String_System_Boolean_System_Text_Encoding_" data-uid="log4net.Appender.FileAppender.ExclusiveLock.OpenFile(System.String,System.Boolean,System.Text.Encoding)">
+  OpenFile(string, bool, Encoding)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Open the file specified and prepare for logging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OpenFile(string filename, bool append, Encoding encoding)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The filename to use</p>
+</dd>
+    <dt><code>append</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to append to the file, or overwrite</p>
+</dd>
+    <dt><code>encoding</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></dt>
+    <dd><p>The encoding to use</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_ExclusiveLock_OpenFile_System_String_System_Boolean_System_Text_Encoding__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Open the file specified and prepare for logging. 
+No writes will be made until <a class="xref" href="log4net.Appender.FileAppender.ExclusiveLock.html#log4net_Appender_FileAppender_ExclusiveLock_AcquireLock">AcquireLock()</a> is called.
+Must be called before any calls to <a class="xref" href="log4net.Appender.FileAppender.ExclusiveLock.html#log4net_Appender_FileAppender_ExclusiveLock_AcquireLock">AcquireLock()</a>,
+<a class="xref" href="log4net.Appender.FileAppender.ExclusiveLock.html#log4net_Appender_FileAppender_ExclusiveLock_ReleaseLock">ReleaseLock()</a> and <a class="xref" href="log4net.Appender.FileAppender.ExclusiveLock.html#log4net_Appender_FileAppender_ExclusiveLock_CloseFile">CloseFile()</a>.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Appender_FileAppender_ExclusiveLock_ReleaseLock_" data-uid="log4net.Appender.FileAppender.ExclusiveLock.ReleaseLock*"></a>
+
+  <h3 id="log4net_Appender_FileAppender_ExclusiveLock_ReleaseLock" data-uid="log4net.Appender.FileAppender.ExclusiveLock.ReleaseLock">
+  ReleaseLock()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Release the lock on the file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ReleaseLock()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_FileAppender_ExclusiveLock_ReleaseLock_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Does nothing. The lock will be released when the file is closed.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

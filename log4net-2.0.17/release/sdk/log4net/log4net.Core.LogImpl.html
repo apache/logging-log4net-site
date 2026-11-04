@@ -1,0 +1,2554 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LogImpl | Apache log4net 2.0.17 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LogImpl | Apache log4net 2.0.17 API Reference ">
+      
+      <meta name="description" content="Implementation of  wrapper interface.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Core.LogImpl">
+
+
+
+  <h1 id="log4net_Core_LogImpl" data-uid="log4net.Core.LogImpl" class="text-break">
+Class LogImpl  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Core.html">Core</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Implementation of <a class="xref" href="log4net.ILog.html">ILog</a> wrapper interface.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LogImpl : LoggerWrapperImpl, ILog, ILoggerWrapper</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Core.LoggerWrapperImpl.html">LoggerWrapperImpl</a></div>
+      <div><span class="xref">LogImpl</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.ILog.html">ILog</a></div>
+      <div><a class="xref" href="log4net.Core.ILoggerWrapper.html">ILoggerWrapper</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Core.LoggerWrapperImpl.html#log4net_Core_LoggerWrapperImpl_Logger">LoggerWrapperImpl.Logger</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugExt_log4net_ILog_System_Func_System_Object__">ILogExtensions.DebugExt(ILog, Func&lt;object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugExt_log4net_ILog_System_Func_System_Object__System_Exception_">ILogExtensions.DebugExt(ILog, Func&lt;object&gt;, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugExt_log4net_ILog_System_Object_">ILogExtensions.DebugExt(ILog, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugExt_log4net_ILog_System_Object_System_Exception_">ILogExtensions.DebugExt(ILog, object, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugFormatExt_log4net_ILog_System_IFormatProvider_System_String_System_Object___">ILogExtensions.DebugFormatExt(ILog, IFormatProvider, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugFormatExt_log4net_ILog_System_String_System_Object_">ILogExtensions.DebugFormatExt(ILog, string, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugFormatExt_log4net_ILog_System_String_System_Object_System_Object_">ILogExtensions.DebugFormatExt(ILog, string, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugFormatExt_log4net_ILog_System_String_System_Object_System_Object_System_Object_">ILogExtensions.DebugFormatExt(ILog, string, object, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_DebugFormatExt_log4net_ILog_System_String_System_Object___">ILogExtensions.DebugFormatExt(ILog, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorExt_log4net_ILog_System_Func_System_Object__">ILogExtensions.ErrorExt(ILog, Func&lt;object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorExt_log4net_ILog_System_Func_System_Object__System_Exception_">ILogExtensions.ErrorExt(ILog, Func&lt;object&gt;, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorExt_log4net_ILog_System_Object_">ILogExtensions.ErrorExt(ILog, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorExt_log4net_ILog_System_Object_System_Exception_">ILogExtensions.ErrorExt(ILog, object, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorFormatExt_log4net_ILog_System_IFormatProvider_System_String_System_Object___">ILogExtensions.ErrorFormatExt(ILog, IFormatProvider, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorFormatExt_log4net_ILog_System_String_System_Object_">ILogExtensions.ErrorFormatExt(ILog, string, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorFormatExt_log4net_ILog_System_String_System_Object_System_Object_">ILogExtensions.ErrorFormatExt(ILog, string, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorFormatExt_log4net_ILog_System_String_System_Object_System_Object_System_Object_">ILogExtensions.ErrorFormatExt(ILog, string, object, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_ErrorFormatExt_log4net_ILog_System_String_System_Object___">ILogExtensions.ErrorFormatExt(ILog, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalExt_log4net_ILog_System_Func_System_Object__">ILogExtensions.FatalExt(ILog, Func&lt;object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalExt_log4net_ILog_System_Func_System_Object__System_Exception_">ILogExtensions.FatalExt(ILog, Func&lt;object&gt;, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalExt_log4net_ILog_System_Object_">ILogExtensions.FatalExt(ILog, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalExt_log4net_ILog_System_Object_System_Exception_">ILogExtensions.FatalExt(ILog, object, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalFormatExt_log4net_ILog_System_IFormatProvider_System_String_System_Object___">ILogExtensions.FatalFormatExt(ILog, IFormatProvider, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalFormatExt_log4net_ILog_System_String_System_Object_">ILogExtensions.FatalFormatExt(ILog, string, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalFormatExt_log4net_ILog_System_String_System_Object_System_Object_">ILogExtensions.FatalFormatExt(ILog, string, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalFormatExt_log4net_ILog_System_String_System_Object_System_Object_System_Object_">ILogExtensions.FatalFormatExt(ILog, string, object, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_FatalFormatExt_log4net_ILog_System_String_System_Object___">ILogExtensions.FatalFormatExt(ILog, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoExt_log4net_ILog_System_Func_System_Object__">ILogExtensions.InfoExt(ILog, Func&lt;object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoExt_log4net_ILog_System_Func_System_Object__System_Exception_">ILogExtensions.InfoExt(ILog, Func&lt;object&gt;, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoExt_log4net_ILog_System_Object_">ILogExtensions.InfoExt(ILog, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoExt_log4net_ILog_System_Object_System_Exception_">ILogExtensions.InfoExt(ILog, object, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoFormatExt_log4net_ILog_System_IFormatProvider_System_String_System_Object___">ILogExtensions.InfoFormatExt(ILog, IFormatProvider, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoFormatExt_log4net_ILog_System_String_System_Object_">ILogExtensions.InfoFormatExt(ILog, string, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoFormatExt_log4net_ILog_System_String_System_Object_System_Object_">ILogExtensions.InfoFormatExt(ILog, string, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoFormatExt_log4net_ILog_System_String_System_Object_System_Object_System_Object_">ILogExtensions.InfoFormatExt(ILog, string, object, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_InfoFormatExt_log4net_ILog_System_String_System_Object___">ILogExtensions.InfoFormatExt(ILog, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnExt_log4net_ILog_System_Func_System_Object__">ILogExtensions.WarnExt(ILog, Func&lt;object&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnExt_log4net_ILog_System_Func_System_Object__System_Exception_">ILogExtensions.WarnExt(ILog, Func&lt;object&gt;, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnExt_log4net_ILog_System_Object_">ILogExtensions.WarnExt(ILog, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnExt_log4net_ILog_System_Object_System_Exception_">ILogExtensions.WarnExt(ILog, object, Exception)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnFormatExt_log4net_ILog_System_IFormatProvider_System_String_System_Object___">ILogExtensions.WarnFormatExt(ILog, IFormatProvider, string, params object[])</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnFormatExt_log4net_ILog_System_String_System_Object_">ILogExtensions.WarnFormatExt(ILog, string, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnFormatExt_log4net_ILog_System_String_System_Object_System_Object_">ILogExtensions.WarnFormatExt(ILog, string, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnFormatExt_log4net_ILog_System_String_System_Object_System_Object_System_Object_">ILogExtensions.WarnFormatExt(ILog, string, object, object, object)</a>
+  </div>
+  <div>
+      <a class="xref" href="log4net.Util.ILogExtensions.html#log4net_Util_ILogExtensions_WarnFormatExt_log4net_ILog_System_String_System_Object___">ILogExtensions.WarnFormatExt(ILog, string, params object[])</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="log4net_Core_LogImpl_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+This implementation of the <a class="xref" href="log4net.ILog.html">ILog</a> interface
+forwards to the <a class="xref" href="log4net.Core.ILogger.html">ILogger</a> held by the base class.
+</p>
+<p>
+This logger has methods to allow the caller to log at the following
+levels:
+</p>
+<p>
+The values for these levels and their semantic meanings can be changed by 
+configuring the <a class="xref" href="log4net.Repository.ILoggerRepository.html#log4net_Repository_ILoggerRepository_LevelMap">LevelMap</a> for the repository.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Core_LogImpl__ctor_" data-uid="log4net.Core.LogImpl.#ctor*"></a>
+
+  <h3 id="log4net_Core_LogImpl__ctor_log4net_Core_ILogger_" data-uid="log4net.Core.LogImpl.#ctor(log4net.Core.ILogger)">
+  LogImpl(ILogger)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new wrapper for the specified logger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogImpl(ILogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="log4net.Core.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger to wrap.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl__ctor_log4net_Core_ILogger__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Construct a new wrapper for the specified logger.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Core_LogImpl_IsDebugEnabled_" data-uid="log4net.Core.LogImpl.IsDebugEnabled*"></a>
+
+  <h3 id="log4net_Core_LogImpl_IsDebugEnabled" data-uid="log4net.Core.LogImpl.IsDebugEnabled">
+  IsDebugEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if this logger is enabled for the <code>DEBUG</code>
+level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsDebugEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if this logger is enabled for <code>DEBUG</code> events,
+<code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_IsDebugEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This function is intended to lessen the computational cost of
+disabled log debug statements.
+</p>
+<p>
+For some <code>log</code> Logger object, when you write:
+</p>
+<pre><code class="lang-csharp">log.Debug("This is entry number: " + i );</code></pre>
+<p>
+You incur the cost constructing the message, concatenation in
+this case, regardless of whether the message is logged or not.
+</p>
+<p>
+If you are worried about speed, then you should write:
+</p>
+<pre><code class="lang-csharp">if (log.IsDebugEnabled())
+{ 
+  log.Debug("This is entry number: " + i );
+}</code></pre>
+<p>
+This way you will not incur the cost of parameter
+construction if debugging is disabled for <code>log</code>. On
+the other hand, if the <code>log</code> is debug enabled, you
+will incur the cost of evaluating whether the logger is debug
+enabled twice. Once in <code>IsDebugEnabled</code> and once in
+the <code>Debug</code>.  This is an insignificant overhead
+since evaluating a logger takes about 1% of the time it
+takes to actually log.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_IsErrorEnabled_" data-uid="log4net.Core.LogImpl.IsErrorEnabled*"></a>
+
+  <h3 id="log4net_Core_LogImpl_IsErrorEnabled" data-uid="log4net.Core.LogImpl.IsErrorEnabled">
+  IsErrorEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if this logger is enabled for the <code>ERROR</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsErrorEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if this logger is enabled for <code>ERROR</code> events,
+<code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_IsErrorEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+See <a class="xref" href="log4net.Core.LogImpl.html#log4net_Core_LogImpl_IsDebugEnabled">IsDebugEnabled</a> for more information and examples of using this method.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="log4net.ILog.html#log4net_ILog_IsDebugEnabled">IsDebugEnabled</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Core_LogImpl_IsFatalEnabled_" data-uid="log4net.Core.LogImpl.IsFatalEnabled*"></a>
+
+  <h3 id="log4net_Core_LogImpl_IsFatalEnabled" data-uid="log4net.Core.LogImpl.IsFatalEnabled">
+  IsFatalEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if this logger is enabled for the <code>FATAL</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsFatalEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if this logger is enabled for <code>FATAL</code> events,
+<code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_IsFatalEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+See <a class="xref" href="log4net.Core.LogImpl.html#log4net_Core_LogImpl_IsDebugEnabled">IsDebugEnabled</a> for more information and examples of using this method.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="log4net.ILog.html#log4net_ILog_IsDebugEnabled">IsDebugEnabled</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Core_LogImpl_IsInfoEnabled_" data-uid="log4net.Core.LogImpl.IsInfoEnabled*"></a>
+
+  <h3 id="log4net_Core_LogImpl_IsInfoEnabled" data-uid="log4net.Core.LogImpl.IsInfoEnabled">
+  IsInfoEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if this logger is enabled for the <code>INFO</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsInfoEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if this logger is enabled for <code>INFO</code> events,
+<code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_IsInfoEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+See <a class="xref" href="log4net.Core.LogImpl.html#log4net_Core_LogImpl_IsDebugEnabled">IsDebugEnabled</a> for more information and examples 
+of using this method.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="log4net.Core.LogImpl.html#log4net_Core_LogImpl_IsDebugEnabled">IsDebugEnabled</a></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Core_LogImpl_IsWarnEnabled_" data-uid="log4net.Core.LogImpl.IsWarnEnabled*"></a>
+
+  <h3 id="log4net_Core_LogImpl_IsWarnEnabled" data-uid="log4net.Core.LogImpl.IsWarnEnabled">
+  IsWarnEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if this logger is enabled for the <code>WARN</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsWarnEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if this logger is enabled for <code>WARN</code> events,
+<code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_IsWarnEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+See <a class="xref" href="log4net.Core.LogImpl.html#log4net_Core_LogImpl_IsDebugEnabled">IsDebugEnabled</a> for more information and examples 
+of using this method.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><a class="xref" href="log4net.ILog.html#log4net_ILog_IsDebugEnabled">IsDebugEnabled</a></div>
+    </dd>
+  </dl>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Core_LogImpl_Debug_" data-uid="log4net.Core.LogImpl.Debug*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Debug_System_Object_" data-uid="log4net.Core.LogImpl.Debug(System.Object)">
+  Debug(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>DEBUG</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Debug(object message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Debug_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method first checks if this logger is <code>DEBUG</code>
+enabled by comparing the level of this logger with the 
+<code>DEBUG</code> level. If this logger is
+<code>DEBUG</code> enabled, then it converts the message object
+(passed as parameter) to a string by invoking the appropriate
+<a class="xref" href="log4net.ObjectRenderer.IObjectRenderer.html">IObjectRenderer</a>. It then 
+proceeds to call all the registered appenders in this logger 
+and also higher in the hierarchy depending on the value of the 
+additivity flag.
+</p>
+<p>
+<b>WARNING</b> Note that passing an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> 
+to this method will print the name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> 
+but no stack trace. To print a stack trace use the 
+<span class="xref">Debug(object,Exception)</span> form instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Debug_" data-uid="log4net.Core.LogImpl.Debug*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Debug_System_Object_System_Exception_" data-uid="log4net.Core.LogImpl.Debug(System.Object,System.Exception)">
+  Debug(object, Exception)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>DEBUG</code> level</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Debug(object message, Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log, including its stack trace.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Debug_System_Object_System_Exception__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Logs a message object with the <code>DEBUG</code> level including
+the stack trace of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> <code class="paramref">exception</code> passed
+as a parameter.
+</p>
+<p>
+See the <span class="xref">Debug(object)</span> form for more detailed information.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span class="xref">Debug(object)</span></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Core_LogImpl_DebugFormat_" data-uid="log4net.Core.LogImpl.DebugFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_DebugFormat_System_IFormatProvider_System_String_System_Object___" data-uid="log4net.Core.LogImpl.DebugFormat(System.IFormatProvider,System.String,System.Object[])">
+  DebugFormat(IFormatProvider, string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>DEBUG</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DebugFormat(IFormatProvider provider, string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a> that supplies culture-specific formatting information</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_DebugFormat_System_IFormatProvider_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Debug(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_DebugFormat_" data-uid="log4net.Core.LogImpl.DebugFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_DebugFormat_System_String_System_Object_" data-uid="log4net.Core.LogImpl.DebugFormat(System.String,System.Object)">
+  DebugFormat(string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>DEBUG</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DebugFormat(string format, object arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_DebugFormat_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">DebugFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Debug(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_DebugFormat_" data-uid="log4net.Core.LogImpl.DebugFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_DebugFormat_System_String_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.DebugFormat(System.String,System.Object,System.Object)">
+  DebugFormat(string, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>DEBUG</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DebugFormat(string format, object arg0, object arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_DebugFormat_System_String_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">DebugFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Debug(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_DebugFormat_" data-uid="log4net.Core.LogImpl.DebugFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_DebugFormat_System_String_System_Object_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.DebugFormat(System.String,System.Object,System.Object,System.Object)">
+  DebugFormat(string, object, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>DEBUG</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DebugFormat(string format, object arg0, object arg1, object arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_DebugFormat_System_String_System_Object_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">DebugFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Debug(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_DebugFormat_" data-uid="log4net.Core.LogImpl.DebugFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_DebugFormat_System_String_System_Object___" data-uid="log4net.Core.LogImpl.DebugFormat(System.String,System.Object[])">
+  DebugFormat(string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>DEBUG</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DebugFormat(string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_DebugFormat_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">DebugFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Debug(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Error_" data-uid="log4net.Core.LogImpl.Error*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Error_System_Object_" data-uid="log4net.Core.LogImpl.Error(System.Object)">
+  Error(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>ERROR</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Error(object message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Error_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method first checks if this logger is <code>ERROR</code>
+enabled by comparing the level of this logger with the 
+<code>ERROR</code> level. If this logger is
+<code>ERROR</code> enabled, then it converts the message object
+(passed as parameter) to a string by invoking the appropriate
+<a class="xref" href="log4net.ObjectRenderer.IObjectRenderer.html">IObjectRenderer</a>. It then 
+proceeds to call all the registered appenders in this logger and 
+also higher in the hierarchy depending on the value of the 
+additivity flag.
+</p>
+<p>
+<b>WARNING</b> Note that passing an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> to this
+method will print the name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> but no
+stack trace. To print a stack trace use the 
+<span class="xref">Error(object,Exception)</span> form instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Error_" data-uid="log4net.Core.LogImpl.Error*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Error_System_Object_System_Exception_" data-uid="log4net.Core.LogImpl.Error(System.Object,System.Exception)">
+  Error(object, Exception)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>ERROR</code> level</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Error(object message, Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log, including its stack trace.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Error_System_Object_System_Exception__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Logs a message object with the <code>ERROR</code> level including
+the stack trace of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> <code class="paramref">exception</code> 
+passed as a parameter.
+</p>
+<p>
+See the <span class="xref">Error(object)</span> form for more detailed information.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span class="xref">Error(object)</span></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Core_LogImpl_ErrorFormat_" data-uid="log4net.Core.LogImpl.ErrorFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_ErrorFormat_System_IFormatProvider_System_String_System_Object___" data-uid="log4net.Core.LogImpl.ErrorFormat(System.IFormatProvider,System.String,System.Object[])">
+  ErrorFormat(IFormatProvider, string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>ERROR</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ErrorFormat(IFormatProvider provider, string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a> that supplies culture-specific formatting information</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_ErrorFormat_System_IFormatProvider_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Error(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_ErrorFormat_" data-uid="log4net.Core.LogImpl.ErrorFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_ErrorFormat_System_String_System_Object_" data-uid="log4net.Core.LogImpl.ErrorFormat(System.String,System.Object)">
+  ErrorFormat(string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>ERROR</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ErrorFormat(string format, object arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_ErrorFormat_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">ErrorFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Error(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_ErrorFormat_" data-uid="log4net.Core.LogImpl.ErrorFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_ErrorFormat_System_String_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.ErrorFormat(System.String,System.Object,System.Object)">
+  ErrorFormat(string, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>ERROR</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ErrorFormat(string format, object arg0, object arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_ErrorFormat_System_String_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">ErrorFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Error(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_ErrorFormat_" data-uid="log4net.Core.LogImpl.ErrorFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_ErrorFormat_System_String_System_Object_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.ErrorFormat(System.String,System.Object,System.Object,System.Object)">
+  ErrorFormat(string, object, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>ERROR</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ErrorFormat(string format, object arg0, object arg1, object arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_ErrorFormat_System_String_System_Object_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">ErrorFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Error(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_ErrorFormat_" data-uid="log4net.Core.LogImpl.ErrorFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_ErrorFormat_System_String_System_Object___" data-uid="log4net.Core.LogImpl.ErrorFormat(System.String,System.Object[])">
+  ErrorFormat(string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>ERROR</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ErrorFormat(string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_ErrorFormat_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">ErrorFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Error(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Fatal_" data-uid="log4net.Core.LogImpl.Fatal*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Fatal_System_Object_" data-uid="log4net.Core.LogImpl.Fatal(System.Object)">
+  Fatal(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>FATAL</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Fatal(object message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Fatal_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method first checks if this logger is <code>FATAL</code>
+enabled by comparing the level of this logger with the 
+<code>FATAL</code> level. If this logger is
+<code>FATAL</code> enabled, then it converts the message object
+(passed as parameter) to a string by invoking the appropriate
+<a class="xref" href="log4net.ObjectRenderer.IObjectRenderer.html">IObjectRenderer</a>. It then 
+proceeds to call all the registered appenders in this logger and 
+also higher in the hierarchy depending on the value of the 
+additivity flag.
+</p>
+<p>
+<b>WARNING</b> Note that passing an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> to this
+method will print the name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> but no
+stack trace. To print a stack trace use the 
+<span class="xref">Fatal(object,Exception)</span> form instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Fatal_" data-uid="log4net.Core.LogImpl.Fatal*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Fatal_System_Object_System_Exception_" data-uid="log4net.Core.LogImpl.Fatal(System.Object,System.Exception)">
+  Fatal(object, Exception)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>FATAL</code> level</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Fatal(object message, Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log, including its stack trace.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Fatal_System_Object_System_Exception__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Logs a message object with the <code>FATAL</code> level including
+the stack trace of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> <code class="paramref">exception</code> 
+passed as a parameter.
+</p>
+<p>
+See the <span class="xref">Fatal(object)</span> form for more detailed information.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span class="xref">Fatal(object)</span></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Core_LogImpl_FatalFormat_" data-uid="log4net.Core.LogImpl.FatalFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_FatalFormat_System_IFormatProvider_System_String_System_Object___" data-uid="log4net.Core.LogImpl.FatalFormat(System.IFormatProvider,System.String,System.Object[])">
+  FatalFormat(IFormatProvider, string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>FATAL</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FatalFormat(IFormatProvider provider, string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a> that supplies culture-specific formatting information</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_FatalFormat_System_IFormatProvider_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Fatal(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_FatalFormat_" data-uid="log4net.Core.LogImpl.FatalFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_FatalFormat_System_String_System_Object_" data-uid="log4net.Core.LogImpl.FatalFormat(System.String,System.Object)">
+  FatalFormat(string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>FATAL</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FatalFormat(string format, object arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_FatalFormat_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">FatalFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Fatal(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_FatalFormat_" data-uid="log4net.Core.LogImpl.FatalFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_FatalFormat_System_String_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.FatalFormat(System.String,System.Object,System.Object)">
+  FatalFormat(string, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>FATAL</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FatalFormat(string format, object arg0, object arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_FatalFormat_System_String_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">FatalFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Fatal(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_FatalFormat_" data-uid="log4net.Core.LogImpl.FatalFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_FatalFormat_System_String_System_Object_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.FatalFormat(System.String,System.Object,System.Object,System.Object)">
+  FatalFormat(string, object, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>FATAL</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FatalFormat(string format, object arg0, object arg1, object arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_FatalFormat_System_String_System_Object_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">FatalFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Fatal(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_FatalFormat_" data-uid="log4net.Core.LogImpl.FatalFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_FatalFormat_System_String_System_Object___" data-uid="log4net.Core.LogImpl.FatalFormat(System.String,System.Object[])">
+  FatalFormat(string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>FATAL</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FatalFormat(string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_FatalFormat_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">FatalFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Fatal(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Info_" data-uid="log4net.Core.LogImpl.Info*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Info_System_Object_" data-uid="log4net.Core.LogImpl.Info(System.Object)">
+  Info(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>INFO</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Info(object message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Info_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method first checks if this logger is <code>INFO</code>
+enabled by comparing the level of this logger with the 
+<code>INFO</code> level. If this logger is
+<code>INFO</code> enabled, then it converts the message object
+(passed as parameter) to a string by invoking the appropriate
+<a class="xref" href="log4net.ObjectRenderer.IObjectRenderer.html">IObjectRenderer</a>. It then 
+proceeds to call all the registered appenders in this logger 
+and also higher in the hierarchy depending on the value of 
+the additivity flag.
+</p>
+<p>
+<b>WARNING</b> Note that passing an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> 
+to this method will print the name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> 
+but no stack trace. To print a stack trace use the 
+<span class="xref">Info(object,Exception)</span> form instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Info_" data-uid="log4net.Core.LogImpl.Info*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Info_System_Object_System_Exception_" data-uid="log4net.Core.LogImpl.Info(System.Object,System.Exception)">
+  Info(object, Exception)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>INFO</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Info(object message, Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log, including its stack trace.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Info_System_Object_System_Exception__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Logs a message object with the <code>INFO</code> level including
+the stack trace of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> <code class="paramref">exception</code> 
+passed as a parameter.
+</p>
+<p>
+See the <span class="xref">Info(object)</span> form for more detailed information.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span class="xref">Info(object)</span></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Core_LogImpl_InfoFormat_" data-uid="log4net.Core.LogImpl.InfoFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_InfoFormat_System_IFormatProvider_System_String_System_Object___" data-uid="log4net.Core.LogImpl.InfoFormat(System.IFormatProvider,System.String,System.Object[])">
+  InfoFormat(IFormatProvider, string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>INFO</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InfoFormat(IFormatProvider provider, string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a> that supplies culture-specific formatting information</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_InfoFormat_System_IFormatProvider_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Info(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_InfoFormat_" data-uid="log4net.Core.LogImpl.InfoFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_InfoFormat_System_String_System_Object_" data-uid="log4net.Core.LogImpl.InfoFormat(System.String,System.Object)">
+  InfoFormat(string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>INFO</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InfoFormat(string format, object arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_InfoFormat_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">InfoFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Info(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_InfoFormat_" data-uid="log4net.Core.LogImpl.InfoFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_InfoFormat_System_String_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.InfoFormat(System.String,System.Object,System.Object)">
+  InfoFormat(string, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>INFO</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InfoFormat(string format, object arg0, object arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_InfoFormat_System_String_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">InfoFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Info(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_InfoFormat_" data-uid="log4net.Core.LogImpl.InfoFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_InfoFormat_System_String_System_Object_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.InfoFormat(System.String,System.Object,System.Object,System.Object)">
+  InfoFormat(string, object, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>INFO</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InfoFormat(string format, object arg0, object arg1, object arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_InfoFormat_System_String_System_Object_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">InfoFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Info(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_InfoFormat_" data-uid="log4net.Core.LogImpl.InfoFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_InfoFormat_System_String_System_Object___" data-uid="log4net.Core.LogImpl.InfoFormat(System.String,System.Object[])">
+  InfoFormat(string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>INFO</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InfoFormat(string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_InfoFormat_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">InfoFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Info(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_ReloadLevels_" data-uid="log4net.Core.LogImpl.ReloadLevels*"></a>
+
+  <h3 id="log4net_Core_LogImpl_ReloadLevels_log4net_Repository_ILoggerRepository_" data-uid="log4net.Core.LogImpl.ReloadLevels(log4net.Repository.ILoggerRepository)">
+  ReloadLevels(ILoggerRepository)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Virtual method called when the configuration of the repository changes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ReloadLevels(ILoggerRepository repository)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>repository</code> <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>the repository holding the levels</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_ReloadLevels_log4net_Repository_ILoggerRepository__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Virtual method called when the configuration of the repository changes
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Warn_" data-uid="log4net.Core.LogImpl.Warn*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Warn_System_Object_" data-uid="log4net.Core.LogImpl.Warn(System.Object)">
+  Warn(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>WARN</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Warn(object message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>the message object to log</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Warn_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method first checks if this logger is <code>WARN</code>
+enabled by comparing the level of this logger with the 
+<code>WARN</code> level. If this logger is
+<code>WARN</code> enabled, then it converts the message object
+(passed as parameter) to a string by invoking the appropriate
+<a class="xref" href="log4net.ObjectRenderer.IObjectRenderer.html">IObjectRenderer</a>. It then 
+proceeds to call all the registered appenders in this logger and 
+also higher in the hierarchy depending on the value of the 
+additivity flag.
+</p>
+<p>
+<b>WARNING</b> Note that passing an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> to this
+method will print the name of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> but no
+stack trace. To print a stack trace use the 
+<span class="xref">Warn(object,Exception)</span> form instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_Warn_" data-uid="log4net.Core.LogImpl.Warn*"></a>
+
+  <h3 id="log4net_Core_LogImpl_Warn_System_Object_System_Exception_" data-uid="log4net.Core.LogImpl.Warn(System.Object,System.Exception)">
+  Warn(object, Exception)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message object with the <code>WARN</code> level</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Warn(object message, Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The message object to log.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log, including its stack trace.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_Warn_System_Object_System_Exception__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Logs a message object with the <code>WARN</code> level including
+the stack trace of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> <code class="paramref">exception</code> 
+passed as a parameter.
+</p>
+<p>
+See the <span class="xref">Warn(object)</span> form for more detailed information.
+</p>
+</div>
+
+
+  <dl class="typelist seealso">
+    <dt>See Also</dt>
+    <dd>
+    <div><span class="xref">Warn(object)</span></div>
+    </dd>
+  </dl>
+
+
+  <a id="log4net_Core_LogImpl_WarnFormat_" data-uid="log4net.Core.LogImpl.WarnFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_WarnFormat_System_IFormatProvider_System_String_System_Object___" data-uid="log4net.Core.LogImpl.WarnFormat(System.IFormatProvider,System.String,System.Object[])">
+  WarnFormat(IFormatProvider, string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>WARN</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void WarnFormat(IFormatProvider provider, string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a> that supplies culture-specific formatting information</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_WarnFormat_System_IFormatProvider_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Warn(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_WarnFormat_" data-uid="log4net.Core.LogImpl.WarnFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_WarnFormat_System_String_System_Object_" data-uid="log4net.Core.LogImpl.WarnFormat(System.String,System.Object)">
+  WarnFormat(string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>WARN</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void WarnFormat(string format, object arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_WarnFormat_System_String_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">WarnFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Warn(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_WarnFormat_" data-uid="log4net.Core.LogImpl.WarnFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_WarnFormat_System_String_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.WarnFormat(System.String,System.Object,System.Object)">
+  WarnFormat(string, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>WARN</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void WarnFormat(string format, object arg0, object arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_WarnFormat_System_String_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">WarnFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Warn(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_WarnFormat_" data-uid="log4net.Core.LogImpl.WarnFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_WarnFormat_System_String_System_Object_System_Object_System_Object_" data-uid="log4net.Core.LogImpl.WarnFormat(System.String,System.Object,System.Object,System.Object)">
+  WarnFormat(string, object, object, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>WARN</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void WarnFormat(string format, object arg0, object arg1, object arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An Object to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_WarnFormat_System_String_System_Object_System_Object_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">WarnFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Warn(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Core_LogImpl_WarnFormat_" data-uid="log4net.Core.LogImpl.WarnFormat*"></a>
+
+  <h3 id="log4net_Core_LogImpl_WarnFormat_System_String_System_Object___" data-uid="log4net.Core.LogImpl.WarnFormat(System.String,System.Object[])">
+  WarnFormat(string, params object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a formatted message string with the <code>WARN</code> level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void WarnFormat(string format, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A String containing zero or more format items</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An Object array containing zero or more objects to format</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Core_LogImpl_WarnFormat_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The message is formatted using the <see cref="M:String.Format(IFormatProvider, string, object[])"></see> method. See
+<code>String.Format</code> for details of the syntax of the format string and the behavior
+of the formatting.
+</p>
+<p>
+The string is formatted using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture">InvariantCulture</a>
+format provider. To specify a localized provider use the
+<span class="xref">WarnFormat(IFormatProvider,string,object[])</span> method.
+</p>
+<p>
+This method does not take an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> object to include in the
+log event. To pass an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a> use one of the <span class="xref">Warn(object)</span>
+methods instead.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

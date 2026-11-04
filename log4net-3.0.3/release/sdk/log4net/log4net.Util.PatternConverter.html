@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PatternConverter | Apache log4net 3.0.3 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PatternConverter | Apache log4net 3.0.3 API Reference ">
+      
+      <meta name="description" content="Abstract class that provides the formatting functionality that derived classes need.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Util.PatternConverter">
+
+
+
+  <h1 id="log4net_Util_PatternConverter" data-uid="log4net.Util.PatternConverter" class="text-break">
+Class PatternConverter  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Util.html">Util</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Abstract class that provides the formatting functionality that
+derived classes need.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class PatternConverter</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PatternConverter</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Layout.Pattern.PatternLayoutConverter.html">PatternLayoutConverter</a></div>
+      <div><a class="xref" href="log4net.Util.PatternStringConverters.EnvironmentPatternConverter.html">EnvironmentPatternConverter</a></div>
+      <div><a class="xref" href="log4net.Util.PatternStringConverters.RandomStringPatternConverter.html">RandomStringPatternConverter</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Util_PatternConverter_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Conversion specifiers in a conversion patterns are parsed to
+individual PatternConverters. Each of which is responsible for
+converting a logging event in a converter specific manner.
+</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Util_PatternConverter__ctor_" data-uid="log4net.Util.PatternConverter.#ctor*"></a>
+
+  <h3 id="log4net_Util_PatternConverter__ctor" data-uid="log4net.Util.PatternConverter.#ctor">
+  PatternConverter()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Protected constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PatternConverter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Initializes a new instance of the <a class="xref" href="log4net.Util.PatternConverter.html">PatternConverter</a> class.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Util_PatternConverter_FormattingInfo_" data-uid="log4net.Util.PatternConverter.FormattingInfo*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_FormattingInfo" data-uid="log4net.Util.PatternConverter.FormattingInfo">
+  FormattingInfo
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the formatting info for this converter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual FormattingInfo FormattingInfo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Util.FormattingInfo.html">FormattingInfo</a></dt>
+    <dd><p>The formatting info for this converter</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_FormattingInfo_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets or sets the formatting info for this converter
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_PatternConverter_Next_" data-uid="log4net.Util.PatternConverter.Next*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_Next" data-uid="log4net.Util.PatternConverter.Next">
+  Next
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the next pattern converter in the chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PatternConverter? Next { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Util.PatternConverter.html">PatternConverter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Util_PatternConverter_Option_" data-uid="log4net.Util.PatternConverter.Option*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_Option" data-uid="log4net.Util.PatternConverter.Option">
+  Option
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the option value for this converter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string? Option { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_Option_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Gets or sets the option value for this converter
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_PatternConverter_Properties_" data-uid="log4net.Util.PatternConverter.Properties*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_Properties" data-uid="log4net.Util.PatternConverter.Properties">
+  Properties
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropertiesDictionary? Properties { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Util.PropertiesDictionary.html">PropertiesDictionary</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Util_PatternConverter_Convert_" data-uid="log4net.Util.PatternConverter.Convert*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_Convert_System_IO_TextWriter_System_Object_" data-uid="log4net.Util.PatternConverter.Convert(System.IO.TextWriter,System.Object)">
+  Convert(TextWriter, object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evaluate this pattern converter and write the output to a writer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Convert(TextWriter writer, object? state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> that will receive the formatted result.</p>
+</dd>
+    <dt><code>state</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The state object on which the pattern converter should be executed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_Convert_System_IO_TextWriter_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Derived pattern converters must override this method in order to
+convert conversion specifiers in the appropriate way.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_PatternConverter_Format_" data-uid="log4net.Util.PatternConverter.Format*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_Format_System_IO_TextWriter_System_Object_" data-uid="log4net.Util.PatternConverter.Format(System.IO.TextWriter,System.Object)">
+  Format(TextWriter, object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write the pattern converter to the writer with appropriate formatting</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Format(TextWriter writer, object? state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> that will receive the formatted result.</p>
+</dd>
+    <dt><code>state</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The state object on which the pattern converter should be executed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_Format_System_IO_TextWriter_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method calls <a class="xref" href="log4net.Util.PatternConverter.html#log4net_Util_PatternConverter_Convert_System_IO_TextWriter_System_Object_">Convert(TextWriter, object?)</a> to allow the subclass to perform
+appropriate conversion of the pattern converter. If formatting options have
+been specified via the <a class="xref" href="log4net.Util.PatternConverter.html#log4net_Util_PatternConverter_FormattingInfo">FormattingInfo</a> then this method will
+apply those formattings before writing the output.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_PatternConverter_SetNext_" data-uid="log4net.Util.PatternConverter.SetNext*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_SetNext_log4net_Util_PatternConverter_" data-uid="log4net.Util.PatternConverter.SetNext(log4net.Util.PatternConverter)">
+  SetNext(PatternConverter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the next pattern converter in the chains</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PatternConverter SetNext(PatternConverter patternConverter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>patternConverter</code> <a class="xref" href="log4net.Util.PatternConverter.html">PatternConverter</a></dt>
+    <dd><p>the pattern converter that should follow this converter in the chain</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="log4net.Util.PatternConverter.html">PatternConverter</a></dt>
+    <dd><p>the next converter</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_SetNext_log4net_Util_PatternConverter__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+The PatternConverter can merge with its neighbor during this method (or a subclass).
+Therefore the return value may or may not be the value of the argument passed in.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_PatternConverter_SpacePad_" data-uid="log4net.Util.PatternConverter.SpacePad*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_SpacePad_System_IO_TextWriter_System_Int32_" data-uid="log4net.Util.PatternConverter.SpacePad(System.IO.TextWriter,System.Int32)">
+  SpacePad(TextWriter, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fast space padding method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void SpacePad(TextWriter writer, int length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> to which the spaces will be appended.</p>
+</dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of spaces to be padded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_SpacePad_System_IO_TextWriter_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Fast space padding method.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_PatternConverter_WriteDictionary_" data-uid="log4net.Util.PatternConverter.WriteDictionary*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_WriteDictionary_System_IO_TextWriter_log4net_Repository_ILoggerRepository_System_Collections_IDictionary_" data-uid="log4net.Util.PatternConverter.WriteDictionary(System.IO.TextWriter,log4net.Repository.ILoggerRepository,System.Collections.IDictionary)">
+  WriteDictionary(TextWriter, ILoggerRepository?, IDictionary)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write an dictionary to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void WriteDictionary(TextWriter writer, ILoggerRepository? repository, IDictionary value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>the writer to write to</p>
+</dd>
+    <dt><code>repository</code> <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>a <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> to use for object conversion</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.idictionary">IDictionary</a></dt>
+    <dd><p>the value to write to the writer</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_WriteDictionary_System_IO_TextWriter_log4net_Repository_ILoggerRepository_System_Collections_IDictionary__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.idictionary">IDictionary</a> to a writer in the form:
+</p>
+<pre><code class="lang-csharp">{key1=value1, key2=value2, key3=value3}</code></pre>
+<p>
+If the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> specified
+is not null then it is used to render the key and value to text, otherwise
+the object's ToString method is called.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_PatternConverter_WriteDictionary_" data-uid="log4net.Util.PatternConverter.WriteDictionary*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_WriteDictionary_System_IO_TextWriter_log4net_Repository_ILoggerRepository_System_Collections_IDictionaryEnumerator_" data-uid="log4net.Util.PatternConverter.WriteDictionary(System.IO.TextWriter,log4net.Repository.ILoggerRepository,System.Collections.IDictionaryEnumerator)">
+  WriteDictionary(TextWriter, ILoggerRepository?, IDictionaryEnumerator)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a dictionary to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void WriteDictionary(TextWriter writer, ILoggerRepository? repository, IDictionaryEnumerator value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>the writer to write to</p>
+</dd>
+    <dt><code>repository</code> <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>a <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> to use for object conversion</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.idictionaryenumerator">IDictionaryEnumerator</a></dt>
+    <dd><p>the value to write to the writer</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_WriteDictionary_System_IO_TextWriter_log4net_Repository_ILoggerRepository_System_Collections_IDictionaryEnumerator__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.idictionaryenumerator">IDictionaryEnumerator</a> to a writer in the form:
+</p>
+<pre><code class="lang-csharp">{key1=value1, key2=value2, key3=value3}</code></pre>
+<p>
+If the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> specified
+is not null then it is used to render the key and value to text, otherwise
+the object's ToString method is called.
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_PatternConverter_WriteObject_" data-uid="log4net.Util.PatternConverter.WriteObject*"></a>
+
+  <h3 id="log4net_Util_PatternConverter_WriteObject_System_IO_TextWriter_log4net_Repository_ILoggerRepository_System_Object_" data-uid="log4net.Util.PatternConverter.WriteObject(System.IO.TextWriter,log4net.Repository.ILoggerRepository,System.Object)">
+  WriteObject(TextWriter, ILoggerRepository?, object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write an object to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void WriteObject(TextWriter writer, ILoggerRepository? repository, object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>the writer to write to</p>
+</dd>
+    <dt><code>repository</code> <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a></dt>
+    <dd><p>a <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> to use for object conversion</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>the value to write to the writer</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_PatternConverter_WriteObject_System_IO_TextWriter_log4net_Repository_ILoggerRepository_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes the Object to a writer. If the <a class="xref" href="log4net.Repository.ILoggerRepository.html">ILoggerRepository</a> specified
+is not null then it is used to render the object to text, otherwise
+the object's ToString method is called.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

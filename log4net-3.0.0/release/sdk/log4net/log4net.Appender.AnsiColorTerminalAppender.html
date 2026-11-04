@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AnsiColorTerminalAppender | Apache log4net 3.0.0 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AnsiColorTerminalAppender | Apache log4net 3.0.0 API Reference ">
+      
+      <meta name="description" content="Appends logging events to the terminal using ANSI color escape sequences.">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Appender.AnsiColorTerminalAppender">
+
+
+
+  <h1 id="log4net_Appender_AnsiColorTerminalAppender" data-uid="log4net.Appender.AnsiColorTerminalAppender" class="text-break">
+Class AnsiColorTerminalAppender  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Appender.html">Appender</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Appends logging events to the terminal using ANSI color escape sequences.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AnsiColorTerminalAppender : AppenderSkeleton, IBulkAppender, IAppender, IOptionHandler, IFlushable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="log4net.Appender.AppenderSkeleton.html">AppenderSkeleton</a></div>
+      <div><span class="xref">AnsiColorTerminalAppender</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Appender.IBulkAppender.html">IBulkAppender</a></div>
+      <div><a class="xref" href="log4net.Appender.IAppender.html">IAppender</a></div>
+      <div><a class="xref" href="log4net.Core.IOptionHandler.html">IOptionHandler</a></div>
+      <div><a class="xref" href="log4net.Appender.IFlushable.html">IFlushable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Close">AppenderSkeleton.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent_">AppenderSkeleton.DoAppend(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_DoAppend_log4net_Core_LoggingEvent___">AppenderSkeleton.DoAppend(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.FilterEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_AddFilter_log4net_Filter_IFilter_">AppenderSkeleton.AddFilter(IFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ClearFilters">AppenderSkeleton.ClearFilters()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_IsAsSevereAsThreshold_log4net_Core_Level_">AppenderSkeleton.IsAsSevereAsThreshold(Level)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_OnClose">AppenderSkeleton.OnClose()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_log4net_Core_LoggingEvent___">AppenderSkeleton.Append(LoggingEvent[])</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Append_System_Collections_Generic_IEnumerable_log4net_Core_LoggingEvent__">AppenderSkeleton.Append(IEnumerable&lt;LoggingEvent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_PreAppendCheck">AppenderSkeleton.PreAppendCheck()</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_RenderLoggingEvent_System_IO_TextWriter_log4net_Core_LoggingEvent_">AppenderSkeleton.RenderLoggingEvent(TextWriter, LoggingEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Flush_System_Int32_">AppenderSkeleton.Flush(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Threshold">AppenderSkeleton.Threshold</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_ErrorHandler">AppenderSkeleton.ErrorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_FilterHead">AppenderSkeleton.FilterHead</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Layout">AppenderSkeleton.Layout</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_Name">AppenderSkeleton.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="log4net.Appender.AppenderSkeleton.html#log4net_Appender_AppenderSkeleton_LockObj">AppenderSkeleton.LockObj</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="log4net_Appender_AnsiColorTerminalAppender_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+AnsiColorTerminalAppender appends log events to the standard output stream
+or the error output stream using a layout specified by the 
+user. It also allows the color of a specific level of message to be set.
+</p>
+<div class="NOTE"><h5>note</h5><p>
+This appender expects the terminal to understand the VT100 control set 
+in order to interpret the color codes. If the terminal or console does not
+understand the control codes the behavior is not defined.
+</p></div>
+<p>
+By default, all output is written to the console's standard output stream.
+The <a class="xref" href="log4net.Appender.AnsiColorTerminalAppender.html#log4net_Appender_AnsiColorTerminalAppender_Target">Target</a> property can be set to direct the output to the
+error stream.
+</p>
+<p>
+NOTE: This appender writes each message to the <code>System.Console.Out</code> or 
+<code>System.Console.Error</code> that is set at the time the event is appended.
+Therefore it is possible to programmatically redirect the output of this appender 
+(for example NUnit does this to capture program output). While this is the desired
+behavior of this appender it may have security implications in your application. 
+</p>
+<p>
+When configuring the ANSI colored terminal appender, a mapping should be
+specified to map a logging level to a color. For example:
+</p>
+<pre><code class="lang-csharp"></code></pre>
+<p>
+The Level is the standard log4net logging level and ForeColor and BackColor can be any
+of the following values:
+<ul><li><span class="term">Blue</span></li><li><span class="term">Green</span></li><li><span class="term">Red</span></li><li><span class="term">White</span></li><li><span class="term">Yellow</span></li><li><span class="term">Purple</span></li><li><span class="term">Cyan</span></li></ul>
+<p>These color values cannot be combined to make new colors.</p>
+
+<p>
+The attributes can be any combination of the following:
+<ul><li><span class="term">Bright</span>foreground is brighter</li><li><span class="term">Dim</span>foreground is dimmer</li><li><span class="term">Underscore</span>message is underlined</li><li><span class="term">Blink</span>foreground is blinking (does not work on all terminals)</li><li><span class="term">Reverse</span>foreground and background are reversed</li><li><span class="term">Hidden</span>output is hidden</li><li><span class="term">Strikethrough</span>message has a line through it</li></ul>
+<p>While any of these attributes may be combined not all combinations
+work well together, for example setting both <i>Bright</i> and <i>Dim</i> attributes makes
+no sense.</p>
+
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Appender_AnsiColorTerminalAppender__ctor_" data-uid="log4net.Appender.AnsiColorTerminalAppender.#ctor*"></a>
+
+  <h3 id="log4net_Appender_AnsiColorTerminalAppender__ctor" data-uid="log4net.Appender.AnsiColorTerminalAppender.#ctor">
+  AnsiColorTerminalAppender()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="log4net.Appender.AnsiColorTerminalAppender.html">AnsiColorTerminalAppender</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnsiColorTerminalAppender()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AnsiColorTerminalAppender__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The instance of the <a class="xref" href="log4net.Appender.AnsiColorTerminalAppender.html">AnsiColorTerminalAppender</a> class is set up to write
+to the standard output stream.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="log4net_Appender_AnsiColorTerminalAppender_ConsoleError" data-uid="log4net.Appender.AnsiColorTerminalAppender.ConsoleError">
+  ConsoleError
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Appender.AnsiColorTerminalAppender.html#log4net_Appender_AnsiColorTerminalAppender_Target">Target</a> to use when writing to the Console
+standard error output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ConsoleError = &quot;Console.Error&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="log4net_Appender_AnsiColorTerminalAppender_ConsoleOut" data-uid="log4net.Appender.AnsiColorTerminalAppender.ConsoleOut">
+  ConsoleOut
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Appender.AnsiColorTerminalAppender.html#log4net_Appender_AnsiColorTerminalAppender_Target">Target</a> to use when writing to the Console
+standard output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ConsoleOut = &quot;Console.Out&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Appender_AnsiColorTerminalAppender_RequiresLayout_" data-uid="log4net.Appender.AnsiColorTerminalAppender.RequiresLayout*"></a>
+
+  <h3 id="log4net_Appender_AnsiColorTerminalAppender_RequiresLayout" data-uid="log4net.Appender.AnsiColorTerminalAppender.RequiresLayout">
+  RequiresLayout
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>This appender requires a <a class="xref" href="log4net.Layout.html">log4net.Layout</a> to be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool RequiresLayout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_AnsiColorTerminalAppender_Target_" data-uid="log4net.Appender.AnsiColorTerminalAppender.Target*"></a>
+
+  <h3 id="log4net_Appender_AnsiColorTerminalAppender_Target" data-uid="log4net.Appender.AnsiColorTerminalAppender.Target">
+  Target
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the console output stream, one of <code>&quot;Console.Out&quot;</code> or <code>&quot;Console.Error&quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Target { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Appender_AnsiColorTerminalAppender_ActivateOptions_" data-uid="log4net.Appender.AnsiColorTerminalAppender.ActivateOptions*"></a>
+
+  <h3 id="log4net_Appender_AnsiColorTerminalAppender_ActivateOptions" data-uid="log4net.Appender.AnsiColorTerminalAppender.ActivateOptions">
+  ActivateOptions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the level to color mappings set on this appender.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_AnsiColorTerminalAppender_AddMapping_" data-uid="log4net.Appender.AnsiColorTerminalAppender.AddMapping*"></a>
+
+  <h3 id="log4net_Appender_AnsiColorTerminalAppender_AddMapping_log4net_Appender_AnsiColorTerminalAppender_LevelColors_" data-uid="log4net.Appender.AnsiColorTerminalAppender.AddMapping(log4net.Appender.AnsiColorTerminalAppender.LevelColors)">
+  AddMapping(LevelColors)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a mapping of level to foreground and background colors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddMapping(AnsiColorTerminalAppender.LevelColors mapping)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mapping</code> <a class="xref" href="log4net.Appender.AnsiColorTerminalAppender.html">AnsiColorTerminalAppender</a>.<a class="xref" href="log4net.Appender.AnsiColorTerminalAppender.LevelColors.html">LevelColors</a></dt>
+    <dd><p>The mapping to add</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="log4net_Appender_AnsiColorTerminalAppender_Append_" data-uid="log4net.Appender.AnsiColorTerminalAppender.Append*"></a>
+
+  <h3 id="log4net_Appender_AnsiColorTerminalAppender_Append_log4net_Core_LoggingEvent_" data-uid="log4net.Appender.AnsiColorTerminalAppender.Append(log4net.Core.LoggingEvent)">
+  Append(LoggingEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes the event to the console.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent loggingEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loggingEvent</code> <a class="xref" href="log4net.Core.LoggingEvent.html">LoggingEvent</a></dt>
+    <dd><p>The event to log.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Appender_AnsiColorTerminalAppender_Append_log4net_Core_LoggingEvent__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+This method is called by the <span class="xref">AppenderSkeleton.DoAppend(LoggingEvent)</span> method.
+</p>
+<p>
+The format of the output will depend on the appender's layout.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

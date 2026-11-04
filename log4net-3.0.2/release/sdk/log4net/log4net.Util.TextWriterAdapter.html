@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TextWriterAdapter | Apache log4net 3.0.2 API Reference </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TextWriterAdapter | Apache log4net 3.0.2 API Reference ">
+      
+      <meta name="description" content="Adapter that extends  and forwards all messages to an instance of .">
+      <link rel="icon" href="../logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Apache log4net">
+            Apache log4net
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="log4net.Util.TextWriterAdapter">
+
+
+
+  <h1 id="log4net_Util_TextWriterAdapter" data-uid="log4net.Util.TextWriterAdapter" class="text-break">
+Class TextWriterAdapter  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="log4net.html">log4net</a>.<a class="xref" href="log4net.Util.html">Util</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>log4net.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Adapter that extends <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> and forwards all
+messages to an instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class TextWriterAdapter : TextWriter, IDisposable, IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></div>
+      <div><span class="xref">TextWriterAdapter</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="log4net.Util.ProtectCloseTextWriter.html">ProtectCloseTextWriter</a></div>
+      <div><a class="xref" href="log4net.Util.QuietTextWriter.html">QuietTextWriter</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.null">TextWriter.Null</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.corenewline">TextWriter.CoreNewLine</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.dispose#system-io-textwriter-dispose">TextWriter.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.disposeasync">TextWriter.DisposeAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-char())">TextWriter.Write(char[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-readonlyspan((system-char)))">TextWriter.Write(ReadOnlySpan&lt;char&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-boolean)">TextWriter.Write(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-int32)">TextWriter.Write(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-uint32)">TextWriter.Write(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-int64)">TextWriter.Write(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-uint64)">TextWriter.Write(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-single)">TextWriter.Write(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-double)">TextWriter.Write(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-decimal)">TextWriter.Write(decimal)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-object)">TextWriter.Write(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-text-stringbuilder)">TextWriter.Write(StringBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object)">TextWriter.Write(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object-system-object)">TextWriter.Write(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object-system-object-system-object)">TextWriter.Write(string, object, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-object())">TextWriter.Write(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.write#system-io-textwriter-write(system-string-system-readonlyspan((system-object)))">TextWriter.Write(string, params ReadOnlySpan&lt;object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline">TextWriter.WriteLine()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char)">TextWriter.WriteLine(char)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char())">TextWriter.WriteLine(char[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-char()-system-int32-system-int32)">TextWriter.WriteLine(char[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-readonlyspan((system-char)))">TextWriter.WriteLine(ReadOnlySpan&lt;char&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-boolean)">TextWriter.WriteLine(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-int32)">TextWriter.WriteLine(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-uint32)">TextWriter.WriteLine(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-int64)">TextWriter.WriteLine(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-uint64)">TextWriter.WriteLine(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-single)">TextWriter.WriteLine(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-double)">TextWriter.WriteLine(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-decimal)">TextWriter.WriteLine(decimal)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string)">TextWriter.WriteLine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-text-stringbuilder)">TextWriter.WriteLine(StringBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-object)">TextWriter.WriteLine(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object)">TextWriter.WriteLine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object-system-object)">TextWriter.WriteLine(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object-system-object-system-object)">TextWriter.WriteLine(string, object, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-object())">TextWriter.WriteLine(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeline#system-io-textwriter-writeline(system-string-system-readonlyspan((system-object)))">TextWriter.WriteLine(string, params ReadOnlySpan&lt;object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char)">TextWriter.WriteAsync(char)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-string)">TextWriter.WriteAsync(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-text-stringbuilder-system-threading-cancellationtoken)">TextWriter.WriteAsync(StringBuilder, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char())">TextWriter.WriteAsync(char[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-char()-system-int32-system-int32)">TextWriter.WriteAsync(char[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writeasync#system-io-textwriter-writeasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)">TextWriter.WriteAsync(ReadOnlyMemory&lt;char&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char)">TextWriter.WriteLineAsync(char)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-string)">TextWriter.WriteLineAsync(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-text-stringbuilder-system-threading-cancellationtoken)">TextWriter.WriteLineAsync(StringBuilder, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char())">TextWriter.WriteLineAsync(char[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-char()-system-int32-system-int32)">TextWriter.WriteLineAsync(char[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync(system-readonlymemory((system-char))-system-threading-cancellationtoken)">TextWriter.WriteLineAsync(ReadOnlyMemory&lt;char&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.writelineasync#system-io-textwriter-writelineasync">TextWriter.WriteLineAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync#system-io-textwriter-flushasync">TextWriter.FlushAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.flushasync#system-io-textwriter-flushasync(system-threading-cancellationtoken)">TextWriter.FlushAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.synchronized">TextWriter.Synchronized(TextWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter.createbroadcasting">TextWriter.CreateBroadcasting(params TextWriter[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice">MarshalByRefObject.GetLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.initializelifetimeservice">MarshalByRefObject.InitializeLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone">MarshalByRefObject.MemberwiseClone(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="log4net_Util_TextWriterAdapter__ctor_" data-uid="log4net.Util.TextWriterAdapter.#ctor*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter__ctor_System_IO_TextWriter_" data-uid="log4net.Util.TextWriterAdapter.#ctor(System.IO.TextWriter)">
+  TextWriterAdapter(TextWriter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="log4net.Util.TextWriterAdapter.html">TextWriterAdapter</a> that forwards all
+messages to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TextWriterAdapter(TextWriter writer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> to forward to</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="log4net_Util_TextWriterAdapter_Encoding_" data-uid="log4net.Util.TextWriterAdapter.Encoding*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_Encoding" data-uid="log4net.Util.TextWriterAdapter.Encoding">
+  Encoding
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="log4net.Util.TextWriterAdapter.html#log4net_Util_TextWriterAdapter_Encoding">Encoding</a> in which the output is written</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Encoding Encoding { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Util_TextWriterAdapter_FormatProvider_" data-uid="log4net.Util.TextWriterAdapter.FormatProvider*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_FormatProvider" data-uid="log4net.Util.TextWriterAdapter.FormatProvider">
+  FormatProvider
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an object that controls formatting</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IFormatProvider FormatProvider { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Util_TextWriterAdapter_NewLine_" data-uid="log4net.Util.TextWriterAdapter.NewLine*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_NewLine" data-uid="log4net.Util.TextWriterAdapter.NewLine">
+  NewLine
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the line terminator string used by the TextWriter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string NewLine { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="log4net_Util_TextWriterAdapter_Writer_" data-uid="log4net.Util.TextWriterAdapter.Writer*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_Writer" data-uid="log4net.Util.TextWriterAdapter.Writer">
+  Writer
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the underlying <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TextWriter Writer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="log4net_Util_TextWriterAdapter_Close_" data-uid="log4net.Util.TextWriterAdapter.Close*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_Close" data-uid="log4net.Util.TextWriterAdapter.Close">
+  Close()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the writer and releases any system resources associated with the writer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_TextWriterAdapter_Close_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_TextWriterAdapter_Dispose_" data-uid="log4net.Util.TextWriterAdapter.Dispose*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_Dispose_System_Boolean_" data-uid="log4net.Util.TextWriterAdapter.Dispose(System.Boolean)">
+  Dispose(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose this writer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>flag indicating if we are being disposed</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_TextWriterAdapter_Dispose_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Dispose this writer
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_TextWriterAdapter_Flush_" data-uid="log4net.Util.TextWriterAdapter.Flush*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_Flush" data-uid="log4net.Util.TextWriterAdapter.Flush">
+  Flush()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flushes any buffered output</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Flush()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_TextWriterAdapter_Flush_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Clears all buffers for the writer and causes any buffered data to be written 
+to the underlying device
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_TextWriterAdapter_Write_" data-uid="log4net.Util.TextWriterAdapter.Write*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_Write_System_Char_" data-uid="log4net.Util.TextWriterAdapter.Write(System.Char)">
+  Write(char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a character to the wrapped TextWriter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(char value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>the value to write to the TextWriter</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_TextWriterAdapter_Write_System_Char__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes a character to the wrapped TextWriter
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_TextWriterAdapter_Write_" data-uid="log4net.Util.TextWriterAdapter.Write*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_Write_System_Char___System_Int32_System_Int32_" data-uid="log4net.Util.TextWriterAdapter.Write(System.Char[],System.Int32,System.Int32)">
+  Write(char[], int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a character buffer to the wrapped TextWriter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(char[] buffer, int index, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>[]</dt>
+    <dd><p>the data buffer</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the start index</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>the number of characters to write</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_TextWriterAdapter_Write_System_Char___System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes a character buffer to the wrapped TextWriter
+</p>
+</div>
+
+
+
+
+  <a id="log4net_Util_TextWriterAdapter_Write_" data-uid="log4net.Util.TextWriterAdapter.Write*"></a>
+
+  <h3 id="log4net_Util_TextWriterAdapter_Write_System_String_" data-uid="log4net.Util.TextWriterAdapter.Write(System.String)">
+  Write(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a string to the wrapped TextWriter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(string? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>the value to write to the TextWriter</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="log4net_Util_TextWriterAdapter_Write_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Writes a string to the wrapped TextWriter
+</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2007-2026 <a href="https://www.apache.org/">The Apache Software Foundation</a>. Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache Software License, Version 2.0</a>. Please read our <a href="https://privacy.apache.org/policies/privacy-policy-public.html">privacy policy</a>. <br>Apache, log4net, and the Apache logo are trademarks or registered trademarks of The Apache Software Foundation. Other names may be trademarks of their respective owners.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
