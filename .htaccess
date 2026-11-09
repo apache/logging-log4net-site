@@ -26,4 +26,4 @@ RewriteRule ^(.*/release/sdk/log4net[^/]*)(Constructor\d*|Members|Methods|Proper
 RewriteRule ^(.*/release/sdk/log4net\.[^/]+)\.[^./]+\.html$ $1.html [N]
 
 RewriteCond %{REQUEST_URI} !^/log4net/log4net-\d.\d.*$
-RewriteRule ^(.*)$ log4net-3.5.0/$1
+RewriteRule ^(.*)$ log4net-3.6.0/$1
